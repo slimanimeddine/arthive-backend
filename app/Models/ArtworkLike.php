@@ -13,7 +13,6 @@ class ArtworkLike extends Model
     protected $fillable = [
         'artwork_id',
         'user_id',
-        'unique_user_artwork_like'
     ];
 
     /**

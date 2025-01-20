@@ -29,7 +29,7 @@ class AuthController extends Controller
      * },
      * }
      */
-    public function sign_up(SignUpRequest $request)
+    public function signUp(SignUpRequest $request)
     {
         $validated = $request->validated();
 
@@ -62,7 +62,7 @@ class AuthController extends Controller
      *  },
      * }
      */
-    public function sign_in(SignInRequest $request)
+    public function signIn(SignInRequest $request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
             return response()->json([
@@ -94,7 +94,7 @@ class AuthController extends Controller
      *      "message": "Signed out successfully",
      * }
      */
-    public function sign_out(Request $request)
+    public function signOut(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
 

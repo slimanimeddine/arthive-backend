@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->longText('bio')->nullable();
             $table->string('photo')->nullable();
-            $table->boolean('verified')->default(false);
+            $table->timestamp('artist_verified_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

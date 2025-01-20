@@ -13,7 +13,6 @@ class ArtworkTag extends Model
     protected $fillable = [
         'artwork_id',
         'tag_id',
-        'unique_artwork_tag'
     ];
 
     /**

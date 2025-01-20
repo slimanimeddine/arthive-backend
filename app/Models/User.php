@@ -27,7 +27,7 @@ class User extends Authenticatable
         'bio',
         'photo',
         'password',
-        'verified',
+        'artist_verified_at',
     ];
 
     /**
@@ -86,27 +86,11 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the likes this user has given on artwork comments.
-     */
-    public function artworkCommentLikes(): HasMany
-    {
-        return $this->hasMany(ArtworkCommentLike::class);
-    }
-
-    /**
      * Get the comments this user has made on artworks.
      */
     public function artworkComments(): HasMany
     {
         return $this->hasMany(ArtworkComment::class);
-    }
-
-    /**
-     * Get the replies this user has made on artwork comments.
-     */
-    public function artworkCommentReplies(): HasMany
-    {
-        return $this->hasMany(ArtworkCommentReply::class);
     }
 
     /**
@@ -130,5 +114,13 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Scope a query to only include verified users.
+     */
+    public function scopeVerified($query): void
+    {
+        $query->whereNotNull('artist_verified_at');
     }
 }

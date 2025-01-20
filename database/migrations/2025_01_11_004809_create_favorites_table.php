@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->foreignId('artwork_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->unique(['user_id', 'artwork_id'], 'unique_user_favorite');
+            $table->unique(['user_id', 'artwork_id']);
             $table->timestamps();
         });
     }

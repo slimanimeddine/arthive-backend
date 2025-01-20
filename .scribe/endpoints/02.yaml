@@ -1,0 +1,300 @@
+name: Users
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get All Users'
+      description: 'Get a list of all users'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      'filter[country]':
+        name: 'filter[country]'
+        description: 'Filter artworks by country.'
+        required: false
+        example: 'filter[country]=finland'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[category]':
+        name: 'filter[category]'
+        description: 'Filter artworks by category.'
+        required: false
+        example: 'filter[category]=ceramics'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sort:
+        name: sort
+        description: 'Sort artworks by new, or popular.'
+        required: false
+        example: sort=new
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      page:
+        name: page
+        description: 'The page number to fetch.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      'filter[country]': 'filter[country]=finland'
+      'filter[category]': 'filter[category]=ceramics'
+      sort: sort=new
+      page: '1'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":403,"username":"chesley.strosin","first_name":"Cordell","last_name":"Deckow","email":"marques.homenick@example.net","country":"Lebanon","bio":"Enim ad atque omnis voluptates. Quasi recusandae quod aspernatur et. Nihil fugit molestias nihil illum.","photo":"https:\/\/via.placeholder.com\/640x480.png\/0000ee?text=eveniet","artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artworks":[{"id":163,"title":"Officia aut numquam voluptatem autem corrupti.","description":"Perferendis neque ea aspernatur eius. Est illo facere rerum et et in reprehenderit aut. Sit doloribus delectus tenetur.","status":"published","user_id":403,"created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]},{"id":404,"username":"monserrat82","first_name":"Erwin","last_name":"Nikolaus","email":"orval.gottlieb@example.com","country":"Ethiopia","bio":"Debitis eos velit cupiditate. Tempora assumenda laboriosam asperiores. Et saepe fugiat maiores qui at aut et. Adipisci amet distinctio enim voluptatibus molestiae qui.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artworks":[{"id":164,"title":"Dignissimos laboriosam soluta unde neque voluptatem doloremque.","description":"Sapiente et exercitationem molestias veniam eos est ducimus. Iure ipsum facilis quod doloremque. Rerum molestiae quos vel voluptatum officia quo laborum.","status":"draft","user_id":404,"created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/verified/{count}'
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Verified Users'
+      description: 'Get a list of verified users'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      count:
+        name: count
+        description: 'The number of records to retrieve'
+        required: true
+        example: 4
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      count: 4
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":405,"username":"buckridge.ozella","first_name":"Mckenzie","last_name":"Quitzon","email":"fschuppe@example.net","country":"Hungary","bio":"Quas voluptatem ea reiciendis dicta earum occaecati. Laborum aspernatur praesentium occaecati assumenda omnis. Dolorum alias fugit repudiandae.","photo":"https:\/\/via.placeholder.com\/640x480.png\/00bb00?text=adipisci","artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"},{"id":406,"username":"hdietrich","first_name":"Lisette","last_name":"Hessel","email":"stanton.hettie@example.net","country":"Tonga","bio":"Quia praesentium expedita nam error vero. Quia sunt facere eos. Et dolorum voluptatem sint et explicabo. Et placeat perferendis neque mollitia sit iure quis.","photo":null,"artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{username}'
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get User by Username'
+      description: 'Get a single user by username'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: 'The username of the user'
+        required: true
+        example: rerum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: rerum
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":407,"username":"bernier.edd","first_name":"Gunnar","last_name":"Dooley","email":"oleffler@example.org","country":"Cape Verde","bio":"Suscipit quidem voluptatem sed unde. Qui quasi ea sapiente. Et quia culpa qui consequuntur.","photo":null,"artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"},{"id":408,"username":"cgerlach","first_name":"Rafaela","last_name":"Zulauf","email":"qfranecki@example.org","country":"Faroe Islands","bio":"Dolorum omnis similique deleniti reiciendis ipsam quasi omnis. Ea sint dolorem voluptatem. Aut voluptatum sit explicabo.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{username}/likes-by-tag'
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get User Total Likes and Likes by Tag'
+      description: 'Get the total number of likes received by a user and the number of likes received by tag'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: 'The username of the user'
+        required: true
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: dolorem
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "data": [
+               "total_likes": 10,
+               "likes_by_tag": [
+                   {
+                       "tag_name": "abstract",
+                       "total_likes": 5
+                   },
+                   {
+                       "tag_name": "portrait",
+                       "total_likes": 3
+                   }
+               ]
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{username}/artwork-tags'
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get User Artwork Tags'
+      description: "Get a list of tags used by a user's artworks"
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: 'The username of the user'
+        required: true
+        example: earum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: earum
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "data": [
+               "tags": [
+                   {
+                       "id": 1,
+                       "name": "abstract"
+                   },
+                   {
+                       "id": 5,
+                       "name": "portrait"
+                   }
+               ]
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

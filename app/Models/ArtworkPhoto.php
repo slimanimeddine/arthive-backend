@@ -13,6 +13,7 @@ class ArtworkPhoto extends Model
     protected $fillable = [
         'path',
         'artwork_id',
+        'is_main'
     ];
 
     /**

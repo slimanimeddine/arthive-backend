@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->foreignId('artwork_id')->constrained()->onDelete('cascade');
             $table->foreignId('tag_id')->constrained()->onDelete('cascade');
-            $table->unique(['artwork_id', 'tag_id'], 'unique_artwork_tag');
+            $table->unique(['artwork_id', 'tag_id']);
             $table->timestamps();
         });
     }

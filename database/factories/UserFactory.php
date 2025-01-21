@@ -35,6 +35,7 @@ class UserFactory extends Factory
             'artist_verified_at' => fake()->boolean() ? now() : null,
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'role' => 'artist',
         ];
     }
 

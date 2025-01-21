@@ -23,6 +23,7 @@ return new class extends Migration
             $table->timestamp('artist_verified_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', ['artist', 'admin'])->default('artist');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -28,6 +28,7 @@ class User extends Authenticatable
         'photo',
         'password',
         'artist_verified_at',
+        'role'
     ];
 
     /**
@@ -122,5 +123,13 @@ class User extends Authenticatable
     public function scopeVerified($query): void
     {
         $query->whereNotNull('artist_verified_at');
+    }
+
+    /**
+     * Scope a query to only include users who are artists.
+     */
+    public function scopeArtists($query): void
+    {
+        $query->where('role', 'artist');
     }
 }

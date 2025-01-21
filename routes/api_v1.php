@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\V1\ArtworkController;
 use App\Http\Controllers\V1\AuthController;
+use App\Http\Controllers\V1\FollowController;
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,8 @@ Route::get('users/authenticated-user/artworks', [UserController::class, 'getAuth
 Route::get('users/authenticated-user/favorite-artworks', [UserController::class, 'getAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
 Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowers'])->middleware('auth:sanctum');
 Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowing'])->middleware('auth:sanctum');
+// Route::get('users/authenticated-user/notifications', [UserController::class, 'getAuthenticatedUserNotifications'])->middleware('auth:sanctum');
+
+// follow routes
+Route::post('follow-user/{id}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('id');
+Route::post('unfollow-user/{id}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('id');

@@ -39,7 +39,7 @@ class UserController extends Controller
      */
     public function getAllUsers(Request $request)
     {
-        $query = QueryBuilder::for(User::with(['artworks']))
+        $query = QueryBuilder::for(User::artists()->with(['artworks']))
             ->allowedFilters([
                 AllowedFilter::exact('country'),
                 AllowedFilter::exact('category', 'artworks.tags.name'),
@@ -66,7 +66,7 @@ class UserController extends Controller
      */
     public function getVerifiedUsers(Request $request, int $count)
     {
-        $query = User::verified()
+        $query = User::artists()->verified()
             ->limit($count)
             ->get();
 
@@ -86,7 +86,7 @@ class UserController extends Controller
      */
     public function getUser(Request $request, string $username)
     {
-        $query = User::where('username', $username)->firstOrFail();
+        $query = User::artists()->where('username', $username)->firstOrFail();
 
         return new UserResource($query);
     }
@@ -117,7 +117,7 @@ class UserController extends Controller
      */
     public function getUserLikesByTag(Request $request, string $username)
     {
-        $user = User::where('username', $username)->firstOrFail();
+        $user = User::artists()->where('username', $username)->firstOrFail();
 
         $likesByTag = $user->artworks()
             ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
@@ -163,7 +163,7 @@ class UserController extends Controller
      */
     public function getUserArtworkTags(Request $request, string $username)
     {
-        $user = User::where('username', $username)->firstOrFail();
+        $user = User::artists()->where('username', $username)->firstOrFail();
 
         $tags = $user->artworks()
             ->join('artwork_tag', 'artworks.id', '=', 'artwork_tag.artwork_id')
@@ -196,7 +196,7 @@ class UserController extends Controller
      */
     public function getUserArtworks(Request $request, string $username)
     {
-        $user = User::where('username', $username)->firstOrFail();
+        $user = User::artists()->where('username', $username)->firstOrFail();
 
         $query = QueryBuilder::for(Artwork::where('user_id', $user->id))
             ->allowedFilters([
@@ -310,4 +310,34 @@ class UserController extends Controller
 
         return UserResource::collection($following);
     }
+
+    // /**
+    //  * Get Authenticated User Notifications
+    //  * 
+    //  * Get a list of all the notifications sent to the authenticated user
+    //  * 
+    //  * @authenticated
+    //  * 
+    //  * @response {
+    //  *      "data" => [
+    //  *          "notifications" => [
+    //  *              {
+    //  * 
+    //  *              }
+    //  *          ]
+    //  *      ]
+    //  * }
+    //  */
+    // public function getAuthenticatedUserNotifications(Request $request)
+    // {
+    //     $authenticatedUser = $request->user();
+
+    //     $notifications = $authenticatedUser->notifications;
+
+    //     return response()->json([
+    //         'data' => [
+    //             'notifications' => $notifications
+    //         ]
+    //     ]);
+    // }
 }

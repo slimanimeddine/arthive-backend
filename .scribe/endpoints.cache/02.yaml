@@ -73,7 +73,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":403,"username":"chesley.strosin","first_name":"Cordell","last_name":"Deckow","email":"marques.homenick@example.net","country":"Lebanon","bio":"Enim ad atque omnis voluptates. Quasi recusandae quod aspernatur et. Nihil fugit molestias nihil illum.","photo":"https:\/\/via.placeholder.com\/640x480.png\/0000ee?text=eveniet","artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artworks":[{"id":163,"title":"Officia aut numquam voluptatem autem corrupti.","description":"Perferendis neque ea aspernatur eius. Est illo facere rerum et et in reprehenderit aut. Sit doloribus delectus tenetur.","status":"published","user_id":403,"created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]},{"id":404,"username":"monserrat82","first_name":"Erwin","last_name":"Nikolaus","email":"orval.gottlieb@example.com","country":"Ethiopia","bio":"Debitis eos velit cupiditate. Tempora assumenda laboriosam asperiores. Et saepe fugiat maiores qui at aut et. Adipisci amet distinctio enim voluptatibus molestiae qui.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artworks":[{"id":164,"title":"Dignissimos laboriosam soluta unde neque voluptatem doloremque.","description":"Sapiente et exercitationem molestias veniam eos est ducimus. Iure ipsum facilis quod doloremque. Rerum molestiae quos vel voluptatum officia quo laborum.","status":"draft","user_id":404,"created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
+        content: '{"data":[{"id":513,"username":"smitham.briana","first_name":"Jaycee","last_name":"Pouros","email":"salvador86@example.net","country":"Cameroon","bio":"Animi praesentium ea numquam est magni. Non expedita impedit quo nihil magni veniam incidunt. Veniam tenetur sit ea quae fugiat.","photo":"https:\/\/via.placeholder.com\/640x480.png\/00bb66?text=corrupti","artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artworks":[{"id":229,"title":"Aut asperiores aut soluta deserunt.","description":"Modi illum quia sapiente hic praesentium doloribus velit. Dolor aspernatur ea et maxime fugit.","status":"published","user_id":513,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]},{"id":514,"username":"dgerlach","first_name":"Florian","last_name":"Boyer","email":"simone06@example.com","country":"Bouvet Island (Bouvetoya)","bio":"Dolorum et nulla voluptatibus voluptas modi et dolor ipsa. Inventore quisquam et impedit temporibus aperiam nesciunt. Non facere perspiciatis sapiente placeat vel voluptas modi. Quisquam perferendis maiores vel velit qui eum autem iste.","photo":null,"artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artworks":[{"id":230,"title":"Animi repellendus laborum fugit est sed.","description":"Optio officiis molestiae quos eum sit. Voluptates id velit consequatur repellendus. Nihil blanditiis in et inventore. Itaque ad necessitatibus fuga voluptate ratione.","status":"published","user_id":514,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}]}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []
@@ -104,14 +104,14 @@ endpoints:
         name: count
         description: 'The number of records to retrieve'
         required: true
-        example: 4
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      count: 4
+      count: 8
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -120,7 +120,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":405,"username":"buckridge.ozella","first_name":"Mckenzie","last_name":"Quitzon","email":"fschuppe@example.net","country":"Hungary","bio":"Quas voluptatem ea reiciendis dicta earum occaecati. Laborum aspernatur praesentium occaecati assumenda omnis. Dolorum alias fugit repudiandae.","photo":"https:\/\/via.placeholder.com\/640x480.png\/00bb00?text=adipisci","artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"},{"id":406,"username":"hdietrich","first_name":"Lisette","last_name":"Hessel","email":"stanton.hettie@example.net","country":"Tonga","bio":"Quia praesentium expedita nam error vero. Quia sunt facere eos. Et dolorum voluptatem sint et explicabo. Et placeat perferendis neque mollitia sit iure quis.","photo":null,"artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"}]}'
+        content: '{"data":[{"id":515,"username":"anne44","first_name":"Brenna","last_name":"Moore","email":"gregg29@example.com","country":"Cape Verde","bio":"Quo ut neque libero natus necessitatibus adipisci. Nobis non suscipit consectetur aspernatur illo et. Velit facilis non cum dolorem pariatur.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"},{"id":516,"username":"gislason.eusebio","first_name":"Esperanza","last_name":"Swaniawski","email":"stevie76@example.org","country":"Uzbekistan","bio":"Qui ex sequi adipisci quis et. Neque qui in tempora et libero. Quaerat magni sint debitis aliquam et.","photo":null,"artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}]}'
         headers: []
         description: ''
         custom: []
@@ -151,14 +151,14 @@ endpoints:
         name: username
         description: 'The username of the user'
         required: true
-        example: rerum
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      username: rerum
+      username: consequatur
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -167,7 +167,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":407,"username":"bernier.edd","first_name":"Gunnar","last_name":"Dooley","email":"oleffler@example.org","country":"Cape Verde","bio":"Suscipit quidem voluptatem sed unde. Qui quasi ea sapiente. Et quia culpa qui consequuntur.","photo":null,"artist_verified_at":"2025-01-20 18:13:23","email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"},{"id":408,"username":"cgerlach","first_name":"Rafaela","last_name":"Zulauf","email":"qfranecki@example.org","country":"Faroe Islands","bio":"Dolorum omnis similique deleniti reiciendis ipsam quasi omnis. Ea sint dolorem voluptatem. Aut voluptatum sit explicabo.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-20T18:13:23.000000Z","created_at":"2025-01-20T18:13:23.000000Z","updated_at":"2025-01-20T18:13:23.000000Z"}]}'
+        content: '{"data":[{"id":517,"username":"vlesch","first_name":"Oscar","last_name":"Greenholt","email":"runte.albina@example.org","country":"Mayotte","bio":"Dicta illo reiciendis unde magni laboriosam tempora in quis. Et modi in est ad sed tenetur voluptas molestiae. Laboriosam id nulla non occaecati beatae laboriosam.","photo":"https:\/\/via.placeholder.com\/640x480.png\/002222?text=harum","artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"},{"id":518,"username":"xmarvin","first_name":"Aleen","last_name":"Bechtelar","email":"kitty.murazik@example.org","country":"Greenland","bio":"Aut eos sed expedita praesentium id quasi vitae. Facilis ullam maxime alias similique accusantium architecto ipsum. Dolores officiis expedita animi qui. Illum repellat voluptatem nulla quis necessitatibus.","photo":"https:\/\/via.placeholder.com\/640x480.png\/00ee99?text=nesciunt","artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}]}'
         headers: []
         description: ''
         custom: []
@@ -198,14 +198,14 @@ endpoints:
         name: username
         description: 'The username of the user'
         required: true
-        example: dolorem
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      username: dolorem
+      username: inventore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -260,14 +260,14 @@ endpoints:
         name: username
         description: 'The username of the user'
         required: true
-        example: earum
+        example: quod
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      username: earum
+      username: quod
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -291,6 +291,252 @@ endpoints:
                ]
             ]
           }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/users/{username}/artworks'
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get User Artworks'
+      description: 'Get a list of artworks by a user'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      username:
+        name: username
+        description: 'The username of the user'
+        required: true
+        example: voluptates
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      username: voluptates
+    queryParameters:
+      'filter[tag]':
+        name: 'filter[tag]'
+        description: 'Filter artworks by tag.'
+        required: false
+        example: 'filter[tag]=abstract'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      page:
+        name: page
+        description: 'The page number to fetch.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      'filter[tag]': 'filter[tag]=abstract'
+      page: '1'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":231,"title":"Neque qui debitis voluptas aut.","description":"Corrupti non explicabo aut vel ipsam modi quo. Et voluptates possimus dolorum atque dolorum quas. Eligendi blanditiis voluptatem quae est quae. Dolorem id reprehenderit quasi enim rerum sit et.","status":"draft","user_id":519,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null},{"id":232,"title":"Voluptas ratione officiis nemo sint.","description":"Voluptas unde et modi ut. Facilis possimus molestiae commodi eligendi enim porro deleniti. Reiciendis consequuntur eos ea perferendis. Harum nisi ut fuga sit ea quos et.","status":"draft","user_id":520,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users/authenticated-user
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Authenticated User'
+      description: 'Get the authenticated user'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":521,"username":"jody53","first_name":"Ervin","last_name":"Blanda","email":"monahan.veda@example.net","country":"Philippines","bio":"Veritatis a laboriosam aut quaerat. Delectus et voluptas et quia. Consequatur commodi perspiciatis error iusto perferendis voluptates quia. Iusto qui eveniet dolorum dolorem facilis cumque ipsa distinctio.","photo":null,"artist_verified_at":"2025-01-21 08:36:10","email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users/authenticated-user/artworks
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Authenticated User Artworks'
+      description: 'Get a list of artworks by the authenticated user'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number to fetch.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: '1'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":233,"title":"Voluptatum quaerat ducimus sed libero omnis aliquid.","description":"Inventore alias facere exercitationem ipsam sapiente reiciendis ut consectetur. Expedita qui et consectetur dolor. Deserunt consequatur optio itaque rerum ea sunt dolorem. Consequuntur rem enim dolor molestias et consequatur.","status":"draft","user_id":522,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null,"artwork_photos":[{"id":119,"path":"0","is_main":0,"artwork_id":233,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}],"tags":[{"id":117,"name":"Mr. Eino Rolfson","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","pivot":{"artwork_id":233,"tag_id":117}}]},{"id":234,"title":"Quia ut modi et consequatur.","description":"Non quod omnis non voluptatum. Aliquam quos maxime officiis dolor possimus. Dolorem non reprehenderit consequatur eius. Dolores recusandae et molestias ex quidem totam.","status":"draft","user_id":523,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null,"artwork_photos":[{"id":120,"path":"0","is_main":0,"artwork_id":234,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}],"tags":[{"id":118,"name":"Mabelle Kirlin","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","pivot":{"artwork_id":234,"tag_id":118}}]}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users/authenticated-user/favorite-artworks
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Authenticated User Favorite Artworks'
+      description: 'Get a list of artworks marked as favorite by the authenticated user'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number to fetch.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: '1'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":235,"title":"Unde officiis qui nihil.","description":"Quia ipsa quisquam culpa odio. Aperiam consequatur velit magni aut eos.","status":"draft","user_id":524,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":null,"artwork_photos":[{"id":121,"path":"0","is_main":0,"artwork_id":235,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}],"tags":[{"id":119,"name":"Dr. Stephen Schroeder","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","pivot":{"artwork_id":235,"tag_id":119}}]},{"id":236,"title":"Reiciendis eius natus atque voluptatem.","description":"Tempora et voluptatem doloremque architecto error. Magnam dolorem sint qui quia. Et ipsum ipsum odio rerum repudiandae aut. Est eum et officia sed qui. Mollitia error aut id soluta nesciunt eveniet.","status":"draft","user_id":525,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","artwork_likes_count":0,"artwork_comments_count":0,"artwork_main_photo_path":"0","artwork_photos":[{"id":122,"path":"0","is_main":1,"artwork_id":236,"created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}],"tags":[{"id":120,"name":"Ransom Schmidt I","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z","pivot":{"artwork_id":236,"tag_id":120}}]}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/users/authenticated-user/followers
+    metadata:
+      groupName: Users
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Authenticated User Following'
+      description: 'Get a list of users the authenticated user is following'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      page:
+        name: page
+        description: 'The page number to fetch.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      page: '1'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":526,"username":"zboncak.marley","first_name":"Christian","last_name":"Kuhic","email":"cbatz@example.org","country":"Swaziland","bio":"Facere a id occaecati omnis alias praesentium. Perspiciatis vel libero at soluta harum ut. Veritatis officiis qui cupiditate nesciunt officia. Totam omnis et animi praesentium. Ut reprehenderit blanditiis sit exercitationem dicta hic et.","photo":"https:\/\/via.placeholder.com\/640x480.png\/00ddee?text=aliquam","artist_verified_at":null,"email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"},{"id":527,"username":"rosalyn.grimes","first_name":"Matilda","last_name":"VonRueden","email":"vgrimes@example.com","country":"Heard Island and McDonald Islands","bio":"Quidem laudantium repellendus commodi rerum. Quidem eos dolores placeat qui ut blanditiis esse.","photo":null,"artist_verified_at":null,"email_verified_at":"2025-01-21T08:36:10.000000Z","created_at":"2025-01-21T08:36:10.000000Z","updated_at":"2025-01-21T08:36:10.000000Z"}],"links":{"first":"\/?page=1","last":"\/?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"\/?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"\/","per_page":10,"to":2,"total":2}}'
         headers: []
         description: ''
         custom: []

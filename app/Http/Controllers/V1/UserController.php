@@ -4,7 +4,9 @@ namespace App\Http\Controllers\V1;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\ArtworkResource;
 use App\Http\Resources\V1\UserResource;
+use App\Models\Artwork;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\QueryBuilder\AllowedFilter;
@@ -175,5 +177,137 @@ class UserController extends Controller
                 'tags' => $tags,
             ]
         ]);
+    }
+
+    /**
+     * Get User Artworks
+     * 
+     * Get a list of artworks by a user
+     * 
+     * @urlParam username string required The username of the user
+     * 
+     * @queryParam filter[tag] string Filter artworks by tag. Example: filter[tag]=abstract
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtworkResource 
+     * 
+     * @apiResourceModel App\Models\Artwork paginate=10
+     */
+    public function getUserArtworks(Request $request, string $username)
+    {
+        $user = User::where('username', $username)->firstOrFail();
+
+        $query = QueryBuilder::for(Artwork::where('user_id', $user->id))
+            ->allowedFilters([
+                AllowedFilter::exact('tag', 'tags.name'),
+            ])
+            ->paginate(10);
+
+        return ArtworkResource::collection($query);
+    }
+
+    /**
+     * Get Authenticated User
+     * 
+     * Get the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @apiResource App\Http\Resources\V1\UserResource
+     * 
+     * @apiResourceModel App\Models\User
+     */
+    public function getAuthenticatedUser(Request $request)
+    {
+        return new UserResource($request->user());
+    }
+
+    /**
+     * Get Authenticated User Artworks
+     * 
+     * Get a list of artworks by the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
+     */
+    public function getAuthenticatedUserArtworks(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $artworks = $authenticatedUser->artworks()->with(['artworkPhotos', 'tags'])->paginate(10);
+
+        return ArtworkResource::collection($artworks);
+    }
+
+    /**
+     * Get Authenticated User Favorite Artworks
+     * 
+     * Get a list of artworks marked as favorite by the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
+     */
+    public function getAuthenticatedUserFavoriteArtworks(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $artworks = $authenticatedUser->favorites()->with(['artworkPhotos', 'tags'])->paginate(10);
+
+        return ArtworkResource::collection($artworks);
+    }
+
+    /**
+     * Get Authenticated User Followers
+     * 
+     * Get a list of users following the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * 
+     * @apiResourceModel App\Models\User paginate=10
+     */
+    public function getAuthenticatedUserFollowers(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $followers = $authenticatedUser->followers()->paginate(10);
+
+        return UserResource::collection($followers);
+    }
+
+    /**
+     * Get Authenticated User Following
+     * 
+     * Get a list of users the authenticated user is following
+     * 
+     * @authenticated
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * 
+     * @apiResourceModel App\Models\User paginate=10
+     */
+    public function getAuthenticatedUserFollowing(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $following = $authenticatedUser->following()->paginate(10);
+
+        return UserResource::collection($following);
     }
 }

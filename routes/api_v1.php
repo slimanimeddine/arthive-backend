@@ -20,6 +20,11 @@ Route::get('artworks/{id}', [ArtworkController::class, 'getArtwork'])->whereNumb
 Route::get('users', [UserController::class, 'getAllUsers']);
 Route::get('users/verified/{count}', [UserController::class, 'getVerifiedUsers'])->whereNumber('count');
 Route::get('users/{username}', [UserController::class, 'getUser']);
-Route::get('/users/{username}/likes-by-tag', [UserController::class, 'getUserLikesByTag']);
-Route::get('/users/{username}/artwork-tags', [UserController::class, 'getUserArtworkTags']);
-Route::get('/users/{username}/artworks', [ArtworkController::class, 'getUserArtworks']);
+Route::get('users/{username}/likes-by-tag', [UserController::class, 'getUserLikesByTag']);
+Route::get('users/{username}/artwork-tags', [UserController::class, 'getUserArtworkTags']);
+Route::get('users/{username}/artworks', [UserController::class, 'getUserArtworks']);
+Route::get('users/authenticated-user', [UserController::class, 'getAuthenticatedUser'])->middleware('auth:sanctum');
+Route::get('users/authenticated-user/artworks', [UserController::class, 'getAuthenticatedUserArtworks'])->middleware('auth:sanctum');
+Route::get('users/authenticated-user/favorite-artworks', [UserController::class, 'getAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
+Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowers'])->middleware('auth:sanctum');
+Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowing'])->middleware('auth:sanctum');

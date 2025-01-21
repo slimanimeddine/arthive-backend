@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Sign in'
+      title: 'Sign In'
       description: 'Signs in a user and returns an auth token'
       authenticated: false
       custom: []
@@ -77,7 +77,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Sign up'
+      title: 'Sign Up'
       description: 'Creates a new user'
       authenticated: false
       custom: []
@@ -152,7 +152,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Sign out'
+      title: 'Sign Out'
       description: 'Signs out a user and deletes the auth token'
       authenticated: true
       custom: []

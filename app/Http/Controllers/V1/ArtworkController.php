@@ -5,7 +5,6 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\ArtworkResource;
 use App\Models\Artwork;
-use App\Models\User;
 use App\Sorts\Artworks\NewSort;
 use App\Sorts\Artworks\PopularSort;
 use App\Sorts\Artworks\RisingSort;
@@ -115,33 +114,5 @@ class ArtworkController extends Controller
             ]);
 
         return new ArtworkResource($query);
-    }
-
-    /**
-     * Get User Artworks
-     * 
-     * Get a list of artworks by a user
-     * 
-     * @urlParam username string required The username of the user
-     * 
-     * @queryParam filter[tag] string Filter artworks by tag. Example: filter[tag]=abstract
-     * 
-     * @queryParam page string The page number to fetch. Example: 1
-     * 
-     * @apiResourceCollection App\Http\Resources\V1\ArtworkResource 
-     * 
-     * @apiResourceModel App\Models\Artwork with=user paginate=10
-     */
-    public function getUserArtworks(Request $request, string $username)
-    {
-        $user = User::where('username', $username)->firstOrFail();
-
-        $query = QueryBuilder::for(Artwork::where('user_id', $user->id))
-            ->allowedFilters([
-                AllowedFilter::exact('tag', 'tags.name'),
-            ])
-            ->paginate(10);
-
-        return ArtworkResource::collection($query);
     }
 }

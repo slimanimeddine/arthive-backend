@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
     /**
-     * Sign up
+     * Sign Up
      * 
      * Creates a new user
      * 
@@ -48,7 +48,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Sign in
+     * Sign In
      * 
      * Signs in a user and returns an auth token
      * 
@@ -84,7 +84,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Sign out
+     * Sign Out
      * 
      * Signs out a user and deletes the auth token
      * 

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\V1\FollowResource;
 use App\Models\Follow;
 use App\Models\User;
+use App\Notifications\UserFollowed;
 use Illuminate\Http\Request;
 
 class FollowController extends Controller
@@ -19,9 +19,9 @@ class FollowController extends Controller
      * 
      * @urlParam id integer required The ID of the user to follow
      * 
-     * @apiResource App\Http\Resources\V1\FollowResource
-     * 
-     * @apiResourceModel App\Models\Follow
+     * @response {
+     *      'message' => 'You have successfully followed this user.'
+     * }
      */
     public function followUser(Request $request, int $id)
     {
@@ -33,12 +33,14 @@ class FollowController extends Controller
             abort(403);
         }
 
-        $follow = Follow::create([
+        Follow::create([
             'follower_id' => $authenticatedUser->id,
             'followed_id' => $userToFollow->id,
         ]);
 
-        return new FollowResource($follow);
+        $userToFollow->notify(new UserFollowed($authenticatedUser));
+
+        return response()->json(['message' => 'You have successfully followed this user.']);
     }
 
     /**
@@ -60,7 +62,7 @@ class FollowController extends Controller
 
         $userToUnfollow = User::findOrFail($id);
 
-        if ($authenticatedUser->cannot('funollow', $userToUnfollow)) {
+        if ($authenticatedUser->cannot('unfollow', $userToUnfollow)) {
             abort(403);
         }
 

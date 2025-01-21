@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\V1\ArtworkController;
+use App\Http\Controllers\V1\ArtworkLikeController;
 use App\Http\Controllers\V1\AuthController;
 use App\Http\Controllers\V1\FollowController;
 use App\Http\Controllers\V1\UserController;
@@ -35,4 +36,10 @@ Route::get('users/authenticated-user/followers', [UserController::class, 'getAut
 Route::middleware(['throttle:follow'])->group(function () {
     Route::post('follow-user/{id}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('id');
     Route::post('unfollow-user/{id}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('id');
+});
+
+// like routes
+Route::middleware(['throttle:like'])->group(function () {
+    Route::post('like-artwork/{id}', [ArtworkLikeController::class, 'likeArtwork'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::post('unlike-artwork/{id}', [ArtworkLikeController::class, 'unlikeArtwork'])->middleware('auth:sanctum')->whereNumber('id');
 });

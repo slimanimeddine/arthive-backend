@@ -29,16 +29,8 @@ class FollowController extends Controller
 
         $userToFollow = User::findOrFail($id);
 
-        if ($authenticatedUser->id === $userToFollow->id) {
-            return response()->json(['message' => 'You cannot follow yourself.'], 400);
-        }
-
-        $alreadyFollowing = Follow::where('follower_id', $authenticatedUser->id)
-            ->where('followed_id', $userToFollow->id)
-            ->exists();
-
-        if ($alreadyFollowing) {
-            return response()->json(['message' => 'You are already following this user.'], 400);
+        if ($authenticatedUser->cannot('follow', $userToFollow)) {
+            abort(403);
         }
 
         $follow = Follow::create([
@@ -68,17 +60,13 @@ class FollowController extends Controller
 
         $userToUnfollow = User::findOrFail($id);
 
-        if ($authenticatedUser->id === $userToUnfollow->id) {
-            return response()->json(['message' => 'You cannot unfollow yourself.'], 400);
+        if ($authenticatedUser->cannot('funollow', $userToUnfollow)) {
+            abort(403);
         }
 
         $follow = Follow::where('follower_id', $authenticatedUser->id)
             ->where('followed_id', $userToUnfollow->id)
             ->first();
-
-        if (!$follow) {
-            return response()->json(['message' => 'You are not following this user.'], 400);
-        }
 
         $follow->delete();
 

@@ -31,7 +31,7 @@ class ArtworkCommentController extends Controller
      * 
      * @apiResourceModel App\Models\ArtworkComment
      */
-    public function store(CreateArtworkCommentRequest $request, int $id)
+    public function postArtworkComment(CreateArtworkCommentRequest $request, int $id)
     {
         $user = $request->user();
 
@@ -63,13 +63,13 @@ class ArtworkCommentController extends Controller
      * 
      * @apiResourceModel App\Models\ArtworkComment
      */
-    public function update(UpdateArtworkCommentRequest $request, int $id)
+    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artworkComment = ArtworkComment::findOrFail($id);
 
-        if ($authenticatedUser->cannot('update', $artworkComment)) {
+        if ($authenticatedUser->cannot('updateArtworkComment', $artworkComment)) {
             abort(403);
         }
 
@@ -93,13 +93,13 @@ class ArtworkCommentController extends Controller
      *     'message' => 'You have successfully deleted the comment.'
      * }
      */
-    public function delete(Request $request, int $id)
+    public function deleteArtworkComment(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artworkComment = ArtworkComment::findOrFail($id);
 
-        if ($authenticatedUser->cannot('delete', $artworkComment)) {
+        if ($authenticatedUser->cannot('deleteArtworkComment', $artworkComment)) {
             abort(403);
         }
 

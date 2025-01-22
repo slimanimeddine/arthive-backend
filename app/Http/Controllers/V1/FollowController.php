@@ -21,19 +21,19 @@ class FollowController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the user to follow
+     * @urlParam userId integer required The ID of the user to follow
      * 
      * @apiResource App\Http\Resources\V1\FollowResource
      * 
      * @apiResourceModel App\Models\Follow
      */
-    public function store(Request $request, int $id)
+    public function followUser(Request $request, int $userId)
     {
         $authenticatedUser = $request->user();
 
-        $userToFollow = User::findOrFail($id);
+        $userToFollow = User::findOrFail($userId);
 
-        if ($authenticatedUser->cannot('store', $userToFollow)) {
+        if ($authenticatedUser->cannot('followUser', $userToFollow)) {
             abort(403);
         }
 
@@ -54,19 +54,19 @@ class FollowController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the user to unfollow
+     * @urlParam userId integer required The ID of the user to unfollow
      * 
      * @response {
      *      'message' => 'You have successfully unfollowed this user.'
      * }
      */
-    public function delete(Request $request, int $id)
+    public function unfollowUser(Request $request, int $userId)
     {
         $authenticatedUser = $request->user();
 
-        $userToUnfollow = User::findOrFail($id);
+        $userToUnfollow = User::findOrFail($userId);
 
-        if ($authenticatedUser->cannot('delete', $userToUnfollow)) {
+        if ($authenticatedUser->cannot('unfollowUser', $userToUnfollow)) {
             abort(403);
         }
 

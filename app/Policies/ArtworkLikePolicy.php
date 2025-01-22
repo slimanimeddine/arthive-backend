@@ -11,7 +11,7 @@ class ArtworkLikePolicy
     /**
      * Determine whether user can like artwork.
      */
-    public function store(User $user, Artwork $artwork): bool
+    public function likeArtwork(User $user, Artwork $artwork): bool
     {
         $isUserArtist = $user->role === 'artist';
 
@@ -25,7 +25,7 @@ class ArtworkLikePolicy
     /**
      * Determine whether user can unlike artwork.
      */
-    public function delete(User $user, Artwork $artwork): bool
+    public function unlikeArtwork(User $user, Artwork $artwork): bool
     {
         $isUserArtist = $user->role === 'artist';
 

@@ -27,13 +27,13 @@ class ArtworkLikeController extends Controller
      * 
      * @apiResourceModel App\Models\ArtworkLike
      */
-    public function store(Request $request, int $id)
+    public function likeArtwork(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::findOrFail($id);
 
-        if ($authenticatedUser->cannot('store', $artwork)) {
+        if ($authenticatedUser->cannot('likeArtwork', $artwork)) {
             abort(403);
         }
 
@@ -60,13 +60,13 @@ class ArtworkLikeController extends Controller
      *      'message' => 'You have successfully unliked this artwork.'
      * }
      */
-    public function delete(Request $request, int $id)
+    public function unlikeArtwork(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::findOrFail($id);
 
-        if ($authenticatedUser->cannot('delete', $artwork)) {
+        if ($authenticatedUser->cannot('unlikeArtwork', $artwork)) {
             abort(403);
         }
 

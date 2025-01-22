@@ -10,7 +10,7 @@ class FollowPolicy
     /**
      * Determine whether user can follow userToFollow
      */
-    public function store(User $user, User $userToFollow): bool
+    public function followUser(User $user, User $userToFollow): bool
     {
         $isUserArtist = $user->role === 'artist';
 
@@ -28,7 +28,7 @@ class FollowPolicy
     /**
      * Determine whether user can unfollow userToFollow
      */
-    public function delete(User $user, User $userToUnfollow): bool
+    public function unfollowUser(User $user, User $userToUnfollow): bool
     {
         $isUserArtist = $user->role === 'artist';
 

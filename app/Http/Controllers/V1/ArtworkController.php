@@ -20,9 +20,9 @@ use Spatie\QueryBuilder\AllowedSort;
 class ArtworkController extends Controller
 {
     /**
-     * Get All Artworks
+     * List Artworks
      * 
-     * Get a list of all artworks
+     * Retrieve a list of all artworks
      * 
      * @queryParam filter[tag] string Filter artworks by tag. Example: filter[tag]=abstract
      * 
@@ -34,7 +34,7 @@ class ArtworkController extends Controller
      * 
      * @apiResourceModel App\Models\Artwork with=user paginate=10
      */
-    public function getAllArtworks(Request $request)
+    public function listArtworks(Request $request)
     {
         $query = QueryBuilder::for(Artwork::with(['user']))
             ->allowedFilters([
@@ -52,59 +52,59 @@ class ArtworkController extends Controller
     }
 
     /**
-     * Get Trending Artworks
+     * List Trending Artworks
      * 
-     * Get a list of trending artworks
+     * Retrieve a list of trending artworks
      * 
-     * @urlParam count integer required The number of records to retrieve
+     * @urlParam artworksCount integer required The number of records to retrieve
      * 
      * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
      * 
      * @apiResourceModel App\Models\Artwork with=user
      */
-    public function getTrendingArtworks(Request $request, int $count)
+    public function listTrendingArtworks(Request $request, int $artworksCount)
     {
         $query = QueryBuilder::for(Artwork::trending()->with(['user']))
-            ->limit($count)
+            ->limit($artworksCount)
             ->get();
 
         return ArtworkResource::collection($query);
     }
 
     /**
-     * Get New Artworks
+     * List New Artworks
      * 
-     * Get a list of new artworks
+     * Retrieve a list of new artworks
      * 
-     * @urlParam count integer required The number of records to retrieve
+     * @urlParam artworksCount integer required The number of records to retrieve
      * 
      * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
      * 
      * @apiResourceModel App\Models\Artwork with=user
      */
-    public function getNewArtworks(Request $request, int $count)
+    public function listNewArtworks(Request $request, int $artworksCount)
     {
         $query = QueryBuilder::for(Artwork::new()->with(['user']))
-            ->limit($count)
+            ->limit($artworksCount)
             ->get();
 
         return ArtworkResource::collection($query);
     }
 
     /**
-     * Get Artwork by Id
+     * Show Artwork
      * 
-     * Get a single artwork by id
+     * Retrieve a single artwork by id
      * 
-     * @urlParam id integer required The id of the artwork
+     * @urlParam artworkId integer required The id of the artwork
      * 
      * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
      * 
      * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,artworkComments.user,artworkLikes.user,tags
      */
-    public function getArtwork(Request $request, int $id)
+    public function showArtwork(Request $request, int $artworkId)
     {
-        $query = Artwork::findOrFail($id)
+        $query = Artwork::findOrFail($artworkId)
             ->with([
                 'user',
                 'artworkPhotos',

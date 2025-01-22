@@ -21,9 +21,9 @@ use App\Sorts\Users\PopularSort;
 class UserController extends Controller
 {
     /**
-     * Get All Users
+     * List Users
      * 
-     * Get a list of all users
+     * Retrieve a list of all users
      * 
      * @queryParam filter[country] string Filter artworks by country. Example: filter[country]=finland
      * 
@@ -37,7 +37,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\User with=artworks paginate=10
      */
-    public function getAllUsers(Request $request)
+    public function listUsers(Request $request)
     {
         $query = QueryBuilder::for(User::artists()->with(['artworks']))
             ->allowedFilters([
@@ -54,29 +54,29 @@ class UserController extends Controller
     }
 
     /**
-     * Get Verified Users
+     * List Verified Users
      * 
-     * Get a list of verified users
+     * Retrieve a list of verified users
      * 
-     * @urlParam count integer required The number of records to retrieve
+     * @urlParam usersCount integer required The number of records to retrieve
      * 
      * @apiResourceCollection App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
      */
-    public function getVerifiedUsers(Request $request, int $count)
+    public function listVerifiedUsers(Request $request, int $usersCount)
     {
         $query = User::artists()->verified()
-            ->limit($count)
+            ->limit($usersCount)
             ->get();
 
         return UserResource::collection($query);
     }
 
     /**
-     * Get User by Username
+     * Show User
      * 
-     * Get a single user by username
+     * Retrieve a single user by username
      * 
      * @urlParam username string required The username of the user
      * 
@@ -84,7 +84,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\User
      */
-    public function getUser(Request $request, string $username)
+    public function showUser(Request $request, string $username)
     {
         $query = User::artists()->where('username', $username)->firstOrFail();
 
@@ -92,16 +92,14 @@ class UserController extends Controller
     }
 
     /**
-     * Get User Total Likes and Likes by Tag
+     * List User Received Likes Count by Tag
      * 
-     * Get the total number of likes received by a user and the number of likes received by tag
+     * Retrieve the number of likes an artist has received by tag
      * 
      * @urlParam username string required The username of the user
      * 
      * @response {
      *   "data": [
-     *      "total_likes": 10,
-     *      "likes_by_tag": [
      *          {
      *              "tag_name": "abstract",
      *              "total_likes": 5
@@ -110,12 +108,11 @@ class UserController extends Controller
      *              "tag_name": "portrait",
      *              "total_likes": 3
      *          }
-     *      ]
      *   ]
      * }
      * 
      */
-    public function getUserLikesByTag(Request $request, string $username)
+    public function listUserReceivedLikesCountByTag(Request $request, string $username)
     {
         $user = User::artists()->where('username', $username)->firstOrFail();
 
@@ -132,23 +129,43 @@ class UserController extends Controller
             ->count();
 
         return response()->json([
-            'data' => [
-                'total_likes' => $totalLikes,
-                'likes_by_tag' => $likesByTag,
-            ]
+            'data' => $likesByTag,
         ]);
     }
 
     /**
-     * Get User Artwork Tags
+     * Show User Received Likes Count
      * 
-     * Get a list of tags used by a user's artworks
+     * Retrieve the total number of likes an artist has received
+     * 
+     * @urlParam username string required The username of the user
+     * 
+     * @response {
+     *  "data": 8
+     * }
+     */
+    public function showUserReceivedLikesCount(Request $request, string $username)
+    {
+        $user = User::artists()->where('username', $username)->firstOrFail();
+
+        $totalLikes = $user->artworks()
+            ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
+            ->count();
+
+        return response()->json([
+            'data' => $totalLikes,
+        ]);
+    }
+
+    /**
+     * List User Artwork Tags
+     * 
+     * Retrieve a list of tags used by a user's artworks
      * 
      * @urlParam username string required The username of the user
      * 
      * @response {
      *   "data": [
-     *      "tags": [
      *          {
      *              "id": 1,
      *              "name": "abstract"
@@ -157,11 +174,10 @@ class UserController extends Controller
      *              "id": 5,
      *              "name": "portrait"
      *          }
-     *      ]
      *   ]
      * }
      */
-    public function getUserArtworkTags(Request $request, string $username)
+    public function listUserArtworkTags(Request $request, string $username)
     {
         $user = User::artists()->where('username', $username)->firstOrFail();
 
@@ -173,16 +189,14 @@ class UserController extends Controller
             ->get();
 
         return response()->json([
-            'data' => [
-                'tags' => $tags,
-            ]
+            'data' => $tags,
         ]);
     }
 
     /**
-     * Get User Artworks
+     * List User Artworks
      * 
-     * Get a list of artworks by a user
+     * Retrieve a list of artworks submitted by a user
      * 
      * @urlParam username string required The username of the user
      * 
@@ -194,7 +208,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\Artwork paginate=10
      */
-    public function getUserArtworks(Request $request, string $username)
+    public function listUserArtworks(Request $request, string $username)
     {
         $user = User::artists()->where('username', $username)->firstOrFail();
 
@@ -208,9 +222,9 @@ class UserController extends Controller
     }
 
     /**
-     * Get Authenticated User
+     * Show Authenticated User
      * 
-     * Get the authenticated user
+     * Retrieve the currently authenticated user
      * 
      * @authenticated
      * 
@@ -218,15 +232,15 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\User
      */
-    public function getAuthenticatedUser(Request $request)
+    public function showAuthenticatedUser(Request $request)
     {
         return new UserResource($request->user());
     }
 
     /**
-     * Get Authenticated User Artworks
+     * List Authenticated User Artworks
      * 
-     * Get a list of artworks by the authenticated user
+     * Retrieve a list of artworks submitted by the currently authenticated user
      * 
      * @authenticated
      * 
@@ -236,7 +250,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
      */
-    public function getAuthenticatedUserArtworks(Request $request)
+    public function listAuthenticatedUserArtworks(Request $request)
     {
         $authenticatedUser = $request->user();
 
@@ -246,9 +260,9 @@ class UserController extends Controller
     }
 
     /**
-     * Get Authenticated User Favorite Artworks
+     * List Authenticated User Favorite Artworks
      * 
-     * Get a list of artworks marked as favorite by the authenticated user
+     * Retrieve a list of artworks marked as favorite by the currently authenticated user
      * 
      * @authenticated
      * 
@@ -258,7 +272,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
      */
-    public function getAuthenticatedUserFavoriteArtworks(Request $request)
+    public function listAuthenticatedUserFavoriteArtworks(Request $request)
     {
         $authenticatedUser = $request->user();
 
@@ -268,9 +282,9 @@ class UserController extends Controller
     }
 
     /**
-     * Get Authenticated User Followers
+     * List Authenticated User Followers
      * 
-     * Get a list of users following the authenticated user
+     * Retrieve a list of users following the currently authenticated user
      * 
      * @authenticated
      * 
@@ -280,7 +294,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\User paginate=10
      */
-    public function getAuthenticatedUserFollowers(Request $request)
+    public function listAuthenticatedUserFollowers(Request $request)
     {
         $authenticatedUser = $request->user();
 
@@ -290,9 +304,9 @@ class UserController extends Controller
     }
 
     /**
-     * Get Authenticated User Following
+     * List Authenticated User Following
      * 
-     * Get a list of users the authenticated user is following
+     * Retrieve a list of users the authenticated user is following
      * 
      * @authenticated
      * 
@@ -302,7 +316,7 @@ class UserController extends Controller
      * 
      * @apiResourceModel App\Models\User paginate=10
      */
-    public function getAuthenticatedUserFollowing(Request $request)
+    public function listAuthenticatedUserFollowing(Request $request)
     {
         $authenticatedUser = $request->user();
 

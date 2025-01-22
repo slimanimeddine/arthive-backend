@@ -8,17 +8,17 @@ use App\Models\User;
 class ArtworkCommentPolicy
 {
     /**
-     * Determine whether the user can update the model.
+     * Determine whether user can update artworkComment.
      */
-    public function update(User $user, ArtworkComment $artworkComment): bool
+    public function updateArtworkComment(User $user, ArtworkComment $artworkComment): bool
     {
         return $user->id === $artworkComment->user_id;
     }
 
     /**
-     * Determine whether the user can delete the model.
+     * Determine whether user can delete artworkComment.
      */
-    public function delete(User $user, ArtworkComment $artworkComment): bool
+    public function deleteArtworkComment(User $user, ArtworkComment $artworkComment): bool
     {
         return $user->id === $artworkComment->user_id;
     }

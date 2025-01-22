@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\ArtworkCommentController;
 use App\Http\Controllers\V1\ArtworkController;
 use App\Http\Controllers\V1\ArtworkLikeController;
 use App\Http\Controllers\V1\AuthController;
@@ -25,21 +26,31 @@ Route::get('users/{username}', [UserController::class, 'getUser']);
 Route::get('users/{username}/likes-by-tag', [UserController::class, 'getUserLikesByTag']);
 Route::get('users/{username}/artwork-tags', [UserController::class, 'getUserArtworkTags']);
 Route::get('users/{username}/artworks', [UserController::class, 'getUserArtworks']);
-Route::get('users/authenticated-user', [UserController::class, 'getAuthenticatedUser'])->middleware('auth:sanctum');
-Route::get('users/authenticated-user/artworks', [UserController::class, 'getAuthenticatedUserArtworks'])->middleware('auth:sanctum');
-Route::get('users/authenticated-user/favorite-artworks', [UserController::class, 'getAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
-Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowers'])->middleware('auth:sanctum');
-Route::get('users/authenticated-user/followers', [UserController::class, 'getAuthenticatedUserFollowing'])->middleware('auth:sanctum');
-// Route::get('users/authenticated-user/notifications', [UserController::class, 'getAuthenticatedUserNotifications'])->middleware('auth:sanctum');
+Route::get('users/authenticated', [UserController::class, 'getAuthenticatedUser'])->middleware('auth:sanctum');
+Route::get('users/authenticated/artworks', [UserController::class, 'getAuthenticatedUserArtworks'])->middleware('auth:sanctum');
+Route::get('users/authenticated/favorite-artworks', [UserController::class, 'getAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
+Route::get('users/authenticated/followers', [UserController::class, 'getAuthenticatedUserFollowers'])->middleware('auth:sanctum');
+Route::get('users/authenticated/followers', [UserController::class, 'getAuthenticatedUserFollowing'])->middleware('auth:sanctum');
+// Route::get('users/authenticated/notifications', [UserController::class, 'getAuthenticatedUserNotifications'])->middleware('auth:sanctum');
 
 // follow routes
 Route::middleware(['throttle:follow'])->group(function () {
-    Route::post('follow-user/{id}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('id');
-    Route::post('unfollow-user/{id}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::post('follows/{id}', [FollowController::class, 'store'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::delete('follows/{id}', [FollowController::class, 'delete'])->middleware('auth:sanctum')->whereNumber('id');
 });
 
 // like routes
 Route::middleware(['throttle:like'])->group(function () {
-    Route::post('like-artwork/{id}', [ArtworkLikeController::class, 'likeArtwork'])->middleware('auth:sanctum')->whereNumber('id');
-    Route::post('unlike-artwork/{id}', [ArtworkLikeController::class, 'unlikeArtwork'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::post('artwork-likes/{id}', [ArtworkLikeController::class, 'store'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::delete('artwork-likes/{id}', [ArtworkLikeController::class, 'delete'])->middleware('auth:sanctum')->whereNumber('id');
+});
+
+// comment routes
+Route::middleware(['throttle:comment'])->group(function () {
+    Route::post('artwork-comments/{id}', [ArtworkCommentController::class, 'store'])->middleware('auth:sanctum')->whereNumber('id');
+    Route::delete('artwork-comments/{id}', [ArtworkCommentController::class, 'delete'])->middleware('auth:sanctum')->whereNumber('id');
+});
+
+Route::middleware(['throttle:update-comment'])->group(function () {
+    Route::put('artwork-comments/{id}', [ArtworkCommentController::class, 'update'])->middleware('auth:sanctum')->whereNumber('id');
 });

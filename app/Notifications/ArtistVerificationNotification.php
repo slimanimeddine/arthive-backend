@@ -5,7 +5,7 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
-class UserVerified extends Notification
+class ArtistVerificationNotification extends Notification
 {
     use Queueable;
 

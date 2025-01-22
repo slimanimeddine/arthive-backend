@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\FollowResource;
 use App\Models\Follow;
 use App\Models\User;
-use App\Notifications\UserFollowed;
+use App\Notifications\FollowNotification;
 use Illuminate\Http\Request;
 
+/**
+ * @group Follows
+ */
 class FollowController extends Controller
 {
     /**
-     * Follow a User
+     * Follow User
      * 
      * Follow a user
      * 
@@ -19,32 +23,32 @@ class FollowController extends Controller
      * 
      * @urlParam id integer required The ID of the user to follow
      * 
-     * @response {
-     *      'message' => 'You have successfully followed this user.'
-     * }
+     * @apiResource App\Http\Resources\V1\FollowResource
+     * 
+     * @apiResourceModel App\Models\Follow
      */
-    public function followUser(Request $request, int $id)
+    public function store(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $userToFollow = User::findOrFail($id);
 
-        if ($authenticatedUser->cannot('follow', $userToFollow)) {
+        if ($authenticatedUser->cannot('store', $userToFollow)) {
             abort(403);
         }
 
-        Follow::create([
+        $follow = Follow::create([
             'follower_id' => $authenticatedUser->id,
             'followed_id' => $userToFollow->id,
         ]);
 
-        $userToFollow->notify(new UserFollowed($authenticatedUser));
+        $userToFollow->notify(new FollowNotification($authenticatedUser));
 
-        return response()->json(['message' => 'You have successfully followed this user.']);
+        return new FollowResource($follow);
     }
 
     /**
-     * Unfollow a User
+     * Unfollow User
      * 
      * Unfollow a user
      * 
@@ -56,13 +60,13 @@ class FollowController extends Controller
      *      'message' => 'You have successfully unfollowed this user.'
      * }
      */
-    public function unfollowUser(Request $request, int $id)
+    public function delete(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $userToUnfollow = User::findOrFail($id);
 
-        if ($authenticatedUser->cannot('unfollow', $userToUnfollow)) {
+        if ($authenticatedUser->cannot('delete', $userToUnfollow)) {
             abort(403);
         }
 

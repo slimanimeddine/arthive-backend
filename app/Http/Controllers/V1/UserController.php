@@ -80,7 +80,7 @@ class UserController extends Controller
      * 
      * @urlParam username string required The username of the user
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResource App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
      */

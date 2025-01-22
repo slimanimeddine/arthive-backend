@@ -7,20 +7,20 @@ use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
-class ArtworkCommented extends Notification
+class ArtworkLikeNotification extends Notification
 {
     use Queueable;
 
-    protected $commenter;
+    protected $liker;
 
     protected $artwork;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(User $commenter, Artwork $artwork)
+    public function __construct(User $liker, Artwork $artwork)
     {
-        $this->commenter = $commenter;
+        $this->liker = $liker;
         $this->artwork = $artwork;
     }
 
@@ -42,7 +42,7 @@ class ArtworkCommented extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'commenter' => $this->commenter,
+            'liker' => $this->liker,
             'artwork' => $this->artwork
         ];
     }

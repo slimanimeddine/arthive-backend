@@ -3,15 +3,19 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\ArtworkLikeResource;
 use App\Models\Artwork;
 use App\Models\ArtworkLike;
-use App\Notifications\ArtworkLiked;
+use App\Notifications\ArtworkLikeNotification;
 use Illuminate\Http\Request;
 
+/**
+ * @group Artwork Likes
+ */
 class ArtworkLikeController extends Controller
 {
     /**
-     * Like an Artwork
+     * Like Artwork
      * 
      * Like an artwork
      * 
@@ -19,34 +23,32 @@ class ArtworkLikeController extends Controller
      * 
      * @urlParam id integer required The ID of the artwork to like
      * 
-     * @response {
-     *      'message' => 'You have successfully liked this artwork.'
-     * }
+     * @apiResource App\Http\Resources\V1\ArtworkLikeResource
+     * 
+     * @apiResourceModel App\Models\ArtworkLike
      */
-    public function likeArtwork(Request $request, int $id)
+    public function store(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::findOrFail($id);
 
-        if ($authenticatedUser->cannot('like', $artwork)) {
+        if ($authenticatedUser->cannot('store', $artwork)) {
             abort(403);
         }
 
-        ArtworkLike::create([
+        $artworkLike = ArtworkLike::create([
             'user_id' => $authenticatedUser->id,
             'artwork_id' => $artwork->id,
         ]);
 
-        $artwork->user->notify(new ArtworkLiked($authenticatedUser, $artwork));
+        $artwork->user->notify(new ArtworkLikeNotification($authenticatedUser, $artwork));
 
-        return response()->json([
-            'message' => 'You have successfully liked this artwork.'
-        ]);
+        return new ArtworkLikeResource($artworkLike);
     }
 
     /**
-     * Unlike an Artwork
+     * Unlike Artwork
      * 
      * Unlike an artwork
      * 
@@ -58,13 +60,13 @@ class ArtworkLikeController extends Controller
      *      'message' => 'You have successfully unliked this artwork.'
      * }
      */
-    public function unlikeArtwork(Request $request, int $id)
+    public function delete(Request $request, int $id)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::findOrFail($id);
 
-        if ($authenticatedUser->cannot('unlike', $artwork)) {
+        if ($authenticatedUser->cannot('delete', $artwork)) {
             abort(403);
         }
 

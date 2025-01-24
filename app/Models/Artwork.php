@@ -87,6 +87,22 @@ class Artwork extends Model
     }
 
     /**
+     * Scope a query to only include published artworks
+     */
+    public function scopePublished(Builder $query): void
+    {
+        $query->where('status', 'published');
+    }
+
+    /**
+     * Scope a query to only include drafts
+     */
+    public function scopeDraft(Builder $query): void
+    {
+        $query->where('status', 'draft');
+    }
+
+    /**
      * Get the count of likes for the artwork.
      */
     protected function artworkLikesCount(): Attribute

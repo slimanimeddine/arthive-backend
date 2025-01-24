@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('artworks', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->longText('description');
+            $table->string('title')->nullable();
+            $table->longText('description')->nullable();
             $table->enum('status', ['draft', 'published'])->default('draft');
 
             $table->foreignId('user_id')->constrained()->onDelete('cascade');

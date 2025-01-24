@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\ArtworkLikeResource;
 use App\Models\Artwork;
 use App\Models\ArtworkLike;
+use App\Models\User;
 use App\Notifications\ArtworkLikeNotification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @group Artwork Likes
@@ -78,6 +80,71 @@ class ArtworkLikeController extends Controller
 
         return response()->json([
             'message' => 'You have successfully unliked this artwork.'
+        ]);
+    }
+
+    /**
+     * List User Received Likes Count by Tag
+     * 
+     * Retrieve the number of likes an artist has received by tag
+     * 
+     * @urlParam username string required The username of the user
+     * 
+     * @response {
+     *   "data": [
+     *          {
+     *              "tag_name": "abstract",
+     *              "total_likes": 5
+     *          },
+     *          {
+     *              "tag_name": "portrait",
+     *              "total_likes": 3
+     *          }
+     *   ]
+     * }
+     */
+    public function listUserReceivedLikesCountByTag(Request $request, string $username)
+    {
+        $user = User::artists()->where('username', $username)->firstOrFail();
+
+        $likesByTag = $user->artworks()
+            ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
+            ->join('artwork_tag', 'artworks.id', '=', 'artwork_tag.artwork_id')
+            ->join('tags', 'artwork_tag.tag_id', '=', 'tags.id')
+            ->select('tags.name as tag_name', DB::raw('COUNT(artwork_likes.id) as total_likes'))
+            ->groupBy('tags.name')
+            ->get();
+
+        $totalLikes = $user->artworks()
+            ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
+            ->count();
+
+        return response()->json([
+            'data' => $likesByTag,
+        ]);
+    }
+
+    /**
+     * Show User Received Likes Count
+     * 
+     * Retrieve the total number of likes an artist has received
+     * 
+     * @urlParam username string required The username of the user
+     * 
+     * @response {
+     *  "data": 8
+     * }
+     */
+    public function showUserReceivedLikesCount(Request $request, string $username)
+    {
+        $user = User::artists()->where('username', $username)->firstOrFail();
+
+        $totalLikes = $user->artworks()
+            ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
+            ->count();
+
+        return response()->json([
+            'data' => $totalLikes,
         ]);
     }
 }

@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests\V1;
 
-use App\Rules\MaxWordCount;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateArtworkCommentRequest extends FormRequest
+class UpdateUserPhotoRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -15,16 +14,15 @@ class UpdateArtworkCommentRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'comment_text' => ['required', 'string', new MaxWordCount],
+            'photo' => ['required', 'image', 'max:2048'],
         ];
     }
 
     public function bodyParameters()
     {
         return [
-            'comment_text' => [
-                'description' => 'The text of the comment',
-                'example' => 'This is a comment',
+            'photo' => [
+                'description' => 'The photo of the user',
             ],
         ];
     }

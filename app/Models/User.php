@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Searchable;
 
     /**
      * The attributes that are mass assignable.
@@ -131,5 +132,30 @@ class User extends Authenticatable
     public function scopeArtists($query): void
     {
         $query->where('role', 'artist');
+    }
+
+    /**
+     * Get the name of the index associated with the model.
+     */
+    public function searchableAs(): string
+    {
+        return 'users_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray()
+    {
+        return [
+            'id' => (string) $this->id,
+            'username' => $this->username,
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'bio' => $this->bio,
+            'created_at' => $this->created_at->timestamp,
+        ];
     }
 }

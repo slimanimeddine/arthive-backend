@@ -9,6 +9,9 @@ use App\Models\Artwork;
 use App\Models\ArtworkPhoto;
 use Illuminate\Http\Request;
 
+/**
+ * @group Artwork Photos
+ */
 class ArtworkPhotoController extends Controller
 {
     /**

@@ -55,6 +55,29 @@ class ArtworkController extends Controller
     }
 
     /**
+     * List Searched Published Artworks
+     * 
+     * Retrieve a list of published artworks that match a search query
+     * 
+     * @urlParam search string required The search query
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork with=user paginate=10
+     */
+    public function listSearchedPublishedArtworks(Request $request, string $search)
+    {
+        $query = Artwork::search($search)
+            ->published()
+            ->with(['user'])
+            ->paginate(10);
+
+        return ArtworkResource::collection($query);
+    }
+
+    /**
      * List Trending Published Artworks
      * 
      * Retrieve a list of trending published artworks

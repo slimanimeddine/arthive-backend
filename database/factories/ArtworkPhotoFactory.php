@@ -17,8 +17,9 @@ class ArtworkPhotoFactory extends Factory
      */
     public function definition(): array
     {
+        $selectedPhoto = fake()->numberBetween(1, 20);
         return [
-            'path' => fake()->image(),
+            'path' => "/storage/seeding-photos/{$selectedPhoto}.jpeg",
             'artwork_id' => Artwork::factory(),
             'is_main' => fake()->boolean()
         ];

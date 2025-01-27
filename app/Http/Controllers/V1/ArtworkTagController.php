@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\TagResource;
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -46,5 +48,21 @@ class ArtworkTagController extends Controller
         return response()->json([
             'data' => $tags,
         ]);
+    }
+
+    /**
+     * List Tags
+     * 
+     * Retrieve a list of all tags
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\TagResource
+     * 
+     * @apiResourceModel App\Models\Tag
+     */
+    public function listTags()
+    {
+        $query = Tag::all();
+
+        return TagResource::collection($query);
     }
 }

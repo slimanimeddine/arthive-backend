@@ -7,6 +7,7 @@ use App\Http\Controllers\V1\ArtworkPhotoController;
 use App\Http\Controllers\V1\ArtworkTagController;
 use App\Http\Controllers\V1\AuthController;
 use App\Http\Controllers\V1\FollowController;
+use App\Http\Controllers\V1\NotificationController;
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ Route::post('sign-out', [AuthController::class, 'signOut'])->middleware('auth:sa
 
 // artwork routes
 Route::get('artworks/published', [ArtworkController::class, 'listPublishedArtworks']);
+Route::get('artworks/published/search/{search}', [ArtworkController::class, 'listSearchedPublishedArtworks'])->whereAlpha('search');
 Route::get('artworks/published/trending/{count}', [ArtworkController::class, 'listTrendingPublishedArtworks'])->whereNumber('count');
 Route::get('artworks/published/new/{count}', [ArtworkController::class, 'listNewPublishedArtworks'])->whereNumber('count');
 Route::get('artworks/published/{id}', [ArtworkController::class, 'showPublishedArtwork'])->whereNumber('id');
@@ -29,6 +31,7 @@ Route::put('artworks/drafts/{id}', [ArtworkController::class, 'publishArtworkDra
 // user routes
 Route::get('users', [UserController::class, 'listUsers']);
 Route::get('users/verified/{count}', [UserController::class, 'listVerifiedUsers'])->whereNumber('count');
+Route::get('users/search/{search}', [UserController::class, 'listSearchedUsers'])->whereAlpha('search');
 Route::get('users/{username}', [UserController::class, 'showUser']);
 Route::get('authenticated', [UserController::class, 'showAuthenticatedUser'])->middleware('auth:sanctum');
 Route::put('authenticated', [UserController::class, 'updateUser'])->middleware('auth:sanctum');
@@ -61,8 +64,14 @@ Route::middleware(['throttle:update-comment'])->group(function () {
 
 // tags routes
 Route::get('users/{username}/artwork-tags', [ArtworkTagController::class, 'listUserArtworkTags']);
+Route::get('tags', [ArtworkTagController::class, 'listTags']);
 
 // photos routes
 Route::post('artworks/drafts/{id}/artwork-photos', [ArtworkPhotoController::class, 'uploadArtworkPhotos'])->middleware('auth:sanctum')->whereNumber('id');
 Route::put('artwork-photos/{id}', [ArtworkPhotoController::class, 'setArtworkPhotoAsMain'])->middleware('auth:sanctum')->whereNumber('id');
 Route::delete('artwork-photos/{id}', [ArtworkPhotoController::class, 'deleteArtworkPhoto'])->middleware('auth:sanctum')->whereNumber('id');
+
+// notifications routes
+Route::get('authenticated/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');
+Route::put('authenticated/notifications/unread/{id}', [NotificationController::class, 'markNotificationAsRead'])->middleware('auth:sanctum')->whereNumber('id');
+Route::put('authenticated/notifications/unread', [NotificationController::class, 'markAllNotificationsAsRead'])->middleware('auth:sanctum')->whereNumber('id');

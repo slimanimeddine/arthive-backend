@@ -74,6 +74,28 @@ class UserController extends Controller
     }
 
     /**
+     * List Searched Users
+     * 
+     * Retrieve a list of users that match a search query
+     * 
+     * @urlParam search string required The search query
+     * 
+     * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * 
+     * @apiResourceModel App\Models\User with=artworks paginate=10
+     */
+    public function listSearchedUsers(Request $request, string $search)
+    {
+        $query = User::search($search)
+            ->artists()
+            ->paginate(10);
+
+        return UserResource::collection($query);
+    }
+
+    /**
      * Show User
      * 
      * Retrieve a single user by username

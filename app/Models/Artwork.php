@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Laravel\Scout\Searchable;
 
 class Artwork extends Model
 {
-    use HasFactory;
+    use Searchable, HasFactory;
 
     protected $fillable = [
         'title',
@@ -131,5 +132,28 @@ class Artwork extends Model
         return new Attribute(
             get: fn() => $artworkMainPhoto ? $artworkMainPhoto->path : null,
         );
+    }
+
+    /**
+     * Get the name of the index associated with the model.
+     */
+    public function searchableAs(): string
+    {
+        return 'artworks_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array<string, mixed>
+     */
+    public function toSearchableArray()
+    {
+        return [
+            'id' => (string) $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'created_at' => $this->created_at->timestamp,
+        ];
     }
 }

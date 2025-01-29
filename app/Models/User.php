@@ -158,4 +158,12 @@ class User extends Authenticatable
             'created_at' => $this->created_at->timestamp,
         ];
     }
+
+    /**
+     * Determine if the model should be searchable.
+     */
+    public function shouldBeSearchable(): bool
+    {
+        return $this->role === 'artist';
+    }
 }

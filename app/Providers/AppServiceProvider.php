@@ -71,5 +71,19 @@ class AppServiceProvider extends ServiceProvider
                 Limit::perDay(100)->by('day' . $request->user()->id . $request->route('id')),
             ];
         });
+
+        RateLimiter::for('create-draft', function (Request $request) {
+            return [
+                Limit::perDay(30)->by('day' . $request->user()->id . $request->route('id')),
+            ];
+        });
+
+        RateLimiter::for('upload-photos', function (Request $request) {
+            return [
+                Limit::perHour(30)->by('hour' . $request->user()->id . $request->route('id')),
+                Limit::perDay(3000)->by('day' . $request->user()->id . $request->route('id')),
+            ];
+        });
+
     }
 }

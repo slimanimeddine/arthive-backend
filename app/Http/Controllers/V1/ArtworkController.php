@@ -4,6 +4,7 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\CreateArtworkDraftRequest;
+use App\Http\Requests\V1\UpdateArtworkDraftRequest;
 use App\Http\Resources\V1\ArtworkResource;
 use App\Models\Artwork;
 use App\Models\Tag;
@@ -230,6 +231,10 @@ class ArtworkController extends Controller
     {
         $authenticatedUser = $request->user();
 
+        if ($authenticatedUser->cannot('createArtworkDraft', Artwork::class)) {
+            abort(403);
+        }
+
         $artwork = Artwork::create([
             'title' => $request->title,
             'description' => $request->description,
@@ -256,9 +261,76 @@ class ArtworkController extends Controller
         return new ArtworkResource($artwork);
     }
 
-    public function updateArtworkDraft() {}
+    /**
+     * Update Artwork Draft
+     * 
+     * Update an artwork draft
+     * 
+     * @authenticated
+     * 
+     * @urlParam id integer required The id of the artwork
+     * 
+     * @apiResource App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork
+     */
+    public function updateArtworkDraft(UpdateArtworkDraftRequest $request, int $id)
+    {
+        $authenticatedUser = $request->user();
 
-    public function deleteArtworkDraft() {}
+        $artwork = Artwork::draft()->where('id', $id)->firstOrFail();
+
+        if ($authenticatedUser->cannot('updateArtworkDraft', $artwork)) {
+            abort(403);
+        }
+
+        $artwork->update([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+
+        $tags = $request->input('tags');
+
+        $artwork->tags()->detach();
+
+        foreach ($tags as $tagName) {
+            $tag = Tag::where('name', $tagName)->firstOrFail();
+
+            $artwork->tags()->attach($tag->id);
+        }
+
+        return new ArtworkResource($artwork);
+    }
+
+    /**
+     * Delete Artwork Draft
+     * 
+     * Delete an artwork draft
+     * 
+     * @authenticated
+     * 
+     * @urlParam id integer required The id of the artwork
+     * 
+     * @response {
+     *      "message": "Artwork draft deleted successfully"
+     * }
+     */
+    public function deleteArtworkDraft(Request $request, int $id)
+    {
+        $authenticatedUser = $request->user();
+
+        $artwork = Artwork::draft()->where('id', $id)->firstOrFail();
+
+        if ($authenticatedUser->cannot('deleteArtworkDraft', $artwork)) {
+            abort(403);
+        }
+
+        $artwork->delete();
+
+        return response()->json([
+            'message' => 'Artwork draft deleted successfully',
+        ]);
+    }
 
     /**
      * Publish Artwork Draft

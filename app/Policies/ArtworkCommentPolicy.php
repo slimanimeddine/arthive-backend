@@ -12,7 +12,9 @@ class ArtworkCommentPolicy
      */
     public function updateArtworkComment(User $user, ArtworkComment $artworkComment): bool
     {
-        return $user->id === $artworkComment->user_id;
+        $isArtist = $user->role === 'artist';
+        $isOwner = $user->id === $artworkComment->user_id;
+        return $isArtist && $isOwner;
     }
 
     /**
@@ -20,6 +22,8 @@ class ArtworkCommentPolicy
      */
     public function deleteArtworkComment(User $user, ArtworkComment $artworkComment): bool
     {
-        return $user->id === $artworkComment->user_id;
+        $isArtist = $user->role === 'artist';
+        $isOwner = $user->id === $artworkComment->user_id;
+        return $isArtist && $isOwner;
     }
 }

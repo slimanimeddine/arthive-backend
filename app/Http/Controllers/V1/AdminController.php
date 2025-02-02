@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\SignInRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 /**
  * @group Admin
  */
-class AdminController extends Controller
+class AdminController extends ApiController
 {
     /**
      * Admin Sign In
@@ -19,32 +18,33 @@ class AdminController extends Controller
      * 
      * @unauthenticated
      * 
-     * @response 200 {
+     * @response 200 scenario=success {
      *  "message": "Authenticated",
      *  "data": {
      *      "token": "{YOUR_AUTH_KEY}",
      *      "id": 1
      *  },
+     *  "status": 200
+     * }
+     * 
+     * @response 401 scenario="Invalid credentials" {
+     *      "message": "Invalid credentials",
+     *      "status": 401
      * }
      */
     public function adminSignIn(SignInRequest $request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
-            return response()->json([
-                'message' => 'Invalid credentials',
-            ], 401);
+            return $this->error('Invalid credentials', 401);
         }
 
         $user = User::where('role', 'admin')->where('email', $request->email)->firstOrFail();
 
         $token = $user->createToken('authToken')->plainTextToken;
 
-        return response()->json([
-            'message' => 'Authenticated',
-            'data' => [
-                'token' => $token,
-                'id' => $user->id,
-            ],
-        ], 200);
+        return $this->success('Authenticated', [
+            'token' => $token,
+            'id' => $user->id,
+        ]);
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\FollowResource;
 use App\Http\Resources\V1\UserResource;
 use App\Models\Follow;
@@ -13,7 +12,7 @@ use Illuminate\Http\Request;
 /**
  * @group Follows
  */
-class FollowController extends Controller
+class FollowController extends ApiController
 {
     /**
      * Follow User
@@ -22,20 +21,36 @@ class FollowController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the user to follow
+     * @urlParam userId integer required The ID of the user to follow
      * 
-     * @apiResource App\Http\Resources\V1\FollowResource
+     * @apiResource scenario=Success App\Http\Resources\V1\FollowResource
      * 
      * @apiResourceModel App\Models\Follow
+     *      
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to follow this user.",
+     *     "status": 403
+     * }
+     * 
+     * @response 404 scenario="User not found" {
+     *     "message": "The user you are trying to follow does not exist.",
+     *     "status": 404
+     * }
      */
-    public function followUser(Request $request, int $id)
+    public function followUser(Request $request, int $userId)
     {
         $authenticatedUser = $request->user();
 
-        $userToFollow = User::findOrFail($id);
+        $userToFollow = User::findOr($userId, function () {
+            return $this->error("The user you are trying to follow does not exist.", 404);
+        });
 
         if ($authenticatedUser->cannot('followUser', $userToFollow)) {
-            abort(403);
+            return $this->error("You are not authorized to follow this user.", 403);
         }
 
         $follow = Follow::create([
@@ -55,29 +70,54 @@ class FollowController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the user to unfollow
+     * @urlParam userId integer required The ID of the user to unfollow
      * 
-     * @response {
+     * @response 200 scenario=Success {
      *      'message' => 'You have successfully unfollowed this user.'
+     *      'data' => [],
+     *      'status' => 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to unfollow this user.",
+     *     "status": 403
+     * }
+     * 
+     * @response 404 scenario="User not found" {
+     *     "message": "The user you are trying to unfollow does not exist.",
+     *     "status": 404
+     * }
+     * 
+     * @response 404 scenario="Follow not found" {
+     *   "message": "You have not followed this user.",
+     *   "status": 404
      * }
      */
-    public function unfollowUser(Request $request, int $id)
+    public function unfollowUser(Request $request, int $userId)
     {
         $authenticatedUser = $request->user();
 
-        $userToUnfollow = User::findOrFail($id);
+        $userToUnfollow = User::findOr($userId, function () {
+            return $this->error("The user you are trying to unfollow does not exist.", 404);
+        });
 
         if ($authenticatedUser->cannot('unfollowUser', $userToUnfollow)) {
-            abort(403);
+            return $this->error("You are not authorized to unfollow this user.", 403);
         }
 
         $follow = Follow::where('follower_id', $authenticatedUser->id)
             ->where('followed_id', $userToUnfollow->id)
-            ->first();
+            ->firstOr(function () {
+                return $this->error("You have not followed this user.", 404);
+            });
 
         $follow->delete();
 
-        return response()->json(['message' => 'You have successfully unfollowed this user.']);
+        return $this->success('You have successfully unfollowed this user.');
     }
 
     /**
@@ -89,9 +129,13 @@ class FollowController extends Controller
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User paginate=10
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
      */
     public function listAuthenticatedUserFollowers(Request $request)
     {
@@ -111,9 +155,13 @@ class FollowController extends Controller
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User paginate=10
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
      */
     public function listAuthenticatedUserFollowing(Request $request)
     {

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\TagResource;
 use App\Models\Tag;
 use App\Models\User;
@@ -11,7 +10,7 @@ use Illuminate\Http\Request;
 /**
  * @group Artwork Tags
  */
-class ArtworkTagController extends Controller
+class ArtworkTagController extends ApiController
 {
     /**
      * List User Artwork Tags
@@ -20,8 +19,8 @@ class ArtworkTagController extends Controller
      * 
      * @urlParam username string required The username of the user
      * 
-     * @response {
-     *   "data": [
+     * @response 200 scenario=Success {
+     *      "data": [
      *          {
      *              "id": 1,
      *              "name": "abstract"
@@ -30,12 +29,21 @@ class ArtworkTagController extends Controller
      *              "id": 5,
      *              "name": "portrait"
      *          }
-     *   ]
+     *      ],
+     *      "message": "",
+     *      "status": 200
+     * }
+     * 
+     * @response 404 scenario="User not found" {
+     *      "message": "The user you are trying to retrieve his artwork tags does not exist.",
+     *      "status": 404
      * }
      */
     public function listUserArtworkTags(Request $request, string $username)
     {
-        $user = User::artists()->where('username', $username)->firstOrFail();
+        $user = User::artists()->where('username', $username)->firstOr(function () {
+            return $this->error("The user you are trying to retrieve his artwork tags does not exist.", 404);
+        });
 
         $tags = $user->artworks()
             ->published()
@@ -45,9 +53,7 @@ class ArtworkTagController extends Controller
             ->distinct()
             ->get();
 
-        return response()->json([
-            'data' => $tags,
-        ]);
+        return $this->success('', $tags);
     }
 
     /**
@@ -55,7 +61,7 @@ class ArtworkTagController extends Controller
      * 
      * Retrieve a list of all tags
      * 
-     * @apiResourceCollection App\Http\Resources\V1\TagResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\TagResource
      * 
      * @apiResourceModel App\Models\Tag
      */

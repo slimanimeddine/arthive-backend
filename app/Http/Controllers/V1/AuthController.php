@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
 use App\Models\User;
@@ -13,38 +12,32 @@ use Illuminate\Support\Facades\Hash;
 /**
  * @group Authentication
  */
-class AuthController extends Controller
+class AuthController extends ApiController
 {
     /**
      * Sign Up
      * 
      * Creates a new user
      * 
-     * @unauthenticated
-     * 
-     * @response 200 {
-     * "message": "User created successfully",
-     * "data": {
-     *      "id": 1 
-     * },
+     * @response 200 scenario=Success {
+     *      "message": "User created successfully",
+     *      "data": {
+     *          "id": 1 
+     *      },
+     *      "status": 200
      * }
      */
     public function signUp(SignUpRequest $request)
     {
-        $validated = $request->validated();
-
         $user = User::create([
-            'username' => $validated['username'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($$request->password),
         ]);
 
-        return response()->json([
-            'message' => 'User created successfully',
-            'data' => [
-                'id' => $user->id,
-            ],
-        ], 200);
+        return $this->success('User created successfully', [
+            'id' => $user->id
+        ]);
     }
 
     /**
@@ -52,35 +45,33 @@ class AuthController extends Controller
      * 
      * Signs in a user and returns an auth token
      * 
-     * @unauthenticated
+     * @response 200 scenario=Success {
+     *      "message": "Authenticated",
+     *      "data": {
+     *          "token": "{YOUR_AUTH_KEY}",
+     *          "id": 1
+     *      },
+     * }
      * 
-     * @response 200 {
-     *  "message": "Authenticated",
-     *  "data": {
-     *      "token": "{YOUR_AUTH_KEY}",
-     *      "id": 1
-     *  },
+     * @response 401 scenario="Invalid credentials" {
+     *      "message": "Invalid credentials",
+     *      "status": 401
      * }
      */
     public function signIn(SignInRequest $request)
     {
         if (!Auth::attempt($request->only('email', 'password'))) {
-            return response()->json([
-                'message' => 'Invalid credentials',
-            ], 401);
+            return $this->error('Invalid credentials', 401);
         }
 
         $user = User::firstWhere('email', $request->email);
 
         $token = $user->createToken('authToken')->plainTextToken;
 
-        return response()->json([
-            'message' => 'Authenticated',
-            'data' => [
-                'token' => $token,
-                'id' => $user->id,
-            ],
-        ], 200);
+        return $this->success('Authenticated', [
+            'token' => $token,
+            'id' => $user->id
+        ]);
     }
 
     /**
@@ -90,16 +81,20 @@ class AuthController extends Controller
      * 
      * @authenticated
      * 
-     * @response 200 {
+     * @response 200 scenario=Success {
      *      "message": "Signed out successfully",
+     *      "data": [],
+     *      "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
      * }
      */
     public function signOut(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
 
-        return response()->json([
-            'message' => 'Signed out successfully',
-        ], 200);
+        return $this->success('Signed out successfully');
     }
 }

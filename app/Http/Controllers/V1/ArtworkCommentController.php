@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\CreateArtworkCommentRequest;
 use App\Http\Requests\V1\UpdateArtworkCommentRequest;
 use App\Http\Resources\V1\ArtworkCommentResource;
@@ -14,7 +13,7 @@ use Illuminate\Http\Request;
 /**
  * @group Artwork Comments
  */
-class ArtworkCommentController extends Controller
+class ArtworkCommentController extends ApiController
 {
     /**
      * Post Artwork Comment
@@ -23,27 +22,47 @@ class ArtworkCommentController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the artwork to comment on
+     * @urlParam artworkId integer required The ID of the artwork to comment on
      * 
      * @bodyParam comment_text string required The text of the comment
      * 
-     * @apiResource App\Http\Resources\V1\ArtworkCommentResource
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
      * 
      * @apiResourceModel App\Models\ArtworkComment
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 404 scenario="Artwork not found" {
+     *     "message": "The artwork you are trying to comment on does not exist.",
+     *     "status": 404
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to post a comment on this artwork.",
+     *     "status": 403
+     * }
      */
-    public function postArtworkComment(CreateArtworkCommentRequest $request, int $id)
+    public function postArtworkComment(CreateArtworkCommentRequest $request, int $artworkId)
     {
-        $user = $request->user();
+        $authenticatedUser = $request->user();
 
-        $artwork = Artwork::findOrFail($id);
+        if ($authenticatedUser->cannot('postArtworkComment', Artwork::class)) {
+            return $this->error("You are not authorized to post a comment on this artwork.", 403);
+        }
+
+        $artwork = Artwork::published()->where('id', $artworkId)->firstOr(function () {
+            return $this->error("The artwork you are trying to comment on does not exist.", 404);
+        });
 
         $artworkComment = ArtworkComment::create([
-            'user_id' => $user->id,
+            'user_id' => $authenticatedUser->id,
             'artwork_id' => $artwork->id,
             'comment_text' => $request->comment_text,
         ]);
 
-        $artwork->user->notify(new ArtworkCommentNotification($user, $artwork));
+        $artwork->user->notify(new ArtworkCommentNotification($authenticatedUser, $artwork));
 
         return new ArtworkCommentResource($artworkComment);
     }
@@ -55,22 +74,38 @@ class ArtworkCommentController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the comment to update
+     * @urlParam commentId integer required The ID of the comment to update
      * 
      * @bodyParam comment_text string required The text of the comment
      * 
-     * @apiResource App\Http\Resources\V1\ArtworkCommentResource
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
      * 
      * @apiResourceModel App\Models\ArtworkComment
+     * 
+     * @response 403 scenario=Unauthorized {
+     *      "message": "You are not authorized to update this comment.",
+     *      "status": 403
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 404 scenario="Comment not found" {
+     *    "message": "The comment you are trying to update on does not exist.",
+     *    "status": 404
+     * }
      */
-    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $id)
+    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $commentId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkComment = ArtworkComment::findOrFail($id);
+        $artworkComment = ArtworkComment::findOr($commentId, function () {
+            return $this->error("The comment you are trying to update on does not exist.", 404);
+        });
 
         if ($authenticatedUser->cannot('updateArtworkComment', $artworkComment)) {
-            abort(403);
+            return $this->error("You are not authorized to update this comment.", 403);
         }
 
         $artworkComment->update([
@@ -87,24 +122,42 @@ class ArtworkCommentController extends Controller
      * 
      * @authenticated
      * 
-     * @urlParam id integer required The ID of the comment to delete
+     * @urlParam commentId integer required The ID of the comment to delete
      * 
-     * @response {
-     *     'message' => 'You have successfully deleted the comment.'
+     * @response 200 scenario=Success {
+     *     'message' => 'You have successfully deleted the comment.',
+     *     'data' => [],
+     *     'status' => 200,
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *    "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to delete this comment.",
+     *     "status": 403
+     * }
+     * 
+     * @response 404 scenario="Comment not found" {
+     *    "message": "The comment you are trying to delete does not exist.",
+     *    "status": 404
      * }
      */
-    public function deleteArtworkComment(Request $request, int $id)
+    public function deleteArtworkComment(Request $request, int $commentId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkComment = ArtworkComment::findOrFail($id);
+        $artworkComment = ArtworkComment::findOr($commentId, function () {
+            return $this->error("The comment you are trying to delete does not exist.", 404);
+        });
 
         if ($authenticatedUser->cannot('deleteArtworkComment', $artworkComment)) {
-            abort(403);
+            return $this->error("You are not authorized to delete this comment.", 403);
         }
 
         $artworkComment->delete();
 
-        return response()->json(['message' => 'You have successfully deleted the comment.']);
+        return $this->success('You have successfully deleted this comment.');
     }
 }

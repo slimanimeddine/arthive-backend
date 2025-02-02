@@ -8,6 +8,14 @@ use App\Models\User;
 class ArtworkCommentPolicy
 {
     /**
+     * Determine whether the user can post a comment.
+     */
+    public function postArtworkComment(User $user): bool
+    {
+        return $user->role === 'artist';
+    }
+
+    /**
      * Determine whether user can update artworkComment.
      */
     public function updateArtworkComment(User $user, ArtworkComment $artworkComment): bool

@@ -2,19 +2,21 @@
 
 namespace App\Notifications;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
-class ArtistVerificationNotification extends Notification
+class ArtistVerificationRequestNotification extends Notification
 {
     use Queueable;
 
+    protected $user;
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -35,7 +37,7 @@ class ArtistVerificationNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'user' => $this->user
         ];
     }
 }

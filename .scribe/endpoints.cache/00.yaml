@@ -53,14 +53,24 @@ endpoints:
         status: 200
         content: |-
           {
-           "message": "Authenticated",
-           "data": {
-               "token": "{YOUR_AUTH_KEY}",
-               "id": 1
-           },
+               "message": "Authenticated",
+               "data": {
+                   "token": "{YOUR_AUTH_KEY}",
+                   "id": 1
+               },
           }
         headers: []
-        description: ''
+        description: Success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+               "message": "Invalid credentials",
+               "status": 401
+          }
+        headers: []
+        description: 'Invalid credentials'
         custom: []
     responseFields: []
     auth: []
@@ -129,13 +139,14 @@ endpoints:
         status: 200
         content: |-
           {
-          "message": "User created successfully",
-          "data": {
-               "id": 1
-          },
+               "message": "User created successfully",
+               "data": {
+                   "id": 1
+               },
+               "status": 200
           }
         headers: []
-        description: ''
+        description: Success
         custom: []
     responseFields: []
     auth: []
@@ -157,6 +168,7 @@ endpoints:
       authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -172,12 +184,26 @@ endpoints:
         content: |-
           {
                "message": "Signed out successfully",
+               "data": [],
+               "status": 200
           }
         headers: []
-        description: ''
+        description: Success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+               "message": "Unauthenticated"
+          }
+        headers: []
+        description: Unauthenticated
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Vfc1385a6abgdZEDkv6h4Pe'
     controller: null
     method: null
     route: null

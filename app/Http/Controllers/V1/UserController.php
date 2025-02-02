@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\UpdateUserPhotoRequest;
 use App\Http\Requests\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
@@ -18,7 +17,7 @@ use Illuminate\Support\Facades\Storage;
 /**
  * @group Users
  */
-class UserController extends Controller
+class UserController extends ApiController
 {
     /**
      * List Users
@@ -33,7 +32,7 @@ class UserController extends Controller
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User with=artworks paginate=10
      */
@@ -60,7 +59,7 @@ class UserController extends Controller
      * 
      * @urlParam count integer required The number of records to retrieve
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
      */
@@ -78,17 +77,17 @@ class UserController extends Controller
      * 
      * Retrieve a list of users that match a search query
      * 
-     * @urlParam search string required The search query
+     * @urlParam searchQuery string required The search query
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
-     * @apiResourceCollection App\Http\Resources\V1\UserResource
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User with=artworks paginate=10
      */
-    public function listSearchedUsers(Request $request, string $search)
+    public function listSearchedUsers(Request $request, string $searchQuery)
     {
-        $query = User::search($search)
+        $query = User::search($searchQuery)
             ->artists()
             ->paginate(10);
 
@@ -102,13 +101,20 @@ class UserController extends Controller
      * 
      * @urlParam username string required The username of the user
      * 
-     * @apiResource App\Http\Resources\V1\UserResource
+     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
+     * 
+     * @response 404 scenario="User not found" {
+     *     "message": "The user you are trying to retrieve does not exist.",
+     *     "status": 404
+     * }
      */
     public function showUser(Request $request, string $username)
     {
-        $query = User::artists()->where('username', $username)->firstOrFail();
+        $query = User::artists()->where('username', $username)->firstOr(function () {
+            return $this->error("The user you are trying to retrieve does not exist.", 404);
+        });
 
         return new UserResource($query);
     }
@@ -120,44 +126,18 @@ class UserController extends Controller
      * 
      * @authenticated
      * 
-     * @apiResource App\Http\Resources\V1\UserResource
+     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
      */
     public function showAuthenticatedUser(Request $request)
     {
         return new UserResource($request->user());
     }
-
-    // /**
-    //  * List Authenticated User Notifications
-    //  * 
-    //  * Retrieve a list of all the notifications sent to the currently authenticated user
-    //  * 
-    //  * @authenticated
-    //  * 
-    //  * @response {
-    //  *      "data" => [
-    //  *          "notifications" => [
-    //  *              {
-    //  * 
-    //  *              }
-    //  *          ]
-    //  *      ]
-    //  * }
-    //  */
-    // public function listAuthenticatedUserNotifications(Request $request)
-    // {
-    //     $authenticatedUser = $request->user();
-
-    //     $notifications = $authenticatedUser->notifications;
-
-    //     return response()->json([
-    //         'data' => [
-    //             'notifications' => $notifications
-    //         ]
-    //     ]);
-    // }
 
     /**
      * Update User
@@ -166,16 +146,26 @@ class UserController extends Controller
      * 
      * @authenticated
      * 
-     * @apiResource App\Http\Resources\V1\UserResource
+     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to update this user.",
+     *     "status": 403
+     * }
+     * 
      */
     public function updateUser(UpdateUserRequest $request)
     {
         $authenticatedUser = $request->user();
 
         if ($authenticatedUser->cannot('updateUser', $authenticatedUser)) {
-            abort(403);
+            return $this->error("You are not authorized to update this user.", 403);
         }
 
         $authenticatedUser->update($request->validated());
@@ -190,16 +180,25 @@ class UserController extends Controller
      * 
      * @authenticated
      * 
-     * @apiResource App\Http\Resources\V1\UserResource
+     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *     "message": "You are not authorized to update this user.",
+     *     "status": 403
+     * }
      */
     public function updateUserPhoto(UpdateUserPhotoRequest $request)
     {
         $authenticatedUser = $request->user();
 
         if ($authenticatedUser->cannot('updateUser', $authenticatedUser)) {
-            abort(403);
+            return $this->error("You are not authorized to update this user.", 403);
         }
 
         if ($authenticatedUser->photo && Storage::disk('public')->exists($authenticatedUser->photo)) {

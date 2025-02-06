@@ -10,19 +10,9 @@ class ArtworkPolicy
     /**
      * Determine whether the user can create a draft.
      */
-    public function createArtworkDraft(User $user): bool
+    public function createArtwork(User $user): bool
     {
-        return $user->role === 'artist';
-    }
-
-    /**
-     * Determine whether the user can publish the model.
-     */
-    public function publishArtworkDraft(User $user, Artwork $artwork): bool
-    {
-        $isArtist = $user->role === 'artist';
-        $isOwner = $user->id === $artwork->user_id;
-        return $isArtist && $isOwner;
+        return $user->isArtist();
     }
 
     /**
@@ -30,17 +20,27 @@ class ArtworkPolicy
      */
     public function uploadArtworkPhotos(User $user, Artwork $artwork): bool
     {
-        $isArtist = $user->role === 'artist';
+        $isArtist = $user->isArtist();
         $isOwner = $user->id === $artwork->user_id;
         return $isArtist && $isOwner;
     }
 
     /**
-     * Determine whether user can delete artwork draft
+     * Determine whether user can update artwork
      */
-    public function deleteArtworkDraft(User $user, Artwork $artwork): bool
+    public function updateArtwork(User $user, Artwork $artwork): bool
     {
-        $isArtist = $user->role === 'artist';
+        $isArtist = $user->isArtist();
+        $isOwner = $user->id === $artwork->user_id;
+        return $isArtist && $isOwner;
+    }
+
+    /**
+     * Determine whether user can delete artwork
+     */
+    public function deleteArtwork(User $user, Artwork $artwork): bool
+    {
+        $isArtist = $user->isArtist();
         $isOwner = $user->id === $artwork->user_id;
         return $isArtist && $isOwner;
     }

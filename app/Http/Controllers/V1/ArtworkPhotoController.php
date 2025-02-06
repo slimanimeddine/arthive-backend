@@ -72,7 +72,7 @@ class ArtworkPhotoController extends ApiController
      * 
      * @authenticated
      * 
-     * @urlParam photoId integer required The id of the artwork photo
+     * @urlParam artworkPhotoId integer required The id of the artwork photo
      * 
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      * 
@@ -92,11 +92,11 @@ class ArtworkPhotoController extends ApiController
      *   "status": 404
      * }
      */
-    public function setArtworkPhotoAsMain(Request $request, int $photoId)
+    public function setArtworkPhotoAsMain(Request $request, int $artworkPhotoId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkPhoto = ArtworkPhoto::where('id', $photoId)->firstOr(function () {
+        $artworkPhoto = ArtworkPhoto::where('id', $artworkPhotoId)->firstOr(function () {
             return $this->error("The artwork photo you are trying to set as main does not exist.", 404);
         });
 
@@ -128,7 +128,7 @@ class ArtworkPhotoController extends ApiController
      * 
      * @authenticated
      * 
-     * @urlParam photoId integer required The id of the artwork photo
+     * @urlParam artworkPhotoId integer required The id of the artwork photo
      * 
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
@@ -160,11 +160,11 @@ class ArtworkPhotoController extends ApiController
      *    "status": 400
      * }
      */
-    public function deleteArtworkPhoto(Request $request, int $photoId)
+    public function deleteArtworkPhoto(Request $request, int $artworkPhotoId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkPhoto = ArtworkPhoto::findOr($photoId, function () {
+        $artworkPhoto = ArtworkPhoto::findOr($artworkPhotoId, function () {
             return $this->error("The artwork photo you are trying to delete does not exist.", 404);
         });
 

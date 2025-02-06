@@ -12,7 +12,7 @@ class ArtworkPhotoPolicy
      */
     public function setArtworkPhotoAsMain(User $user, ArtworkPhoto $artworkPhoto): bool
     {
-        $isArtist = $user->role === 'artist';
+        $isArtist = $user->isArtist();
         $isOwner = $user->id === $artworkPhoto->artwork->user_id;
         return $isArtist && $isOwner;
     }
@@ -22,7 +22,7 @@ class ArtworkPhotoPolicy
      */
     public function deleteArtworkPhoto(User $user, ArtworkPhoto $artworkPhoto): bool
     {
-        $isArtist = $user->role === 'artist';
+        $isArtist = $user->isArtist();
         $isOwner = $user->id === $artworkPhoto->artwork->user_id;
         return $isArtist && $isOwner;
     }

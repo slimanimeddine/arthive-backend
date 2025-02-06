@@ -33,6 +33,16 @@ class User extends Authenticatable
         'role'
     ];
 
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isArtist(): bool
+    {
+        return $this->role === 'artist';
+    }
+
     /**
      * Get the artworks created by the user (artist).
      */
@@ -165,6 +175,6 @@ class User extends Authenticatable
      */
     public function shouldBeSearchable(): bool
     {
-        return $this->role === 'artist';
+        return $this->isArtist();
     }
 }

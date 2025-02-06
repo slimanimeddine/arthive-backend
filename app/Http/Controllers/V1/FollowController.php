@@ -121,13 +121,17 @@ class FollowController extends ApiController
     }
 
     /**
-     * List Authenticated User Followers
+     * List Authenticated User Follows
      * 
-     * Retrieve a list of users following the currently authenticated user
+     * Retrieve a list of users following or followed by the currently authenticated user
      * 
      * @authenticated
      * 
-     * @queryParam page string The page number to fetch. Example: 1
+     * @queryParam filter[follows] string required If followers retrieve the followers of the authenticated user else the following. Enum: followers, following. Example: follows=followers
+     * 
+     * @queryParam page integer The page number to fetch. Example: 1
+     * 
+     * @queryParam perPage integer The number of items to fetch per page. Example: 10
      * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
@@ -137,38 +141,16 @@ class FollowController extends ApiController
      *      "message": "Unauthenticated"
      * }
      */
-    public function listAuthenticatedUserFollowers(Request $request)
+    public function listAuthenticatedUserFollows(Request $request)
     {
         $authenticatedUser = $request->user();
 
-        $followers = $authenticatedUser->followers()->paginate(10);
+        $perPage = $request->query('perPage', 10);
 
-        return UserResource::collection($followers);
-    }
+        $followers = $request->query('filter[follows]', 'followers');
 
-    /**
-     * List Authenticated User Following
-     * 
-     * Retrieve a list of users the authenticated user is following
-     * 
-     * @authenticated
-     * 
-     * @queryParam page string The page number to fetch. Example: 1
-     * 
-     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
-     * 
-     * @apiResourceModel App\Models\User paginate=10
-     * 
-     * @response 401 scenario=Unauthenticated {
-     *      "message": "Unauthenticated"
-     * }
-     */
-    public function listAuthenticatedUserFollowing(Request $request)
-    {
-        $authenticatedUser = $request->user();
+        $query = $followers ? $authenticatedUser->followers()->paginate($perPage) : $authenticatedUser->followed()->paginate($perPage);
 
-        $following = $authenticatedUser->following()->paginate(10);
-
-        return UserResource::collection($following);
+        return UserResource::collection($query);
     }
 }

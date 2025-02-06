@@ -93,10 +93,10 @@ class AppServiceProvider extends ServiceProvider
             ];
         });
 
-        RateLimiter::for('create-draft', function (Request $request) {
+        RateLimiter::for('create-artwork', function (Request $request) {
             return [
                 Limit::perDay(30)->by('day' . $request->user()->id . $request->route('id'))->response(function () {
-                    return $this->error('You have reached the daily limit for creating drafts.', 429);
+                    return $this->error('You have reached the daily limit for creating artworks.', 429);
                 }),
             ];
         });

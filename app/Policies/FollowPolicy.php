@@ -12,9 +12,9 @@ class FollowPolicy
      */
     public function followUser(User $user, User $userToFollow): bool
     {
-        $isUserArtist = $user->role === 'artist';
+        $isUserArtist = $user->isArtist();
 
-        $isUserToFollowArtist = $userToFollow->role === 'artist';
+        $isUserToFollowArtist = $userToFollow->isArtist();
 
         $sameUser = $user->id === $userToFollow->id;
 
@@ -30,9 +30,9 @@ class FollowPolicy
      */
     public function unfollowUser(User $user, User $userToUnfollow): bool
     {
-        $isUserArtist = $user->role === 'artist';
+        $isUserArtist = $user->isArtist();
 
-        $isUserToUnfollowArtist = $userToUnfollow->role === 'artist';
+        $isUserToUnfollowArtist = $userToUnfollow->isArtist();
 
         $sameUser = $user->id === $userToUnfollow->id;
 

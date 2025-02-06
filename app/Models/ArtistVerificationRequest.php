@@ -13,7 +13,7 @@ class ArtistVerificationRequest extends Model
     protected $fillable = [
         'user_id',
         'status',
-        'notes',
+        'reason',
     ];
 
     /**

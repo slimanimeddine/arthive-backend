@@ -3,6 +3,7 @@
 namespace App\Http\Requests\V1;
 
 use App\Rules\MaxWordCount;
+use App\Rules\MinWordCount;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateUserRequest extends FormRequest
@@ -15,12 +16,13 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => ['required', 'string', 'max:255', 'unique:users,username'],
-            'first_name' => ['string', 'max:255'],
-            'last_name' => ['string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
-            'country' => ['string', 'max:255'],
-            'bio' => ['string', new MaxWordCount],
+            'username' => ['sometimes', 'string', 'min:10', 'max:255', 'unique:users,username'],
+            'first_name' => ['sometimes', 'string', 'min:10', 'max:255'],
+            'last_name' => ['sometimes', 'string', 'min:10', 'max:255'],
+            'email' => ['sometimes', 'string', 'email', 'unique:users,email'],
+            'country' => ['sometimes', 'string', 'min:10', 'max:255'],
+            'bio' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
+            'photo' => ['sometimes', 'image', 'max:2048'],
         ];
     }
 
@@ -50,6 +52,9 @@ class UpdateUserRequest extends FormRequest
             'bio' => [
                 'description' => 'The bio of the user',
                 'example' => 'This is a bio',
+            ],
+            'photo' => [
+                'description' => 'The photo of the user',
             ],
         ];
     }

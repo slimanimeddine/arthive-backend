@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\V1;
 
-use App\Http\Requests\V1\UpdateUserPhotoRequest;
 use App\Http\Requests\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
@@ -26,11 +25,19 @@ class UserController extends ApiController
      * 
      * @queryParam filter[country] string Filter artworks by country. Example: filter[country]=finland
      * 
-     * @queryParam filter[category] string Filter artworks by category. Example: filter[category]=ceramics
+     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: filter[tag]=ceramics
+     * 
+     * @queryParam filter[verified] integer Filter artists by verification status. Enum: 1, 0. Example: filter[verified]=1
+     * 
+     * @queryParam searchQuery string Search for users by username, first name, or last name. Example: searchQuery=lorem
      * 
      * @queryParam sort string Sort artworks by new, or popular. Example: sort=new
      * 
+     * @queryParam include string Include related artworks. Enum: artworks. Example: include=artworks
+     * 
      * @queryParam page string The page number to fetch. Example: 1
+     * 
+     * @queryParam perPage string The number of records to retrieve per page. Example: 10
      * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
@@ -38,58 +45,27 @@ class UserController extends ApiController
      */
     public function listUsers(Request $request)
     {
-        $query = QueryBuilder::for(User::artists()->with(['artworks']))
+        $perPage = $request->query('perPage', 10);
+
+        $searchQuery = $request->query('searchQuery');
+
+        $searchIds = isset($searchQuery) ? User::search($searchQuery)->get()->pluck('id')->toArray() : [];
+
+        $query = QueryBuilder::for(User::artists())
             ->allowedFilters([
                 AllowedFilter::exact('country'),
-                AllowedFilter::exact('category', 'artworks.tags.name'),
+                AllowedFilter::exact('tag', 'artworks.tags.name'),
+                AllowedFilter::scope('verified'),
             ])
             ->allowedSorts([
                 AllowedSort::custom('new', new NewSort()),
                 AllowedSort::custom('popular', new PopularSort()),
             ])
-            ->paginate(10);
-
-        return UserResource::collection($query);
-    }
-
-    /**
-     * List Verified Users
-     * 
-     * Retrieve a list of verified users
-     * 
-     * @urlParam count integer required The number of records to retrieve
-     * 
-     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
-     * 
-     * @apiResourceModel App\Models\User
-     */
-    public function listVerifiedUsers(Request $request, int $count)
-    {
-        $query = User::artists()->verified()
-            ->limit($count)
-            ->get();
-
-        return UserResource::collection($query);
-    }
-
-    /**
-     * List Searched Users
-     * 
-     * Retrieve a list of users that match a search query
-     * 
-     * @urlParam searchQuery string required The search query
-     * 
-     * @queryParam page string The page number to fetch. Example: 1
-     * 
-     * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
-     * 
-     * @apiResourceModel App\Models\User with=artworks paginate=10
-     */
-    public function listSearchedUsers(Request $request, string $searchQuery)
-    {
-        $query = User::search($searchQuery)
-            ->artists()
-            ->paginate(10);
+            ->allowedIncludes(['artworks'])
+            ->tap(function ($query) use ($searchIds) {
+                return empty($searchIds) ? $query :  $query->whereIn('users.id', $searchIds);
+            })
+            ->paginate($perPage);
 
         return UserResource::collection($query);
     }
@@ -140,7 +116,7 @@ class UserController extends ApiController
     }
 
     /**
-     * Update User
+     * Update Authenticated User
      * 
      * Update the currently authenticated user
      * 
@@ -160,7 +136,7 @@ class UserController extends ApiController
      * }
      * 
      */
-    public function updateUser(UpdateUserRequest $request)
+    public function updateAuthenticatedUser(UpdateUserRequest $request)
     {
         $authenticatedUser = $request->user();
 
@@ -168,47 +144,16 @@ class UserController extends ApiController
             return $this->error("You are not authorized to update this user.", 403);
         }
 
-        $authenticatedUser->update($request->validated());
+        $authenticatedUser->update($request->safe()->except('photo'));
 
-        return new UserResource($authenticatedUser);
-    }
+        if ($request->hasFile('photo')) {
+            if ($authenticatedUser->photo && Storage::disk('public')->exists($authenticatedUser->photo)) {
+                Storage::delete($authenticatedUser->photo);
+            }
 
-    /**
-     * Update User Photo
-     * 
-     * Update the profile picture of the currently authenticated user
-     * 
-     * @authenticated
-     * 
-     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
-     * 
-     * @apiResourceModel App\Models\User
-     * 
-     * @response 401 scenario=Unauthenticated {
-     *      "message": "Unauthenticated"
-     * }
-     * 
-     * @response 403 scenario=Unauthorized {
-     *     "message": "You are not authorized to update this user.",
-     *     "status": 403
-     * }
-     */
-    public function updateUserPhoto(UpdateUserPhotoRequest $request)
-    {
-        $authenticatedUser = $request->user();
-
-        if ($authenticatedUser->cannot('updateUser', $authenticatedUser)) {
-            return $this->error("You are not authorized to update this user.", 403);
+            $authenticatedUser->photo = $request->file('photo')->store('users');
+            $authenticatedUser->save();
         }
-
-        if ($authenticatedUser->photo && Storage::disk('public')->exists($authenticatedUser->photo)) {
-            Storage::delete($authenticatedUser->photo);
-        }
-
-        $authenticatedUser->photo = $request->file('photo')->store('users');
-        $authenticatedUser->save();
-
-        $authenticatedUser->update($request->validated());
 
         return new UserResource($authenticatedUser);
     }

@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Requests\V1\ReviewArtistVerificationRequestRequest;
 use App\Http\Resources\V1\ArtistVerificationRequestResource;
 use App\Models\ArtistVerificationRequest;
 use App\Models\User;
 use App\Notifications\ArtistVerificationRequestNotification;
+use App\Notifications\ArtistVerificationResponseNotification;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
 
 /**
- * @group Artist Verification Request
+ * @group Artist Verification Requests
  */
 class ArtistVerificationRequestController extends ApiController
 {
@@ -92,5 +95,74 @@ class ArtistVerificationRequestController extends ApiController
         }
 
         return new ArtistVerificationRequestResource($verificationRequest);
+    }
+
+    /**
+     * Review Artist Verification Request
+     * 
+     * Reviews an artist verification request
+     * 
+     * @authenticated
+     * 
+     * @urlParam artistVerificationRequestId required The ID of the artist verification request to review.
+     * 
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
+     * 
+     * @apiResourceModel App\Models\ArtistVerificationRequest
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *      "message": "You are not authorized to review this artist verification request.",
+     *      "status": 403
+     * }
+     * 
+     * @response 404 scenario="Artist verification request not found" {
+     *      "message": "The artist verification request you are trying to review does not exist.",
+     *      "status": 404
+     * }
+     */
+    public function reviewArtistVerificationRequest(ReviewArtistVerificationRequestRequest $request, int $artistVerificationRequestId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artistVerificationRequest = ArtistVerificationRequest::findOr($artistVerificationRequestId, function () {
+            return $this->error('The artist verification request you are trying to review does not exist.', 404);
+        });
+
+        if ($authenticatedUser->cannot('reviewArtistVerificationRequest', $artistVerificationRequest)) {
+            return $this->error('You are not authorized to review this artist verification request.', 403);
+        }
+
+        $status = $request->status;
+        $reason = $request->has('reason') ? $request->reason : '';
+
+        $artistVerificationRequest->update([
+            'status' => $status,
+            'reason' => $reason,
+        ]);
+
+        $artistVerificationRequest->user->notify(new ArtistVerificationResponseNotification($status, $reason));
+
+        return new ArtistVerificationRequestResource($artistVerificationRequest);
+    }
+
+    public function listArtistVerificationRequests(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        if ($authenticatedUser->cannot('listArtistVerificationRequests', ArtistVerificationRequest::class)) {
+            return $this->error('You are not authorized to list artist verification requests.', 403);
+        }
+
+        $query = QueryBuilder::for(ArtistVerificationRequest::with(['user']))
+            ->allowedFilters(['status'])
+            ->allowedSorts(['created_at', 'status'])
+            ->defaultSort('-created_at')
+            ->paginate(10);
+
+        return ArtistVerificationRequestResource::collection($query);
     }
 }

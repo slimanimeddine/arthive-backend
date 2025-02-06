@@ -15,4 +15,12 @@ class ArtistVerificationRequestPolicy
         $isVerified = $user->artist_verified_at !== null;
         return $isArtist && !$isVerified;
     }
+
+    /**
+     * Determine whether user can review an artist verification request.
+     */
+    public function reviewArtistVerificationRequest(User $user): bool
+    {
+        return $user->role === 'admin';
+    }
 }

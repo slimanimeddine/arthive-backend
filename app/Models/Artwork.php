@@ -21,6 +21,16 @@ class Artwork extends Model
         'user_id'
     ];
 
+    public function isPublished(): bool
+    {
+        return $this->status === 'published';
+    }
+
+    public function isDraft(): bool
+    {
+        return $this->status === 'draft';
+    }
+
     /**
      * The accessors to append to the model's array form.
      *
@@ -162,6 +172,6 @@ class Artwork extends Model
      */
     public function shouldBeSearchable(): bool
     {
-        return $this->status === 'published';
+        return $this->isPublished();
     }
 }

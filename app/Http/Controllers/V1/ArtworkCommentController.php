@@ -31,7 +31,7 @@ class ArtworkCommentController extends ApiController
      * @apiResourceModel App\Models\ArtworkComment
      * 
      * @response 401 scenario=Unauthenticated {
-     *      "message": "Unauthenticated"
+     *     "message": "Unauthenticated"
      * }
      * 
      * @response 404 scenario="Artwork not found" {
@@ -74,7 +74,7 @@ class ArtworkCommentController extends ApiController
      * 
      * @authenticated
      * 
-     * @urlParam commentId integer required The ID of the comment to update
+     * @urlParam artworkCommentId integer required The ID of the comment to update
      * 
      * @bodyParam comment_text string required The text of the comment
      * 
@@ -96,11 +96,11 @@ class ArtworkCommentController extends ApiController
      *    "status": 404
      * }
      */
-    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $commentId)
+    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $artworkCommentId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkComment = ArtworkComment::findOr($commentId, function () {
+        $artworkComment = ArtworkComment::findOr($artworkCommentId, function () {
             return $this->error("The comment you are trying to update on does not exist.", 404);
         });
 
@@ -122,7 +122,7 @@ class ArtworkCommentController extends ApiController
      * 
      * @authenticated
      * 
-     * @urlParam commentId integer required The ID of the comment to delete
+     * @urlParam artworkCommentId integer required The ID of the comment to delete
      * 
      * @response 200 scenario=Success {
      *     'message' => 'You have successfully deleted the comment.',
@@ -144,11 +144,11 @@ class ArtworkCommentController extends ApiController
      *    "status": 404
      * }
      */
-    public function deleteArtworkComment(Request $request, int $commentId)
+    public function deleteArtworkComment(Request $request, int $artworkCommentId)
     {
         $authenticatedUser = $request->user();
 
-        $artworkComment = ArtworkComment::findOr($commentId, function () {
+        $artworkComment = ArtworkComment::findOr($artworkCommentId, function () {
             return $this->error("The comment you are trying to delete does not exist.", 404);
         });
 

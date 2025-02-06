@@ -13,7 +13,7 @@ class ArtworkLikePolicy
      */
     public function likeArtwork(User $user, Artwork $artwork): bool
     {
-        $isUserArtist = $user->role === 'artist';
+        $isUserArtist = $user->isArtist();
 
         $alreadyLiked = ArtworkLike::where('user_id', $user->id)
             ->where('artwork_id', $artwork->id)
@@ -27,7 +27,7 @@ class ArtworkLikePolicy
      */
     public function unlikeArtwork(User $user, Artwork $artwork): bool
     {
-        $isUserArtist = $user->role === 'artist';
+        $isUserArtist = $user->isArtist();
 
         $alreadyLiked = ArtworkLike::where('user_id', $user->id)
             ->where('artwork_id', $artwork->id)

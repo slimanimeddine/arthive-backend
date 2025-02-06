@@ -4,9 +4,10 @@ namespace App\Http\Requests\V1;
 
 use App\Rules\ExactlyOneMainArtworkPhotoExists;
 use App\Rules\MaxWordCount;
+use App\Rules\MinWordCount;
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateArtworkDraftRequest extends FormRequest
+class CreateArtworkRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -20,7 +21,7 @@ class CreateArtworkDraftRequest extends FormRequest
             'photos.*.file' => ['required', 'image', 'max:2048'],
             'photos.*.is_main' => ['required', 'boolean'],
             'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', new MaxWordCount],
+            'description' => ['required', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['required', 'array', 'min:1', 'max:3'],
             'tags.*' => ['required', 'string', 'unique:tags,name'],
         ];

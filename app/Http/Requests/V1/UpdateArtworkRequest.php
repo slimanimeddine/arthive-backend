@@ -3,9 +3,10 @@
 namespace App\Http\Requests\V1;
 
 use App\Rules\MaxWordCount;
+use App\Rules\MinWordCount;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateArtworkDraftRequest extends FormRequest
+class UpdateArtworkRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -15,10 +16,11 @@ class UpdateArtworkDraftRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string', new MaxWordCount],
-            'tags' => ['required', 'array', 'min:1', 'max:3'],
-            'tags.*' => ['required', 'string', 'unique:tags,name'],
+            'title' => ['sometimes', 'string', 'max:255', 'min:5'],
+            'description' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
+            'status' => ['sometimes', 'string', 'in:published'],
+            'tags' => ['sometimes', 'array', 'min:1', 'max:3'],
+            'tags.*' => ['sometimes', 'string', 'unique:tags,name'],
         ];
     }
 
@@ -32,6 +34,10 @@ class UpdateArtworkDraftRequest extends FormRequest
             'description' => [
                 'description' => 'The description of the artwork',
                 'example' => 'This is an artwork description',
+            ],
+            'status' => [
+                'description' => 'The status of the artwork',
+                'example' => 'published',
             ],
             'tags' => [
                 'description' => 'The tags of the artwork',

@@ -9,12 +9,16 @@ class ArtistVerificationResponseNotification extends Notification
 {
     use Queueable;
 
+    protected $status;
+    protected $reason;
+
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct(string $status, string $reason = '')
     {
-        //
+        $this->status = $status;
+        $this->reason = $reason;
     }
 
     /**
@@ -35,7 +39,8 @@ class ArtistVerificationResponseNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            //
+            'status' => $this->status,
+            'reason' => $this->reason,
         ];
     }
 }

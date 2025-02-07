@@ -64,13 +64,54 @@ class AuthController extends ApiController
             return $this->error('Invalid credentials', 401);
         }
 
-        $user = User::firstWhere('email', $request->email);
+        $user = User::artist()->where('email', $request->email)->firstOr(function () {
+            return $this->error('Invalid credentials', 401);
+        });
 
         $token = $user->createToken('authToken')->plainTextToken;
 
         return $this->success('Authenticated', [
             'token' => $token,
             'id' => $user->id
+        ]);
+    }
+
+    /**
+     * Admin Sign In
+     * 
+     * Signs in an admin user and returns an auth token
+     * 
+     * @unauthenticated
+     * 
+     * @response 200 scenario=success {
+     *  "message": "Authenticated",
+     *  "data": {
+     *      "token": "{YOUR_AUTH_KEY}",
+     *      "id": 1
+     *  },
+     *  "status": 200
+     * }
+     * 
+     * @response 401 scenario="Invalid credentials" {
+     *      "message": "Invalid credentials",
+     *      "status": 401
+     * }
+     */
+    public function adminSignIn(SignInRequest $request)
+    {
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return $this->error('Invalid credentials', 401);
+        }
+
+        $user = User::admin()->where('email', $request->email)->firstOr(function () {
+            return $this->error('Invalid credentials', 401);
+        });
+
+        $token = $user->createToken('authToken')->plainTextToken;
+
+        return $this->success('Authenticated', [
+            'token' => $token,
+            'id' => $user->id,
         ]);
     }
 

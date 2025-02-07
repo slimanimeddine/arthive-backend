@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\V1\AdminController;
 use App\Http\Controllers\V1\ArtistVerificationRequestController;
 use App\Http\Controllers\V1\ArtworkCommentController;
 use App\Http\Controllers\V1\ArtworkController;
@@ -74,14 +73,15 @@ Route::put('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 's
 Route::delete('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'deleteArtworkPhoto'])->middleware('auth:sanctum')->whereNumber('artworkPhotoId');
 
 // notifications routes
-Route::get('user/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');
-Route::put('user/notifications/unread/{notificationId}', [NotificationController::class, 'markNotificationAsRead'])->middleware('auth:sanctum')->whereNumber('notificationId');
-Route::put('user/notifications/unread', [NotificationController::class, 'markAllNotificationsAsRead'])->middleware('auth:sanctum');
+Route::get('users/me/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');
+Route::put('users/me/notifications/unread/{notificationId}', [NotificationController::class, 'markNotificationAsRead'])->middleware('auth:sanctum')->whereNumber('notificationId');
+Route::put('users/me/notifications/unread', [NotificationController::class, 'markAllNotificationsAsRead'])->middleware('auth:sanctum');
 
 // admin routes
-Route::post('admin/sign-in', [AdminController::class, 'adminSignIn']);
+Route::post('admin/sign-in', [AuthController::class, 'adminSignIn']);
 
 // artist verification request routes
+Route::get('artist-verification-requests', [ArtistVerificationRequestController::class, 'listArtistVerificationRequests']);
 Route::post('users/me/artist-verification-requests', [ArtistVerificationRequestController::class, 'submitArtistVerificationRequest'])->middleware('auth:sanctum');
 Route::put('artist-verification-requests/{artistVerificationRequestId}', [ArtistVerificationRequestController::class, 'reviewArtistVerificationRequest'])->middleware('auth:sanctum')->whereNumber('artistVerificationRequestId');
 

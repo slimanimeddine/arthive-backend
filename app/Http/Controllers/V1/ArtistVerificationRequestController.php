@@ -149,9 +149,28 @@ class ArtistVerificationRequestController extends ApiController
         return new ArtistVerificationRequestResource($artistVerificationRequest);
     }
 
+    /**
+     * List Artist Verification Requests
+     * 
+     * Retrieve a list of artist verification requests submitted by artists.
+     * 
+     * @authenticated
+     * 
+     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtistVerificationRequestResource
+     * 
+     * @apiResourceModel App\Models\ArtistVerificationRequest with=user paginate=10
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *     "message": "Unauthenticated"
+     * }
+     */
     public function listArtistVerificationRequests(Request $request)
     {
         $authenticatedUser = $request->user();
+
+        $perPage = $request->query('perPage', 10);
 
         if ($authenticatedUser->cannot('listArtistVerificationRequests', ArtistVerificationRequest::class)) {
             return $this->error('You are not authorized to list artist verification requests.', 403);
@@ -161,7 +180,7 @@ class ArtistVerificationRequestController extends ApiController
             ->allowedFilters(['status'])
             ->allowedSorts(['created_at', 'status'])
             ->defaultSort('-created_at')
-            ->paginate(10);
+            ->paginate($perPage);
 
         return ArtistVerificationRequestResource::collection($query);
     }

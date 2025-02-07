@@ -140,9 +140,17 @@ class User extends Authenticatable
     /**
      * Scope a query to only include users who are artists.
      */
-    public function scopeArtists($query): void
+    public function scopeArtist($query): void
     {
         $query->where('role', 'artist');
+    }
+
+    /**
+     * Scope a query to only include users who are admins.
+     */
+    public function scopeAdmin($query): void
+    {
+        $query->where('role', 'admin');
     }
 
     /**

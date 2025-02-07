@@ -11,7 +11,7 @@ class ArtistVerificationRequestPolicy
      */
     public function submitArtistVerificationRequest(User $user): bool
     {
-        $isArtist = $user->role === 'artist';
+        $isArtist = $user->isArtist();
         $isVerified = $user->artist_verified_at !== null;
         return $isArtist && !$isVerified;
     }
@@ -21,6 +21,14 @@ class ArtistVerificationRequestPolicy
      */
     public function reviewArtistVerificationRequest(User $user): bool
     {
-        return $user->role === 'admin';
+        return $user->isAdmin();
+    }
+
+    /**
+     * Determine whether user can list artist verification requests.
+     */
+    public function listArtistVerificationRequests(User $user): bool
+    {
+        return $user->isAdmin();
     }
 }

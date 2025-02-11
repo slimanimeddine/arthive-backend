@@ -38,7 +38,8 @@ Route::get('users/me', [UserController::class, 'showAuthenticatedUser'])->middle
 Route::put('users/me', [UserController::class, 'updateAuthenticatedUser'])->middleware('auth:sanctum');
 
 // follow routes
-Route::get('users/me/follows', [FollowController::class, 'listAuthenticatedUserFollows'])->middleware('auth:sanctum');
+Route::get('users/me/follows/followers', [FollowController::class, 'listAuthenticatedUserFollowers'])->middleware('auth:sanctum');
+Route::get('users/me/follows/following', [FollowController::class, 'listAuthenticatedUserFollowing'])->middleware('auth:sanctum');
 Route::middleware(['throttle:follow'])->group(function () {
     Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('userId');
     Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('userId');

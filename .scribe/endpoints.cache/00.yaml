@@ -203,7 +203,83 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer cb5f1aDhdaevV6ZPk63Eg48'
+      - 'Bearer e1akDvdc64a3fg8EbZV56Ph'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/admin/sign-in
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Admin Sign In'
+      description: 'Signs in an admin user and returns an auth token'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user attempting to sign in. Must be a valid email address.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The password associated with the user account.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+      password: password
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "message": "Authenticated",
+           "data": {
+               "token": "{YOUR_AUTH_KEY}",
+               "id": 1
+           },
+           "status": 200
+          }
+        headers: []
+        description: success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+               "message": "Invalid credentials",
+               "status": 401
+          }
+        headers: []
+        description: 'Invalid credentials'
+        custom: []
+    responseFields: []
+    auth: []
     controller: null
     method: null
     route: null

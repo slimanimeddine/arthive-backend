@@ -41,7 +41,7 @@ class ArtworkTagController extends ApiController
      */
     public function listUserArtworkTags(Request $request, string $username)
     {
-        $user = User::artists()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->firstOr(function () {
             return $this->error("The user you are trying to retrieve his artwork tags does not exist.", 404);
         });
 

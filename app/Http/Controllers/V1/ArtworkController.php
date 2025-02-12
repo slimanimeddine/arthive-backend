@@ -29,9 +29,9 @@ class ArtworkController extends ApiController
      * 
      * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
      * 
-     * @queryParam searchQuery string Search for artworks by title or description. Example: searchQuery=lorem
+     * @queryParam searchQuery string Search for artworks by title or description. Example: lorem
      * 
-     * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: sort=trending
+     * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
      * 
      * @queryParam page integer The page number to fetch. Example: 1
      * 
@@ -107,7 +107,7 @@ class ArtworkController extends ApiController
      * 
      * @urlParam username string required The username of the user
      * 
-     * @queryParam filter[tag] string Filter artworks by tag. Example: filter[tag]=abstract
+     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
@@ -124,7 +124,7 @@ class ArtworkController extends ApiController
      */
     public function listUserPublishedArtworks(Request $request, string $username)
     {
-        $user = User::artists()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->firstOr(function () {
             return $this->error("The user you are trying to retrieve his artworks does not exist.", 404);
         });
 
@@ -146,7 +146,7 @@ class ArtworkController extends ApiController
      * 
      * @authenticated
      * 
-     * @queryParam filter[status] string Filter artworks by status. Enum: draft, published. Example: filter[status]=published
+     * @queryParam filter[status] string Filter artworks by status. Enum: draft, published. Example: published
      * 
      * @queryParam page integer The page number to fetch. Example: 1
      * 
@@ -207,7 +207,7 @@ class ArtworkController extends ApiController
             'user_id' => $authenticatedUser->id,
         ]);
 
-        $photos = $request->input('photos');
+        $photos = $request->photos;
 
         foreach ($photos as $photo) {
             $artwork->artworkPhotos()->create([

@@ -17,29 +17,25 @@ class CreateArtworkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'photos' => ['required', 'array', 'min:1', 'max:10', new ExactlyOneMainArtworkPhotoExists],
-            'photos.*.file' => ['required', 'image', 'max:2048'],
-            'photos.*.is_main' => ['required', 'boolean'],
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'min:5', 'max:255'],
             'description' => ['required', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['required', 'array', 'min:1', 'max:3'],
-            'tags.*' => ['required', 'string', 'unique:tags,name'],
+            'tags.*' => ['required', 'string', 'distinct:strict', 'exists:tags,name'],
+            'photos' => ['required', 'array', 'min:1', 'max:10', 'required_array_keys:file,is_main'],
+            'photos.*.file' => ['required', 'image', 'max:2048'],
+            'photos.*.is_main' => ['required', 'boolean'],
+            'photos' => function ($attribute, $value, $fail) {
+                $trueCount = collect($value)->where('is_main', true)->count();
+                if ($trueCount !== 1) {
+                    $fail('The photos array must contain exactly one main photo.');
+                }
+            },
         ];
     }
 
     public function bodyParameters()
     {
         return [
-            'photos' => [
-                'description' => 'The photos of the artwork',
-            ],
-            'photos.*.file' => [
-                'description' => 'The file of the photo',
-            ],
-            'photos.*.is_main' => [
-                'description' => 'Set a photo as main or not',
-                'example' => 'true',
-            ],
             'title' => [
                 'description' => 'The title of the artwork',
                 'example' => 'Artwork Title',
@@ -55,6 +51,16 @@ class CreateArtworkRequest extends FormRequest
             'tags.*' => [
                 'description' => 'The tag of the artwork',
                 'example' => 'abstract',
+            ],
+            'photos' => [
+                'description' => 'The photos of the artwork',
+            ],
+            'photos.*.file' => [
+                'description' => 'The file of the photo',
+            ],
+            'photos.*.is_main' => [
+                'description' => 'Set a photo as main or not',
+                'example' => 'true',
             ],
         ];
     }

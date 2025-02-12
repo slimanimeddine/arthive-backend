@@ -18,7 +18,7 @@ class ArtworkFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(),
+            'title' => fake()->sentence(3),
             'description' => fake()->paragraph(),
             'status' => fake()->randomElement(['draft', 'published']),
             'user_id' => User::factory()

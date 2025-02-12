@@ -150,7 +150,7 @@ class ArtworkLikeController extends ApiController
      */
     public function listUserReceivedLikesCountByTag(Request $request, string $username)
     {
-        $user = User::artists()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->firstOr(function () {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
         });
 
@@ -191,7 +191,7 @@ class ArtworkLikeController extends ApiController
      */
     public function showUserReceivedLikesCount(Request $request, string $username)
     {
-        $user = User::artists()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->firstOr(function () {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
         });
 

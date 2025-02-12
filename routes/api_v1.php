@@ -21,8 +21,8 @@ Route::post('sign-out', [AuthController::class, 'signOut'])->middleware('auth:sa
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);
 Route::get('artworks/{artworkId}', [ArtworkController::class, 'showPublishedArtwork'])->whereNumber('artworkId');
-Route::get('users/{username}/artworks', [ArtworkController::class, 'listUserPublishedArtworks']);
 Route::get('users/me/artworks', [ArtworkController::class, 'listAuthenticatedUserArtworks'])->middleware('auth:sanctum');
+Route::get('users/{username}/artworks', [ArtworkController::class, 'listUserPublishedArtworks']);
 
 Route::middleware(['throttle:create-artwork'])->group(function () {
     Route::post('artworks', [ArtworkController::class, 'createArtwork'])->middleware('auth:sanctum');

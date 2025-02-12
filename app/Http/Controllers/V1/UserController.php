@@ -23,17 +23,17 @@ class UserController extends ApiController
      * 
      * Retrieve a list of all users
      * 
-     * @queryParam filter[country] string Filter artworks by country. Example: filter[country]=finland
+     * @queryParam filter[country] string Filter artworks by country. Example: finland
      * 
-     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: filter[tag]=ceramics
+     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: ceramics
      * 
-     * @queryParam filter[verified] integer Filter artists by verification status. Enum: 1, 0. Example: filter[verified]=1
+     * @queryParam filter[verified] integer Filter artists by verification status. Enum: 1, 0. Example: 1
      * 
-     * @queryParam searchQuery string Search for users by username, first name, or last name. Example: searchQuery=lorem
+     * @queryParam searchQuery string Search for users by username, first name, or last name. Example: lorem
      * 
-     * @queryParam sort string Sort artworks by new, or popular. Example: sort=new
+     * @queryParam sort string Sort artworks by new, or popular. Example: new
      * 
-     * @queryParam include string Include related artworks. Enum: artworks. Example: include=artworks
+     * @queryParam include string Include related artworks. Enum: artworks. Example: artworks
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
@@ -51,7 +51,7 @@ class UserController extends ApiController
 
         $searchIds = isset($searchQuery) ? User::search($searchQuery)->get()->pluck('id')->toArray() : [];
 
-        $query = QueryBuilder::for(User::artists())
+        $query = QueryBuilder::for(User::artist())
             ->allowedFilters([
                 AllowedFilter::exact('country'),
                 AllowedFilter::exact('tag', 'artworks.tags.name'),
@@ -88,7 +88,7 @@ class UserController extends ApiController
      */
     public function showUser(Request $request, string $username)
     {
-        $query = User::artists()->where('username', $username)->firstOr(function () {
+        $query = User::artist()->where('username', $username)->firstOr(function () {
             return $this->error("The user you are trying to retrieve does not exist.", 404);
         });
 

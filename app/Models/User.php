@@ -185,4 +185,14 @@ class User extends Authenticatable
     {
         return $this->isArtist();
     }
+
+    /**
+     * The channels the user receives notification broadcasts on.
+     */
+    public function receivesBroadcastNotificationsOn(): string
+    {
+        return $this->isArtist()
+            ? 'users.' . $this->id
+            : 'admins';
+    }
 }

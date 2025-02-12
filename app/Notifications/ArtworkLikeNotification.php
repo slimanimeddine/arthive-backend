@@ -31,7 +31,7 @@ class ArtworkLikeNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['database'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -43,7 +43,7 @@ class ArtworkLikeNotification extends Notification
     {
         return [
             'liker' => $this->liker,
-            'artwork' => $this->artwork
+            'artwork' => $this->artwork,
         ];
     }
 }

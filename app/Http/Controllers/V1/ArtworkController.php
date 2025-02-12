@@ -27,7 +27,7 @@ class ArtworkController extends ApiController
      * 
      * Retrieve a list of all published artworks
      * 
-     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: filter[tag]=graphic
+     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
      * 
      * @queryParam searchQuery string Search for artworks by title or description. Example: searchQuery=lorem
      * 

@@ -122,6 +122,8 @@ class UserController extends ApiController
      * 
      * @authenticated
      * 
+     * @header Content-Type multipart/form-data
+     * 
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      * 
      * @apiResourceModel App\Models\User

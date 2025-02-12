@@ -18,5 +18,7 @@ class DatabaseSeeder extends Seeder
         Artisan::call('db:seed --class=ArtworkSeeder');
         Artisan::call('db:seed --class=ArtworkCommentSeeder');
         Artisan::call('db:seed --class=ArtworkLikeSeeder');
+        Artisan::call('db:seed --class=FavoritesSeeder');
+        Artisan::call('db:seed --class=FollowsSeeder');
     }
 }

@@ -32,7 +32,7 @@ class AuthController extends ApiController
         $user = User::create([
             'username' => $request->username,
             'email' => $request->email,
-            'password' => Hash::make($$request->password),
+            'password' => Hash::make($request->password),
         ]);
 
         return $this->success('User created successfully', [
@@ -51,6 +51,7 @@ class AuthController extends ApiController
      *          "token": "{YOUR_AUTH_KEY}",
      *          "id": 1
      *      },
+     *      "status": 200
      * }
      * 
      * @response 401 scenario="Invalid credentials" {

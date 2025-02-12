@@ -6,81 +6,6 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/v1/sign-in
-    metadata:
-      groupName: Authentication
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Sign In'
-      description: 'Signs in a user and returns an auth token'
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: 'The email address of the user attempting to sign in. Must be a valid email address.'
-        required: true
-        example: johndoe@gmail.com
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      password:
-        name: password
-        description: 'The password associated with the user account.'
-        required: true
-        example: password
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanBodyParameters:
-      email: johndoe@gmail.com
-      password: password
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: |-
-          {
-               "message": "Authenticated",
-               "data": {
-                   "token": "{YOUR_AUTH_KEY}",
-                   "id": 1
-               },
-          }
-        headers: []
-        description: Success
-        custom: []
-      -
-        status: 401
-        content: |-
-          {
-               "message": "Invalid credentials",
-               "status": 401
-          }
-        headers: []
-        description: 'Invalid credentials'
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
     uri: api/v1/sign-up
     metadata:
       groupName: Authentication
@@ -157,6 +82,82 @@ endpoints:
   -
     httpMethods:
       - POST
+    uri: api/v1/sign-in
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Sign In'
+      description: 'Signs in a user and returns an auth token'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user attempting to sign in. Must be a valid email address.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The password associated with the user account.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+      password: password
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Authenticated",
+               "data": {
+                   "token": "{YOUR_AUTH_KEY}",
+                   "id": 1
+               },
+               "status": 200
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+               "message": "Invalid credentials",
+               "status": 401
+          }
+        headers: []
+        description: 'Invalid credentials'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
     uri: api/v1/sign-out
     metadata:
       groupName: Authentication
@@ -203,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vZ3heaaE68Vk6dbg1D5Pfc4'
+      - 'Bearer a3ecV4a6fgPEkh1db5Zv8D6'
     controller: null
     method: null
     route: null

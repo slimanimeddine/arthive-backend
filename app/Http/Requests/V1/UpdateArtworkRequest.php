@@ -20,7 +20,7 @@ class UpdateArtworkRequest extends FormRequest
             'description' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
             'status' => ['sometimes', 'string', 'in:published'],
             'tags' => ['sometimes', 'array', 'min:1', 'max:3'],
-            'tags.*' => ['sometimes', 'string', 'unique:tags,name'],
+            'tags.*' => ['sometimes', 'string', 'distinct:strict', 'exists:tags,name'],
         ];
     }
 

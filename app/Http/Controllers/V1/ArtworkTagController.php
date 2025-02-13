@@ -6,6 +6,7 @@ use App\Http\Resources\V1\TagResource;
 use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * @group Artwork Tags
@@ -67,7 +68,9 @@ class ArtworkTagController extends ApiController
      */
     public function listTags()
     {
-        $query = Tag::all();
+        $query = Cache::rememberForever('tags', function () {
+            return Tag::all();
+        });
 
         return TagResource::collection($query);
     }

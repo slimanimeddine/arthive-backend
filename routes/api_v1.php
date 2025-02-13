@@ -7,6 +7,7 @@ use App\Http\Controllers\V1\ArtworkLikeController;
 use App\Http\Controllers\V1\ArtworkPhotoController;
 use App\Http\Controllers\V1\ArtworkTagController;
 use App\Http\Controllers\V1\AuthController;
+use App\Http\Controllers\V1\CountryController;
 use App\Http\Controllers\V1\FavoriteController;
 use App\Http\Controllers\V1\FollowController;
 use App\Http\Controllers\V1\NotificationController;
@@ -88,3 +89,6 @@ Route::put('artist-verification-requests/{artistVerificationRequestId}', [Artist
 
 // favorite routes
 Route::get('users/me/favorites/artworks', [FavoriteController::class, 'listAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
+
+// country routes
+Route::get('countries', [CountryController::class, 'index']);

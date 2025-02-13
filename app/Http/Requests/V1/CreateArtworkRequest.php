@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\V1;
 
-use App\Rules\ExactlyOneMainArtworkPhotoExists;
 use App\Rules\MaxWordCount;
 use App\Rules\MinWordCount;
 use Illuminate\Foundation\Http\FormRequest;

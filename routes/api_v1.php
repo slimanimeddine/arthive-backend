@@ -34,17 +34,17 @@ Route::delete('artworks/{artworkId}', [ArtworkController::class, 'deleteArtwork'
 
 // user routes
 Route::get('users', [UserController::class, 'listUsers']);
-Route::get('users/{username}', [UserController::class, 'showUser']);
 Route::get('users/me', [UserController::class, 'showAuthenticatedUser'])->middleware('auth:sanctum');
-Route::put('users/me', [UserController::class, 'updateAuthenticatedUser'])->middleware('auth:sanctum');
+Route::get('users/{username}', [UserController::class, 'showUser']);
+Route::post('users/me', [UserController::class, 'updateAuthenticatedUser'])->middleware('auth:sanctum');
 
 // follow routes
 Route::get('users/me/follows/followers', [FollowController::class, 'listAuthenticatedUserFollowers'])->middleware('auth:sanctum');
 Route::get('users/me/follows/following', [FollowController::class, 'listAuthenticatedUserFollowing'])->middleware('auth:sanctum');
-Route::middleware(['throttle:follow'])->group(function () {
+// Route::middleware(['throttle:follow'])->group(function () {
     Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('userId');
     Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('userId');
-});
+// });
 
 // like routes
 Route::get('users/{username}/artwork-likes/received/count/by-tag', [ArtworkLikeController::class, 'listUserReceivedLikesCountByTag']);

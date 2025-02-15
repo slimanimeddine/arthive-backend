@@ -5,16 +5,12 @@ namespace App\Providers;
 use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
-use App\Models\ArtworkLike;
 use App\Models\ArtworkPhoto;
-use App\Models\Follow;
 use App\Models\User;
 use App\Policies\ArtistVerificationRequestPolicy;
 use App\Policies\ArtworkCommentPolicy;
-use App\Policies\ArtworkLikePolicy;
 use App\Policies\ArtworkPhotoPolicy;
 use App\Policies\ArtworkPolicy;
-use App\Policies\FollowPolicy;
 use App\Policies\UserPolicy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -40,10 +36,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // registering policies
-        Gate::policy(Follow::class, FollowPolicy::class);
-        Gate::policy(ArtworkLike::class, ArtworkLikePolicy::class);
-        Gate::policy(ArtworkComment::class, ArtworkCommentPolicy::class);
         Gate::policy(User::class, UserPolicy::class);
+        Gate::policy(ArtworkComment::class, ArtworkCommentPolicy::class);
         Gate::policy(Artwork::class, ArtworkPolicy::class);
         Gate::policy(ArtworkPhoto::class, ArtworkPhotoPolicy::class);
         Gate::policy(ArtistVerificationRequest::class, ArtistVerificationRequestPolicy::class);

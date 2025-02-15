@@ -23,7 +23,7 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
-        $selectedPhoto = fake()->numberBetween(1, 20);
+        $selectedPhoto = fake()->numberBetween(1, 40);
 
         return [
             'username' => fake()->unique()->userName(),
@@ -33,7 +33,7 @@ class UserFactory extends Factory
             'email_verified_at' => fake()->boolean() ? now() : null,
             'country' => fake()->country(),
             'bio' => fake()->paragraph(),
-            'photo' => fake()->boolean() ? "/storage/seeding-photos/{$selectedPhoto}.jpeg" : null,
+            'photo' => fake()->boolean() ? "artwork-seeding-photos/{$selectedPhoto}.jpeg" : null,
             'artist_verified_at' => fake()->boolean() ? now() : null,
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),

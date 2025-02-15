@@ -150,9 +150,9 @@ class FollowController extends ApiController
 
         $perPage = $request->query('perPage', 10);
 
-        $query = $authenticatedUser->followers()->paginate($perPage);
+        $followers = $authenticatedUser->followers()->paginate($perPage);
 
-        return UserResource::collection($query);
+        return UserResource::collection($followers);
     }
 
     /**
@@ -180,8 +180,8 @@ class FollowController extends ApiController
 
         $perPage = $request->query('perPage', 10);
 
-        $query = $authenticatedUser->following()->paginate($perPage);
+        $following = $authenticatedUser->following()->paginate($perPage);
 
-        return UserResource::collection($query);
+        return UserResource::collection($following);
     }
 }

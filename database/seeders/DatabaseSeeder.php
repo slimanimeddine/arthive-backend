@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Artisan::call('db:seed --class=CountriesSeeder');
         Artisan::call('db:seed --class=TagSeeder');
         Artisan::call('db:seed --class=UserSeeder');
         Artisan::call('db:seed --class=ArtworkSeeder');

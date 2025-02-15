@@ -89,7 +89,7 @@ class UserController extends ApiController
     public function showUser(Request $request, string $username)
     {
         $user = User::artist()->where('username', $username)->first();
-        
+
         if (!$user) {
             return $this->error("The user you are trying to retrieve does not exist.", 404);
         }
@@ -150,13 +150,15 @@ class UserController extends ApiController
 
         $authenticatedUser->update($request->safe()->except('photo'));
 
+        if ($request->has('email')) {
+            $authenticatedUser->update(['email_verified_at' => null]);
+        }
+
         if ($request->hasFile('photo')) {
             if ($authenticatedUser->photo && Storage::disk('public')->exists($authenticatedUser->photo)) {
                 Storage::delete($authenticatedUser->photo);
             }
-
-            $authenticatedUser->photo = $request->file('photo')->store('users');
-            $authenticatedUser->save();
+            $authenticatedUser->update(['photo' => $request->file('photo')->store('users')]);
         }
 
         return new UserResource($authenticatedUser);

@@ -16,7 +16,7 @@ class CreateArtworkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'min:5', 'max:255'],
+            'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['required', 'array', 'min:1', 'max:3'],
             'tags.*' => ['required', 'string', 'distinct:strict', 'exists:tags,name'],

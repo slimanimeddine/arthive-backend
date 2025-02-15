@@ -16,11 +16,11 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username' => ['sometimes', 'string', 'min:10', 'max:255', 'unique:users,username'],
-            'first_name' => ['sometimes', 'string', 'min:10', 'max:255'],
-            'last_name' => ['sometimes', 'string', 'min:10', 'max:255'],
+            'username' => ['sometimes', 'string', 'max:255', 'unique:users,username'],
+            'first_name' => ['sometimes', 'string', 'max:255'],
+            'last_name' => ['sometimes', 'string', 'max:255'],
             'email' => ['sometimes', 'string', 'email', 'unique:users,email'],
-            'country' => ['sometimes', 'string', 'min:10', 'max:255'],
+            'country' => ['sometimes', 'string', 'max:255', 'exists:countries,name'],
             'bio' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
             'photo' => ['sometimes', 'image', 'max:2048'],
         ];

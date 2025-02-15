@@ -49,7 +49,7 @@ class ArtworkController extends ApiController
 
         $searchIds = isset($searchQuery) ? Artwork::search($searchQuery)->get()->pluck('id')->toArray() : [];
 
-        $query = QueryBuilder::for(Artwork::published()->with(['user']))
+        $artworks = QueryBuilder::for(Artwork::published()->with(['user']))
             ->allowedFilters([
                 AllowedFilter::exact('tag', 'tags.name'),
             ])
@@ -64,7 +64,7 @@ class ArtworkController extends ApiController
             })
             ->paginate($perPage);
 
-        return ArtworkResource::collection($query);
+        return ArtworkResource::collection($artworks);
     }
 
     /**
@@ -85,7 +85,7 @@ class ArtworkController extends ApiController
      */
     public function showPublishedArtwork(Request $request, int $artworkId)
     {
-        $query = Artwork::published()->where('id', $artworkId)
+        $artwork = Artwork::published()->where('id', $artworkId)
             ->with([
                 'user',
                 'artworkPhotos',
@@ -93,11 +93,13 @@ class ArtworkController extends ApiController
                 'artworkComments.user',
                 'tags'
             ])
-            ->firstOr(function () {
-                return $this->error("The artwork you are trying to retrieve does not exist.", 404);
-            });
+            ->first();
 
-        return new ArtworkResource($query);
+        if (!$artwork) {
+            return $this->error("The artwork you are trying to retrieve does not exist.", 404);
+        }
+
+        return new ArtworkResource($artwork);
     }
 
     /**
@@ -124,19 +126,21 @@ class ArtworkController extends ApiController
      */
     public function listUserPublishedArtworks(Request $request, string $username)
     {
-        $user = User::artist()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->first();
+
+        if (!$user) {
             return $this->error("The user you are trying to retrieve his artworks does not exist.", 404);
-        });
+        }
 
         $perPage = $request->query('perPage', 10);
 
-        $query = QueryBuilder::for(Artwork::published()->where('user_id', $user->id))
+        $artworks = QueryBuilder::for(Artwork::published()->where('user_id', $user->id))
             ->allowedFilters([
                 AllowedFilter::exact('tag', 'tags.name'),
             ])
             ->paginate($perPage);
 
-        return ArtworkResource::collection($query);
+        return ArtworkResource::collection($artworks);
     }
 
     /**
@@ -166,11 +170,11 @@ class ArtworkController extends ApiController
 
         $perPage = $request->query('perPage', 10);
 
-        $query = QueryBuilder::for(Artwork::where('user_id', $authenticatedUser->id)->with(['artworkPhotos', 'tags']))
+        $artworks = QueryBuilder::for(Artwork::where('user_id', $authenticatedUser->id)->with(['artworkPhotos', 'tags']))
             ->allowedFilters(['status'])
             ->paginate($perPage);
 
-        return ArtworkResource::collection($query);
+        return ArtworkResource::collection($artworks);
     }
 
     /**
@@ -198,7 +202,7 @@ class ArtworkController extends ApiController
         $authenticatedUser = $request->user();
 
         if ($authenticatedUser->cannot('createArtwork', Artwork::class)) {
-            return $this->error("You are not authorized to create an artwork.", 403);
+            return $this->error("You are not authorized to create an artwork draft.", 403);
         }
 
         $artwork = Artwork::create([
@@ -258,28 +262,28 @@ class ArtworkController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::draft()->where('id', $artworkId)->firstOr(function () {
-            return $this->error("The artwork you are trying to update does not exist.", 404);
-        });
+        $artwork = Artwork::draft()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
+            return $this->error("The artwork draft you are trying to update does not exist.", 404);
+        }
 
         if ($authenticatedUser->cannot('updateArtwork', $artwork)) {
             return $this->error("You are not authorized to update this artwork draft.", 403);
         }
 
-        $artwork->update([
-            'title' => $request->title,
-            'description' => $request->description,
-            'status' => $request->status,
-        ]);
+        $artwork->update($request->safe()->except(['tags']));
 
-        $tags = $request->input('tags');
+        if ($request->has('tags')) {
+            $tags = $request->tags;
 
-        $artwork->tags()->detach();
+            $artwork->tags()->detach();
 
-        foreach ($tags as $tagName) {
-            $tag = Tag::where('name', $tagName)->firstOrFail();
+            foreach ($tags as $tagName) {
+                $tag = Tag::where('name', $tagName)->firstOrFail();
 
-            $artwork->tags()->attach($tag->id);
+                $artwork->tags()->attach($tag->id);
+            }
         }
 
         return new ArtworkResource($artwork);
@@ -316,9 +320,11 @@ class ArtworkController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::findOr($artworkId, function () {
+        $artwork = Artwork::find($artworkId);
+
+        if (!$artwork) {
             return $this->error("The artwork you are trying to delete does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('deleteArtwork', $artwork)) {
             return $this->error("You are not authorized to delete this artwork.", 403);

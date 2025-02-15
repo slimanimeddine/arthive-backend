@@ -42,9 +42,11 @@ class ArtworkTagController extends ApiController
      */
     public function listUserArtworkTags(Request $request, string $username)
     {
-        $user = User::artist()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->first();
+
+        if (!$user) {
             return $this->error("The user you are trying to retrieve his artwork tags does not exist.", 404);
-        });
+        }
 
         $tags = $user->artworks()
             ->published()
@@ -68,10 +70,10 @@ class ArtworkTagController extends ApiController
      */
     public function listTags()
     {
-        $query = Cache::rememberForever('tags', function () {
+        $tags = Cache::rememberForever('tags', function () {
             return Tag::all();
         });
 
-        return TagResource::collection($query);
+        return TagResource::collection($tags);
     }
 }

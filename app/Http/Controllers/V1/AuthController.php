@@ -65,9 +65,11 @@ class AuthController extends ApiController
             return $this->error('Invalid credentials', 401);
         }
 
-        $user = User::artist()->where('email', $request->email)->firstOr(function () {
+        $user = User::artist()->where('email', $request->email)->first();
+
+        if (!$user) {
             return $this->error('Invalid credentials', 401);
-        });
+        }
 
         $token = $user->createToken('authToken')->plainTextToken;
 
@@ -104,9 +106,11 @@ class AuthController extends ApiController
             return $this->error('Invalid credentials', 401);
         }
 
-        $user = User::admin()->where('email', $request->email)->firstOr(function () {
+        $user = User::admin()->where('email', $request->email)->first();
+
+        if (!$user) {
             return $this->error('Invalid credentials', 401);
-        });
+        }
 
         $token = $user->createToken('authToken')->plainTextToken;
 

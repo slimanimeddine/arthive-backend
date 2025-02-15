@@ -45,9 +45,11 @@ class ArtworkPhotoController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::draft()->where('id', $artworkId)->firstOr(function () {
+        $artwork = Artwork::draft()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
             return $this->error("The artwork you are trying to upload photos to does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('uploadArtworkPhotos', $artwork)) {
             return $this->error("You are not authorized to upload photos to this artwork.", 403);
@@ -96,9 +98,11 @@ class ArtworkPhotoController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artworkPhoto = ArtworkPhoto::where('id', $artworkPhotoId)->firstOr(function () {
+        $artworkPhoto = ArtworkPhoto::where('id', $artworkPhotoId)->first();
+
+        if (!$artworkPhoto) {
             return $this->error("The artwork photo you are trying to set as main does not exist.", 404);
-        });
+        }
 
         $artwork = $artworkPhoto->artwork;
 
@@ -164,9 +168,11 @@ class ArtworkPhotoController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artworkPhoto = ArtworkPhoto::findOr($artworkPhotoId, function () {
+        $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
+
+        if (!$artworkPhoto) {
             return $this->error("The artwork photo you are trying to delete does not exist.", 404);
-        });
+        }
 
         $artwork = $artworkPhoto->artwork;
 

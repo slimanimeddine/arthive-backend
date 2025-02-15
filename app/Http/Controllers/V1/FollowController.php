@@ -45,9 +45,11 @@ class FollowController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $userToFollow = User::findOr($userId, function () {
+        $userToFollow = User::find($userId);
+
+        if (!$userToFollow) {
             return $this->error("The user you are trying to follow does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('followUser', $userToFollow)) {
             return $this->error("You are not authorized to follow this user.", 403);
@@ -101,9 +103,11 @@ class FollowController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $userToUnfollow = User::findOr($userId, function () {
+        $userToUnfollow = User::find($userId);
+
+        if (!$userToUnfollow) {
             return $this->error("The user you are trying to unfollow does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('unfollowUser', $userToUnfollow)) {
             return $this->error("You are not authorized to unfollow this user.", 403);
@@ -111,9 +115,10 @@ class FollowController extends ApiController
 
         $follow = Follow::where('follower_id', $authenticatedUser->id)
             ->where('followed_id', $userToUnfollow->id)
-            ->firstOr(function () {
-                return $this->error("You have not followed this user.", 404);
-            });
+            ->first();
+        if (!$follow) {
+            return $this->error("You have not followed this user.", 404);
+        }
 
         $follow->delete();
 

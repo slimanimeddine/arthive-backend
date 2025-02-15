@@ -128,9 +128,11 @@ class ArtistVerificationRequestController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artistVerificationRequest = ArtistVerificationRequest::findOr($artistVerificationRequestId, function () {
+        $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
+        
+        if (!$artistVerificationRequest) {
             return $this->error('The artist verification request you are trying to review does not exist.', 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('reviewArtistVerificationRequest', $artistVerificationRequest)) {
             return $this->error('You are not authorized to review this artist verification request.', 403);

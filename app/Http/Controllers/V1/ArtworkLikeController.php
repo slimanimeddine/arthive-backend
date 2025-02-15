@@ -46,9 +46,11 @@ class ArtworkLikeController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::published()->where('id', $artworkId)->firstOr(function () {
+        $artwork = Artwork::published()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
             return $this->error("The artwork you are trying to like does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('likeArtwork', $artwork)) {
             return $this->error("You are not authorized to like this artwork.", 403);
@@ -102,9 +104,11 @@ class ArtworkLikeController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::published()->where('id', $artworkId)->firstOr(function () {
+        $artwork = Artwork::published()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
             return $this->error("The artwork you are trying to unlike does not exist.", 404);
-        });
+        }
 
         if ($authenticatedUser->cannot('unlikeArtwork', $artwork)) {
             return $this->error("You are not authorized to unlike this artwork.", 403);
@@ -112,9 +116,11 @@ class ArtworkLikeController extends ApiController
 
         $artworkLike = ArtworkLike::where('user_id', $authenticatedUser->id)
             ->where('artwork_id', $artwork->id)
-            ->firstOr(function () {
-                return $this->error("You have not liked this artwork.", 404);
-            });
+            ->first();
+
+        if (!$artworkLike) {
+            return $this->error("You have not liked this artwork.", 404);
+        }
 
         $artworkLike->delete();
 
@@ -150,9 +156,11 @@ class ArtworkLikeController extends ApiController
      */
     public function listUserReceivedLikesCountByTag(Request $request, string $username)
     {
-        $user = User::artist()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->first();
+        
+        if (!$user) {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
-        });
+        }
 
         $artworksCount = $user->artworks()->count();
 
@@ -191,9 +199,11 @@ class ArtworkLikeController extends ApiController
      */
     public function showUserReceivedLikesCount(Request $request, string $username)
     {
-        $user = User::artist()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->first();
+        
+        if (!$user) {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
-        });
+        }
 
         $artworksCount = $user->artworks()->count();
 

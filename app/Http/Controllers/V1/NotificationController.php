@@ -57,9 +57,11 @@ class NotificationController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->firstOr(function () {
+        $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->first();
+        
+        if (!$unreadNotification) {
             return $this->error("The notification you are trying to retrieve does not exist.", 404);
-        });
+        }
 
         $unreadNotification->markAsRead();
 

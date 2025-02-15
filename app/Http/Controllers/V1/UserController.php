@@ -88,11 +88,13 @@ class UserController extends ApiController
      */
     public function showUser(Request $request, string $username)
     {
-        $query = User::artist()->where('username', $username)->firstOr(function () {
+        $user = User::artist()->where('username', $username)->first();
+        
+        if (!$user) {
             return $this->error("The user you are trying to retrieve does not exist.", 404);
-        });
+        }
 
-        return new UserResource($query);
+        return new UserResource($user);
     }
 
     /**

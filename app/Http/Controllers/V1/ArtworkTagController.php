@@ -7,6 +7,7 @@ use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @group Artwork Tags
@@ -48,11 +49,18 @@ class ArtworkTagController extends ApiController
             return $this->error("The user you are trying to retrieve his artwork tags does not exist.", 404);
         }
 
-        $tags = $user->artworks()
-            ->published()
-            ->join('artwork_tag', 'artworks.id', '=', 'artwork_tag.artwork_id')
-            ->join('tags', 'artwork_tag.tag_id', '=', 'tags.id')
-            ->select('tags.id', 'tags.name')
+        $artworksCount = $user->artworks()->count();
+
+        if ($artworksCount === 0) {
+            return $this->success('', []);
+        }
+
+        $tags = DB::table('tags')
+            ->join('artwork_tags', 'tags.id', '=', 'artwork_tags.tag_id')
+            ->join('artworks', 'artwork_tags.artwork_id', '=', 'artworks.id')
+            ->where('artworks.user_id', $user->id)
+            ->where('artworks.status', 'published')
+            ->select('tags.name as tag_name')
             ->distinct()
             ->get();
 

@@ -45,7 +45,7 @@ class ArtworkPhotoController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::draft()->where('id', $artworkId)->first();
+        $artwork = Artwork::find($artworkId);
 
         if (!$artwork) {
             return $this->error("The artwork you are trying to upload photos to does not exist.", 404);
@@ -55,7 +55,7 @@ class ArtworkPhotoController extends ApiController
             return $this->error("You are not authorized to upload photos to this artwork.", 403);
         }
 
-        $photos = $request->input('photos');
+        $photos = $request->file('photos');
 
         foreach ($photos as $photo) {
             $artwork->artworkPhotos()->create([
@@ -98,7 +98,7 @@ class ArtworkPhotoController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artworkPhoto = ArtworkPhoto::where('id', $artworkPhotoId)->first();
+        $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
         if (!$artworkPhoto) {
             return $this->error("The artwork photo you are trying to set as main does not exist.", 404);
@@ -106,8 +106,8 @@ class ArtworkPhotoController extends ApiController
 
         $artwork = $artworkPhoto->artwork;
 
-        if ($authenticatedUser->cannot('setArtworkPhotoAsMain', $artwork)) {
-            $this->error("You are not authorized to set this photo as the main photo of the artwork.", 403);
+        if ($authenticatedUser->cannot('setArtworkPhotoAsMain', $artworkPhoto)) {
+            return $this->error("You are not authorized to set this photo as the main photo of the artwork.", 403);
         }
 
         $artworkPhotoAlreadyMain = $artwork->artworkPhotos()->where('is_main', true)->first();
@@ -154,15 +154,6 @@ class ArtworkPhotoController extends ApiController
      *    "status": 404
      * }
      * 
-     * @response 400 scenario="Published artwork photo" {
-     *    "message": "Cannot delete photos of published artworks",
-     *    "status": 400
-     * }
-     * 
-     * @response 400 scenario="Only photo" {
-     *    "message": "Cannot delete the only photo of the artwork",
-     *    "status": 400
-     * }
      */
     public function deleteArtworkPhoto(Request $request, int $artworkPhotoId)
     {
@@ -174,21 +165,7 @@ class ArtworkPhotoController extends ApiController
             return $this->error("The artwork photo you are trying to delete does not exist.", 404);
         }
 
-        $artwork = $artworkPhoto->artwork;
-
-        $isArtworkDraft = $artwork->status === 'draft';
-
-        if (!$isArtworkDraft) {
-            return $this->error("Cannot delete photos of published artworks", 400);
-        }
-
-        $artworkPhotosCount = $artwork->artworkPhotos()->count();
-
-        if ($artworkPhotosCount === 1) {
-            return $this->error("Cannot delete the only photo of the artwork", 400);
-        }
-
-        if ($authenticatedUser->cannot('deleteArtworkPhoto', $artwork)) {
+        if ($authenticatedUser->cannot('deleteArtworkPhoto', $artworkPhoto)) {
             return $this->error("You are not authorized to delete this artwork photo.", 403);
         }
 

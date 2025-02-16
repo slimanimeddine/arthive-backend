@@ -25,9 +25,20 @@ class ArtworkSeeder extends Seeder
 
         $artworks = Artwork::all();
 
-        ArtworkPhoto::factory(400)
-            ->recycle($artworks)
-            ->create();
+        // ArtworkPhoto::factory(400)
+        //     ->recycle($artworks)
+        //     ->create();
+
+        // Loop through each artwork to assign photos
+        foreach ($artworks as $artwork) {
+            // Generate a random number of photos (between 1 and 4)
+            $photos = ArtworkPhoto::factory(rand(1, 4))
+                ->create(['artwork_id' => $artwork->id]);
+
+            // Randomly select ONE photo and set it as the main photo
+            $mainPhoto = $photos->random();
+            $mainPhoto->update(['is_main' => true]);
+        }
 
         $tags = Tag::all();
 

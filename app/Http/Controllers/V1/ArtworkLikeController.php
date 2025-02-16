@@ -46,7 +46,7 @@ class ArtworkLikeController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::published()->where('id', $artworkId)->first();
+        $artwork = Artwork::find($artworkId);
 
         if (!$artwork) {
             return $this->error("The artwork you are trying to like does not exist.", 404);
@@ -95,10 +95,6 @@ class ArtworkLikeController extends ApiController
      *    "status": 403
      * }
      * 
-     * @response 404 scenario="Like not found" {
-     *   "message": "You have not liked this artwork.",
-     *   "status": 404
-     * }
      */
     public function unlikeArtwork(Request $request, int $artworkId)
     {
@@ -117,10 +113,6 @@ class ArtworkLikeController extends ApiController
         $artworkLike = ArtworkLike::where('user_id', $authenticatedUser->id)
             ->where('artwork_id', $artwork->id)
             ->first();
-
-        if (!$artworkLike) {
-            return $this->error("You have not liked this artwork.", 404);
-        }
 
         $artworkLike->delete();
 
@@ -157,7 +149,7 @@ class ArtworkLikeController extends ApiController
     public function listUserReceivedLikesCountByTag(Request $request, string $username)
     {
         $user = User::artist()->where('username', $username)->first();
-        
+
         if (!$user) {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
         }
@@ -168,11 +160,13 @@ class ArtworkLikeController extends ApiController
             return $this->success('', []);
         }
 
-        $likesByTag = $user->artworks()
+        $likesByTag = DB::table('tags')
+            ->join('artwork_tags', 'tags.id', '=', 'artwork_tags.tag_id')
+            ->join('artworks', 'artwork_tags.artwork_id', '=', 'artworks.id')
             ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
-            ->join('artwork_tag', 'artworks.id', '=', 'artwork_tag.artwork_id')
-            ->join('tags', 'artwork_tag.tag_id', '=', 'tags.id')
-            ->select('tags.name as tag_name', DB::raw('COUNT(artwork_likes.id) as total_likes'))
+            ->where('artworks.user_id', $user->id)
+            ->where('artworks.status', 'published')
+            ->select('tags.name as tag_name', DB::raw('COUNT(DISTINCT artwork_likes.id) as total_likes'))
             ->groupBy('tags.name')
             ->get();
 
@@ -200,7 +194,7 @@ class ArtworkLikeController extends ApiController
     public function showUserReceivedLikesCount(Request $request, string $username)
     {
         $user = User::artist()->where('username', $username)->first();
-        
+
         if (!$user) {
             return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
         }
@@ -213,6 +207,7 @@ class ArtworkLikeController extends ApiController
 
         $totalLikes = $user->artworks()
             ->join('artwork_likes', 'artworks.id', '=', 'artwork_likes.artwork_id')
+            ->where('artworks.status', 'published')
             ->count();
 
         return $this->success('', $totalLikes);

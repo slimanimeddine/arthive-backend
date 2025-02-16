@@ -21,7 +21,7 @@ class ArtworkPhotoFactory extends Factory
         return [
             'path' => "artwork-seeding-photos/{$selectedPhoto}.jpeg",
             'artwork_id' => Artwork::factory(),
-            'is_main' => fake()->boolean()
+            'is_main' => false
         ];
     }
 }

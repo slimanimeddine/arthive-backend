@@ -14,7 +14,9 @@ class ArtworkPhotoPolicy
     {
         $isArtist = $user->isArtist();
         $isOwner = $user->id === $artworkPhoto->artwork->user_id;
-        return $isArtist && $isOwner;
+        $isDraft = $artworkPhoto->artwork->isDraft();
+        
+        return $isArtist && $isOwner && $isDraft;
     }
 
     /**
@@ -23,7 +25,13 @@ class ArtworkPhotoPolicy
     public function deleteArtworkPhoto(User $user, ArtworkPhoto $artworkPhoto): bool
     {
         $isArtist = $user->isArtist();
-        $isOwner = $user->id === $artworkPhoto->artwork->user_id;
-        return $isArtist && $isOwner;
+
+        $artwork = $artworkPhoto->artwork;
+        $isOwner = $user->id === $artwork->user_id;
+        $isDraft = $artwork->isDraft();
+        $isMain = $artwork->is_main;
+        $artworkPhotosCount = $artwork->artworkPhotos()->count();
+
+        return $isArtist && $isOwner && $isDraft && $artworkPhotosCount > 1 && !$isMain;
     }
 }

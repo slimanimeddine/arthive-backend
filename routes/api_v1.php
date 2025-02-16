@@ -41,10 +41,10 @@ Route::post('users/me', [UserController::class, 'updateAuthenticatedUser'])->mid
 // follow routes
 Route::get('users/me/follows/followers', [FollowController::class, 'listAuthenticatedUserFollowers'])->middleware('auth:sanctum');
 Route::get('users/me/follows/following', [FollowController::class, 'listAuthenticatedUserFollowing'])->middleware('auth:sanctum');
-// Route::middleware(['throttle:follow'])->group(function () {
+Route::middleware(['throttle:follow'])->group(function () {
     Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('userId');
     Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('userId');
-// });
+});
 
 // like routes
 Route::get('users/{username}/artwork-likes/received/count/by-tag', [ArtworkLikeController::class, 'listUserReceivedLikesCountByTag']);
@@ -68,7 +68,7 @@ Route::get('users/{username}/artwork-tags', [ArtworkTagController::class, 'listU
 Route::get('tags', [ArtworkTagController::class, 'listTags']);
 
 // photos routes
-Route::middleware(['throttle:update-comment'])->group(function () {
+Route::middleware(['throttle:upload-photos'])->group(function () {
     Route::post('artworks/{artworkId}/artwork-photos', [ArtworkPhotoController::class, 'uploadArtworkPhotos'])->middleware('auth:sanctum')->whereNumber('artworkId');
 });
 Route::put('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'setArtworkPhotoAsMain'])->middleware('auth:sanctum')->whereNumber('artworkPhotoId');
@@ -89,6 +89,8 @@ Route::put('artist-verification-requests/{artistVerificationRequestId}', [Artist
 
 // favorite routes
 Route::get('users/me/favorites/artworks', [FavoriteController::class, 'listAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
+Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereNumber('artworkId');
+Route::delete('artworks/{artworkId}/favorites', [FavoriteController::class, 'removeArtworkFromFavorites'])->middleware('auth:sanctum')->whereNumber('artworkId');
 
 // country routes
 Route::get('countries', [CountryController::class, 'index']);

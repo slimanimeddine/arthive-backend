@@ -262,14 +262,14 @@ class ArtworkController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $artwork = Artwork::draft()->where('id', $artworkId)->first();
+        $artwork = Artwork::find($artworkId);
 
         if (!$artwork) {
-            return $this->error("The artwork draft you are trying to update does not exist.", 404);
+            return $this->error("The artwork you are trying to update does not exist.", 404);
         }
 
         if ($authenticatedUser->cannot('updateArtwork', $artwork)) {
-            return $this->error("You are not authorized to update this artwork draft.", 403);
+            return $this->error("You are not authorized to update this artwork.", 403);
         }
 
         $artwork->update($request->safe()->except(['tags']));

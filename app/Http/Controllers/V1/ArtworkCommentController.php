@@ -48,14 +48,14 @@ class ArtworkCommentController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        if ($authenticatedUser->cannot('postArtworkComment', Artwork::class)) {
-            return $this->error("You are not authorized to post a comment on this artwork.", 403);
-        }
-
-        $artwork = Artwork::published()->where('id', $artworkId)->first();
+        $artwork = Artwork::find($artworkId);
 
         if (!$artwork) {
             return $this->error("The artwork you are trying to comment on does not exist.", 404);
+        }
+
+        if ($authenticatedUser->cannot('postArtworkComment', $artwork)) {
+            return $this->error("You are not authorized to post a comment on this artwork.", 403);
         }
 
         $artworkComment = ArtworkComment::create([
@@ -103,7 +103,7 @@ class ArtworkCommentController extends ApiController
         $authenticatedUser = $request->user();
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
-        
+
         if (!$artworkComment) {
             return $this->error("The comment you are trying to update on does not exist.", 404);
         }
@@ -153,7 +153,7 @@ class ArtworkCommentController extends ApiController
         $authenticatedUser = $request->user();
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
-        
+
         if (!$artworkComment) {
             return $this->error("The comment you are trying to delete does not exist.", 404);
         }

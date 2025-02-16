@@ -4,6 +4,7 @@ namespace App\Policies;
 
 use App\Models\Artwork;
 use App\Models\ArtworkLike;
+use App\Models\Favorite;
 use App\Models\User;
 
 class ArtworkPolicy
@@ -23,7 +24,9 @@ class ArtworkPolicy
     {
         $isArtist = $user->isArtist();
         $isOwner = $user->id === $artwork->user_id;
-        return $isArtist && $isOwner;
+        $isDraft = $artwork->isDraft();
+
+        return $isArtist && $isOwner && $isDraft;
     }
 
     /**
@@ -33,7 +36,9 @@ class ArtworkPolicy
     {
         $isArtist = $user->isArtist();
         $isOwner = $user->id === $artwork->user_id;
-        return $isArtist && $isOwner;
+        $isDraft = $artwork->isDraft();
+
+        return $isArtist && $isOwner && $isDraft;
     }
 
     /**
@@ -43,6 +48,7 @@ class ArtworkPolicy
     {
         $isArtist = $user->isArtist();
         $isOwner = $user->id === $artwork->user_id;
+
         return $isArtist && $isOwner;
     }
 
@@ -53,11 +59,13 @@ class ArtworkPolicy
     {
         $isUserArtist = $user->isArtist();
 
+        $isPublished = $artwork->isPublished();
+
         $alreadyLiked = ArtworkLike::where('user_id', $user->id)
             ->where('artwork_id', $artwork->id)
             ->exists();
 
-        return $isUserArtist && !$alreadyLiked;
+        return $isUserArtist && !$alreadyLiked && $isPublished;
     }
 
     /**
@@ -67,10 +75,56 @@ class ArtworkPolicy
     {
         $isUserArtist = $user->isArtist();
 
+        $isPublished = $artwork->isPublished();
+
         $alreadyLiked = ArtworkLike::where('user_id', $user->id)
             ->where('artwork_id', $artwork->id)
             ->exists();
 
-        return $isUserArtist && $alreadyLiked;
+        return $isUserArtist && $alreadyLiked && $isPublished;
+    }
+
+    /**
+     * Determine whether the user can post a comment.
+     */
+    public function postArtworkComment(User $user, Artwork $artwork): bool
+    {
+        $isUserArtist = $user->isArtist();
+
+        $isPublished = $artwork->isPublished();
+
+        return $isUserArtist && $isPublished;
+    }
+
+    /**
+     * Determine whether the user can mark artwork as favorite.
+     */
+    public function markArtworkAsFavorite(User $user, Artwork $artwork): bool
+    {
+        $isUserArtist = $user->isArtist();
+
+        $isPublished = $artwork->isPublished();
+
+        $alreadyFavorited = Favorite::where('user_id', $user->id)
+            ->where('artwork_id', $artwork->id)
+            ->exists();
+
+        return $isUserArtist && !$alreadyFavorited && $isPublished;
+    }
+
+    /**
+     * Determine whether the user can remove artwork from favorites.
+     */
+    public function removeArtworkFromFavorites(User $user, Artwork $artwork): bool
+    {
+        $isUserArtist = $user->isArtist();
+
+        $isPublished = $artwork->isPublished();
+
+        $alreadyFavorited = Favorite::where('user_id', $user->id)
+            ->where('artwork_id', $artwork->id)
+            ->exists();
+
+        return $isUserArtist && $alreadyFavorited && $isPublished;
     }
 }

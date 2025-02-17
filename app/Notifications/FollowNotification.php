@@ -37,7 +37,20 @@ class FollowNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'follower' => $this->follower,
+            'follower' => [
+                'id' => $this->follower->id,
+                'username' => $this->follower->username
+            ],
         ];
+    }
+
+    /**
+     * Get the notification's database type.
+     *
+     * @return string
+     */
+    public function databaseType(object $notifiable): string
+    {
+        return 'follow';
     }
 }

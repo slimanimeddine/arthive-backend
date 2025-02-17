@@ -42,8 +42,24 @@ class ArtworkLikeNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'liker' => $this->liker,
-            'artwork' => $this->artwork,
+            'liker' => [
+                'id' => $this->liker->id,
+                'username' => $this->liker->username,
+            ],
+            'artwork' => [
+                'id' => $this->artwork->id,
+                'title' => $this->artwork->title,
+            ],
         ];
+    }
+
+    /**
+     * Get the notification's database type.
+     *
+     * @return string
+     */
+    public function databaseType(object $notifiable): string
+    {
+        return 'artwork-like';
     }
 }

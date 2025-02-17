@@ -202,7 +202,83 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer c6PdEef831DghVkv6b45Zaa'
+      - 'Bearer aZ4e36cEgv86Pb1dVhDk5fa'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/reset-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reset Password'
+      description: 'Resets the password of the authenticated user'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      current_password:
+        name: current_password
+        description: 'The current password of the user.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      new_password:
+        name: new_password
+        description: 'The new password of the user. Must be at least 8 characters.'
+        required: true
+        example: new_password
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      current_password: password
+      new_password: new_password
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Password updated successfully",
+               "data": [],
+               "status": 200
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+               "message": "Unauthenticated"
+          }
+        headers: []
+        description: Unauthenticated
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer afeEvcda834ZhVgPbDk6516'
     controller: null
     method: null
     route: null

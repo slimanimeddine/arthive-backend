@@ -1,0 +1,274 @@
+{
+    "data": [
+        {
+            "id": "b37675eb-5537-4a9c-8d91-35a2beb79255",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 192, "username": "pierre.fahey" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:40.000000Z",
+            "updated_at": "2025-02-17T11:51:40.000000Z"
+        },
+        {
+            "id": "2d48979c-3ce6-4bb2-b9f0-6c8b28d1f7f9",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 115, "username": "lourdes29" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:37.000000Z",
+            "updated_at": "2025-02-17T11:51:37.000000Z"
+        },
+        {
+            "id": "a213f492-f70a-4d88-9b77-65912815d886",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 85, "username": "miller.schaden" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:35.000000Z",
+            "updated_at": "2025-02-17T11:51:35.000000Z"
+        },
+        {
+            "id": "b3281688-5f67-47d0-9b9a-408ab2103917",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 56, "username": "cleo49" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:34.000000Z",
+            "updated_at": "2025-02-17T11:51:34.000000Z"
+        },
+        {
+            "id": "44b1d18b-9be6-4936-bce7-92c1d3319573",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 36, "username": "mya50" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:33.000000Z",
+            "updated_at": "2025-02-17T11:51:33.000000Z"
+        },
+        {
+            "id": "dc98c179-d240-44b1-8df6-cde34ac0b5dc",
+            "type": "follow",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": { "follower": { "id": 17, "username": "mleannon" } },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:32.000000Z",
+            "updated_at": "2025-02-17T11:51:32.000000Z"
+        },
+        {
+            "id": "d7f2dd99-106d-43db-9af4-b5e6104fb627",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 168, "username": "ethyl13" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:25.000000Z",
+            "updated_at": "2025-02-17T11:51:25.000000Z"
+        },
+        {
+            "id": "215cb62d-755e-42a5-bde9-83968943008d",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 135, "username": "ddare" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:24.000000Z",
+            "updated_at": "2025-02-17T11:51:24.000000Z"
+        },
+        {
+            "id": "a8acddb9-60fc-4d6f-947f-d0d68204487f",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 126, "username": "yheidenreich" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:23.000000Z",
+            "updated_at": "2025-02-17T11:51:23.000000Z"
+        },
+        {
+            "id": "dda7cc2d-1295-4332-abf5-84304477567c",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 123, "username": "bergnaum.charity" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:23.000000Z",
+            "updated_at": "2025-02-17T11:51:23.000000Z"
+        },
+        {
+            "id": "312ed431-d105-4edb-bfab-1f5db10aa3a3",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 106, "username": "ckihn" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:22.000000Z",
+            "updated_at": "2025-02-17T11:51:22.000000Z"
+        },
+        {
+            "id": "80503867-3820-41ab-8a2f-7ef28c4a85e6",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 107, "username": "mraz.alisa" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:22.000000Z",
+            "updated_at": "2025-02-17T11:51:22.000000Z"
+        },
+        {
+            "id": "e856767a-aec0-4cf2-8496-4e9563fcea00",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 72, "username": "wisoky.vincenzo" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:21.000000Z",
+            "updated_at": "2025-02-17T11:51:21.000000Z"
+        },
+        {
+            "id": "bc5966aa-1927-464e-a29c-6a9bd429d26c",
+            "type": "artwork-like",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "liker": { "id": 53, "username": "casandra.kirlin" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:20.000000Z",
+            "updated_at": "2025-02-17T11:51:20.000000Z"
+        },
+        {
+            "id": "247b9e8f-a388-4bae-9fc8-20f424cd3e48",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 65, "username": "rtrantow" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:17.000000Z",
+            "updated_at": "2025-02-17T11:51:17.000000Z"
+        },
+        {
+            "id": "3251de1f-74fc-44d1-bf81-960e58e54c8c",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 114, "username": "odell.flatley" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:17.000000Z",
+            "updated_at": "2025-02-17T11:51:17.000000Z"
+        },
+        {
+            "id": "48880ab2-1278-45f8-915f-cf3c96d99586",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 165, "username": "lkohler" },
+                "artwork": { "id": 144, "title": "Possimus non voluptas ut." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:17.000000Z",
+            "updated_at": "2025-02-17T11:51:17.000000Z"
+        },
+        {
+            "id": "10e255c7-5321-4038-b983-2f70331b0d12",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 77, "username": "bertha.gerhold" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:14.000000Z",
+            "updated_at": "2025-02-17T11:51:14.000000Z"
+        },
+        {
+            "id": "1d60231e-c48c-4d5f-8b56-589e31e1698e",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 19, "username": "tyrel39" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:14.000000Z",
+            "updated_at": "2025-02-17T11:51:14.000000Z"
+        },
+        {
+            "id": "720e8dbf-66e6-4279-8003-c2d2feae984d",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 110, "username": "bins.bradly" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:14.000000Z",
+            "updated_at": "2025-02-17T11:51:14.000000Z"
+        },
+        {
+            "id": "dbb4e80d-5aa8-481c-9b62-e7d7ec926ac8",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 72, "username": "wisoky.vincenzo" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:14.000000Z",
+            "updated_at": "2025-02-17T11:51:14.000000Z"
+        },
+        {
+            "id": "fcc53f9f-db9a-4df2-b042-26e54d03d7fd",
+            "type": "artwork-comment",
+            "notifiable_type": "App\\Models\\User",
+            "notifiable_id": 1,
+            "data": {
+                "commenter": { "id": 172, "username": "wilhelm33" },
+                "artwork": { "id": 37, "title": "Sed nisi minima." }
+            },
+            "read_at": null,
+            "created_at": "2025-02-17T11:51:14.000000Z",
+            "updated_at": "2025-02-17T11:51:14.000000Z"
+        }
+    ],
+    "message": "",
+    "status": 200
+}

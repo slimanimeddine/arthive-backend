@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Follow;
 use App\Models\User;
+use App\Notifications\FollowNotification;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +15,7 @@ class FollowsSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
+        $users = User::artist()->get();
 
         // Loop through each user and assign random followers
         $users->each(function ($user) use ($users) {
@@ -30,6 +31,8 @@ class FollowsSeeder extends Seeder
                     'follower_id' => $user->id,
                     'followed_id' => $userToFollow->id,
                 ]);
+
+                $userToFollow->notify(new FollowNotification($user));
             });
         });
     }

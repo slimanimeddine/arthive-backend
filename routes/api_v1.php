@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('sign-up', [AuthController::class, 'signUp']);
 Route::post('sign-in', [AuthController::class, 'signIn']);
 Route::post('sign-out', [AuthController::class, 'signOut'])->middleware('auth:sanctum');
+Route::post('reset-password', [AuthController::class, 'resetPassword'])->middleware('auth:sanctum');
 
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);
@@ -89,7 +90,9 @@ Route::put('artist-verification-requests/{artistVerificationRequestId}', [Artist
 
 // favorite routes
 Route::get('users/me/favorites/artworks', [FavoriteController::class, 'listAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
-Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereNumber('artworkId');
+Route::middleware(['throttle:favorite'])->group(function () {
+    Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereNumber('artworkId');
+});
 Route::delete('artworks/{artworkId}/favorites', [FavoriteController::class, 'removeArtworkFromFavorites'])->middleware('auth:sanctum')->whereNumber('artworkId');
 
 // country routes

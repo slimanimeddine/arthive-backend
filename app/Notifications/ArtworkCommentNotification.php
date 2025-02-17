@@ -42,8 +42,24 @@ class ArtworkCommentNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'commenter' => $this->commenter,
-            'artwork' => $this->artwork
+            'commenter' => [
+                'id' => $this->commenter->id,
+                'username' => $this->commenter->username
+            ],
+            'artwork' => [
+                'id' => $this->artwork->id,
+                'title' => $this->artwork->title
+            ]
         ];
+    }
+
+    /**
+     * Get the notification's database type.
+     *
+     * @return string
+     */
+    public function databaseType(object $notifiable): string
+    {
+        return 'artwork-comment';
     }
 }

@@ -16,6 +16,14 @@ class NotificationController extends ApiController
      * 
      * @authenticated
      * 
+     * @queryParam filter[notificationType] string Filter notification by notification type. Enum: artist-verification-request, artist-verification-response, artwork-comment, artwork-like, follow. Example: follow
+     * 
+     * @queryParam filter[readStatus] string Filter notification by read and unread. Enum: read, unread. Example: read
+     * 
+     * @queryParam page integer The page number to fetch. Example: 1
+     * 
+     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
@@ -23,8 +31,37 @@ class NotificationController extends ApiController
     public function listAuthenticatedUserNotifications(Request $request)
     {
         $authenticatedUser = $request->user();
+        $query = $authenticatedUser->notifications();
 
-        $notifications = $authenticatedUser->notifications;
+        $userType = $authenticatedUser->role;
+
+        $notificationTypes = $request->query('filter.notificationType');
+        if ($notificationTypes) {
+            $notificationTypes = explode(',', $notificationTypes);
+
+            $validTypes = [
+                'artist' => ['artist-verification-request', 'artwork-comment', 'artwork-like', 'follow'],
+                'admin' => ['artist-verification-response']
+            ];
+
+            if (array_diff($notificationTypes, $validTypes[$userType])) {
+                return $this->error('Invalid notificationType for the given userType', 400);
+            }
+
+            $query->whereIn('type', $notificationTypes);
+        }
+
+        $readStatus = $request->query('filter.readStatus');
+        if ($readStatus !== null) {
+            if (!in_array($readStatus, ['read', 'unread'])) {
+                return $this->error('Invalid readStatus', 400);
+            }
+
+            $query->where('read_at', $readStatus === 'read' ? '!=' : '=', null);
+        }
+
+        $perPage = $request->query('perPage', 10);
+        $notifications = $query->paginate($perPage);
 
         return $this->success("", $notifications);
     }
@@ -58,7 +95,7 @@ class NotificationController extends ApiController
         $authenticatedUser = $request->user();
 
         $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->first();
-        
+
         if (!$unreadNotification) {
             return $this->error("The notification you are trying to retrieve does not exist.", 404);
         }

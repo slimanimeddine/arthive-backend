@@ -37,7 +37,20 @@ class ArtistVerificationRequestNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'user' => $this->user
+            'user' => [
+                'id' => $this->user->id,
+                'username' => $this->user->username,
+            ]
         ];
+    }
+
+    /**
+     * Get the notification's database type.
+     *
+     * @return string
+     */
+    public function databaseType(object $notifiable): string
+    {
+        return 'artist-verification-request';
     }
 }

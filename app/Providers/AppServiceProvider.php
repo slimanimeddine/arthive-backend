@@ -105,5 +105,16 @@ class AppServiceProvider extends ServiceProvider
                 }),
             ];
         });
+
+        RateLimiter::for('favorite', function (Request $request) {
+            return [
+                Limit::perHour(10)->by('hour' . $request->user()->id . $request->route('id'))->response(function () {
+                    return $this->error('You have reached the hourly limit for favoriting artworks.', 429);
+                }),
+                Limit::perDay(50)->by('day' . $request->user()->id . $request->route('id'))->response(function () {
+                    return $this->error('You have reached the daily limit for favoriting artworks.', 429);
+                }),
+            ];
+        });
     }
 }

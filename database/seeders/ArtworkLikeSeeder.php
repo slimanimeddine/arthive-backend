@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Artwork;
 use App\Models\ArtworkLike;
 use App\Models\User;
+use App\Notifications\ArtworkLikeNotification;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,8 +17,8 @@ class ArtworkLikeSeeder extends Seeder
     public function run(): void
     {
         // Get all artworks and users
-        $artworks = Artwork::all();
-        $users = User::all();
+        $artworks = Artwork::published()->get();
+        $users = User::artist()->get();
 
         // Loop through each user and assign likes to random artworks
         $users->each(function ($user) use ($artworks) {
@@ -33,6 +34,8 @@ class ArtworkLikeSeeder extends Seeder
                     'user_id' => $user->id,
                     'artwork_id' => $artwork->id,
                 ]);
+
+                $artwork->user->notify(new ArtworkLikeNotification($user, $artwork));
             });
         });
     }

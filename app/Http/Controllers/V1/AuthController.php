@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Requests\V1\ResetPasswordRequest;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
 use App\Models\User;
@@ -142,5 +143,33 @@ class AuthController extends ApiController
         $request->user()->currentAccessToken()->delete();
 
         return $this->success('Signed out successfully');
+    }
+
+    /**
+     * Reset Password
+     * 
+     * Resets the password of the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Password updated successfully",
+     *      "data": [],
+     *      "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function resetPassword(ResetPasswordRequest $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $authenticatedUser->update([
+            'password' => Hash::make($request->new_password)
+        ]);
+
+        return $this->success('Password updated successfully');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Models\ArtistVerificationRequest;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 
@@ -9,16 +10,14 @@ class ArtistVerificationResponseNotification extends Notification
 {
     use Queueable;
 
-    protected $status;
-    protected $reason;
+    protected $artistVerificationRequest;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(string $status, string $reason = '')
+    public function __construct(ArtistVerificationRequest $artistVerificationRequest)
     {
-        $this->status = $status;
-        $this->reason = $reason;
+        $this->artistVerificationRequest = $artistVerificationRequest;
     }
 
     /**
@@ -39,8 +38,19 @@ class ArtistVerificationResponseNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'status' => $this->status,
-            'reason' => $this->reason,
+            'id' => $this->artistVerificationRequest->id,
+            'status' => $this->artistVerificationRequest->status,
+            'reason' => $this->artistVerificationRequest->reason,
         ];
+    }
+
+    /**
+     * Get the notification's database type.
+     *
+     * @return string
+     */
+    public function databaseType(object $notifiable): string
+    {
+        return 'artist-verification-response';
     }
 }

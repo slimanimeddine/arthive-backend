@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
 use App\Models\User;
+use App\Notifications\ArtworkCommentNotification;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,8 +17,8 @@ class ArtworkCommentSeeder extends Seeder
     public function run(): void
     {
         // Get all artworks and users
-        $artworks = Artwork::all();
-        $users = User::all();
+        $artworks = Artwork::published()->get();
+        $users = User::artist()->get();
 
         // Loop through each artwork and assign comments from random users
         $artworks->each(function ($artwork) use ($users) {
@@ -34,6 +35,8 @@ class ArtworkCommentSeeder extends Seeder
                     'artwork_id' => $artwork->id,
                     'user_id' => $user->id,
                 ]);
+
+                $artwork->user->notify(new ArtworkCommentNotification($user, $artwork));
             });
         });
     }

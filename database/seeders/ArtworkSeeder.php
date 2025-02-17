@@ -17,17 +17,13 @@ class ArtworkSeeder extends Seeder
      */
     public function run(): void
     {
-        $users = User::all();
+        $users = User::artist()->get();
 
         Artwork::factory(200)
             ->recycle($users)
             ->create();
 
         $artworks = Artwork::all();
-
-        // ArtworkPhoto::factory(400)
-        //     ->recycle($artworks)
-        //     ->create();
 
         // Loop through each artwork to assign photos
         foreach ($artworks as $artwork) {

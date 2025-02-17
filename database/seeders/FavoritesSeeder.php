@@ -15,8 +15,8 @@ class FavoritesSeeder extends Seeder
      */
     public function run(): void
     {
-        $artworks = Artwork::all();
-        $users = User::all();
+        $artworks = Artwork::published()->get();
+        $users = User::artist()->get();
 
         // Loop through each user and assign random favorite artworks
         $users->each(function ($user) use ($artworks) {

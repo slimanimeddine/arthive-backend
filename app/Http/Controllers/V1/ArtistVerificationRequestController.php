@@ -146,7 +146,7 @@ class ArtistVerificationRequestController extends ApiController
             'reason' => $reason,
         ]);
 
-        $artistVerificationRequest->user->notify(new ArtistVerificationResponseNotification($status, $reason));
+        $artistVerificationRequest->user->notify(new ArtistVerificationResponseNotification($artistVerificationRequest));
 
         return new ArtistVerificationRequestResource($artistVerificationRequest);
     }

@@ -139,6 +139,14 @@ class User extends Authenticatable
     }
 
     /**
+     * Scope a query to only include unverified users.
+     */
+    public function scopeUnverified($query): void
+    {
+        $query->whereNull('artist_verified_at');
+    }
+
+    /**
      * Scope a query to only include users who are artists.
      */
     public function scopeArtist($query): void

@@ -27,21 +27,41 @@ class NotificationController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
+     * 
+     * @response 400 scenario="Invalid notificationType" {
+     *      "message": "Invalid notificationType for the given userType",
+     *      "status": 400
+     * }
+     * 
+     * @response 400 scenario="Invalid readStatus" {
+     *      "message": "Invalid readStatus",
+     *      "status": 400
+     * }
+     * 
+     * @responseFile status=200 scenario="Authenticated as admin" storage/responses/admin_notifications.json
+     * 
+     * @responseFile status=200 scenario="Authenticated as artist" storage/responses/artist_notifications.json
      */
     public function listAuthenticatedUserNotifications(Request $request)
     {
         $authenticatedUser = $request->user();
+
         $query = $authenticatedUser->notifications();
 
         $userType = $authenticatedUser->role;
 
-        $notificationTypes = $request->query('filter.notificationType');
+        $filter = $request->query('filter');
+
+        $notificationTypes = $filter['notificationType'] ?? null;
+
+        $readStatus = $filter['readStatus'] ?? null;
+
         if ($notificationTypes) {
             $notificationTypes = explode(',', $notificationTypes);
 
             $validTypes = [
-                'artist' => ['artist-verification-request', 'artwork-comment', 'artwork-like', 'follow'],
-                'admin' => ['artist-verification-response']
+                'artist' => ['artist-verification-response', 'artwork-comment', 'artwork-like', 'follow'],
+                'admin' => ['artist-verification-request']
             ];
 
             if (array_diff($notificationTypes, $validTypes[$userType])) {
@@ -51,7 +71,7 @@ class NotificationController extends ApiController
             $query->whereIn('type', $notificationTypes);
         }
 
-        $readStatus = $request->query('filter.readStatus');
+        $readStatus = $request->query('readStatus');
         if ($readStatus !== null) {
             if (!in_array($readStatus, ['read', 'unread'])) {
                 return $this->error('Invalid readStatus', 400);

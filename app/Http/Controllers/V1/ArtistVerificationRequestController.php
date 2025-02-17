@@ -88,7 +88,7 @@ class ArtistVerificationRequestController extends ApiController
             'user_id' => $authenticatedUser->id,
         ]);
 
-        $adminUsers = User::where('role', 'admin')->get();
+        $adminUsers = User::admin()->get();
 
         foreach ($adminUsers as $adminUser) {
             $adminUser->notify(new ArtistVerificationRequestNotification($authenticatedUser));

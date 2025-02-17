@@ -1,0 +1,172 @@
+{
+    "data": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": "1773d412-2e2e-4081-8cac-37c829f1b8f4",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 196, "username": "luigi.feeney" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:35.000000Z",
+                "updated_at": "2025-02-17T14:12:35.000000Z"
+            },
+            {
+                "id": "8e65eefd-3680-497a-9552-92e11d634c64",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 199, "username": "alvah.gislason" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:35.000000Z",
+                "updated_at": "2025-02-17T14:12:35.000000Z"
+            },
+            {
+                "id": "9b6f8486-f4db-418b-8bed-013d9fb53271",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 192, "username": "fkihn" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:35.000000Z",
+                "updated_at": "2025-02-17T14:12:35.000000Z"
+            },
+            {
+                "id": "dc7d7aff-5c8f-4eca-8bfa-2664dd3141b0",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 194, "username": "udouglas" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:35.000000Z",
+                "updated_at": "2025-02-17T14:12:35.000000Z"
+            },
+            {
+                "id": "e861a862-5d79-4791-85e5-acffd079b54f",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 195, "username": "roob.itzel" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:35.000000Z",
+                "updated_at": "2025-02-17T14:12:35.000000Z"
+            },
+            {
+                "id": "00dd0d86-e262-497e-88d7-f5273964300c",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 40, "username": "bdavis" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:34.000000Z",
+                "updated_at": "2025-02-17T14:12:34.000000Z"
+            },
+            {
+                "id": "098d612f-d71a-4b3b-bffd-f9f4c110cf6f",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 51, "username": "amir.will" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:34.000000Z",
+                "updated_at": "2025-02-17T14:12:34.000000Z"
+            },
+            {
+                "id": "0adbfa94-283e-4584-a147-fe21c83addd7",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 20, "username": "aurore.kuvalis" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:34.000000Z",
+                "updated_at": "2025-02-17T14:12:34.000000Z"
+            },
+            {
+                "id": "0d4d43ed-331c-40be-81db-e181f01f724d",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 47, "username": "brant87" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:34.000000Z",
+                "updated_at": "2025-02-17T14:12:34.000000Z"
+            },
+            {
+                "id": "13c5495e-f6be-4a52-a823-116a5ea0ae93",
+                "type": "artist-verification-request",
+                "notifiable_type": "App\\Models\\User",
+                "notifiable_id": 1,
+                "data": { "user": { "id": 143, "username": "jarod.prohaska" } },
+                "read_at": null,
+                "created_at": "2025-02-17T14:12:34.000000Z",
+                "updated_at": "2025-02-17T14:12:34.000000Z"
+            }
+        ],
+        "first_page_url": "http://localhost:8000/api/v1/users/me/notifications?page=1",
+        "from": 1,
+        "last_page": 9,
+        "last_page_url": "http://localhost:8000/api/v1/users/me/notifications?page=9",
+        "links": [
+            { "url": null, "label": "&laquo; Previous", "active": false },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=2",
+                "label": "2",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=3",
+                "label": "3",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=4",
+                "label": "4",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=5",
+                "label": "5",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=6",
+                "label": "6",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=7",
+                "label": "7",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=8",
+                "label": "8",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=9",
+                "label": "9",
+                "active": false
+            },
+            {
+                "url": "http://localhost:8000/api/v1/users/me/notifications?page=2",
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "next_page_url": "http://localhost:8000/api/v1/users/me/notifications?page=2",
+        "path": "http://localhost:8000/api/v1/users/me/notifications",
+        "per_page": 10,
+        "prev_page_url": null,
+        "to": 10,
+        "total": 90
+    },
+    "message": "",
+    "status": 200
+}

@@ -13,7 +13,7 @@ class CreateAdminUser extends Command
      *
      * @var string
      */
-    protected $signature = 'app:create-admin-user';
+    protected $signature = 'app:create-admin-user {username} {email} {password}';
 
     /**
      * The console command description.
@@ -27,9 +27,9 @@ class CreateAdminUser extends Command
      */
     public function handle()
     {
-        $username = $this->ask('Enter the username:');
-        $email = $this->ask('Enter the email:');
-        $password = $this->ask('Enter the password:');
+        $username = $this->argument('username');
+        $email = $this->argument('email');
+        $password = $this->argument('password');
 
         User::create([
             'username' => $username,

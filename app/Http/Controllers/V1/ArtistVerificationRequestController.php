@@ -28,12 +28,12 @@ class ArtistVerificationRequestController extends ApiController
      * @apiResourceModel App\Models\ArtistVerificationRequest
      * 
      * @response 401 scenario=Unauthenticated {
-     *     "message": "Unauthenticated"
+     *      "message": "Unauthenticated"
      * }
      * 
      * @response 403 scenario=Unauthorized {
-     *    "message": "You are not authorized to submit an artist verification request.",
-     *    "status": 403
+     *      "message": "You are not authorized to submit an artist verification request.",
+     *      "status": 403
      * }
      * 
      * @response 400 scenario="Request limit reached" {
@@ -129,7 +129,7 @@ class ArtistVerificationRequestController extends ApiController
         $authenticatedUser = $request->user();
 
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
-        
+
         if (!$artistVerificationRequest) {
             return $this->error('The artist verification request you are trying to review does not exist.', 404);
         }

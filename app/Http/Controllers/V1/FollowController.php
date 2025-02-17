@@ -75,9 +75,9 @@ class FollowController extends ApiController
      * @urlParam userId integer required The ID of the user to unfollow
      * 
      * @response 200 scenario=Success {
-     *      'message' => 'You have successfully unfollowed this user.'
-     *      'data' => [],
-     *      'status' => 200
+     *      'message': 'You have successfully unfollowed this user.'
+     *      'data': null,
+     *      'status': 200
      * }
      * 
      * @response 401 scenario=Unauthenticated {

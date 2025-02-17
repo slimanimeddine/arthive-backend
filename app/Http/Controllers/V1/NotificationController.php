@@ -97,7 +97,7 @@ class NotificationController extends ApiController
      * 
      * @response 200 scenario=Success {
      *      "message": "Notification marked as read",
-     *      "data": [],
+     *      "data": null,
      *      "status": 200
      * }
      * 
@@ -134,7 +134,7 @@ class NotificationController extends ApiController
      * 
      * @response 200 scenario=Success {
      *      "message": "All your notifications are marked as read.",
-     *      "data": [],
+     *      "data": null,
      *      "status": 200
      * }
      * 

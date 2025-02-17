@@ -183,7 +183,7 @@ endpoints:
         content: |-
           {
                "message": "Signed out successfully",
-               "data": [],
+               "data": null,
                "status": 200
           }
         headers: []
@@ -202,7 +202,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E1v6haPbda3f8gD4kZV6ec5'
+      - 'Bearer kc661gahD8bV5faePd43vZE'
     controller: null
     method: null
     route: null
@@ -259,7 +259,7 @@ endpoints:
         content: |-
           {
                "message": "Password updated successfully",
-               "data": [],
+               "data": null,
                "status": 200
           }
         headers: []
@@ -278,7 +278,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DZPbdch3vf68kae46a1gE5V'
+      - 'Bearer h6acb6EkDeg4vVadP1f38Z5'
     controller: null
     method: null
     route: null

@@ -130,7 +130,7 @@ class AuthController extends ApiController
      * 
      * @response 200 scenario=Success {
      *      "message": "Signed out successfully",
-     *      "data": [],
+     *      "data": null,
      *      "status": 200
      * }
      * 
@@ -154,7 +154,7 @@ class AuthController extends ApiController
      * 
      * @response 200 scenario=Success {
      *      "message": "Password updated successfully",
-     *      "data": [],
+     *      "data": null,
      *      "status": 200
      * }
      * 

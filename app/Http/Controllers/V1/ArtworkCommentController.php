@@ -129,9 +129,9 @@ class ArtworkCommentController extends ApiController
      * @urlParam artworkCommentId integer required The ID of the comment to delete
      * 
      * @response 200 scenario=Success {
-     *     'message' => 'You have successfully deleted the comment.',
-     *     'data' => [],
-     *     'status' => 200,
+     *     'message': 'You have successfully deleted the comment.',
+     *     'data': null,
+     *     'status': 200,
      * }
      * 
      * @response 401 scenario=Unauthenticated {

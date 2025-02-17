@@ -76,9 +76,9 @@ class ArtworkLikeController extends ApiController
      * @urlParam artworkId integer required The ID of the artwork to unlike
      * 
      * @response 200 scenario=Success {
-     *      'message' => 'You have successfully unliked this artwork.',
-     *      'data' => [],
-     *      'status' => 200
+     *      'message': 'You have successfully unliked this artwork.',
+     *      'data': null,
+     *      'status': 200
      * }
      * 
      * @response 401 scenario=Unauthenticated {

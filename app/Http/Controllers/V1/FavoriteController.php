@@ -103,8 +103,8 @@ class FavoriteController extends ApiController
      * @urlParam artworkId integer required The ID of the artwork to remove from favorites
      * 
      * @response 200 scenario=Success {
-     *      'message' => 'You have successfully removed this artwork from your favorites.',
-     *      'data' => [],
+     *      'message': 'You have successfully removed this artwork from your favorites.',
+     *      'data': null,
      *      'status' => 200
      * }
      * 

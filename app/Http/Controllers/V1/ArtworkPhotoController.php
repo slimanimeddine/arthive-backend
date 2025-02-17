@@ -136,7 +136,7 @@ class ArtworkPhotoController extends ApiController
      * 
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
-     *    "data" => [],
+     *    "data": null,
      *    "status": 200
      * }
      * 

@@ -188,8 +188,20 @@
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-sign-out">
                                 <a href="#authentication-POSTapi-v1-sign-out">Sign Out</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-GETapi-v1-email-verify--id---hash-">
+                                <a href="#authentication-GETapi-v1-email-verify--id---hash-">Verify Email</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-email-verification-notification">
+                                <a href="#authentication-POSTapi-v1-email-verification-notification">Resend Verification Email</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-forgot-password">
+                                <a href="#authentication-POSTapi-v1-forgot-password">Send Reset Password Link</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-reset-password">
                                 <a href="#authentication-POSTapi-v1-reset-password">Reset Password</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-change-password">
+                                <a href="#authentication-POSTapi-v1-change-password">Change Password</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="authentication-POSTapi-v1-admin-sign-in">
                                 <a href="#authentication-POSTapi-v1-admin-sign-in">Admin Sign In</a>
@@ -285,7 +297,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 17, 2025</li>
+        <li>Last updated: February 18, 2025</li>
     </ul>
 </div>
 
@@ -363,49 +375,49 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 103,
-            &quot;user_id&quot;: 362,
-            &quot;status&quot;: &quot;rejected&quot;,
-            &quot;reason&quot;: &quot;Consequuntur at illo tempora ab voluptatem. Quos autem sequi et ut exercitationem architecto. Quibusdam voluptatem aut facilis deserunt nam est.&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 100,
+            &quot;user_id&quot;: 236,
+            &quot;status&quot;: &quot;pending&quot;,
+            &quot;reason&quot;: &quot;Quam et rerum sit. Aut beatae sit veniam animi non.&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 362,
-                &quot;username&quot;: &quot;ally91&quot;,
-                &quot;first_name&quot;: &quot;Henri&quot;,
-                &quot;last_name&quot;: &quot;Parisian&quot;,
-                &quot;email&quot;: &quot;gbernier@example.org&quot;,
-                &quot;country&quot;: &quot;Armenia&quot;,
-                &quot;bio&quot;: &quot;Ex sit ratione maiores magnam. Est nostrum quia consequatur non officia eius ex quia. Quaerat ut tenetur cum. Quisquam et qui et corporis sit non.&quot;,
-                &quot;photo&quot;: null,
-                &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
+                &quot;id&quot;: 236,
+                &quot;username&quot;: &quot;abshire.alaina&quot;,
+                &quot;first_name&quot;: &quot;Vince&quot;,
+                &quot;last_name&quot;: &quot;Jacobson&quot;,
+                &quot;email&quot;: &quot;pcrooks@example.net&quot;,
+                &quot;country&quot;: &quot;Christmas Island&quot;,
+                &quot;bio&quot;: &quot;Quo et consequatur aliquid totam. Est perspiciatis occaecati repellendus non aperiam. Est ex aperiam ipsam asperiores.&quot;,
+                &quot;photo&quot;: &quot;artwork-seeding-photos/15.jpeg&quot;,
+                &quot;artist_verified_at&quot;: null,
                 &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
             }
         },
         {
-            &quot;id&quot;: 104,
-            &quot;user_id&quot;: 363,
+            &quot;id&quot;: 101,
+            &quot;user_id&quot;: 237,
             &quot;status&quot;: &quot;rejected&quot;,
-            &quot;reason&quot;: &quot;Saepe culpa quidem possimus quasi ea et. Aliquid deserunt dicta quo voluptate voluptatem qui modi. Consequatur ullam est esse aut ad. Perferendis suscipit quia rerum tempore consequuntur.&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;reason&quot;: &quot;Fuga sed sint optio et. Sunt impedit accusantium excepturi cupiditate ut est eius. Modi dolorem deleniti rem vitae. Officia delectus reiciendis odio expedita ducimus dolores eos delectus.&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: 363,
-                &quot;username&quot;: &quot;dolores.watsica&quot;,
-                &quot;first_name&quot;: &quot;Clare&quot;,
-                &quot;last_name&quot;: &quot;Hoppe&quot;,
-                &quot;email&quot;: &quot;tad.mills@example.com&quot;,
-                &quot;country&quot;: &quot;Taiwan&quot;,
-                &quot;bio&quot;: &quot;Deserunt eligendi et earum ut eveniet fugiat eveniet. Porro dignissimos est aut qui eos ut qui. Maiores nobis asperiores et ad enim id ut.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/4.jpeg&quot;,
-                &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-                &quot;email_verified_at&quot;: null,
+                &quot;id&quot;: 237,
+                &quot;username&quot;: &quot;ykunze&quot;,
+                &quot;first_name&quot;: &quot;Lamont&quot;,
+                &quot;last_name&quot;: &quot;King&quot;,
+                &quot;email&quot;: &quot;batz.bell@example.org&quot;,
+                &quot;country&quot;: &quot;French Guiana&quot;,
+                &quot;bio&quot;: &quot;Animi sint perferendis assumenda cum odio corrupti et voluptatem. Quos dolorem quasi molestiae odit distinctio nihil. Suscipit dolor praesentium porro voluptas.&quot;,
+                &quot;photo&quot;: &quot;artwork-seeding-photos/34.jpeg&quot;,
+                &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
             }
         }
     ],
@@ -593,12 +605,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 105,
-        &quot;user_id&quot;: 364,
-        &quot;status&quot;: &quot;rejected&quot;,
-        &quot;reason&quot;: &quot;Ratione repellendus sunt quis qui laboriosam enim beatae. Blanditiis illum tempora odit eum sunt dolor.&quot;,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 102,
+        &quot;user_id&quot;: 238,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;reason&quot;: &quot;Nisi fuga consectetur et. Facere blanditiis quia explicabo minima. Sit nobis enim laboriosam qui explicabo qui rerum. In neque pariatur sunt cum.&quot;,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -758,7 +770,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artist-verification-requests/molestiae" \
+    "http://localhost:8000/api/v1/artist-verification-requests/dolores" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -771,7 +783,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artist-verification-requests/molestiae"
+    "http://localhost:8000/api/v1/artist-verification-requests/dolores"
 );
 
 const headers = {
@@ -801,12 +813,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 106,
-        &quot;user_id&quot;: 365,
+        &quot;id&quot;: 103,
+        &quot;user_id&quot;: 239,
         &quot;status&quot;: &quot;rejected&quot;,
-        &quot;reason&quot;: &quot;Cumque esse aperiam molestiae neque molestiae maxime. Alias tenetur provident iusto similique nostrum tempore. Blanditiis nam quia deleniti sit expedita ab ea.&quot;,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;reason&quot;: &quot;Expedita et sint et explicabo facilis dolore optio. Culpa labore ea laudantium qui ea assumenda. Ut qui dolore quas autem optio et. Placeat cum et impedit id et repellat.&quot;,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -927,10 +939,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="artistVerificationRequestId"                data-endpoint="PUTapi-v1-artist-verification-requests--artistVerificationRequestId-"
-               value="molestiae"
+               value="dolores"
                data-component="url">
     <br>
-<p>The ID of the artist verification request to review. Example: <code>molestiae</code></p>
+<p>The ID of the artist verification request to review. Example: <code>dolores</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -977,19 +989,19 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/9/artwork-comments" \
+    "http://localhost:8000/api/v1/artworks/10/artwork-comments" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"quod\"
+    \"comment_text\": \"ut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/9/artwork-comments"
+    "http://localhost:8000/api/v1/artworks/10/artwork-comments"
 );
 
 const headers = {
@@ -999,7 +1011,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "quod"
+    "comment_text": "ut"
 };
 
 fetch(url, {
@@ -1018,12 +1030,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 347,
-        &quot;comment_text&quot;: &quot;Impedit ad quo optio deserunt.&quot;,
-        &quot;artwork_id&quot;: 277,
-        &quot;user_id&quot;: 356,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 323,
+        &quot;comment_text&quot;: &quot;Ut asperiores nam autem qui voluptas maiores dolor.&quot;,
+        &quot;artwork_id&quot;: 214,
+        &quot;user_id&quot;: 230,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -1144,10 +1156,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="POSTapi-v1-artworks--artworkId--artwork-comments"
-               value="9"
+               value="10"
                data-component="url">
     <br>
-<p>The ID of the artwork to comment on Example: <code>9</code></p>
+<p>The ID of the artwork to comment on Example: <code>10</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1156,10 +1168,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="comment_text"                data-endpoint="POSTapi-v1-artworks--artworkId--artwork-comments"
-               value="quod"
+               value="ut"
                data-component="body">
     <br>
-<p>The text of the comment Example: <code>quod</code></p>
+<p>The text of the comment Example: <code>ut</code></p>
         </div>
         </form>
 
@@ -1177,7 +1189,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-comments/18" \
+    "http://localhost:8000/api/v1/artwork-comments/11" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1185,7 +1197,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/18"
+    "http://localhost:8000/api/v1/artwork-comments/11"
 );
 
 const headers = {
@@ -1330,10 +1342,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkCommentId"                data-endpoint="DELETEapi-v1-artwork-comments--artworkCommentId-"
-               value="18"
+               value="11"
                data-component="url">
     <br>
-<p>The ID of the comment to delete Example: <code>18</code></p>
+<p>The ID of the comment to delete Example: <code>11</code></p>
             </div>
                     </form>
 
@@ -1351,19 +1363,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-comments/18" \
+    "http://localhost:8000/api/v1/artwork-comments/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"sit\"
+    \"comment_text\": \"facilis\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/18"
+    "http://localhost:8000/api/v1/artwork-comments/17"
 );
 
 const headers = {
@@ -1373,7 +1385,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "sit"
+    "comment_text": "facilis"
 };
 
 fetch(url, {
@@ -1392,12 +1404,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 348,
-        &quot;comment_text&quot;: &quot;Minus adipisci dolore sed assumenda aliquid.&quot;,
-        &quot;artwork_id&quot;: 278,
-        &quot;user_id&quot;: 358,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 324,
+        &quot;comment_text&quot;: &quot;Quasi quae est quam.&quot;,
+        &quot;artwork_id&quot;: 215,
+        &quot;user_id&quot;: 232,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -1518,10 +1530,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkCommentId"                data-endpoint="PUTapi-v1-artwork-comments--artworkCommentId-"
-               value="18"
+               value="17"
                data-component="url">
     <br>
-<p>The ID of the comment to update Example: <code>18</code></p>
+<p>The ID of the comment to update Example: <code>17</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1530,10 +1542,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="comment_text"                data-endpoint="PUTapi-v1-artwork-comments--artworkCommentId-"
-               value="sit"
+               value="facilis"
                data-component="body">
     <br>
-<p>The text of the comment Example: <code>sit</code></p>
+<p>The text of the comment Example: <code>facilis</code></p>
         </div>
         </form>
 
@@ -1554,14 +1566,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/in/artwork-likes/received/count/by-tag" \
+    --get "http://localhost:8000/api/v1/users/sed/artwork-likes/received/count/by-tag" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/in/artwork-likes/received/count/by-tag"
+    "http://localhost:8000/api/v1/users/sed/artwork-likes/received/count/by-tag"
 );
 
 const headers = {
@@ -1684,10 +1696,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="GETapi-v1-users--username--artwork-likes-received-count-by-tag"
-               value="in"
+               value="sed"
                data-component="url">
     <br>
-<p>The username of the user Example: <code>in</code></p>
+<p>The username of the user Example: <code>sed</code></p>
             </div>
                     </form>
 
@@ -1704,14 +1716,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/quia/artwork-likes/received/count" \
+    --get "http://localhost:8000/api/v1/users/voluptatibus/artwork-likes/received/count" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/quia/artwork-likes/received/count"
+    "http://localhost:8000/api/v1/users/voluptatibus/artwork-likes/received/count"
 );
 
 const headers = {
@@ -1825,10 +1837,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="GETapi-v1-users--username--artwork-likes-received-count"
-               value="quia"
+               value="voluptatibus"
                data-component="url">
     <br>
-<p>The username of the user Example: <code>quia</code></p>
+<p>The username of the user Example: <code>voluptatibus</code></p>
             </div>
                     </form>
 
@@ -1846,7 +1858,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/6/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/13/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1854,7 +1866,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/6/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/13/artwork-likes"
 );
 
 const headers = {
@@ -1878,11 +1890,11 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1145,
-        &quot;artwork_id&quot;: 276,
-        &quot;user_id&quot;: 354,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 1098,
+        &quot;artwork_id&quot;: 213,
+        &quot;user_id&quot;: 228,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -2003,10 +2015,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="POSTapi-v1-artworks--artworkId--artwork-likes"
-               value="6"
+               value="13"
                data-component="url">
     <br>
-<p>The ID of the artwork to like Example: <code>6</code></p>
+<p>The ID of the artwork to like Example: <code>13</code></p>
             </div>
                     </form>
 
@@ -2024,7 +2036,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/12/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/10/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2032,7 +2044,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/12/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/10/artwork-likes"
 );
 
 const headers = {
@@ -2177,10 +2189,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="DELETEapi-v1-artworks--artworkId--artwork-likes"
-               value="12"
+               value="10"
                data-component="url">
     <br>
-<p>The ID of the artwork to unlike Example: <code>12</code></p>
+<p>The ID of the artwork to unlike Example: <code>10</code></p>
             </div>
                     </form>
 
@@ -2202,16 +2214,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/1/artwork-photos" \
+    "http://localhost:8000/api/v1/artworks/7/artwork-photos" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "photos[]=@/tmp/php31r8u8qmfaqs9ieHCNg" </code></pre></div>
+    --form "photos[]=@/tmp/phpb31j11q2m1rf9pdMobm" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/1/artwork-photos"
+    "http://localhost:8000/api/v1/artworks/7/artwork-photos"
 );
 
 const headers = {
@@ -2240,20 +2252,20 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 538,
-            &quot;path&quot;: &quot;artwork-seeding-photos/38.jpeg&quot;,
+            &quot;id&quot;: 501,
+            &quot;path&quot;: &quot;artwork-seeding-photos/18.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: 279,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;artwork_id&quot;: 216,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         },
         {
-            &quot;id&quot;: 539,
-            &quot;path&quot;: &quot;artwork-seeding-photos/37.jpeg&quot;,
+            &quot;id&quot;: 502,
+            &quot;path&quot;: &quot;artwork-seeding-photos/1.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: 280,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;artwork_id&quot;: 217,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         }
     ]
 }</code>
@@ -2375,10 +2387,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="POSTapi-v1-artworks--artworkId--artwork-photos"
-               value="1"
+               value="7"
                data-component="url">
     <br>
-<p>The id of the artwork Example: <code>1</code></p>
+<p>The id of the artwork Example: <code>7</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2410,7 +2422,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-photos/9" \
+    "http://localhost:8000/api/v1/artwork-photos/4" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2418,7 +2430,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/9"
+    "http://localhost:8000/api/v1/artwork-photos/4"
 );
 
 const headers = {
@@ -2442,12 +2454,12 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 540,
-        &quot;path&quot;: &quot;artwork-seeding-photos/7.jpeg&quot;,
+        &quot;id&quot;: 503,
+        &quot;path&quot;: &quot;artwork-seeding-photos/37.jpeg&quot;,
         &quot;is_main&quot;: 0,
-        &quot;artwork_id&quot;: 281,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;artwork_id&quot;: 218,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -2568,10 +2580,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkPhotoId"                data-endpoint="PUTapi-v1-artwork-photos--artworkPhotoId-"
-               value="9"
+               value="4"
                data-component="url">
     <br>
-<p>The id of the artwork photo Example: <code>9</code></p>
+<p>The id of the artwork photo Example: <code>4</code></p>
             </div>
                     </form>
 
@@ -2589,7 +2601,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-photos/17" \
+    "http://localhost:8000/api/v1/artwork-photos/15" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2597,7 +2609,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/17"
+    "http://localhost:8000/api/v1/artwork-photos/15"
 );
 
 const headers = {
@@ -2742,10 +2754,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkPhotoId"                data-endpoint="DELETEapi-v1-artwork-photos--artworkPhotoId-"
-               value="17"
+               value="15"
                data-component="url">
     <br>
-<p>The id of the artwork photo Example: <code>17</code></p>
+<p>The id of the artwork photo Example: <code>15</code></p>
             </div>
                     </form>
 
@@ -2766,14 +2778,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/non/artwork-tags" \
+    --get "http://localhost:8000/api/v1/users/in/artwork-tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/non/artwork-tags"
+    "http://localhost:8000/api/v1/users/in/artwork-tags"
 );
 
 const headers = {
@@ -2896,10 +2908,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="GETapi-v1-users--username--artwork-tags"
-               value="non"
+               value="in"
                data-component="url">
     <br>
-<p>The username of the user Example: <code>non</code></p>
+<p>The username of the user Example: <code>in</code></p>
             </div>
                     </form>
 
@@ -2947,16 +2959,16 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 44,
-            &quot;name&quot;: &quot;Lucy Reilly&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;id&quot;: 20,
+            &quot;name&quot;: &quot;Paige Witting&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         },
         {
-            &quot;id&quot;: 45,
-            &quot;name&quot;: &quot;Dr. Vergie Lesch&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;id&quot;: 21,
+            &quot;name&quot;: &quot;Dr. Lonny Fay&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         }
     ]
 }</code>
@@ -3091,57 +3103,57 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 264,
-            &quot;title&quot;: &quot;Et occaecati distinctio.&quot;,
-            &quot;description&quot;: &quot;Sint dolorum quod eum est voluptas facere. Suscipit aut et fuga rem.&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 328,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+            &quot;id&quot;: 201,
+            &quot;title&quot;: &quot;Dolores eum aut.&quot;,
+            &quot;description&quot;: &quot;Dolorem numquam vitae sit dolor dolor occaecati. Consequuntur enim similique voluptatem neque. Voluptatum repellendus provident assumenda ut. Vel cum quae et et quasi officia.&quot;,
+            &quot;status&quot;: &quot;draft&quot;,
+            &quot;user_id&quot;: 202,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: 328,
-                &quot;username&quot;: &quot;skye78&quot;,
-                &quot;first_name&quot;: &quot;Jarret&quot;,
-                &quot;last_name&quot;: &quot;Glover&quot;,
-                &quot;email&quot;: &quot;nola.oconnell@example.net&quot;,
-                &quot;country&quot;: &quot;Kyrgyz Republic&quot;,
-                &quot;bio&quot;: &quot;Quae eos sed architecto possimus pariatur. Aspernatur et blanditiis sapiente.&quot;,
-                &quot;photo&quot;: null,
-                &quot;artist_verified_at&quot;: null,
-                &quot;email_verified_at&quot;: null,
+                &quot;id&quot;: 202,
+                &quot;username&quot;: &quot;brock.turcotte&quot;,
+                &quot;first_name&quot;: &quot;Carmela&quot;,
+                &quot;last_name&quot;: &quot;Wehner&quot;,
+                &quot;email&quot;: &quot;annie16@example.org&quot;,
+                &quot;country&quot;: &quot;Mozambique&quot;,
+                &quot;bio&quot;: &quot;Laboriosam suscipit cumque perferendis voluptatum animi at. Ea omnis consequatur illum perferendis aut. Quia vel eaque voluptatem commodi unde qui hic commodi.&quot;,
+                &quot;photo&quot;: &quot;artwork-seeding-photos/7.jpeg&quot;,
+                &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:54&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
             }
         },
         {
-            &quot;id&quot;: 265,
-            &quot;title&quot;: &quot;Incidunt veritatis.&quot;,
-            &quot;description&quot;: &quot;Esse facere qui ab consequuntur et natus. Dolore facilis saepe et id quaerat qui nobis dolores. Sunt sit excepturi rerum voluptatem et. Fugit deleniti dolor cumque voluptate ut veritatis.&quot;,
-            &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: 329,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+            &quot;id&quot;: 202,
+            &quot;title&quot;: &quot;Numquam quas et inventore.&quot;,
+            &quot;description&quot;: &quot;Est quia blanditiis in. Delectus optio tempora natus sed est. Eaque et non cupiditate.&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;user_id&quot;: 203,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: 329,
-                &quot;username&quot;: &quot;flatley.shaina&quot;,
-                &quot;first_name&quot;: &quot;Sallie&quot;,
-                &quot;last_name&quot;: &quot;Wilderman&quot;,
-                &quot;email&quot;: &quot;kbarton@example.org&quot;,
-                &quot;country&quot;: &quot;Sao Tome and Principe&quot;,
-                &quot;bio&quot;: &quot;Aut eius perspiciatis accusantium sunt ea molestias velit. Accusantium a aspernatur sapiente sit fugit eos quia. Esse neque corporis consequatur molestiae omnis et. Ut est expedita et rerum tenetur sunt quisquam.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/40.jpeg&quot;,
-                &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:57&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                &quot;id&quot;: 203,
+                &quot;username&quot;: &quot;jshields&quot;,
+                &quot;first_name&quot;: &quot;Rebecca&quot;,
+                &quot;last_name&quot;: &quot;Ratke&quot;,
+                &quot;email&quot;: &quot;francis.goldner@example.com&quot;,
+                &quot;country&quot;: &quot;Kuwait&quot;,
+                &quot;bio&quot;: &quot;Et omnis odio commodi odio voluptatem qui in aperiam. Explicabo suscipit corrupti alias. Sunt ratione omnis sit nihil. Ut qui culpa maxime eum cum. Distinctio et molestiae at animi autem nisi beatae eos.&quot;,
+                &quot;photo&quot;: &quot;artwork-seeding-photos/38.jpeg&quot;,
+                &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:54&quot;,
+                &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
             }
         }
     ],
@@ -3324,14 +3336,14 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/7" \
+    --get "http://localhost:8000/api/v1/artworks/8" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/7"
+    "http://localhost:8000/api/v1/artworks/8"
 );
 
 const headers = {
@@ -3355,197 +3367,197 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 266,
-            &quot;title&quot;: &quot;Iusto voluptas necessitatibus incidunt.&quot;,
-            &quot;description&quot;: &quot;Alias et ut voluptatem dolor tempore ducimus. Dolorem distinctio ut asperiores cumque quod atque assumenda. Fuga perspiciatis eos sapiente laboriosam cupiditate repudiandae. Quia voluptatem voluptates temporibus amet dolore.&quot;,
-            &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: 330,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+            &quot;id&quot;: 203,
+            &quot;title&quot;: &quot;Culpa laboriosam laborum.&quot;,
+            &quot;description&quot;: &quot;Doloremque tempora consequuntur est nam voluptate et culpa veniam. Ut eum quia ipsa recusandae ut nobis et omnis. Qui aut qui dolorem sed saepe quos. Id rerum sunt laborum quo.&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;user_id&quot;: 204,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 1,
             &quot;artwork_comments_count&quot;: 1,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: 330,
-                &quot;username&quot;: &quot;bayer.deontae&quot;,
-                &quot;first_name&quot;: &quot;Terrence&quot;,
-                &quot;last_name&quot;: &quot;Dickens&quot;,
-                &quot;email&quot;: &quot;alek32@example.org&quot;,
-                &quot;country&quot;: &quot;Andorra&quot;,
-                &quot;bio&quot;: &quot;Ut officia numquam sed qui quisquam ipsa consectetur. Sunt dicta similique alias voluptas. Dolorem minima placeat nulla molestiae rem alias.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/8.jpeg&quot;,
+                &quot;id&quot;: 204,
+                &quot;username&quot;: &quot;witting.abelardo&quot;,
+                &quot;first_name&quot;: &quot;Paula&quot;,
+                &quot;last_name&quot;: &quot;Kunde&quot;,
+                &quot;email&quot;: &quot;wehner.vernon@example.net&quot;,
+                &quot;country&quot;: &quot;Equatorial Guinea&quot;,
+                &quot;bio&quot;: &quot;Dolorum est aspernatur placeat nemo fugit. Et ducimus sit totam voluptate. Qui nihil ducimus explicabo dolorem accusantium tenetur voluptatibus.&quot;,
+                &quot;photo&quot;: null,
                 &quot;artist_verified_at&quot;: null,
-                &quot;email_verified_at&quot;: null,
+                &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
             },
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 534,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/21.jpeg&quot;,
+                    &quot;id&quot;: 497,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/6.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 266,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                    &quot;artwork_id&quot;: 203,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
                 }
             ],
             &quot;artwork_comments&quot;: [
                 {
-                    &quot;id&quot;: 345,
-                    &quot;comment_text&quot;: &quot;Labore consequuntur ipsam consequatur aperiam.&quot;,
-                    &quot;artwork_id&quot;: 266,
-                    &quot;user_id&quot;: 331,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                    &quot;id&quot;: 321,
+                    &quot;comment_text&quot;: &quot;Vel iste autem molestias qui qui veniam.&quot;,
+                    &quot;artwork_id&quot;: 203,
+                    &quot;user_id&quot;: 205,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                     &quot;user&quot;: {
-                        &quot;id&quot;: 331,
-                        &quot;username&quot;: &quot;ahermann&quot;,
-                        &quot;first_name&quot;: &quot;Connie&quot;,
-                        &quot;last_name&quot;: &quot;Wyman&quot;,
-                        &quot;email&quot;: &quot;price.filomena@example.net&quot;,
-                        &quot;country&quot;: &quot;Tokelau&quot;,
-                        &quot;bio&quot;: &quot;Maiores vero repellat a ea. Quod repudiandae fugit possimus aut. Sit est facilis quisquam. Ab aut aspernatur rem vitae tempore debitis.&quot;,
-                        &quot;photo&quot;: null,
-                        &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:57&quot;,
-                        &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                        &quot;id&quot;: 205,
+                        &quot;username&quot;: &quot;ivah57&quot;,
+                        &quot;first_name&quot;: &quot;Lloyd&quot;,
+                        &quot;last_name&quot;: &quot;Kuhlman&quot;,
+                        &quot;email&quot;: &quot;dsteuber@example.com&quot;,
+                        &quot;country&quot;: &quot;Zambia&quot;,
+                        &quot;bio&quot;: &quot;Ipsa aut quos occaecati sunt. Ut odit et ea omnis. Eveniet et corrupti molestias voluptatem ea dignissimos est.&quot;,
+                        &quot;photo&quot;: &quot;artwork-seeding-photos/23.jpeg&quot;,
+                        &quot;artist_verified_at&quot;: null,
+                        &quot;email_verified_at&quot;: null,
                         &quot;role&quot;: &quot;artist&quot;,
-                        &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
                     }
                 }
             ],
             &quot;artwork_likes&quot;: [
                 {
-                    &quot;id&quot;: 1143,
-                    &quot;artwork_id&quot;: 266,
-                    &quot;user_id&quot;: 332,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                    &quot;id&quot;: 1096,
+                    &quot;artwork_id&quot;: 203,
+                    &quot;user_id&quot;: 206,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                     &quot;user&quot;: {
-                        &quot;id&quot;: 332,
-                        &quot;username&quot;: &quot;agaylord&quot;,
-                        &quot;first_name&quot;: &quot;Audie&quot;,
-                        &quot;last_name&quot;: &quot;Kessler&quot;,
-                        &quot;email&quot;: &quot;adela81@example.com&quot;,
-                        &quot;country&quot;: &quot;Cote d&#039;Ivoire&quot;,
-                        &quot;bio&quot;: &quot;Similique iusto et rem. Sapiente maxime ducimus porro dolores officia vero iure.&quot;,
-                        &quot;photo&quot;: &quot;artwork-seeding-photos/37.jpeg&quot;,
-                        &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:57&quot;,
-                        &quot;email_verified_at&quot;: null,
+                        &quot;id&quot;: 206,
+                        &quot;username&quot;: &quot;doris84&quot;,
+                        &quot;first_name&quot;: &quot;Rosalia&quot;,
+                        &quot;last_name&quot;: &quot;Kovacek&quot;,
+                        &quot;email&quot;: &quot;goyette.aletha@example.org&quot;,
+                        &quot;country&quot;: &quot;Vietnam&quot;,
+                        &quot;bio&quot;: &quot;Sunt sint et quia ut ipsum. Rerum illo consequatur amet natus sequi modi est. Voluptatem non ullam veritatis ut inventore laboriosam unde sunt. Recusandae cupiditate qui tenetur a autem.&quot;,
+                        &quot;photo&quot;: &quot;artwork-seeding-photos/16.jpeg&quot;,
+                        &quot;artist_verified_at&quot;: null,
+                        &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                         &quot;role&quot;: &quot;artist&quot;,
-                        &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
                     }
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 40,
-                    &quot;name&quot;: &quot;Geovanny O&#039;Keefe&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                    &quot;id&quot;: 16,
+                    &quot;name&quot;: &quot;Muriel Bailey PhD&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 266,
-                        &quot;tag_id&quot;: 40
+                        &quot;artwork_id&quot;: 203,
+                        &quot;tag_id&quot;: 16
                     }
                 }
             ]
         },
         {
-            &quot;id&quot;: 267,
-            &quot;title&quot;: &quot;Tenetur impedit.&quot;,
-            &quot;description&quot;: &quot;Molestiae ratione recusandae corrupti nisi est ipsa. Numquam autem ut iste odio saepe molestiae nulla. Molestias neque porro quia et. Voluptas inventore aut at.&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 333,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 204,
+            &quot;title&quot;: &quot;Voluptatem qui accusamus amet.&quot;,
+            &quot;description&quot;: &quot;Illo aut provident ipsam. Voluptas rerum minima ea veniam optio. Ipsam facilis dolore optio ratione. Corrupti rerum repudiandae minus soluta dolores. Esse quis repudiandae dolor reiciendis.&quot;,
+            &quot;status&quot;: &quot;draft&quot;,
+            &quot;user_id&quot;: 207,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 1,
             &quot;artwork_comments_count&quot;: 1,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: 333,
-                &quot;username&quot;: &quot;schaefer.fredrick&quot;,
-                &quot;first_name&quot;: &quot;Mina&quot;,
-                &quot;last_name&quot;: &quot;Ziemann&quot;,
-                &quot;email&quot;: &quot;burdette.leuschke@example.com&quot;,
-                &quot;country&quot;: &quot;Morocco&quot;,
-                &quot;bio&quot;: &quot;Sed asperiores rem libero suscipit rem. Voluptatem quis veniam at ab aut necessitatibus numquam. Sunt accusamus dignissimos fugiat omnis. Quia quam non non.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/8.jpeg&quot;,
-                &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:57&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
+                &quot;id&quot;: 207,
+                &quot;username&quot;: &quot;itreutel&quot;,
+                &quot;first_name&quot;: &quot;Breanna&quot;,
+                &quot;last_name&quot;: &quot;Boyer&quot;,
+                &quot;email&quot;: &quot;reid73@example.org&quot;,
+                &quot;country&quot;: &quot;Fiji&quot;,
+                &quot;bio&quot;: &quot;Laboriosam voluptatem aut nobis error. Id rem aut amet eos suscipit deserunt quo. Voluptates aliquam asperiores natus molestiae ducimus in accusamus et.&quot;,
+                &quot;photo&quot;: null,
+                &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:54&quot;,
+                &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-02-17T17:41:57.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
             },
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 535,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/40.jpeg&quot;,
+                    &quot;id&quot;: 498,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/7.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 267,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                    &quot;artwork_id&quot;: 204,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
                 }
             ],
             &quot;artwork_comments&quot;: [
                 {
-                    &quot;id&quot;: 346,
-                    &quot;comment_text&quot;: &quot;Aut sit velit velit sapiente.&quot;,
-                    &quot;artwork_id&quot;: 267,
-                    &quot;user_id&quot;: 334,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 322,
+                    &quot;comment_text&quot;: &quot;Consequatur alias maiores inventore minima nostrum dolores iste laboriosam.&quot;,
+                    &quot;artwork_id&quot;: 204,
+                    &quot;user_id&quot;: 208,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;user&quot;: {
-                        &quot;id&quot;: 334,
-                        &quot;username&quot;: &quot;timmothy.pollich&quot;,
-                        &quot;first_name&quot;: &quot;Orion&quot;,
-                        &quot;last_name&quot;: &quot;Ritchie&quot;,
-                        &quot;email&quot;: &quot;leslie09@example.org&quot;,
-                        &quot;country&quot;: &quot;Maldives&quot;,
-                        &quot;bio&quot;: &quot;Consectetur sed quia officia velit corrupti consequatur. Error in illo distinctio. Laboriosam ipsam non necessitatibus ut modi.&quot;,
-                        &quot;photo&quot;: &quot;artwork-seeding-photos/9.jpeg&quot;,
-                        &quot;artist_verified_at&quot;: null,
-                        &quot;email_verified_at&quot;: null,
+                        &quot;id&quot;: 208,
+                        &quot;username&quot;: &quot;bergstrom.devon&quot;,
+                        &quot;first_name&quot;: &quot;Kaitlyn&quot;,
+                        &quot;last_name&quot;: &quot;Schmitt&quot;,
+                        &quot;email&quot;: &quot;shirley.mcclure@example.org&quot;,
+                        &quot;country&quot;: &quot;Japan&quot;,
+                        &quot;bio&quot;: &quot;Et occaecati esse non aperiam aliquid et non. Dolores rerum fugit quasi ut. Dolore qui laudantium quisquam ut. Eos et aut cumque voluptatum reprehenderit et consequatur.&quot;,
+                        &quot;photo&quot;: &quot;artwork-seeding-photos/6.jpeg&quot;,
+                        &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:54&quot;,
+                        &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
                         &quot;role&quot;: &quot;artist&quot;,
-                        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2025-02-18T16:33:54.000000Z&quot;
                     }
                 }
             ],
             &quot;artwork_likes&quot;: [
                 {
-                    &quot;id&quot;: 1144,
-                    &quot;artwork_id&quot;: 267,
-                    &quot;user_id&quot;: 335,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 1097,
+                    &quot;artwork_id&quot;: 204,
+                    &quot;user_id&quot;: 209,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;user&quot;: {
-                        &quot;id&quot;: 335,
-                        &quot;username&quot;: &quot;kkoch&quot;,
-                        &quot;first_name&quot;: &quot;Jensen&quot;,
-                        &quot;last_name&quot;: &quot;Orn&quot;,
-                        &quot;email&quot;: &quot;kutch.coleman@example.com&quot;,
-                        &quot;country&quot;: &quot;Algeria&quot;,
-                        &quot;bio&quot;: &quot;Corporis voluptatum ut unde non omnis aliquam repellat. Laudantium maiores vitae corporis omnis saepe magni. Magni ut sapiente impedit voluptatem cupiditate.&quot;,
-                        &quot;photo&quot;: &quot;artwork-seeding-photos/1.jpeg&quot;,
-                        &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-                        &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                        &quot;id&quot;: 209,
+                        &quot;username&quot;: &quot;lulu.reilly&quot;,
+                        &quot;first_name&quot;: &quot;Bettie&quot;,
+                        &quot;last_name&quot;: &quot;Gerhold&quot;,
+                        &quot;email&quot;: &quot;phyllis07@example.com&quot;,
+                        &quot;country&quot;: &quot;Albania&quot;,
+                        &quot;bio&quot;: &quot;Voluptate voluptatem exercitationem natus id laborum iusto explicabo porro. Ipsum quam repellat et ipsam. Culpa harum minus itaque sed. Dolor nemo ipsam sit eius et.&quot;,
+                        &quot;photo&quot;: null,
+                        &quot;artist_verified_at&quot;: null,
+                        &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                         &quot;role&quot;: &quot;artist&quot;,
-                        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
                     }
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 41,
-                    &quot;name&quot;: &quot;Jeffery Doyle&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 17,
+                    &quot;name&quot;: &quot;Rita Stracke&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 267,
-                        &quot;tag_id&quot;: 41
+                        &quot;artwork_id&quot;: 204,
+                        &quot;tag_id&quot;: 17
                     }
                 }
             ]
@@ -3640,10 +3652,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="GETapi-v1-artworks--artworkId-"
-               value="7"
+               value="8"
                data-component="url">
     <br>
-<p>The id of the artwork Example: <code>7</code></p>
+<p>The id of the artwork Example: <code>8</code></p>
             </div>
                     </form>
 
@@ -3702,69 +3714,69 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 268,
-            &quot;title&quot;: &quot;Sit perspiciatis vel voluptatem.&quot;,
-            &quot;description&quot;: &quot;Nobis aliquam omnis blanditiis omnis ex. Dolorem tenetur suscipit reprehenderit accusantium quos adipisci vero perspiciatis. Molestias voluptas animi accusamus sunt ut alias.&quot;,
+            &quot;id&quot;: 205,
+            &quot;title&quot;: &quot;Voluptas aut necessitatibus quo.&quot;,
+            &quot;description&quot;: &quot;Illo nemo maxime officiis ex nihil. Eligendi sapiente iste voluptas ducimus. Quia quis ut qui enim repudiandae ut. Architecto sequi velit et cum sed provident eveniet.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 336,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;user_id&quot;: 210,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 536,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/26.jpeg&quot;,
+                    &quot;id&quot;: 499,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/32.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 268,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                    &quot;artwork_id&quot;: 205,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 42,
-                    &quot;name&quot;: &quot;Joelle Ebert&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 18,
+                    &quot;name&quot;: &quot;Evert Jerde&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 268,
-                        &quot;tag_id&quot;: 42
+                        &quot;artwork_id&quot;: 205,
+                        &quot;tag_id&quot;: 18
                     }
                 }
             ]
         },
         {
-            &quot;id&quot;: 269,
-            &quot;title&quot;: &quot;Animi id et aspernatur.&quot;,
-            &quot;description&quot;: &quot;Qui illo reprehenderit porro nam. Odit quidem ut quia quis sed nam neque. Non distinctio voluptatem eius. Quo ipsa tempora cumque est.&quot;,
+            &quot;id&quot;: 206,
+            &quot;title&quot;: &quot;Sequi consequatur pariatur.&quot;,
+            &quot;description&quot;: &quot;Qui ducimus iusto voluptatum velit. Perspiciatis minus accusantium ea possimus perferendis in. Dolores rerum vitae vel qui. Et aut quis esse rerum.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 337,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;user_id&quot;: 211,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 537,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/36.jpeg&quot;,
+                    &quot;id&quot;: 500,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/23.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 269,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                    &quot;artwork_id&quot;: 206,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 43,
-                    &quot;name&quot;: &quot;Miracle Bogisich&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 19,
+                    &quot;name&quot;: &quot;Destany Hartmann II&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 269,
-                        &quot;tag_id&quot;: 43
+                        &quot;artwork_id&quot;: 206,
+                        &quot;tag_id&quot;: 19
                     }
                 }
             ]
@@ -3945,14 +3957,14 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/aperiam/artworks?filter%5Btag%5D=graphic&amp;page=1&amp;perPage=10" \
+    --get "http://localhost:8000/api/v1/users/quis/artworks?filter%5Btag%5D=graphic&amp;page=1&amp;perPage=10" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/aperiam/artworks"
+    "http://localhost:8000/api/v1/users/quis/artworks"
 );
 
 const params = {
@@ -3984,25 +3996,25 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 270,
-            &quot;title&quot;: &quot;Dolorem iste et enim.&quot;,
-            &quot;description&quot;: &quot;Blanditiis velit molestiae aperiam praesentium ipsa minima consequuntur. Aliquid aut laudantium aliquid rerum rerum provident nobis. Non distinctio sint sapiente. Quos totam temporibus explicabo repellendus sit.&quot;,
+            &quot;id&quot;: 207,
+            &quot;title&quot;: &quot;Ea quod ut deserunt.&quot;,
+            &quot;description&quot;: &quot;Et totam cumque molestiae consectetur alias. Et enim quibusdam nulla. Nisi fugiat commodi totam autem.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: 338,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;user_id&quot;: 212,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: 271,
-            &quot;title&quot;: &quot;Sunt accusantium vel omnis.&quot;,
-            &quot;description&quot;: &quot;Non culpa aliquid voluptate rerum. Sit accusamus nihil minima et ratione. Vitae ut ut non veritatis neque provident. Autem et et quia et similique qui omnis.&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 339,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 208,
+            &quot;title&quot;: &quot;Praesentium quia.&quot;,
+            &quot;description&quot;: &quot;Ea ullam et magnam et. Aliquid neque minima nihil assumenda aut. Et fugit modi aut dignissimos.&quot;,
+            &quot;status&quot;: &quot;draft&quot;,
+            &quot;user_id&quot;: 213,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -4129,10 +4141,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="GETapi-v1-users--username--artworks"
-               value="aperiam"
+               value="quis"
                data-component="url">
     <br>
-<p>The username of the user Example: <code>aperiam</code></p>
+<p>The username of the user Example: <code>quis</code></p>
             </div>
                         <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                                     <div style="padding-left: 28px; clear: unset;">
@@ -4235,13 +4247,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 272,
-        &quot;title&quot;: &quot;Est soluta iure placeat.&quot;,
-        &quot;description&quot;: &quot;Rerum inventore natus quo consequatur ea ut qui laudantium. Voluptate sed omnis dolor culpa. Et odio sunt soluta est. Id placeat ut blanditiis qui quia aperiam.&quot;,
+        &quot;id&quot;: 209,
+        &quot;title&quot;: &quot;Minus quaerat nostrum ipsam.&quot;,
+        &quot;description&quot;: &quot;Distinctio voluptas doloremque ad eos facere qui. Ut quia delectus necessitatibus deleniti voluptatibus.&quot;,
         &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: 340,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+        &quot;user_id&quot;: 214,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -4402,7 +4414,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>The file of the photo. Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/php83agmpaa2d8bfaINhnH</code></p>
+<p>The file of the photo. Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpelkhs7ge49ud9dahjkM</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>is_main</code></b>&nbsp;&nbsp;
@@ -4443,7 +4455,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artworks/16" \
+    "http://localhost:8000/api/v1/artworks/17" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -4460,7 +4472,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/16"
+    "http://localhost:8000/api/v1/artworks/17"
 );
 
 const headers = {
@@ -4494,13 +4506,13 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 273,
-        &quot;title&quot;: &quot;Id dolor quia.&quot;,
-        &quot;description&quot;: &quot;Dicta ducimus eum eos doloribus voluptates vel. Voluptatem et voluptatum sapiente vero autem adipisci. Voluptatem deserunt ut et modi. Tempora rerum est architecto omnis iusto ducimus.&quot;,
+        &quot;id&quot;: 210,
+        &quot;title&quot;: &quot;Eaque laborum earum.&quot;,
+        &quot;description&quot;: &quot;Molestias aut ea eum magni ut quis. Et voluptatem cumque est. Voluptatem est rerum ex doloremque expedita architecto aliquam.&quot;,
         &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: 341,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+        &quot;user_id&quot;: 215,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -4624,10 +4636,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="PUTapi-v1-artworks--artworkId-"
-               value="16"
+               value="17"
                data-component="url">
     <br>
-<p>The id of the artwork Example: <code>16</code></p>
+<p>The id of the artwork Example: <code>17</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -4694,7 +4706,7 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/16" \
+    "http://localhost:8000/api/v1/artworks/2" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -4702,7 +4714,7 @@ Must be one of:
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/16"
+    "http://localhost:8000/api/v1/artworks/2"
 );
 
 const headers = {
@@ -4847,10 +4859,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="DELETEapi-v1-artworks--artworkId-"
-               value="16"
+               value="2"
                data-component="url">
     <br>
-<p>The id of the artwork Example: <code>16</code></p>
+<p>The id of the artwork Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -5334,13 +5346,471 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="authentication-POSTapi-v1-reset-password">Reset Password</h2>
+                    <h2 id="authentication-GETapi-v1-email-verify--id---hash-">Verify Email</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
 </p>
 
-<p>Resets the password of the authenticated user</p>
+<p>Verifies the email of the authenticated user</p>
+
+<span id="example-requests-GETapi-v1-email-verify--id---hash-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/v1/email/verify/voluptate/fugit" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/v1/email/verify/voluptate/fugit"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-email-verify--id---hash-">
+            <blockquote>
+            <p>Example response (200, Success):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Email verified successfully&quot;,
+    &quot;data&quot;: null,
+    &quot;status&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Unauthenticated):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-email-verify--id---hash-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-email-verify--id---hash-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-email-verify--id---hash-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-email-verify--id---hash-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-email-verify--id---hash-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-email-verify--id---hash-" data-method="GET"
+      data-path="api/v1/email/verify/{id}/{hash}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-email-verify--id---hash-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-email-verify--id---hash-"
+                    onclick="tryItOut('GETapi-v1-email-verify--id---hash-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-email-verify--id---hash-"
+                    onclick="cancelTryOut('GETapi-v1-email-verify--id---hash-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-email-verify--id---hash-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/email/verify/{id}/{hash}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="voluptate"
+               data-component="url">
+    <br>
+<p>The ID of the verify. Example: <code>voluptate</code></p>
+            </div>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>hash</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="hash"                data-endpoint="GETapi-v1-email-verify--id---hash-"
+               value="fugit"
+               data-component="url">
+    <br>
+<p>Example: <code>fugit</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="authentication-POSTapi-v1-email-verification-notification">Resend Verification Email</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Resends the verification email to the authenticated user</p>
+
+<span id="example-requests-POSTapi-v1-email-verification-notification">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/v1/email/verification-notification" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/v1/email/verification-notification"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-email-verification-notification">
+            <blockquote>
+            <p>Example response (200, Success):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Verification email sent successfully&quot;,
+    &quot;data&quot;: null,
+    &quot;status&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Unauthenticated):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-email-verification-notification" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-email-verification-notification"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-email-verification-notification"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-email-verification-notification" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-email-verification-notification">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-email-verification-notification" data-method="POST"
+      data-path="api/v1/email/verification-notification"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-email-verification-notification', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-email-verification-notification"
+                    onclick="tryItOut('POSTapi-v1-email-verification-notification');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-email-verification-notification"
+                    onclick="cancelTryOut('POSTapi-v1-email-verification-notification');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-email-verification-notification"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/email/verification-notification</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-email-verification-notification"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-email-verification-notification"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-email-verification-notification"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="authentication-POSTapi-v1-forgot-password">Send Reset Password Link</h2>
+
+<p>
+</p>
+
+<p>Sends a reset password link to the user's email</p>
+
+<span id="example-requests-POSTapi-v1-forgot-password">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/v1/forgot-password" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"johndoe@gmail.com\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/v1/forgot-password"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "johndoe@gmail.com"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-forgot-password">
+            <blockquote>
+            <p>Example response (200, Success):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Reset password link sent successfully&quot;,
+    &quot;data&quot;: {
+        &quot;status&quot;: &quot;passwords.sent&quot;
+    },
+    &quot;status&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (500, Failure):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Failed to send reset password link&quot;,
+    &quot;status&quot;: 500
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-forgot-password" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-forgot-password"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-forgot-password"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-forgot-password" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-forgot-password">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-forgot-password" data-method="POST"
+      data-path="api/v1/forgot-password"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-forgot-password', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-forgot-password"
+                    onclick="tryItOut('POSTapi-v1-forgot-password');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-forgot-password"
+                    onclick="cancelTryOut('POSTapi-v1-forgot-password');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-forgot-password"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/forgot-password</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-forgot-password"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-forgot-password"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-v1-forgot-password"
+               value="johndoe@gmail.com"
+               data-component="body">
+    <br>
+<p>The email address of the user. Must be unique. Must be a valid email address. The <code>email</code> of an existing record in the users table. Example: <code>johndoe@gmail.com</code></p>
+        </div>
+        </form>
+
+                    <h2 id="authentication-POSTapi-v1-reset-password">Reset Password</h2>
+
+<p>
+</p>
+
+<p>Resets the password of the user</p>
 
 <span id="example-requests-POSTapi-v1-reset-password">
 <blockquote>Example request:</blockquote>
@@ -5349,12 +5819,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/reset-password" \
-    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"current_password\": \"password\",
-    \"new_password\": \"new_password\"
+    \"token\": \"id\",
+    \"email\": \"johndoe@gmail.com\",
+    \"password\": \"password1234\"
 }"
 </code></pre></div>
 
@@ -5365,14 +5835,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Authorization": "Bearer {YOUR_AUTH_KEY}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
 
 let body = {
-    "current_password": "password",
-    "new_password": "new_password"
+    "token": "id",
+    "email": "johndoe@gmail.com",
+    "password": "password1234"
 };
 
 fetch(url, {
@@ -5390,18 +5860,21 @@ fetch(url, {
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Password updated successfully&quot;,
-    &quot;data&quot;: null,
+    &quot;message&quot;: &quot;Password reset successfully&quot;,
+    &quot;data&quot;: {
+        &quot;status&quot;: &quot;passwords.reset&quot;
+    },
     &quot;status&quot;: 200
 }</code>
  </pre>
             <blockquote>
-            <p>Example response (401, Unauthenticated):</p>
+            <p>Example response (500, Failure):</p>
         </blockquote>
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Unauthenticated&quot;
+    &quot;message&quot;: &quot;Failed to reset password&quot;,
+    &quot;status&quot;: 500
 }</code>
  </pre>
     </span>
@@ -5422,7 +5895,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-reset-password" data-method="POST"
       data-path="api/v1/reset-password"
-      data-authed="1"
+      data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5453,17 +5926,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-reset-password"
-               value="Bearer {YOUR_AUTH_KEY}"
-               data-component="header">
-    <br>
-<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -5487,11 +5949,198 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>token</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="token"                data-endpoint="POSTapi-v1-reset-password"
+               value="id"
+               data-component="body">
+    <br>
+<p>The token sent to the user email. Example: <code>id</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-v1-reset-password"
+               value="johndoe@gmail.com"
+               data-component="body">
+    <br>
+<p>The email of the user. Must be a valid email address. The <code>email</code> of an existing record in the users table. Example: <code>johndoe@gmail.com</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-v1-reset-password"
+               value="password1234"
+               data-component="body">
+    <br>
+<p>The new password of the user. Must be at least 8 characters. Example: <code>password1234</code></p>
+        </div>
+        </form>
+
+                    <h2 id="authentication-POSTapi-v1-change-password">Change Password</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Changes the password of the authenticated user</p>
+
+<span id="example-requests-POSTapi-v1-change-password">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/v1/change-password" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"current_password\": \"password\",
+    \"new_password\": \"new_password\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/v1/change-password"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "current_password": "password",
+    "new_password": "new_password"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-change-password">
+            <blockquote>
+            <p>Example response (200, Success):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Password updated successfully&quot;,
+    &quot;data&quot;: null,
+    &quot;status&quot;: 200
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (401, Unauthenticated):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-change-password" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-change-password"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-change-password"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-change-password" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-change-password">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-change-password" data-method="POST"
+      data-path="api/v1/change-password"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-change-password', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-change-password"
+                    onclick="tryItOut('POSTapi-v1-change-password');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-change-password"
+                    onclick="cancelTryOut('POSTapi-v1-change-password');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-change-password"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/change-password</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-change-password"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-change-password"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-change-password"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>current_password</code></b>&nbsp;&nbsp;
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="current_password"                data-endpoint="POSTapi-v1-reset-password"
+                              name="current_password"                data-endpoint="POSTapi-v1-change-password"
                value="password"
                data-component="body">
     <br>
@@ -5502,7 +6151,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>string</small>&nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="new_password"                data-endpoint="POSTapi-v1-reset-password"
+                              name="new_password"                data-endpoint="POSTapi-v1-change-password"
                value="new_password"
                data-component="body">
     <br>
@@ -5724,16 +6373,16 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 251,
-            &quot;name&quot;: &quot;Christmas Island&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;id&quot;: 245,
+            &quot;name&quot;: &quot;Saint Kitts and Nevis&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:56.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:56.000000Z&quot;
         },
         {
-            &quot;id&quot;: 252,
-            &quot;name&quot;: &quot;Guam&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;id&quot;: 246,
+            &quot;name&quot;: &quot;Luxembourg&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:56.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:56.000000Z&quot;
         }
     ]
 }</code>
@@ -5868,69 +6517,69 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 282,
-            &quot;title&quot;: &quot;Sed ea velit.&quot;,
-            &quot;description&quot;: &quot;Et eius voluptatem ut quia. Omnis quia eos iste temporibus. Et unde debitis ea aut qui. Tempora unde vel aliquid distinctio sit unde ab nihil.&quot;,
+            &quot;id&quot;: 219,
+            &quot;title&quot;: &quot;Est nihil.&quot;,
+            &quot;description&quot;: &quot;Possimus in tempora id sint et. Consequatur rerum aspernatur aut dolorem. Dignissimos ex possimus id quia eos perferendis ipsum. Culpa qui ut qui voluptas.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 366,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;user_id&quot;: 240,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 541,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/20.jpeg&quot;,
+                    &quot;id&quot;: 504,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/3.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 282,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                    &quot;artwork_id&quot;: 219,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 46,
-                    &quot;name&quot;: &quot;Macey Monahan DVM&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 22,
+                    &quot;name&quot;: &quot;Cassidy Jacobi III&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 282,
-                        &quot;tag_id&quot;: 46
+                        &quot;artwork_id&quot;: 219,
+                        &quot;tag_id&quot;: 22
                     }
                 }
             ]
         },
         {
-            &quot;id&quot;: 283,
-            &quot;title&quot;: &quot;Recusandae nobis animi.&quot;,
-            &quot;description&quot;: &quot;Perspiciatis accusamus error impedit veniam autem molestiae. Earum non pariatur harum repudiandae exercitationem ex. Natus et soluta voluptatem sapiente blanditiis. Dolorem ratione consequatur aut alias atque totam.&quot;,
+            &quot;id&quot;: 220,
+            &quot;title&quot;: &quot;Rerum magnam.&quot;,
+            &quot;description&quot;: &quot;Tempore aperiam ex et architecto dignissimos rerum. Ex quod aut dolor neque eos nostrum consequatur. Autem pariatur numquam corporis ipsam odio optio vitae magni.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: 367,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;user_id&quot;: 241,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;artwork_photos&quot;: [
                 {
-                    &quot;id&quot;: 542,
-                    &quot;path&quot;: &quot;artwork-seeding-photos/38.jpeg&quot;,
+                    &quot;id&quot;: 505,
+                    &quot;path&quot;: &quot;artwork-seeding-photos/15.jpeg&quot;,
                     &quot;is_main&quot;: 0,
-                    &quot;artwork_id&quot;: 283,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+                    &quot;artwork_id&quot;: 220,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
                 }
             ],
             &quot;tags&quot;: [
                 {
-                    &quot;id&quot;: 47,
-                    &quot;name&quot;: &quot;Jazlyn Okuneva&quot;,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 23,
+                    &quot;name&quot;: &quot;Madilyn Pollich&quot;,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;pivot&quot;: {
-                        &quot;artwork_id&quot;: 283,
-                        &quot;tag_id&quot;: 47
+                        &quot;artwork_id&quot;: 220,
+                        &quot;tag_id&quot;: 23
                     }
                 }
             ]
@@ -6099,7 +6748,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/9/favorites" \
+    "http://localhost:8000/api/v1/artworks/20/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6107,7 +6756,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/9/favorites"
+    "http://localhost:8000/api/v1/artworks/20/favorites"
 );
 
 const headers = {
@@ -6131,11 +6780,11 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1149,
-        &quot;artwork_id&quot;: 284,
-        &quot;user_id&quot;: 369,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 1128,
+        &quot;artwork_id&quot;: 221,
+        &quot;user_id&quot;: 243,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -6256,10 +6905,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="POSTapi-v1-artworks--artworkId--favorites"
-               value="9"
+               value="20"
                data-component="url">
     <br>
-<p>The ID of the artwork to mark as favorite Example: <code>9</code></p>
+<p>The ID of the artwork to mark as favorite Example: <code>20</code></p>
             </div>
                     </form>
 
@@ -6277,7 +6926,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/6/favorites" \
+    "http://localhost:8000/api/v1/artworks/20/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6285,7 +6934,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/6/favorites"
+    "http://localhost:8000/api/v1/artworks/20/favorites"
 );
 
 const headers = {
@@ -6430,10 +7079,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="artworkId"                data-endpoint="DELETEapi-v1-artworks--artworkId--favorites"
-               value="6"
+               value="20"
                data-component="url">
     <br>
-<p>The ID of the artwork to remove from favorites Example: <code>6</code></p>
+<p>The ID of the artwork to remove from favorites Example: <code>20</code></p>
             </div>
                     </form>
 
@@ -6495,34 +7144,34 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 347,
-            &quot;username&quot;: &quot;dan93&quot;,
-            &quot;first_name&quot;: &quot;Allie&quot;,
-            &quot;last_name&quot;: &quot;Gorczany&quot;,
-            &quot;email&quot;: &quot;emmerich.leatha@example.net&quot;,
-            &quot;country&quot;: &quot;Holy See (Vatican City State)&quot;,
-            &quot;bio&quot;: &quot;Autem animi et dignissimos autem non totam et labore. Dignissimos qui fugit accusamus eveniet porro est officiis. Et et libero distinctio quia repellat vero quaerat ratione. Perferendis quia quae quaerat nemo molestias.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 221,
+            &quot;username&quot;: &quot;favian34&quot;,
+            &quot;first_name&quot;: &quot;Johnathon&quot;,
+            &quot;last_name&quot;: &quot;Considine&quot;,
+            &quot;email&quot;: &quot;dianna54@example.org&quot;,
+            &quot;country&quot;: &quot;Honduras&quot;,
+            &quot;bio&quot;: &quot;Dolor blanditiis beatae ut voluptas repellat et. Aut quia doloremque omnis voluptatum at consequuntur. Officiis sit pariatur et consequatur porro rerum consequatur magni.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/15.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         },
         {
-            &quot;id&quot;: 348,
-            &quot;username&quot;: &quot;margarita.stoltenberg&quot;,
-            &quot;first_name&quot;: &quot;Corene&quot;,
-            &quot;last_name&quot;: &quot;Quitzon&quot;,
-            &quot;email&quot;: &quot;alverta31@example.net&quot;,
-            &quot;country&quot;: &quot;Ethiopia&quot;,
-            &quot;bio&quot;: &quot;Non nam et consequatur maiores accusamus. Maiores voluptates ipsum odio aliquam. Facilis est ipsum quisquam assumenda. Ullam fugiat tempore magnam excepturi possimus.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 222,
+            &quot;username&quot;: &quot;gaetano.oconner&quot;,
+            &quot;first_name&quot;: &quot;Kayla&quot;,
+            &quot;last_name&quot;: &quot;Reynolds&quot;,
+            &quot;email&quot;: &quot;clarabelle.hansen@example.org&quot;,
+            &quot;country&quot;: &quot;Paraguay&quot;,
+            &quot;bio&quot;: &quot;Rerum non praesentium sit dolor. Sed neque perferendis sint minus et nostrum velit. Est omnis nulla qui dolorem eos non.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/29.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+            &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
@@ -6728,34 +7377,34 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 349,
-            &quot;username&quot;: &quot;rasheed.brakus&quot;,
-            &quot;first_name&quot;: &quot;Denis&quot;,
-            &quot;last_name&quot;: &quot;Vandervort&quot;,
-            &quot;email&quot;: &quot;mertz.avery@example.net&quot;,
-            &quot;country&quot;: &quot;Barbados&quot;,
-            &quot;bio&quot;: &quot;Vero architecto tenetur quos cupiditate. Debitis expedita aut quo accusantium. Quaerat exercitationem aut consequatur consectetur et.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 350,
-            &quot;username&quot;: &quot;qschultz&quot;,
-            &quot;first_name&quot;: &quot;Shanie&quot;,
-            &quot;last_name&quot;: &quot;Stiedemann&quot;,
-            &quot;email&quot;: &quot;champlin.augustus@example.org&quot;,
-            &quot;country&quot;: &quot;Moldova&quot;,
-            &quot;bio&quot;: &quot;Et deleniti ut reprehenderit quia enim impedit. Eius sit aliquid vel dolor et ut. Perferendis voluptas id et accusantium omnis quo. Amet vitae doloremque et.&quot;,
-            &quot;photo&quot;: null,
+            &quot;id&quot;: 223,
+            &quot;username&quot;: &quot;slowe&quot;,
+            &quot;first_name&quot;: &quot;Jeramie&quot;,
+            &quot;last_name&quot;: &quot;Hamill&quot;,
+            &quot;email&quot;: &quot;gspencer@example.com&quot;,
+            &quot;country&quot;: &quot;Tanzania&quot;,
+            &quot;bio&quot;: &quot;Est omnis earum accusamus pariatur dolorum cupiditate quia. Et dolorum nam voluptatibus sit. Repellendus quis voluptatem et doloremque quidem pariatur. Id dicta et laudantium consectetur aperiam. Reiciendis animi non distinctio at.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/34.jpeg&quot;,
             &quot;artist_verified_at&quot;: null,
             &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 224,
+            &quot;username&quot;: &quot;cullen49&quot;,
+            &quot;first_name&quot;: &quot;Elenora&quot;,
+            &quot;last_name&quot;: &quot;O&#039;Keefe&quot;,
+            &quot;email&quot;: &quot;chaim17@example.org&quot;,
+            &quot;country&quot;: &quot;American Samoa&quot;,
+            &quot;bio&quot;: &quot;Debitis a asperiores quia quia dicta. Reprehenderit quo et nisi voluptatum. Illum molestias nisi quam explicabo commodi. Recusandae qui ad hic quidem et quae velit voluptatibus. Ducimus dignissimos veritatis sed consequatur ea deserunt autem.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/24.jpeg&quot;,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;role&quot;: &quot;artist&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
@@ -6921,7 +7570,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/follows/users/13" \
+    "http://localhost:8000/api/v1/follows/users/11" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -6929,7 +7578,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/13"
+    "http://localhost:8000/api/v1/follows/users/11"
 );
 
 const headers = {
@@ -6953,11 +7602,11 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1140,
-        &quot;follower_id&quot;: 351,
-        &quot;followed_id&quot;: 352,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;id&quot;: 1111,
+        &quot;follower_id&quot;: 225,
+        &quot;followed_id&quot;: 226,
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -7078,10 +7727,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="userId"                data-endpoint="POSTapi-v1-follows-users--userId-"
-               value="13"
+               value="11"
                data-component="url">
     <br>
-<p>The ID of the user to follow Example: <code>13</code></p>
+<p>The ID of the user to follow Example: <code>11</code></p>
             </div>
                     </form>
 
@@ -7099,7 +7748,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/follows/users/14" \
+    "http://localhost:8000/api/v1/follows/users/1" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -7107,7 +7756,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/14"
+    "http://localhost:8000/api/v1/follows/users/1"
 );
 
 const headers = {
@@ -7262,10 +7911,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="userId"                data-endpoint="DELETEapi-v1-follows-users--userId-"
-               value="14"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the user to unfollow Example: <code>14</code></p>
+<p>The ID of the user to unfollow Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -8248,28 +8897,28 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 342,
-            &quot;username&quot;: &quot;vena95&quot;,
-            &quot;first_name&quot;: &quot;Florence&quot;,
-            &quot;last_name&quot;: &quot;Fay&quot;,
-            &quot;email&quot;: &quot;sjenkins@example.com&quot;,
-            &quot;country&quot;: &quot;Tokelau&quot;,
-            &quot;bio&quot;: &quot;Et vel fuga dolores atque ut dolor. Quis vel ut numquam tempore. Soluta quis veritatis dolores est aut accusamus ullam. Aut impedit ad enim.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;id&quot;: 216,
+            &quot;username&quot;: &quot;king.kolby&quot;,
+            &quot;first_name&quot;: &quot;Gail&quot;,
+            &quot;last_name&quot;: &quot;Haag&quot;,
+            &quot;email&quot;: &quot;ward.cynthia@example.com&quot;,
+            &quot;country&quot;: &quot;Germany&quot;,
+            &quot;bio&quot;: &quot;Porro perspiciatis dolorem odio error inventore atque voluptatem. Est ipsa quia pariatur unde voluptas aut. Id eaque in doloremque enim quaerat modi facilis. Et quis id labore ab aut aut velit.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/14.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artworks&quot;: [
                 {
-                    &quot;id&quot;: 274,
-                    &quot;title&quot;: &quot;Minima cupiditate.&quot;,
-                    &quot;description&quot;: &quot;Similique accusamus sunt maxime aut ea quod. Corporis impedit iste aut nihil recusandae. Ad ipsa eaque hic in repudiandae. Quia voluptas aut delectus nobis cupiditate quod sed.&quot;,
-                    &quot;status&quot;: &quot;draft&quot;,
-                    &quot;user_id&quot;: 342,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;id&quot;: 211,
+                    &quot;title&quot;: &quot;Velit numquam qui voluptate.&quot;,
+                    &quot;description&quot;: &quot;Veniam consequatur odit recusandae. Officiis similique molestias inventore commodi sed impedit est beatae. Repellat quidem illum provident modi sed molestiae aut. Quaerat et dolores culpa sunt reiciendis. Qui nihil omnis nihil enim.&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;user_id&quot;: 216,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;artwork_likes_count&quot;: 0,
                     &quot;artwork_comments_count&quot;: 0,
                     &quot;artwork_main_photo_path&quot;: null
@@ -8277,28 +8926,28 @@ fetch(url, {
             ]
         },
         {
-            &quot;id&quot;: 343,
-            &quot;username&quot;: &quot;qhaley&quot;,
-            &quot;first_name&quot;: &quot;Brant&quot;,
-            &quot;last_name&quot;: &quot;Bahringer&quot;,
-            &quot;email&quot;: &quot;marlene49@example.net&quot;,
-            &quot;country&quot;: &quot;China&quot;,
-            &quot;bio&quot;: &quot;Deserunt molestiae hic quisquam quo. Repudiandae cupiditate quibusdam nisi ea accusamus voluptas dolores soluta. Est sapiente error a qui sed rerum facere. Nemo repellendus aliquam porro fuga nulla.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: null,
+            &quot;id&quot;: 217,
+            &quot;username&quot;: &quot;ara85&quot;,
+            &quot;first_name&quot;: &quot;Roselyn&quot;,
+            &quot;last_name&quot;: &quot;Beahan&quot;,
+            &quot;email&quot;: &quot;hulda97@example.org&quot;,
+            &quot;country&quot;: &quot;Bahrain&quot;,
+            &quot;bio&quot;: &quot;Quia facilis ipsam consectetur sed adipisci eveniet quia ut. Ut sed veniam inventore qui sunt quos.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/19.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
             &quot;artworks&quot;: [
                 {
-                    &quot;id&quot;: 275,
-                    &quot;title&quot;: &quot;Consequatur in enim.&quot;,
-                    &quot;description&quot;: &quot;Voluptatem et eveniet incidunt. Excepturi eius perferendis sit sit. Et minus aut dolores et ipsum sapiente.&quot;,
+                    &quot;id&quot;: 212,
+                    &quot;title&quot;: &quot;Earum illo repellendus.&quot;,
+                    &quot;description&quot;: &quot;Ut rerum accusamus omnis earum. Quo praesentium ea quidem modi qui dolores at ut. Voluptatibus debitis commodi magni alias nisi aspernatur. Consectetur vero nemo quam perspiciatis est.&quot;,
                     &quot;status&quot;: &quot;draft&quot;,
-                    &quot;user_id&quot;: 343,
-                    &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+                    &quot;user_id&quot;: 217,
+                    &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
                     &quot;artwork_likes_count&quot;: 0,
                     &quot;artwork_comments_count&quot;: 0,
                     &quot;artwork_main_photo_path&quot;: null
@@ -8553,19 +9202,19 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 344,
-        &quot;username&quot;: &quot;ubogisich&quot;,
-        &quot;first_name&quot;: &quot;Allison&quot;,
-        &quot;last_name&quot;: &quot;Toy&quot;,
-        &quot;email&quot;: &quot;qkshlerin@example.net&quot;,
-        &quot;country&quot;: &quot;Latvia&quot;,
-        &quot;bio&quot;: &quot;Qui est atque cum nemo exercitationem. Aliquam quas labore et fugit. Aspernatur in possimus non nesciunt sint omnis aspernatur.&quot;,
+        &quot;id&quot;: 218,
+        &quot;username&quot;: &quot;cole85&quot;,
+        &quot;first_name&quot;: &quot;Armand&quot;,
+        &quot;last_name&quot;: &quot;Abbott&quot;,
+        &quot;email&quot;: &quot;alexandrea92@example.net&quot;,
+        &quot;country&quot;: &quot;Western Sahara&quot;,
+        &quot;bio&quot;: &quot;Non nihil repellat veritatis dolor dolorem ipsa unde. Voluptatum eos iure excepturi neque natus a. Quia molestiae nihil quia voluptatibus qui unde aliquam. Consectetur quis nobis et nemo aut voluptatum doloribus.&quot;,
         &quot;photo&quot;: null,
         &quot;artist_verified_at&quot;: null,
-        &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+        &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -8674,14 +9323,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/hic" \
+    --get "http://localhost:8000/api/v1/users/ut" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/hic"
+    "http://localhost:8000/api/v1/users/ut"
 );
 
 const headers = {
@@ -8704,19 +9353,19 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 345,
-        &quot;username&quot;: &quot;lboyer&quot;,
-        &quot;first_name&quot;: &quot;Brianne&quot;,
-        &quot;last_name&quot;: &quot;Abshire&quot;,
-        &quot;email&quot;: &quot;donny.rosenbaum@example.org&quot;,
-        &quot;country&quot;: &quot;Turkmenistan&quot;,
-        &quot;bio&quot;: &quot;Iure quia et sint non fuga et. Dicta qui in sunt. Ipsum inventore provident recusandae aut eos et. Explicabo rerum at quos omnis.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/2.jpeg&quot;,
-        &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
-        &quot;email_verified_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
+        &quot;id&quot;: 219,
+        &quot;username&quot;: &quot;lucas97&quot;,
+        &quot;first_name&quot;: &quot;Sheldon&quot;,
+        &quot;last_name&quot;: &quot;Murphy&quot;,
+        &quot;email&quot;: &quot;bbeahan@example.com&quot;,
+        &quot;country&quot;: &quot;South Georgia and the South Sandwich Islands&quot;,
+        &quot;bio&quot;: &quot;Dolor molestiae voluptatem alias et. Laboriosam pariatur qui minus quaerat. Et ut totam itaque tempora dolores. Aut aut illo sed quis in.&quot;,
+        &quot;photo&quot;: null,
+        &quot;artist_verified_at&quot;: &quot;2025-02-18 16:33:55&quot;,
+        &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -8807,10 +9456,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="username"                data-endpoint="GETapi-v1-users--username-"
-               value="hic"
+               value="ut"
                data-component="url">
     <br>
-<p>The username of the user Example: <code>hic</code></p>
+<p>The username of the user Example: <code>ut</code></p>
             </div>
                     </form>
 
@@ -8838,7 +9487,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "email=johndoe@gmail.com"\
     --form "country=United States"\
     --form "bio=This is a bio"\
-    --form "photo=@/tmp/phpkt6700mjselafLgfhIN" </code></pre></div>
+    --form "photo=@/tmp/phphfhpbcmv282v4lbIKHc" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -8877,19 +9526,19 @@ fetch(url, {
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 346,
-        &quot;username&quot;: &quot;cartwright.josephine&quot;,
-        &quot;first_name&quot;: &quot;Jedidiah&quot;,
-        &quot;last_name&quot;: &quot;Beier&quot;,
-        &quot;email&quot;: &quot;abshire.oswaldo@example.org&quot;,
-        &quot;country&quot;: &quot;Belarus&quot;,
-        &quot;bio&quot;: &quot;Ut molestias quibusdam ut consequatur rem veniam et. Ut aliquid numquam dolor voluptates occaecati inventore. Qui ad praesentium deserunt voluptas culpa. In excepturi omnis vero mollitia aut et est. Aliquid nemo sint autem fuga vel.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/16.jpeg&quot;,
-        &quot;artist_verified_at&quot;: &quot;2025-02-17 17:41:58&quot;,
+        &quot;id&quot;: 220,
+        &quot;username&quot;: &quot;bbergstrom&quot;,
+        &quot;first_name&quot;: &quot;Deion&quot;,
+        &quot;last_name&quot;: &quot;Tromp&quot;,
+        &quot;email&quot;: &quot;schamberger.berneice@example.org&quot;,
+        &quot;country&quot;: &quot;Germany&quot;,
+        &quot;bio&quot;: &quot;Possimus facere quia est sapiente magnam et. Adipisci blanditiis ut dolorum.&quot;,
+        &quot;photo&quot;: &quot;artwork-seeding-photos/28.jpeg&quot;,
+        &quot;artist_verified_at&quot;: null,
         &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-02-17T17:41:58.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-02-18T16:33:55.000000Z&quot;
     }
 }</code>
  </pre>
@@ -9069,7 +9718,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>The photo of the user. Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phpkt6700mjselafLgfhIN</code></p>
+<p>The photo of the user. Must be an image. Must not be greater than 2048 kilobytes. Example: <code>/tmp/phphfhpbcmv282v4lbIKHc</code></p>
         </div>
         </form>
 

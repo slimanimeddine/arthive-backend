@@ -14,25 +14,29 @@ class ResetPasswordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'current_password' => ['required', 'string'],
-            'new_password' => ['required', 'string', 'min:8', 'confirmed'],
+            'token' => ['required'],
+            'email' => ['required', 'email', 'exists:users,email'],
+            'password' => ['required', 'min:8', 'confirmed'],
         ];
     }
 
     public function bodyParameters()
     {
         return [
-            'current_password' => [
-                'description' => 'The current password of the user.',
-                'example' => 'password',
+            'token' => [
+                'description' => 'The token sent to the user email.',
             ],
-            'new_password' => [
+            'email' => [
+                'description' => 'The email of the user.',
+                'example' => 'johndoe@gmail.com',
+            ],
+            'password' => [
                 'description' => 'The new password of the user.',
-                'example' => 'new_password',
+                'example' => 'password1234',
             ],
-            'new_password_confirmation' => [
-                'description' => 'The new password confirmation of the user.',
-                'example' => 'new_password',
+            'password_confirmation' => [
+                'description' => 'The new password confirmation.',
+                'example' => 'password1234',
             ],
         ];
     }

@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Requests\V1\ChangePasswordRequest;
 use App\Http\Requests\V1\ResetPasswordRequest;
+use App\Http\Requests\V1\SendResetPasswordLinkRequest;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Str;
 
 /**
  * @group Authentication
@@ -35,6 +42,8 @@ class AuthController extends ApiController
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+
+        event(new Registered($user));
 
         return $this->success('User created successfully', [
             'id' => $user->id
@@ -146,9 +155,9 @@ class AuthController extends ApiController
     }
 
     /**
-     * Reset Password
+     * Change Password
      * 
-     * Resets the password of the authenticated user
+     * Changes the password of the authenticated user
      * 
      * @authenticated
      * 
@@ -162,7 +171,7 @@ class AuthController extends ApiController
      *      "message": "Unauthenticated"
      * }
      */
-    public function resetPassword(ResetPasswordRequest $request)
+    public function changePassword(ChangePasswordRequest $request)
     {
         $authenticatedUser = $request->user();
 
@@ -170,6 +179,125 @@ class AuthController extends ApiController
             'password' => Hash::make($request->new_password)
         ]);
 
-        return $this->success('Password updated successfully');
+        return $this->success('Password changed successfully');
+    }
+
+    /**
+     * Verify Email
+     * 
+     * Verifies the email of the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Email verified successfully",
+     *      "data": null,
+     *      "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function verifyEmail(EmailVerificationRequest $request)
+    {
+        $request->fulfill();
+
+        return $this->success('Email verified successfully');
+    }
+
+    /**
+     * Resend Verification Email
+     * 
+     * Resends the verification email to the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Verification email sent successfully",
+     *      "data": null,
+     *      "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function resendVerificationEmail(Request $request)
+    {
+        $request->user()->sendEmailVerificationNotification();
+
+        return $this->success('Verification email sent successfully');
+    }
+
+    /**
+     * Send Reset Password Link
+     * 
+     * Sends a reset password link to the user's email
+     * 
+     * @response 200 scenario=Success {
+     *     "message": "Reset password link sent successfully",
+     *    "data": {
+     *       "status": "passwords.sent"
+     *   },
+     *  "status": 200
+     * }
+     * 
+     * @response 500 scenario="Failure" {
+     *     "message": "Failed to send reset password link",
+     *    "status": 500
+     * }
+     */
+    public function sendResetPasswordLink(SendResetPasswordLinkRequest $request)
+    {
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::ResetLinkSent
+            ? $this->success('Reset password link sent successfully', [
+                'status' => __($status)
+            ])
+            : $this->error('Failed to send reset password link', 500);
+    }
+
+    /**
+     * Reset Password
+     * 
+     * Resets the password of the user
+     * 
+     * @response 200 scenario=Success {
+     *    "message": "Password reset successfully",
+     *   "data": {
+     *     "status": "passwords.reset"
+     *  },
+     * "status": 200
+     * }
+     * 
+     * @response 500 scenario="Failure" {
+     *    "message": "Failed to reset password",
+     *  "status": 500
+     * }
+     */
+    public function resetPassword(ResetPasswordRequest $request)
+    {
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function (User $user, string $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+
+                event(new PasswordReset($user));
+            }
+        );
+
+        return $status === Password::PasswordReset
+            ? $this->success('Password reset successfully', [
+                'status' => __($status)
+            ])
+            : $this->error('Failed to reset password', 500);
     }
 }

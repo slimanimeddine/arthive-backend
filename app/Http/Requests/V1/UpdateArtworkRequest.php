@@ -18,7 +18,6 @@ class UpdateArtworkRequest extends FormRequest
         return [
             'title' => ['sometimes', 'string', 'max:255'],
             'description' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
-            'status' => ['sometimes', 'string', 'in:published'],
             'tags' => ['sometimes', 'array', 'min:1', 'max:3'],
             'tags.*' => ['sometimes', 'string', 'distinct:strict', 'exists:tags,name'],
         ];
@@ -34,10 +33,6 @@ class UpdateArtworkRequest extends FormRequest
             'description' => [
                 'description' => 'The description of the artwork',
                 'example' => 'This is an artwork description',
-            ],
-            'status' => [
-                'description' => 'The status of the artwork',
-                'example' => 'published',
             ],
             'tags' => [
                 'description' => 'The tags of the artwork',

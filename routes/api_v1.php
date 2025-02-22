@@ -35,6 +35,7 @@ Route::middleware(['throttle:create-artwork'])->group(function () {
 });
 
 Route::put('artworks/{artworkId}', [ArtworkController::class, 'updateArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
+Route::put('artworks/{artworkId}/publish', [ArtworkController::class, 'publishArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
 Route::delete('artworks/{artworkId}', [ArtworkController::class, 'deleteArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
 
 // user routes

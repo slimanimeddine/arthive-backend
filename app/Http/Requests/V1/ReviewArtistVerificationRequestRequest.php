@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests\V1;
 
+use App\Rules\MaxWordCount;
+use App\Rules\MinWordCount;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ReviewArtistVerificationRequestRequest extends FormRequest
@@ -14,8 +16,8 @@ class ReviewArtistVerificationRequestRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => 'required|in:approved,rejected',
-            'reason' => 'required_if:status,rejected',
+            'status' => ['required|in:approved,rejected'],
+            'reason' => ['required_if:status,rejected', new MinWordCount, new MaxWordCount],
         ];
     }
 

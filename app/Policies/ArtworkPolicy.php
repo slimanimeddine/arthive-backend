@@ -42,6 +42,18 @@ class ArtworkPolicy
     }
 
     /**
+     * Determine whether user can publish artwork
+     */
+    public function publishArtwork(User $user, Artwork $artwork): bool
+    {
+        $isArtist = $user->isArtist();
+        $isOwner = $user->id === $artwork->user_id;
+        $isDraft = $artwork->isDraft();
+
+        return $isArtist && $isOwner && $isDraft;
+    }
+
+    /**
      * Determine whether user can delete artwork
      */
     public function deleteArtwork(User $user, Artwork $artwork): bool

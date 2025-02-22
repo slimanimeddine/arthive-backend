@@ -290,6 +290,52 @@ class ArtworkController extends ApiController
     }
 
     /**
+     * Publish Artwork
+     * 
+     * Publish an artwork draft
+     * 
+     * @authenticated
+     * 
+     * @urlParam artworkId integer required The id of the artwork
+     * 
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork
+     * 
+     * @response 403 scenario=Unauthorized {
+     *    "message": "You are not authorized to publish this artwork.",
+     *   "status": 403
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *   "message": "Unauthenticated"
+     * }
+     * 
+     * @response 404 scenario="Artwork not found" {
+     *  "message": "The artwork you are trying to publish does not exist.",
+     * "status": 404
+     * }
+     */
+    public function publishArtwork(Request $request, int $artworkId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artwork = Artwork::find($artworkId);
+
+        if (!$artwork) {
+            return $this->error("The artwork you are trying to publish does not exist.", 404);
+        }
+
+        if ($authenticatedUser->cannot('publishArtwork', $artwork)) {
+            return $this->error("You are not authorized to publish this artwork.", 403);
+        }
+
+        $artwork->update(['status' => 'published']);
+
+        return new ArtworkResource($artwork);
+    }
+
+    /**
      * Delete Artwork
      * 
      * Delete an artwork

@@ -202,7 +202,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3gVavk8PZDc1ba6dh54ef6E'
+      - 'Bearer EZ3f4ck86vdhgP5DabeVa61'
     controller: null
     method: null
     route: null
@@ -229,7 +229,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: voluptate
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -239,15 +239,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: fugit
+        example: repellendus
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: voluptate
-      hash: fugit
+      id: non
+      hash: repellendus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -278,7 +278,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4e6c5fbDgvk31PdV86aEhaZ'
+      - 'Bearer DckE8Zd5f4v66g1VPbhae3a'
     controller: null
     method: null
     route: null
@@ -332,7 +332,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer c436V6Dafk1E5Phagvedb8Z'
+      - 'Bearer 861hfvEgVPdc6akeZ453Dab'
     controller: null
     method: null
     route: null
@@ -426,7 +426,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: id
+        example: eum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -453,7 +453,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: id
+      token: eum
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -558,7 +558,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer c8af1PeZ6kvh3ED4dg5b6aV'
+      - 'Bearer eadP1h6gVD64ka8f3EZc5bv'
     controller: null
     method: null
     route: null

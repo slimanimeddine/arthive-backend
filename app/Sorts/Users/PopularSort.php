@@ -9,7 +9,7 @@ class PopularSort implements Sort
 {
     public function __invoke(Builder $query, bool $descending, string $property)
     {
-        $query->withCount('likes')
-            ->orderBy('likes_count', $descending ? 'desc' : 'asc');
+        $query->withCount('receivedArtworkLikes')
+            ->orderBy('received_artwork_likes_count', $descending ? 'desc' : 'asc');
     }
 }

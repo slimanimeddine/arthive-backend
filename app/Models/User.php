@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Laravel\Scout\Searchable;
 use Laravel\Sanctum\HasApiTokens;
 
@@ -107,6 +108,20 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(ArtworkComment::class);
     }
 
+    /**
+     * Get the likes this user has received on his artworks.
+     */
+    public function receivedArtworkLikes(): HasManyThrough
+    {
+        return $this->hasManyThrough(
+            ArtworkLike::class,
+            Artwork::class,
+            'user_id',
+            'artwork_id',
+            'id',
+            'id'
+        );
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

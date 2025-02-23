@@ -83,7 +83,7 @@ class Artwork extends Model
      */
     public function scopeTrending(Builder $query): void
     {
-        $query->withCount(['likes' => function ($q) {
+        $query->withCount(['artworkLikes' => function ($q) {
             $q->where('created_at', '>=', now()->subDays(7));
         }])
             ->orderBy('likes_count', 'desc');

@@ -33,8 +33,6 @@ class UserController extends ApiController
      * 
      * @queryParam sort string Sort artworks by new, or popular. Example: new
      * 
-     * @queryParam include string Include related artworks. Enum: artworks. Example: artworks
-     * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
      * @queryParam perPage string The number of records to retrieve per page. Example: 10
@@ -51,7 +49,7 @@ class UserController extends ApiController
 
         $searchIds = isset($searchQuery) ? User::search($searchQuery)->get()->pluck('id')->toArray() : [];
 
-        $query = QueryBuilder::for(User::artist())
+        $query = QueryBuilder::for(User::artist()->with(['artworks']))
             ->allowedFilters([
                 AllowedFilter::exact('country'),
                 AllowedFilter::exact('tag', 'artworks.tags.name'),
@@ -61,7 +59,6 @@ class UserController extends ApiController
                 AllowedSort::custom('new', new NewSort()),
                 AllowedSort::custom('popular', new PopularSort()),
             ])
-            ->allowedIncludes(['artworks'])
             ->tap(function ($query) use ($searchIds) {
                 return empty($searchIds) ? $query :  $query->whereIn('users.id', $searchIds);
             })

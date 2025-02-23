@@ -26,7 +26,7 @@ endpoints:
     bodyParameters:
       username:
         name: username
-        description: 'A unique username for the user.'
+        description: 'A unique username for the user. Must contain only letters, numbers, dashes and underscores. Must be at least 3 characters. Must not be greater than 255 characters.'
         required: true
         example: johndoe
         type: string
@@ -112,7 +112,7 @@ endpoints:
         custom: []
       password:
         name: password
-        description: 'The password associated with the user account.'
+        description: 'The password associated with the user account. Must be at least 8 characters.'
         required: true
         example: password
         type: string
@@ -204,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer c3fkDZEva614ebV5P6ga8dh'
+      - 'Bearer vhafPcDgZ8beEk4da56V631'
     controller: null
     method: null
     route: null
@@ -231,7 +231,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: minus
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -241,15 +241,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: et
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: minus
-      hash: et
+      id: qui
+      hash: dolores
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V4adke5a8D6g3EZPbfvc6h1'
+      - 'Bearer eaaP64381bkDVg6Eh5cdZvf'
     controller: null
     method: null
     route: null
@@ -334,7 +334,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer V6gfDZd4b6veP5h31Ekc8aa'
+      - 'Bearer 3DgEaZ14hk8abfe6cPv6dV5'
     controller: null
     method: null
     route: null
@@ -428,7 +428,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: rem
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -455,7 +455,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: rem
+      token: fuga
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -560,7 +560,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hec56DbVadk348Efv61PgZa'
+      - 'Bearer 631vZfgVeaD4Pk56ahbEcd8'
     controller: null
     method: null
     route: null
@@ -598,7 +598,7 @@ endpoints:
         custom: []
       password:
         name: password
-        description: 'The password associated with the user account.'
+        description: 'The password associated with the user account. Must be at least 8 characters.'
         required: true
         example: password
         type: string

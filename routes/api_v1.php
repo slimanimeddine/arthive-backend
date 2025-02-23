@@ -40,6 +40,7 @@ Route::delete('artworks/{artworkId}', [ArtworkController::class, 'deleteArtwork'
 
 // user routes
 Route::get('users', [UserController::class, 'listUsers']);
+Route::get('users/{userId}', [UserController::class, 'showUserById'])->whereNumber('userId');
 Route::get('users/me', [UserController::class, 'showAuthenticatedUser'])->middleware('auth:sanctum');
 Route::get('users/{username}', [UserController::class, 'showUser']);
 Route::post('users/me', [UserController::class, 'updateAuthenticatedUser'])->middleware('auth:sanctum');

@@ -16,12 +16,12 @@ class CreateArtworkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'min:3', 'max:255'],
             'description' => ['required', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['required', 'array', 'min:1', 'max:3'],
             'tags.*' => ['required', 'string', 'distinct:strict', 'exists:tags,name'],
             'photos' => ['required', 'array', 'min:1', 'max:10', 'required_array_keys:file,is_main'],
-            'photos.*.file' => ['required', 'image', 'max:2048'],
+            'photos.*.file' => ['required', 'image', 'max:5000000'],
             'photos.*.is_main' => ['required', 'boolean'],
             'photos' => function ($attribute, $value, $fail) {
                 $trueCount = collect($value)->where('is_main', true)->count();

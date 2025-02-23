@@ -15,7 +15,7 @@ class UploadArtworkPhotosRequest extends FormRequest
     {
         return [
             'photos' => ['required', 'array', 'min:1', 'max:10'],
-            'photos.*' => ['required', 'image', 'max:2048'],
+            'photos.*' => ['required', 'image', 'max:5000000'],
         ];
     }
 

@@ -98,6 +98,28 @@ class UserController extends ApiController
     }
 
     /**
+     * Show User By Id
+     * 
+     * Retrieve a single user by id
+     * 
+     * @urlParam userId integer required The id of the user
+     * 
+     * @apiResource scenario=Success App\Http\Resources\V1\UserResource
+     * 
+     * @apiResourceModel App\Models\User
+     */
+    public function showUserById(Request $request, int $userId)
+    {
+        $user = User::artist()->where('id', $userId)->first();
+
+        if (!$user) {
+            return $this->error("The user you are trying to retrieve does not exist.", 404);
+        }
+
+        return new UserResource($user);
+    }
+
+    /**
      * Show Authenticated User
      * 
      * Retrieve the currently authenticated user

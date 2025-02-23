@@ -16,7 +16,7 @@ class UpdateArtworkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['sometimes', 'string', 'max:255'],
+            'title' => ['sometimes', 'string', 'min:3', 'max:255'],
             'description' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['sometimes', 'array', 'min:1', 'max:3'],
             'tags.*' => ['sometimes', 'string', 'distinct:strict', 'exists:tags,name'],

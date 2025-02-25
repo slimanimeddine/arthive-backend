@@ -26,13 +26,15 @@ class UserController extends ApiController
      * 
      * @queryParam filter[country] string Filter artworks by country. Example: finland
      * 
-     * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: ceramics
+     * @queryParam filter[tag] string Filter artworks by tag. Example: ceramics
      * 
      * @queryParam filter[verified] boolean Filter artists by verification status. Example: true
      * 
+     * @queryParam include string Include artworks in the response. Enum: artworks. Example: artworks
+     * 
      * @queryParam searchQuery string Search for users by username, first name, or last name. Example: lorem
      * 
-     * @queryParam sort string Sort artworks by new, or popular. Example: new
+     * @queryParam sort string Sort artworks by new, or popular. Enum: new, popular. Example: new
      * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
@@ -50,7 +52,7 @@ class UserController extends ApiController
 
         $searchIds = isset($searchQuery) ? User::search($searchQuery)->get()->pluck('id')->toArray() : [];
 
-        $query = QueryBuilder::for(User::artist()->with(['artworks']))
+        $query = QueryBuilder::for(User::artist())
             ->allowedFilters([
                 AllowedFilter::exact('country'),
                 AllowedFilter::exact('tag', 'artworks.tags.name'),
@@ -60,6 +62,7 @@ class UserController extends ApiController
                 AllowedSort::custom('new', new NewSort()),
                 AllowedSort::custom('popular', new PopularSort()),
             ])
+            ->allowedIncludes(['artworks'])
             ->tap(function ($query) use ($searchIds) {
                 return empty($searchIds) ? $query :  $query->whereIn('users.id', $searchIds);
             })

@@ -204,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1VfDh56be486aagZkcvEd3P'
+      - 'Bearer a3Vf4Peb1kED6g6Zdah5v8c'
     controller: null
     method: null
     route: null
@@ -231,7 +231,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: dignissimos
+        example: cum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -241,15 +241,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: sequi
+        example: quo
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: dignissimos
-      hash: sequi
+      id: cum
+      hash: quo
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E1Phd6456Zc8Davbgf3eakV'
+      - 'Bearer fZdEDacvaVkbe6Ph31g8456'
     controller: null
     method: null
     route: null
@@ -334,7 +334,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 386b6EDhgecfa4ZdPakVv51'
+      - 'Bearer ha4ea6cP5V3Z18dDfkvb6Eg'
     controller: null
     method: null
     route: null
@@ -428,7 +428,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: et
+        example: fugit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -455,7 +455,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: et
+      token: fugit
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -560,7 +560,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 3hE6P6dkafa1ZVv8cb45egD'
+      - 'Bearer vhc35VkZbDaedPE16fga846'
     controller: null
     method: null
     route: null

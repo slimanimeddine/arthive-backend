@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Filters\Users\VerifiedFilter;
 use App\Http\Requests\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
@@ -27,7 +28,7 @@ class UserController extends ApiController
      * 
      * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: ceramics
      * 
-     * @queryParam filter[verified] integer Filter artists by verification status. Enum: 1, 0. Example: 1
+     * @queryParam filter[verified] boolean Filter artists by verification status. Example: true
      * 
      * @queryParam searchQuery string Search for users by username, first name, or last name. Example: lorem
      * 
@@ -53,7 +54,7 @@ class UserController extends ApiController
             ->allowedFilters([
                 AllowedFilter::exact('country'),
                 AllowedFilter::exact('tag', 'artworks.tags.name'),
-                AllowedFilter::scope('verified'),
+                AllowedFilter::custom('verified', new VerifiedFilter),
             ])
             ->allowedSorts([
                 AllowedSort::custom('new', new NewSort()),

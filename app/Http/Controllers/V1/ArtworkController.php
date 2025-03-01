@@ -74,7 +74,7 @@ class ArtworkController extends ApiController
      * 
      * @urlParam artworkId integer required The id of the artwork
      * 
-     * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      * 
      * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,artworkComments.user,artworkLikes.user,tags
      * 

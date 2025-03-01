@@ -184,4 +184,45 @@ class FollowController extends ApiController
 
         return UserResource::collection($following);
     }
+
+    /**
+     * Check if Authenticated User is Following
+     * 
+     * Check if the currently authenticated user is following a user
+     * 
+     * @authenticated
+     * 
+     * @urlParam userId integer required The ID of the user to check if the authenticated user is following
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "",
+     *      "data": true,
+     *      "status": 200
+     * }
+     * 
+     * @response 404 scenario="User not found" {
+     *      "message": "The user you are trying to check does not exist.",
+     *      "status": 404
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function isAuthenticatedUserFollowing(Request $request, int $userId)
+    {
+        $authenticatedUser = $request->user();
+
+        $userToCheck = User::find($userId);
+
+        if (!$userToCheck) {
+            return $this->error("The user you are trying to check does not exist.", 404);
+        }
+
+        $isFollowing = Follow::where('follower_id', $authenticatedUser->id)
+            ->where('followed_id', $userToCheck->id)
+            ->exists();
+
+        return $this->success('', $isFollowing);
+    }
 }

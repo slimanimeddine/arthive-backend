@@ -52,6 +52,7 @@ Route::middleware(['throttle:follow'])->group(function () {
     Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereNumber('userId');
     Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereNumber('userId');
 });
+Route::get('users/{userId}/is-following', [FollowController::class, 'isAuthenticatedUserFollowing'])->middleware('auth:sanctum')->whereNumber('userId');
 
 // like routes
 Route::get('users/{username}/artwork-likes/received/count/by-tag', [ArtworkLikeController::class, 'listUserReceivedLikesCountByTag']);

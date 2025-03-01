@@ -41,7 +41,7 @@ class ArtworkSeeder extends Seeder
         // Loop through each artwork and assign a random number of tags
         $artworks->each(function ($artwork) use ($tags) {
             // Randomly decide how many tags to assign to this artwork
-            $numberOfTags = rand(1, 5);
+            $numberOfTags = rand(1, 3);
 
             // Get a random subset of tags
             $randomTags = $tags->random($numberOfTags);

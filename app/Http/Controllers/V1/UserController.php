@@ -30,7 +30,7 @@ class UserController extends ApiController
      * 
      * @queryParam filter[verified] boolean Filter artists by verification status. Example: true
      * 
-     * @queryParam include string Include artworks in the response. Enum: artworks. Example: artworks
+     * @queryParam include string Include publishedArtworks in the response. Enum: publishedArtworks. Example: publishedArtworks
      * 
      * @queryParam searchQuery string Search for users by username, first name, or last name. Example: lorem
      * 
@@ -42,7 +42,7 @@ class UserController extends ApiController
      * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
-     * @apiResourceModel App\Models\User with=artworks paginate=10
+     * @apiResourceModel App\Models\User with=publishedArtworks paginate=10
      */
     public function listUsers(Request $request)
     {
@@ -55,14 +55,14 @@ class UserController extends ApiController
         $query = QueryBuilder::for(User::artist())
             ->allowedFilters([
                 AllowedFilter::exact('country'),
-                AllowedFilter::exact('tag', 'artworks.tags.name'),
+                AllowedFilter::exact('tag', 'publishedArtworks.tags.name'),
                 AllowedFilter::custom('verified', new VerifiedFilter),
             ])
             ->allowedSorts([
                 AllowedSort::custom('new', new NewSort()),
                 AllowedSort::custom('popular', new PopularSort()),
             ])
-            ->allowedIncludes(['artworks'])
+            ->allowedIncludes(['publishedArtworks'])
             ->tap(function ($query) use ($searchIds) {
                 return empty($searchIds) ? $query :  $query->whereIn('users.id', $searchIds);
             })

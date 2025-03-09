@@ -54,6 +54,22 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * Get the published artworks created by the user (artist).
+     */
+    public function publishedArtworks(): HasMany
+    {
+        return $this->artworks()->where('status', 'published');
+    }
+
+    /**
+     * Get the drafts created by the user (artist).
+     */
+    public function drafts(): HasMany
+    {
+        return $this->artworks()->where('status', 'draft');
+    }
+
+    /**
      * Get the users this user is following.
      */
     public function following(): BelongsToMany

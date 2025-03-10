@@ -212,4 +212,45 @@ class ArtworkLikeController extends ApiController
 
         return $this->success('', $totalLikes);
     }
+
+    /**
+     * Check if Authenticated User is Liking
+     * 
+     * Check if the currently authenticated user is liking an artwork
+     * 
+     * @authenticated
+     * 
+     * @urlParam artworkId integer required The ID of the artwork to check if the authenticated user is liking
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "",
+     *      "data": true,
+     *      "status": 200
+     * }
+     * 
+     * @response 404 scenario="Artwork not found" {
+     *      "message": "The artwork you are trying to check if you liked does not exist.",
+     *      "status": 404
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function isAuthenticatedUserLiking(Request $request, int $artworkId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artwork = Artwork::published()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
+            return $this->error("The artwork you are trying to check if you liked does not exist.", 404);
+        }
+
+        $isLiking = ArtworkLike::where('user_id', $authenticatedUser->id)
+            ->where('artwork_id', $artwork->id)
+            ->exists();
+
+        return $this->success('', $isLiking);
+    }
 }

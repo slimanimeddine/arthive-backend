@@ -144,4 +144,46 @@ class FavoriteController extends ApiController
 
         return $this->success("You have successfully removed this artwork from your favorites.");
     }
+
+    /**
+     * Check if Authenticated User is Favoriting
+     * 
+     * Check if the currently authenticated user is favoriting an artwork
+     * 
+     * @authenticated
+     * 
+     * @urlParam artworkId integer required The ID of the artwork to check if the authenticated user is favoriting
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "",
+     *      "data": true,
+     *      "status": 200
+     * }
+     * 
+     * @response 404 scenario="Artwork not found" {
+     *      "message": "The artwork you are trying to check if you favorited does not exist.",
+     *      "status": 404
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+
+    public function isAuthenticatedUserFavoriting(Request $request, int $artworkId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artwork = Artwork::published()->where('id', $artworkId)->first();
+
+        if (!$artwork) {
+            return $this->error("The artwork you are trying to check if you favorited does not exist.", 404);
+        }
+
+        $isFavoriting = Favorite::where('user_id', $authenticatedUser->id)
+            ->where('artwork_id', $artwork->id)
+            ->exists();
+
+        return $this->success('', $isFavoriting);
+    }
 }

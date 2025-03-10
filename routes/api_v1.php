@@ -61,6 +61,7 @@ Route::middleware(['throttle:like'])->group(function () {
     Route::post('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'likeArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
     Route::delete('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'unlikeArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
 });
+Route::get('artworks/{artworkId}/is-liking', [ArtworkLikeController::class, 'isAuthenticatedUserLiking'])->middleware('auth:sanctum')->whereNumber('artworkId');
 
 // comment routes
 Route::middleware(['throttle:comment'])->group(function () {
@@ -101,6 +102,7 @@ Route::middleware(['throttle:favorite'])->group(function () {
     Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereNumber('artworkId');
 });
 Route::delete('artworks/{artworkId}/favorites', [FavoriteController::class, 'removeArtworkFromFavorites'])->middleware('auth:sanctum')->whereNumber('artworkId');
+Route::get('artworks/{artworkId}/favorites/is-favoriting', [FavoriteController::class, 'isAuthenticatedUserFavoriting'])->middleware('auth:sanctum')->whereNumber('artworkId');
 
 // country routes
 Route::get('countries', [CountryController::class, 'index']);

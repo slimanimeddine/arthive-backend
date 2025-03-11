@@ -111,6 +111,8 @@ class ArtworkController extends ApiController
      * 
      * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
      * 
+     * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
+     * 
      * @queryParam page string The page number to fetch. Example: 1
      * 
      * @queryParam perPage integer The number of records to fetch per page. Example: 10
@@ -137,6 +139,12 @@ class ArtworkController extends ApiController
         $artworks = QueryBuilder::for(Artwork::published()->where('user_id', $user->id))
             ->allowedFilters([
                 AllowedFilter::exact('tag', 'tags.name'),
+            ])
+            ->allowedSorts([
+                AllowedSort::custom('trending', new TrendingSort()),
+                AllowedSort::custom('rising', new RisingSort()),
+                AllowedSort::custom('new', new NewSort()),
+                AllowedSort::custom('popular', new PopularSort()),
             ])
             ->paginate($perPage);
 

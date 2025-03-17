@@ -170,10 +170,19 @@ class AuthController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
+     * 
+     * @response 422 scenario="Invalid current password" {
+     *      "message": "Invalid current password",
+     *      "status": 422
+     * }
      */
     public function changePassword(ChangePasswordRequest $request)
     {
         $authenticatedUser = $request->user();
+
+        if (!Hash::check($request->current_password, $authenticatedUser->password)) {
+            return $this->error('Invalid current password', 422);
+        }
 
         $authenticatedUser->update([
             'password' => Hash::make($request->new_password)

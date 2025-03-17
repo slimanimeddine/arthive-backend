@@ -132,13 +132,9 @@ class FollowController extends ApiController
      * 
      * @authenticated
      * 
-     * @queryParam page integer The page number to fetch. Example: 1
-     * 
-     * @queryParam perPage integer The number of items to fetch per page. Example: 10
-     * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
-     * @apiResourceModel App\Models\User paginate=10
+     * @apiResourceModel App\Models\User
      * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -148,9 +144,7 @@ class FollowController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $perPage = $request->query('perPage', 10);
-
-        $followers = $authenticatedUser->followers()->paginate($perPage);
+        $followers = $authenticatedUser->followers()->get();
 
         return UserResource::collection($followers);
     }
@@ -162,13 +156,9 @@ class FollowController extends ApiController
      * 
      * @authenticated
      * 
-     * @queryParam page integer The page number to fetch. Example: 1
-     * 
-     * @queryParam perPage integer The number of items to fetch per page. Example: 10
-     * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      * 
-     * @apiResourceModel App\Models\User paginate=10
+     * @apiResourceModel App\Models\User
      * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"

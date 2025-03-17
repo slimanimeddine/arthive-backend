@@ -204,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D53PeV46Egk6dhca8Zf1abv'
+      - 'Bearer av6agDf5E6e341VcbZdPk8h'
     controller: null
     method: null
     route: null
@@ -231,7 +231,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: veritatis
+        example: fugit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -241,15 +241,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: et
+        example: vitae
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: veritatis
-      hash: et
+      id: fugit
+      hash: vitae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer adVecEPk64h6gafbZv5831D'
+      - 'Bearer Ecdh6vDgb514ekZ68faP3aV'
     controller: null
     method: null
     route: null
@@ -334,7 +334,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer gfa5PeEak6Z8h1c36dVvD4b'
+      - 'Bearer d1D5Pg6Eca8fZvek46bVa3h'
     controller: null
     method: null
     route: null
@@ -428,7 +428,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: consequatur
+        example: assumenda
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -455,7 +455,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: consequatur
+      token: assumenda
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -556,11 +556,21 @@ endpoints:
         headers: []
         description: Unauthenticated
         custom: []
+      -
+        status: 422
+        content: |-
+          {
+               "message": "Invalid current password",
+               "status": 422
+          }
+        headers: []
+        description: 'Invalid current password'
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer PcfeV8Eb13aahdgv46ZDk56'
+      - 'Bearer PghaVZd156ED3fe64bcavk8'
     controller: null
     method: null
     route: null

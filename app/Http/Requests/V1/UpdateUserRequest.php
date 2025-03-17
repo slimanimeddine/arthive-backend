@@ -22,7 +22,7 @@ class UpdateUserRequest extends FormRequest
             'email' => ['sometimes', 'string', 'email', 'unique:users,email'],
             'country' => ['sometimes', 'string', 'max:255', 'exists:countries,name'],
             'bio' => ['sometimes', 'string', new MinWordCount, new MaxWordCount],
-            'photo' => ['sometimes', 'image', 'max:5000000'],
+            'photo' => ['sometimes', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5000000'],
         ];
     }
 

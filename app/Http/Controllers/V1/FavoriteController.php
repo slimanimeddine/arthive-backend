@@ -20,13 +20,9 @@ class FavoriteController extends ApiController
      * 
      * @authenticated
      * 
-     * @queryParam page integer The page number to fetch. Example: 1
-     * 
-     * @queryParam perPage integer The number of records to fetch per page. Example: 10
-     * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      * 
-     * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
+     * @apiResourceModel App\Models\Artwork
      * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -36,10 +32,7 @@ class FavoriteController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        $perPage = $request->query('perPage', 10);
-
-        $query = $authenticatedUser->favorites()->with(['artworkPhotos', 'tags'])
-            ->paginate($perPage);
+        $query = $authenticatedUser->favorites()->get();
 
         return ArtworkResource::collection($query);
     }

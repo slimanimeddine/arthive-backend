@@ -30,13 +30,13 @@ class ArtworkCommentSeeder extends Seeder
 
             // Attach comments to the artwork from the random users
             $randomUsers->each(function ($user) use ($artwork) {
-                ArtworkComment::create([
+                $comment = ArtworkComment::create([
                     'comment_text' => fake()->sentence(),
                     'artwork_id' => $artwork->id,
                     'user_id' => $user->id,
                 ]);
 
-                $artwork->user->notify(new ArtworkCommentNotification($user, $artwork));
+                $artwork->user->notify(new ArtworkCommentNotification($user, $artwork, $comment));
             });
         });
     }

@@ -64,7 +64,7 @@ class ArtworkCommentController extends ApiController
             'comment_text' => $request->comment_text,
         ]);
 
-        $artwork->user->notify(new ArtworkCommentNotification($authenticatedUser, $artwork));
+        $artwork->user->notify(new ArtworkCommentNotification($authenticatedUser, $artwork, $artworkComment));
 
         return new ArtworkCommentResource($artworkComment);
     }

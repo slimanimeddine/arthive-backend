@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\Artwork;
+use App\Models\ArtworkComment;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
@@ -15,13 +16,16 @@ class ArtworkCommentNotification extends Notification
 
     protected $artwork;
 
+    protected $comment;
+
     /**
      * Create a new notification instance.
      */
-    public function __construct(User $commenter, Artwork $artwork)
+    public function __construct(User $commenter, Artwork $artwork, ArtworkComment $comment)
     {
         $this->commenter = $commenter;
         $this->artwork = $artwork;
+        $this->comment = $comment;
     }
 
     /**
@@ -44,11 +48,16 @@ class ArtworkCommentNotification extends Notification
         return [
             'commenter' => [
                 'id' => $this->commenter->id,
-                'username' => $this->commenter->username
+                'username' => $this->commenter->username,
+                'first_name' => $this->commenter->first_name,
+                'last_name' => $this->commenter->last_name,
             ],
             'artwork' => [
                 'id' => $this->artwork->id,
                 'title' => $this->artwork->title
+            ],
+            'comment' => [
+                'id' => $this->comment->id,
             ]
         ];
     }

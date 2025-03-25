@@ -45,6 +45,8 @@ class ArtworkLikeNotification extends Notification
             'liker' => [
                 'id' => $this->liker->id,
                 'username' => $this->liker->username,
+                'first_name' => $this->liker->first_name,
+                'last_name' => $this->liker->last_name,
             ],
             'artwork' => [
                 'id' => $this->artwork->id,

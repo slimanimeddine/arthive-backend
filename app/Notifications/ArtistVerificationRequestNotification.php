@@ -40,6 +40,8 @@ class ArtistVerificationRequestNotification extends Notification
             'user' => [
                 'id' => $this->user->id,
                 'username' => $this->user->username,
+                'first_name' => $this->user->first_name,
+                'last_name' => $this->user->last_name,
             ]
         ];
     }

@@ -110,7 +110,7 @@ class NotificationController extends ApiController
      *     "status": 404
      * }
      */
-    public function markNotificationAsRead(Request $request, int $notificationId)
+    public function markNotificationAsRead(Request $request, string $notificationId)
     {
         $authenticatedUser = $request->user();
 

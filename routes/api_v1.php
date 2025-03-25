@@ -85,7 +85,7 @@ Route::delete('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class,
 
 // notifications routes
 Route::get('users/me/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');
-Route::put('users/me/notifications/unread/{notificationId}', [NotificationController::class, 'markNotificationAsRead'])->middleware('auth:sanctum')->whereNumber('notificationId');
+Route::put('users/me/notifications/unread/{notificationId}', [NotificationController::class, 'markNotificationAsRead'])->middleware('auth:sanctum')->whereUuid('notificationId');
 Route::put('users/me/notifications/unread', [NotificationController::class, 'markAllNotificationsAsRead'])->middleware('auth:sanctum');
 
 // admin routes

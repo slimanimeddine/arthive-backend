@@ -39,7 +39,9 @@ class FollowNotification extends Notification
         return [
             'follower' => [
                 'id' => $this->follower->id,
-                'username' => $this->follower->username
+                'username' => $this->follower->username,
+                'first_name' => $this->follower->first_name,
+                'last_name' => $this->follower->last_name,
             ],
         ];
     }

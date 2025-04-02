@@ -16,6 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
                 ->group(base_path('routes/api_v1.php'));
         }
     )
+    ->withBroadcasting(
+        __DIR__ . '/../routes/channels.php',
+        ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum']],
+    )
     ->withMiddleware(function (Middleware $middleware) {
         //
     })

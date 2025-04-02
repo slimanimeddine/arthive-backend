@@ -151,4 +151,32 @@ class NotificationController extends ApiController
 
         return $this->success('All your notifications are marked as read.');
     }
+
+    /**
+     * Check if unread notifications exist
+     * 
+     * Check if the authenticated user has any unread notifications
+     * 
+     * @authenticated
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Unread notifications exist",
+     *      "data": {
+     *          "exists": true
+     *      },
+     *      "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     */
+    public function unreadNotificationsExists(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $unreadNotifications = $authenticatedUser->unreadNotifications()->exists();
+
+        return $this->success('Unread notifications exist', ['exists' => $unreadNotifications]);
+    }
 }

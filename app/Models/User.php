@@ -226,14 +226,4 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->isArtist();
     }
-
-    /**
-     * The channels the user receives notification broadcasts on.
-     */
-    public function receivesBroadcastNotificationsOn(): string
-    {
-        return $this->isArtist()
-            ? 'users.' . $this->id
-            : 'admins';
-    }
 }

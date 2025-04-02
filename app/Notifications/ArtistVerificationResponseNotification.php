@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\Models\ArtistVerificationRequest;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 
 class ArtistVerificationResponseNotification extends Notification
@@ -42,6 +43,22 @@ class ArtistVerificationResponseNotification extends Notification
             'status' => $this->artistVerificationRequest->status,
             'reason' => $this->artistVerificationRequest->reason,
         ];
+    }
+
+    /**
+     * Get the broadcastable representation of the notification.
+     */
+    public function toBroadcast(object $notifiable): BroadcastMessage
+    {
+        return new BroadcastMessage($this->toArray($notifiable));
+    }
+
+    /**
+     * Get the type of the notification being broadcast.
+     */
+    public function broadcastType(): string
+    {
+        return 'artist-verification-response';
     }
 
     /**

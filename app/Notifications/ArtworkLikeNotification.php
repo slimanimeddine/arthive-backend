@@ -5,6 +5,7 @@ namespace App\Notifications;
 use App\Models\Artwork;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 
 class ArtworkLikeNotification extends Notification
@@ -53,6 +54,22 @@ class ArtworkLikeNotification extends Notification
                 'title' => $this->artwork->title,
             ],
         ];
+    }
+
+    /**
+     * Get the broadcastable representation of the notification.
+     */
+    public function toBroadcast(object $notifiable): BroadcastMessage
+    {
+        return new BroadcastMessage($this->toArray($notifiable));
+    }
+
+    /**
+     * Get the type of the notification being broadcast.
+     */
+    public function broadcastType(): string
+    {
+        return 'artwork-like';
     }
 
     /**

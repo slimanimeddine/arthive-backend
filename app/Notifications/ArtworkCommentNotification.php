@@ -6,6 +6,7 @@ use App\Models\Artwork;
 use App\Models\ArtworkComment;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Notification;
 
 class ArtworkCommentNotification extends Notification
@@ -60,6 +61,22 @@ class ArtworkCommentNotification extends Notification
                 'id' => $this->comment->id,
             ]
         ];
+    }
+
+    /**
+     * Get the broadcastable representation of the notification.
+     */
+    public function toBroadcast(object $notifiable): BroadcastMessage
+    {
+        return new BroadcastMessage($this->toArray($notifiable));
+    }
+
+    /**
+     * Get the type of the notification being broadcast.
+     */
+    public function broadcastType(): string
+    {
+        return 'artwork-comment';
     }
 
     /**

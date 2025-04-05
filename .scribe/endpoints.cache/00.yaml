@@ -204,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 38bae1cP65akDhfdVZEv6g4'
+      - 'Bearer PVe4k6D3g1f8dZvaa65cEhb'
     controller: null
     method: null
     route: null
@@ -231,7 +231,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: placeat
+        example: quia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -241,15 +241,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: sapiente
+        example: est
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: placeat
-      hash: sapiente
+      id: quia
+      hash: est
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5bcae63EVf6Dav4ghdZ1k8P'
+      - 'Bearer h4V6615dPvDZag3keEf8cba'
     controller: null
     method: null
     route: null
@@ -334,7 +334,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DVdaac418befgP6Z6hkE3v5'
+      - 'Bearer f5khabE6Pg3aDV8641dcevZ'
     controller: null
     method: null
     route: null
@@ -428,7 +428,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: quia
+        example: eligendi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -455,7 +455,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: quia
+      token: eligendi
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -570,7 +570,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1bZ4f3658aaeEvgVhcD6kdP'
+      - 'Bearer aEd3D6gkPZa1V8h5c6fb4ve'
     controller: null
     method: null
     route: null

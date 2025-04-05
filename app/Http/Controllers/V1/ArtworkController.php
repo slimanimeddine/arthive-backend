@@ -60,7 +60,7 @@ class ArtworkController extends ApiController
                 AllowedSort::custom('popular', new PopularSort()),
             ])
             ->tap(function ($query) use ($searchIds) {
-                return empty($searchIds) ? $query :  $query->whereIn('artworks.id', $searchIds);
+                return empty($searchIds) ? $query : $query->whereIn('artworks.id', $searchIds);
             })
             ->paginate($perPage);
 
@@ -191,6 +191,8 @@ class ArtworkController extends ApiController
      * Create a new artwork
      * 
      * @authenticated
+     * 
+     * @header Content-Type multipart/form-data
      * 
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      * 

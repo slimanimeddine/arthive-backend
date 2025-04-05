@@ -20,15 +20,20 @@ class CreateArtworkRequest extends FormRequest
             'description' => ['required', 'string', new MinWordCount, new MaxWordCount],
             'tags' => ['required', 'array', 'min:1', 'max:3'],
             'tags.*' => ['required', 'string', 'distinct:strict', 'exists:tags,name'],
-            'photos' => ['required', 'array', 'min:1', 'max:10', 'required_array_keys:file,is_main'],
+            'photos' => [
+                'required',
+                'array',
+                'min:1',
+                'max:10',
+                function ($attribute, $value, $fail) {
+                    $trueCount = collect($value)->where('is_main', true)->count();
+                    if ($trueCount !== 1) {
+                        $fail('The photos array must contain exactly one main photo.');
+                    }
+                }
+            ],
             'photos.*.file' => ['required', 'image', 'max:5000000'],
             'photos.*.is_main' => ['required', 'boolean'],
-            'photos' => function ($attribute, $value, $fail) {
-                $trueCount = collect($value)->where('is_main', true)->count();
-                if ($trueCount !== 1) {
-                    $fail('The photos array must contain exactly one main photo.');
-                }
-            },
         ];
     }
 

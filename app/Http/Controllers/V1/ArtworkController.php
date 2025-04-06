@@ -166,7 +166,7 @@ class ArtworkController extends ApiController
      * 
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      * 
-     * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags paginate=10
+     * @apiResourceModel App\Models\Artwork paginate=10
      * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -178,11 +178,50 @@ class ArtworkController extends ApiController
 
         $perPage = $request->query('perPage', 10);
 
-        $artworks = QueryBuilder::for(Artwork::where('user_id', $authenticatedUser->id)->with(['artworkPhotos', 'tags']))
+        $artworks = QueryBuilder::for(Artwork::where('user_id', $authenticatedUser->id))
             ->allowedFilters(['status'])
             ->paginate($perPage);
 
         return ArtworkResource::collection($artworks);
+    }
+
+    /**
+     * 
+     * Show Authenticated User Artwork
+     * 
+     * Retrieve a single artwork published or draft by the currently authenticated user
+     * 
+     * @authenticated
+     * 
+     * @urlParam artworkId integer required The id of the artwork
+     * 
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
+     * 
+     * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags
+     * 
+     * @response 404 scenario="Artwork not found" {
+     *  "message": "The artwork you are trying to retrieve does not exist.",
+     *  "status": 404
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *     "message": "Unauthenticated"
+     * }
+     */
+    public function showAuthenticatedUserArtwork(Request $request, int $artworkId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artwork = Artwork::where('user_id', $authenticatedUser->id)->where('id', $artworkId)->with([
+            'artworkPhotos',
+            'tags'
+        ])->first();
+
+        if (!$artwork) {
+            return $this->error("The artwork you are trying to retrieve does not exist.", 404);
+        }
+
+        return new ArtworkResource($artwork);
     }
 
     /**

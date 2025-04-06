@@ -15,7 +15,7 @@ class ArtworkPhotoPolicy
         $isArtist = $user->isArtist();
         $isOwner = $user->id === $artworkPhoto->artwork->user_id;
         $isDraft = $artworkPhoto->artwork->isDraft();
-        
+
         return $isArtist && $isOwner && $isDraft;
     }
 
@@ -27,9 +27,10 @@ class ArtworkPhotoPolicy
         $isArtist = $user->isArtist();
 
         $artwork = $artworkPhoto->artwork;
+
         $isOwner = $user->id === $artwork->user_id;
         $isDraft = $artwork->isDraft();
-        $isMain = $artwork->is_main;
+        $isMain = $artworkPhoto->is_main;
         $artworkPhotosCount = $artwork->artworkPhotos()->count();
 
         return $isArtist && $isOwner && $isDraft && $artworkPhotosCount > 1 && !$isMain;

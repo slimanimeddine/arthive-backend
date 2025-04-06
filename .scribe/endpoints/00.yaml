@@ -202,7 +202,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PVe4k6D3g1f8dZvaa65cEhb'
+      - 'Bearer bg6dEchk6Z15Dfe4vPa83Va'
     controller: null
     method: null
     route: null
@@ -229,7 +229,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: quia
+        example: pariatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -239,15 +239,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: est
+        example: fuga
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: quia
-      hash: est
+      id: pariatur
+      hash: fuga
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -278,7 +278,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer h4V6615dPvDZag3keEf8cba'
+      - 'Bearer 66geZ1fdVhDb4cP58aa3vkE'
     controller: null
     method: null
     route: null
@@ -332,7 +332,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f5khabE6Pg3aDV8641dcevZ'
+      - 'Bearer k4hgef8VEP5aav63Z6Dbc1d'
     controller: null
     method: null
     route: null
@@ -426,7 +426,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: eligendi
+        example: voluptate
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -453,7 +453,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: eligendi
+      token: voluptate
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -568,7 +568,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aEd3D6gkPZa1V8h5c6fb4ve'
+      - 'Bearer aDbfP5k6ZV3gdha8ecv614E'
     controller: null
     method: null
     route: null

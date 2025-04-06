@@ -28,6 +28,7 @@ Route::post('change-password', [AuthController::class, 'changePassword'])->middl
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);
 Route::get('artworks/{artworkId}', [ArtworkController::class, 'showPublishedArtwork'])->whereNumber('artworkId');
 Route::get('users/me/artworks', [ArtworkController::class, 'listAuthenticatedUserArtworks'])->middleware('auth:sanctum');
+Route::get('users/me/artworks/{artworkId}', [ArtworkController::class, 'showAuthenticatedUserArtwork'])->middleware('auth:sanctum')->whereNumber('artworkId');
 Route::get('users/{username}/artworks', [ArtworkController::class, 'listUserPublishedArtworks']);
 
 Route::middleware(['throttle:create-artwork'])->group(function () {

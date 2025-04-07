@@ -83,6 +83,7 @@ Route::middleware(['throttle:upload-photos'])->group(function () {
 });
 Route::put('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'setArtworkPhotoAsMain'])->middleware('auth:sanctum')->whereNumber('artworkPhotoId');
 Route::delete('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'deleteArtworkPhoto'])->middleware('auth:sanctum')->whereNumber('artworkPhotoId');
+Route::put('artwork-photos/{artworkPhotoId}/path', [ArtworkPhotoController::class, 'replaceArtworkPhotoPath'])->middleware('auth:sanctum')->whereNumber('artworkPhotoId');
 
 // notifications routes
 Route::get('users/me/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');

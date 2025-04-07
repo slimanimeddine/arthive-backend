@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\V1;
 
+use App\Http\Requests\V1\ReplaceArtworkPhotoPathRequest;
 use App\Http\Requests\V1\UploadArtworkPhotosRequest;
 use App\Http\Resources\V1\ArtworkPhotoResource;
 use App\Models\Artwork;
@@ -172,5 +173,58 @@ class ArtworkPhotoController extends ApiController
         $artworkPhoto->delete();
 
         return $this->success("Artwork photo deleted successfully");
+    }
+
+    /**
+     * Replace Artwork Photo Path
+     * 
+     * Replace the path of an artwork photo
+     * 
+     * @authenticated
+     * 
+     * @urlParam artworkPhotoId integer required The id of the artwork photo
+     * 
+     * @response 200 scenario=Success {
+     *    "message": "Artwork photo replaced successfully",
+     *    "data": null,
+     *    "status": 200
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *    "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *    "message": "You are not authorized to replace this artwork photo.",
+     *    "status": 403
+     * }
+     * 
+     * @response 404 scenario="Artwork photo not found" {
+     *    "message": "The artwork photo you are trying to replace does not exist.",
+     *    "status": 404
+     * }
+     * 
+     */
+    public function replaceArtworkPhotoPath(ReplaceArtworkPhotoPathRequest $request, int $artworkPhotoId)
+    {
+        $authenticatedUser = $request->user();
+
+        $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
+
+        if (!$artworkPhoto) {
+            return $this->error("The artwork photo you are trying to replace does not exist.", 404);
+        }
+
+        if ($authenticatedUser->cannot('replaceArtworkPhotoPath', $artworkPhoto)) {
+            return $this->error("You are not authorized to replace this artwork photo.", 403);
+        }
+
+        $photo = $request->file('photo');
+
+        $artworkPhoto->update([
+            'path' => $photo->store('artwork-photos'),
+        ]);
+
+        return $this->success("Artwork photo replaced successfully");
     }
 }

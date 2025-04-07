@@ -204,7 +204,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer bg6dEchk6Z15Dfe4vPa83Va'
+      - 'Bearer 3EDdvbf46akV6gea58c1hPZ'
     controller: null
     method: null
     route: null
@@ -231,7 +231,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: pariatur
+        example: libero
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -241,15 +241,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: fuga
+        example: eius
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: pariatur
-      hash: fuga
+      id: libero
+      hash: eius
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -280,7 +280,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 66geZ1fdVhDb4cP58aa3vkE'
+      - 'Bearer 4E63g5D861bvPhckfaeadVZ'
     controller: null
     method: null
     route: null
@@ -334,7 +334,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer k4hgef8VEP5aav63Z6Dbc1d'
+      - 'Bearer k61v8haEacd5fVPg643eDZb'
     controller: null
     method: null
     route: null
@@ -428,7 +428,7 @@ endpoints:
         name: token
         description: 'The token sent to the user email.'
         required: true
-        example: voluptate
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -455,7 +455,7 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      token: voluptate
+      token: voluptatem
       email: johndoe@gmail.com
       password: password1234
     fileParameters: []
@@ -570,7 +570,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aDbfP5k6ZV3gdha8ecv614E'
+      - 'Bearer d3ePhkvacVZE68bg6D5a4f1'
     controller: null
     method: null
     route: null

@@ -31,8 +31,23 @@ class ArtworkPhotoPolicy
         $isOwner = $user->id === $artwork->user_id;
         $isDraft = $artwork->isDraft();
         $isMain = $artworkPhoto->is_main;
-        $artworkPhotosCount = $artwork->artworkPhotos()->count();
+        $artworkPhotosCount = $artwork->artworkPhotos()->count() > 1;
 
-        return $isArtist && $isOwner && $isDraft && $artworkPhotosCount > 1 && !$isMain;
+        return $isArtist && $isOwner && $isDraft && $artworkPhotosCount && !$isMain;
+    }
+
+    /**
+     * Determine whether user can replace artworkPhoto.
+     */
+    public function replaceArtworkPhotoPath(User $user, ArtworkPhoto $artworkPhoto): bool
+    {
+        $isArtist = $user->isArtist();
+
+        $artwork = $artworkPhoto->artwork;
+
+        $isOwner = $user->id === $artwork->user_id;
+        $isDraft = $artwork->isDraft();
+
+        return $isArtist && $isOwner && $isDraft;
     }
 }

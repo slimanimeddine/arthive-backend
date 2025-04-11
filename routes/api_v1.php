@@ -18,11 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::post('sign-up', [AuthController::class, 'signUp']);
 Route::post('sign-in', [AuthController::class, 'signIn']);
 Route::post('sign-out', [AuthController::class, 'signOut'])->middleware('auth:sanctum');
-Route::get('email/verify/{id}/{hash}', [AuthController::class, 'verifyEmail'])->middleware(['auth:sanctum', 'signed'])->name('verification.verify');
-Route::post('email/verification-notification', [AuthController::class, 'resendVerificationEmail'])->middleware(['auth:sanctum', 'throttle:6,1'])->name('verification.send');
-Route::post('forgot-password', [AuthController::class, 'sendResetPasswordLink'])->name('password.email');
-Route::post('reset-password', [AuthController::class, 'resetPassword'])->name('password.update');
 Route::post('change-password', [AuthController::class, 'changePassword'])->middleware('auth:sanctum');
+
+Route::middleware(['throttle:email-verification-code'])->group(function () {
+    Route::post('email-verification/send', [AuthController::class, 'sendEmailVerificationCode'])->middleware('auth:sanctum');
+});
+
+Route::post('email-verification/verify', [AuthController::class, 'verifyEmailCode'])->middleware('auth:sanctum');
 
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);

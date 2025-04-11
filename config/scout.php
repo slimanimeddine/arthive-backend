@@ -198,14 +198,17 @@ return [
                         [
                             'name' => 'first_name',
                             'type' => 'string',
+                            'optional' => true,
                         ],
                         [
                             'name' => 'last_name',
                             'type' => 'string',
+                            'optional' => true,
                         ],
                         [
                             'name' => 'bio',
                             'type' => 'string',
+                            'optional' => true,
                         ],
                         [
                             'name' => 'created_at',

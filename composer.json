@@ -15,6 +15,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/scout": "^10.12",
         "laravel/tinker": "^2.9",
+        "resend/resend-laravel": "^0.17.0",
         "spatie/laravel-query-builder": "^6.3",
         "typesense/typesense-php": "^4.9"
     },

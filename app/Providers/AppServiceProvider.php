@@ -6,11 +6,13 @@ use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
 use App\Models\ArtworkPhoto;
+use App\Models\EmailVerification;
 use App\Models\User;
 use App\Policies\ArtistVerificationRequestPolicy;
 use App\Policies\ArtworkCommentPolicy;
 use App\Policies\ArtworkPhotoPolicy;
 use App\Policies\ArtworkPolicy;
+use App\Policies\EmailVerificationPolicy;
 use App\Policies\UserPolicy;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
@@ -41,6 +43,7 @@ class AppServiceProvider extends ServiceProvider
         Gate::policy(Artwork::class, ArtworkPolicy::class);
         Gate::policy(ArtworkPhoto::class, ArtworkPhotoPolicy::class);
         Gate::policy(ArtistVerificationRequest::class, ArtistVerificationRequestPolicy::class);
+        Gate::policy(EmailVerification::class, EmailVerificationPolicy::class);
 
         // rate limiting
         RateLimiter::for('follow', function (Request $request) {
@@ -113,6 +116,17 @@ class AppServiceProvider extends ServiceProvider
                 }),
                 Limit::perDay(50)->by('day' . $request->user()->id . $request->route('id'))->response(function () {
                     return $this->error('You have reached the daily limit for favoriting artworks.', 429);
+                }),
+            ];
+        });
+
+        RateLimiter::for('email-verification-code', function (Request $request) {
+            return [
+                Limit::perMinute(1)->by('minute' . $request->user()->id)->response(function () {
+                    return $this->error('You have reached the minute limit for sending email verification codes.', 429);
+                }),
+                Limit::perHour(10)->by('hour' . $request->user()->id)->response(function () {
+                    return $this->error('You have reached the hourly limit for sending email verification codes.', 429);
                 }),
             ];
         });

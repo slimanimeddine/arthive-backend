@@ -3,18 +3,16 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Requests\V1\ChangePasswordRequest;
-use App\Http\Requests\V1\ResetPasswordRequest;
-use App\Http\Requests\V1\SendResetPasswordLinkRequest;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
+use App\Http\Requests\V1\VerifyEmailCodeRequest;
+use App\Mail\EmailVerifyCode;
+use App\Models\EmailVerification;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 /**
@@ -42,8 +40,6 @@ class AuthController extends ApiController
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        event(new Registered($user));
 
         return $this->success('User created successfully', [
             'id' => $user->id
@@ -192,121 +188,109 @@ class AuthController extends ApiController
     }
 
     /**
-     * Verify Email
+     * Send Email Verification Code
      * 
-     * Verifies the email of the authenticated user
+     * Sends a verification code to the authenticated user's email
      * 
      * @authenticated
      * 
      * @response 200 scenario=Success {
-     *      "message": "Email verified successfully",
-     *      "data": null,
-     *      "status": 200
+     *     "message": "Verification code sent successfully",
+     *     "data": null,
+     *    "status": 200
+     * }
+     * 
+     * @response 400 scenario="Email already verified" {
+     *     "message": "Email already verified",
+     *    "status": 400
      * }
      * 
      * @response 401 scenario=Unauthenticated {
-     *      "message": "Unauthenticated"
+     *    "message": "Unauthenticated"
      * }
      */
-    public function verifyEmail(EmailVerificationRequest $request)
+    public function sendEmailVerificationCode(Request $request)
     {
-        $request->fulfill();
+        $authenticatedUser = $request->user();
+
+        if ($authenticatedUser->cannot('sendEmailVerificationCode', EmailVerification::class)) {
+            return $this->error('Email already verified', 400);
+        }
+
+        $email = $authenticatedUser->email;
+        $code = Str::random(6);
+        $code_expires_at = now()->addMinutes(10);
+
+        EmailVerification::create([
+            'email' => $email,
+            'code' => $code,
+            'code_expires_at' => $code_expires_at
+        ]);
+
+        Mail::to($email)->send(new EmailVerifyCode($code));
+
+        return $this->success('Verification code sent successfully');
+    }
+
+    /**
+     * Verify Email Code
+     * 
+     * Verifies the email verification code
+     * 
+     * @authenticated
+     * 
+     * @response 200 scenario=Success {
+     *     "message": "Email verified successfully",
+     *    "data": null,
+     *    "status": 200
+     * }
+     * 
+     * @response 400 scenario="Invalid code" {
+     *    "message": "Invalid code",
+     *   "status": 400
+     * }
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *    "message": "Unauthenticated"
+     * }
+     * 
+     * @response 400 scenario="Email already verified" {
+     *   "message": "Email already verified",
+     *  "status": 400
+     *  }
+     */
+    public function verifyEmailCode(VerifyEmailCodeRequest $request)
+    {
+        $authenticatedUser = $request->user();
+
+        if ($authenticatedUser->cannot('verifyEmailCode', EmailVerification::class)) {
+            return $this->error('Email already verified', 400);
+        }
+
+        $email = $authenticatedUser->email;
+
+        $email_verification = EmailVerification::where('email', $email)
+            ->where('code', $request->code)
+            ->latest()
+            ->first();
+
+        if (!$email_verification) {
+            return $this->error('Invalid code', 400);
+        }
+
+        if ($email_verification->code !== $request->code) {
+            return $this->error('Invalid code', 400);
+        }
+
+        if ($email_verification->code_expires_at < now()) {
+            return $this->error('Invalid code', 400);
+        }
+
+        $authenticatedUser->email_verified_at = now();
+        $authenticatedUser->save();
+
+        $email_verification->delete();
 
         return $this->success('Email verified successfully');
-    }
-
-    /**
-     * Resend Verification Email
-     * 
-     * Resends the verification email to the authenticated user
-     * 
-     * @authenticated
-     * 
-     * @response 200 scenario=Success {
-     *      "message": "Verification email sent successfully",
-     *      "data": null,
-     *      "status": 200
-     * }
-     * 
-     * @response 401 scenario=Unauthenticated {
-     *      "message": "Unauthenticated"
-     * }
-     */
-    public function resendVerificationEmail(Request $request)
-    {
-        $request->user()->sendEmailVerificationNotification();
-
-        return $this->success('Verification email sent successfully');
-    }
-
-    /**
-     * Send Reset Password Link
-     * 
-     * Sends a reset password link to the user's email
-     * 
-     * @response 200 scenario=Success {
-     *     "message": "Reset password link sent successfully",
-     *    "data": {
-     *       "status": "passwords.sent"
-     *   },
-     *  "status": 200
-     * }
-     * 
-     * @response 500 scenario="Failure" {
-     *     "message": "Failed to send reset password link",
-     *    "status": 500
-     * }
-     */
-    public function sendResetPasswordLink(SendResetPasswordLinkRequest $request)
-    {
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
-
-        return $status === Password::ResetLinkSent
-            ? $this->success('Reset password link sent successfully', [
-                'status' => __($status)
-            ])
-            : $this->error('Failed to send reset password link', 500);
-    }
-
-    /**
-     * Reset Password
-     * 
-     * Resets the password of the user
-     * 
-     * @response 200 scenario=Success {
-     *    "message": "Password reset successfully",
-     *   "data": {
-     *     "status": "passwords.reset"
-     *  },
-     * "status": 200
-     * }
-     * 
-     * @response 500 scenario="Failure" {
-     *    "message": "Failed to reset password",
-     *  "status": 500
-     * }
-     */
-    public function resetPassword(ResetPasswordRequest $request)
-    {
-        $status = Password::reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
-            function (User $user, string $password) {
-                $user->forceFill([
-                    'password' => Hash::make($password)
-                ])->setRememberToken(Str::random(60));
-
-                $user->save();
-
-                event(new PasswordReset($user));
-            }
-        );
-
-        return $status === Password::PasswordReset
-            ? $this->success('Password reset successfully', [
-                'status' => __($status)
-            ])
-            : $this->error('Failed to reset password', 500);
     }
 }

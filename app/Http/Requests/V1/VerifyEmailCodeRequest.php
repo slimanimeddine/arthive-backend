@@ -4,7 +4,7 @@ namespace App\Http\Requests\V1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SendResetPasswordLinkRequest extends FormRequest
+class VerifyEmailCodeRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -14,17 +14,17 @@ class SendResetPasswordLinkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'email', 'exists:users,email'],
+            'code' => ['required', 'string'],
         ];
     }
 
     public function bodyParameters()
     {
         return [
-            'email' => [
-                'description' => 'The email address of the user. Must be unique.',
-                'example' => 'johndoe@gmail.com',
-            ],
+            'code' => [
+                'description' => 'The verification code sent to the user\'s email',
+                'example' => '123456',
+            ]
         ];
     }
 }

@@ -47,54 +47,54 @@ This project is a backend API built with Laravel to power a Traditional Artworks
 
 #### Authentication & User Management
 
--   User registration (sign-up) and login (sign-in)
--   Email verification and password reset
--   Secure authentication using Laravel Sanctum
--   User profile management
+- User registration (sign-up) and login (sign-in)
+- Email verification and password reset
+- Secure authentication using Laravel Sanctum
+- User profile management
 
 #### Artwork Management
 
--   CRUD operations for artworks, including image uploads
--   Categorization using tags
--   Ability to list artworks by user or globally
+- CRUD operations for artworks, including image uploads
+- Categorization using tags
+- Ability to list artworks by user or globally
 
 #### Social Interactions
 
--   Follow/unfollow artists
--   Like/unlike artworks
--   Comment on artworks with edit and delete capabilities
+- Follow/unfollow artists
+- Like/unlike artworks
+- Comment on artworks with edit and delete capabilities
 
 #### Favorites & Notifications
 
--   Mark artworks as favorites
--   Receive real-time notifications for interactions
+- Mark artworks as favorites
+- Receive real-time notifications for interactions
 
 #### Tagging & Filtering
 
--   Organize and filter artworks by tags
--   View an artist's artworks based on tags
+- Organize and filter artworks by tags
+- View an artist's artworks based on tags
 
 #### Admin & Verification
 
--   Admin authentication
--   Artist verification request system
+- Admin authentication
+- Artist verification request system
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
--   [Laravel](https://laravel.com/)
--   [Laravel-query-builder](https://spatie.be/docs/laravel-query-builder/v6/introduction)
--   [Laravel Scout](https://laravel.com/docs/11.x/scout)
--   [Typesense](https://typesense.org/)
--   [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)
--   [Laravel Reverb](https://laravel.com/docs/11.x/reverb)
--   [Scribe](https://scribe.knuckles.wtf/)
+- [Laravel](https://laravel.com/)
+- [Laravel-query-builder](https://spatie.be/docs/laravel-query-builder/v6/introduction)
+- [Laravel Scout](https://laravel.com/docs/11.x/scout)
+- [Typesense](https://typesense.org/)
+- [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)
+- [Laravel Reverb](https://laravel.com/docs/11.x/reverb)
+- [Scribe](https://scribe.knuckles.wtf/)
+- [Resend](https://resend.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
-
 
 ### Prerequisites
 
@@ -106,43 +106,50 @@ If you don't you can head to [Installing PHP and the Laravel Installer](https://
 Follow these instructions to run this project locally on your machine
 
 1. Clone the repo:
-    ```sh
-    git clone https://github.com/slimanimeddine/arthive-backend.git
-    ```
+
+   ```sh
+   git clone https://github.com/slimanimeddine/arthive-backend.git
+   ```
 
 2. Copy `.env.example` to `.env`
 
 3. Create a database and copy its credentials to `.env`
 
 4. Install the project's dependencies:
-    ```sh
-    composer install
-    ```
+
+   ```sh
+   composer install
+   ```
 
 5. Generate the application key:
-    ```sh
-    php artisan key:generate
-    ```
+
+   ```sh
+   php artisan key:generate
+   ```
 
 6. Run database migrations:
-    ```sh
-    php artisan migrate
-    ```
+
+   ```sh
+   php artisan migrate
+   ```
 
 7. Create a symbolic link to the storage folder:
-    ```sh
-    php artisan storage:link
-    ```
+
+   ```sh
+   php artisan storage:link
+   ```
 
 8. Start the Laravel development server:
-    ```sh
-    php artisan serve
-    ```
+
+   ```sh
+   php artisan serve
+   ```
 
 9. I have used [Typesense](https://typesense.org/) as an engine to add full text search to this project.
-To run Typesense on your local machine follow these [instructions](https://typesense.org/docs/guide/install-typesense.html#option-2-local-machine-self-hosting).
+   To run Typesense on your local machine follow these [instructions](https://typesense.org/docs/guide/install-typesense.html#option-2-local-machine-self-hosting).
 
 10. Then, set the `SCOUT_DRIVER` environment variable as well as your Typesense host and API key credentials within your application's .env file:
+
     ```sh
     SCOUT_DRIVER=typesense
     TYPESENSE_API_KEY=masterKey
@@ -150,15 +157,17 @@ To run Typesense on your local machine follow these [instructions](https://types
     ```
 
 11. Import User model records into the search index:
+
     ```sh
     php artisan scout:import "App\Models\User"
     ```
 
-11. Import Artwork model records into the search index:
+12. Import Artwork model records into the search index:
     ```sh
     php artisan scout:import "App\Models\Artwork"
     ```
-
+13. I have used [Resend](https://resend.com/) as an email API to send emails such as email verificaiton codes and forgot password codes.
+To configure Resend with Laravel follow these [instructions](https://resend.com/docs/send-with-laravel).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage

@@ -30,7 +30,7 @@ class CreateArtworkRequest extends FormRequest
                     if ($trueCount !== 1) {
                         $fail('The photos array must contain exactly one main photo.');
                     }
-                }
+                },
             ],
             'photos.*.file' => ['required', 'image', 'max:5000000'],
             'photos.*.is_main' => ['required', 'boolean'],

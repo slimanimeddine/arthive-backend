@@ -55,11 +55,11 @@ class ArtworkCommentNotification extends Notification
             ],
             'artwork' => [
                 'id' => $this->artwork->id,
-                'title' => $this->artwork->title
+                'title' => $this->artwork->title,
             ],
             'comment' => [
                 'id' => $this->comment->id,
-            ]
+            ],
         ];
     }
 
@@ -81,8 +81,6 @@ class ArtworkCommentNotification extends Notification
 
     /**
      * Get the notification's database type.
-     *
-     * @return string
      */
     public function databaseType(object $notifiable): string
     {

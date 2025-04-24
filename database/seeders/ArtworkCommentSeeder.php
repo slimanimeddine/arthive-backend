@@ -6,7 +6,6 @@ use App\Models\Artwork;
 use App\Models\ArtworkComment;
 use App\Models\User;
 use App\Notifications\ArtworkCommentNotification;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ArtworkCommentSeeder extends Seeder

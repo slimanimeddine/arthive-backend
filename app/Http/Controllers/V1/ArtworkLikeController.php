@@ -17,26 +17,24 @@ class ArtworkLikeController extends ApiController
 {
     /**
      * Like Artwork
-     * 
+     *
      * Like an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The ID of the artwork to like
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkLikeResource
-     * 
+     *
      * @apiResourceModel App\Models\ArtworkLike
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *    "message": "The artwork you are trying to like does not exist.",
      *    "status": 404
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to like this artwork.",
      *    "status": 403
@@ -48,12 +46,12 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to like does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to like does not exist.');
         }
 
         if ($authenticatedUser->cannot('likeArtwork', $artwork)) {
-            return $this->error("You are not authorized to like this artwork.", 403);
+            return $this->unauthorized('You are not authorized to like this artwork.');
         }
 
         $artworkLike = ArtworkLike::create([
@@ -68,33 +66,28 @@ class ArtworkLikeController extends ApiController
 
     /**
      * Unlike Artwork
-     * 
+     *
      * Unlike an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The ID of the artwork to unlike
-     * 
+     *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unliked this artwork.',
-     *      'data': null,
-     *      'status': 200
+     *      'status': 204
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *   "message": "The artwork you are trying to unlike does not exist.",
      *   "status": 404
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to unlike this artwork.",
      *    "status": 403
      * }
-     * 
      */
     public function unlikeArtwork(Request $request, int $artworkId)
     {
@@ -102,12 +95,12 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::published()->where('id', $artworkId)->first();
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to unlike does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to unlike does not exist.');
         }
 
         if ($authenticatedUser->cannot('unlikeArtwork', $artwork)) {
-            return $this->error("You are not authorized to unlike this artwork.", 403);
+            return $this->unauthorized('You are not authorized to unlike this artwork.');
         }
 
         $artworkLike = ArtworkLike::where('user_id', $authenticatedUser->id)
@@ -116,16 +109,16 @@ class ArtworkLikeController extends ApiController
 
         $artworkLike->delete();
 
-        return $this->success('You have successfully unliked this artwork.');
+        return $this->noContent('You have successfully unliked this artwork.');
     }
 
     /**
      * List User Received Likes Count by Tag
-     * 
+     *
      * Retrieve the number of likes an artist has received by tag
-     * 
+     *
      * @urlParam username string required The username of the user
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "",
      *      "data": [
@@ -140,7 +133,10 @@ class ArtworkLikeController extends ApiController
      *      ],
      *      "status": 200
      * }
-     * 
+     * @response 204 scenario="No Content" {
+     *     "message": "No Content",
+     *     "status": 204
+     * }
      * @response 404 scenario="User not found" {
      *      "message": "The user you are trying to retrieve likes for does not exist.",
      *      "status": 404
@@ -150,8 +146,8 @@ class ArtworkLikeController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve likes for does not exist.');
         }
 
         $artworksCount = $user->artworks()->count();
@@ -175,17 +171,16 @@ class ArtworkLikeController extends ApiController
 
     /**
      * Show User Received Likes Count
-     * 
+     *
      * Retrieve the total number of likes an artist has received
-     * 
+     *
      * @urlParam username string required The username of the user
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "",
      *      "data": 8,
      *      "status": 200
      * }
-     * 
      * @response 404 scenario="User not found" {
      *     "message": "The user you are trying to retrieve likes for does not exist.",
      *     "status": 404
@@ -195,8 +190,8 @@ class ArtworkLikeController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve likes for does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve likes for does not exist.');
         }
 
         $artworksCount = $user->artworks()->count();
@@ -215,24 +210,22 @@ class ArtworkLikeController extends ApiController
 
     /**
      * Check if Authenticated User is Liking
-     * 
+     *
      * Check if the currently authenticated user is liking an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The ID of the artwork to check if the authenticated user is liking
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "",
      *      "data": true,
      *      "status": 200
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *      "message": "The artwork you are trying to check if you liked does not exist.",
      *      "status": 404
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
@@ -243,8 +236,8 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::published()->where('id', $artworkId)->first();
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to check if you liked does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to check if you liked does not exist.');
         }
 
         $isLiking = ArtworkLike::where('user_id', $authenticatedUser->id)

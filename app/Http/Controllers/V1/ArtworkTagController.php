@@ -16,11 +16,11 @@ class ArtworkTagController extends ApiController
 {
     /**
      * List User Artwork Tags
-     * 
+     *
      * Retrieve a list of tags used by a user's published artworks
-     * 
+     *
      * @urlParam username string required The username of the user
-     * 
+     *
      * @response 200 scenario=Success {
      *      "data": [
      *          {
@@ -35,7 +35,6 @@ class ArtworkTagController extends ApiController
      *      "message": "",
      *      "status": 200
      * }
-     * 
      * @response 404 scenario="User not found" {
      *      "message": "The user you are trying to retrieve his artwork tags does not exist.",
      *      "status": 404
@@ -45,8 +44,8 @@ class ArtworkTagController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve his artwork tags does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve his artwork tags does not exist.');
         }
 
         $artworksCount = $user->artworks()->count();
@@ -69,11 +68,11 @@ class ArtworkTagController extends ApiController
 
     /**
      * List Tags
-     * 
+     *
      * Retrieve a list of all tags
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\TagResource
-     * 
+     *
      * @apiResourceModel App\Models\Tag
      */
     public function listTags()

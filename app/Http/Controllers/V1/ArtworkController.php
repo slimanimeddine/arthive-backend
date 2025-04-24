@@ -13,9 +13,9 @@ use App\Sorts\Artworks\PopularSort;
 use App\Sorts\Artworks\RisingSort;
 use App\Sorts\Artworks\TrendingSort;
 use Illuminate\Http\Request;
-use Spatie\QueryBuilder\QueryBuilder;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\AllowedSort;
+use Spatie\QueryBuilder\QueryBuilder;
 
 /**
  * @group Artworks
@@ -24,21 +24,17 @@ class ArtworkController extends ApiController
 {
     /**
      * List Published Artworks
-     * 
+     *
      * Retrieve a list of all published artworks
-     * 
+     *
      * @queryParam filter[tag] string Filter artworks by tag. Example: graphic
-     * 
      * @queryParam searchQuery string Search for artworks by title or description. Example: lorem
-     * 
      * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
-     * 
      * @queryParam page integer The page number to fetch. Example: 1
-     * 
      * @queryParam perPage integer The number of records to fetch per page. Example: 10
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork with=user paginate=10
      */
     public function listPublishedArtworks(Request $request)
@@ -54,10 +50,10 @@ class ArtworkController extends ApiController
                 AllowedFilter::exact('tag', 'tags.name'),
             ])
             ->allowedSorts([
-                AllowedSort::custom('trending', new TrendingSort()),
-                AllowedSort::custom('rising', new RisingSort()),
-                AllowedSort::custom('new', new NewSort()),
-                AllowedSort::custom('popular', new PopularSort()),
+                AllowedSort::custom('trending', new TrendingSort),
+                AllowedSort::custom('rising', new RisingSort),
+                AllowedSort::custom('new', new NewSort),
+                AllowedSort::custom('popular', new PopularSort),
             ])
             ->tap(function ($query) use ($searchIds) {
                 return empty($searchIds) ? $query : $query->whereIn('artworks.id', $searchIds);
@@ -69,15 +65,15 @@ class ArtworkController extends ApiController
 
     /**
      * Show Published Artwork
-     * 
+     *
      * Retrieve a single published artwork by id
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,artworkComments.user,artworkLikes.user,tags
-     * 
+     *
      * @response 404 scenario="Artwork not found" {
      *    "message": "The artwork you are trying to retrieve does not exist.",
      *    "status": 404
@@ -91,12 +87,12 @@ class ArtworkController extends ApiController
                 'artworkPhotos',
                 'artworkLikes.user',
                 'artworkComments.user',
-                'tags'
+                'tags',
             ])
             ->first();
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to retrieve does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
         return new ArtworkResource($artwork);
@@ -104,23 +100,20 @@ class ArtworkController extends ApiController
 
     /**
      * List User Published Artworks
-     * 
+     *
      * Retrieve a list of artworks published by a user
-     * 
+     *
      * @urlParam username string required The username of the user
-     * 
+     *
      * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
-     * 
      * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
-     * 
      * @queryParam page string The page number to fetch. Example: 1
-     * 
      * @queryParam perPage integer The number of records to fetch per page. Example: 10
-     * 
-     * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource 
-     * 
+     *
+     * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
+     *
      * @apiResourceModel App\Models\Artwork paginate=10
-     * 
+     *
      * @response 404 scenario="User not found" {
      *   "message": "The user you are trying to retrieve his artworks does not exist.",
      *   "status": 404
@@ -130,8 +123,8 @@ class ArtworkController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve his artworks does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve his artworks does not exist.');
         }
 
         $perPage = $request->query('perPage', 10);
@@ -141,10 +134,10 @@ class ArtworkController extends ApiController
                 AllowedFilter::exact('tag', 'tags.name'),
             ])
             ->allowedSorts([
-                AllowedSort::custom('trending', new TrendingSort()),
-                AllowedSort::custom('rising', new RisingSort()),
-                AllowedSort::custom('new', new NewSort()),
-                AllowedSort::custom('popular', new PopularSort()),
+                AllowedSort::custom('trending', new TrendingSort),
+                AllowedSort::custom('rising', new RisingSort),
+                AllowedSort::custom('new', new NewSort),
+                AllowedSort::custom('popular', new PopularSort),
             ])
             ->paginate($perPage);
 
@@ -153,21 +146,19 @@ class ArtworkController extends ApiController
 
     /**
      * List Authenticated User Artworks
-     * 
+     *
      * Retrieve a list of artworks published or drafts by the currently authenticated user
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @queryParam filter[status] string Filter artworks by status. Enum: draft, published. Example: published
-     * 
      * @queryParam page integer The page number to fetch. Example: 1
-     * 
      * @queryParam perPage integer The number of records to fetch per page. Example: 10
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork paginate=10
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
@@ -186,24 +177,22 @@ class ArtworkController extends ApiController
     }
 
     /**
-     * 
      * Show Authenticated User Artwork
-     * 
+     *
      * Retrieve a single artwork published or draft by the currently authenticated user
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork with=artworkPhotos,tags
-     * 
+     *
      * @response 404 scenario="Artwork not found" {
      *  "message": "The artwork you are trying to retrieve does not exist.",
      *  "status": 404
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
@@ -214,11 +203,11 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::where('user_id', $authenticatedUser->id)->where('id', $artworkId)->with([
             'artworkPhotos',
-            'tags'
+            'tags',
         ])->first();
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to retrieve does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
         return new ArtworkResource($artwork);
@@ -226,21 +215,20 @@ class ArtworkController extends ApiController
 
     /**
      * Create Artwork
-     * 
+     *
      * Create a new artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @header Content-Type multipart/form-data
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     *
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to create an artwork draft.",
      *    "status": 403
@@ -251,7 +239,7 @@ class ArtworkController extends ApiController
         $authenticatedUser = $request->user();
 
         if ($authenticatedUser->cannot('createArtwork', Artwork::class)) {
-            return $this->error("You are not authorized to create an artwork draft.", 403);
+            return $this->unauthorized('You are not authorized to create an artwork draft.');
         }
 
         $artwork = Artwork::create([
@@ -282,26 +270,24 @@ class ArtworkController extends ApiController
 
     /**
      * Update Artwork Draft
-     * 
+     *
      * Update an artwork draft
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork
-     * 
+     *
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to update this artwork draft.",
      *     "status": 403
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *   "message": "The artwork you are trying to update does not exist.",
      *   "status": 404
@@ -313,12 +299,12 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to update does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to update does not exist.');
         }
 
         if ($authenticatedUser->cannot('updateArtwork', $artwork)) {
-            return $this->error("You are not authorized to update this artwork.", 403);
+            return $this->unauthorized('You are not authorized to update this artwork.');
         }
 
         $artwork->update($request->safe()->except(['tags']));
@@ -340,26 +326,24 @@ class ArtworkController extends ApiController
 
     /**
      * Publish Artwork
-     * 
+     *
      * Publish an artwork draft
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
-     * 
+     *
      * @apiResourceModel App\Models\Artwork
-     * 
+     *
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to publish this artwork.",
      *   "status": 403
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *   "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *  "message": "The artwork you are trying to publish does not exist.",
      * "status": 404
@@ -371,12 +355,12 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to publish does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to publish does not exist.');
         }
 
         if ($authenticatedUser->cannot('publishArtwork', $artwork)) {
-            return $this->error("You are not authorized to publish this artwork.", 403);
+            return $this->unauthorized('You are not authorized to publish this artwork.');
         }
 
         $artwork->update(['status' => 'published']);
@@ -386,28 +370,25 @@ class ArtworkController extends ApiController
 
     /**
      * Delete Artwork
-     * 
+     *
      * Delete an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "Artwork deleted successfully"
      *      "data": null,
      *     "status": 200
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to delete this artwork.",
      *     "status": 403
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *   "message": "The artwork you are trying to delete does not exist.",
      *   "status": 404
@@ -419,12 +400,12 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to delete does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to delete does not exist.');
         }
 
         if ($authenticatedUser->cannot('deleteArtwork', $artwork)) {
-            return $this->error("You are not authorized to delete this artwork.", 403);
+            return $this->unauthorized('You are not authorized to delete this artwork.');
         }
 
         $artwork->delete();

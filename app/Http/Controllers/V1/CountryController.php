@@ -14,11 +14,11 @@ class CountryController extends ApiController
 {
     /**
      * List Countries
-     * 
+     *
      * Retrieve a list of countries
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\CountryResource
-     * 
+     *
      * @apiResourceModel App\Models\Country
      */
     public function index(Request $request)

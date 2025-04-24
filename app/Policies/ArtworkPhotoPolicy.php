@@ -33,7 +33,7 @@ class ArtworkPhotoPolicy
         $isMain = $artworkPhoto->is_main;
         $artworkPhotosCount = $artwork->artworkPhotos()->count() > 1;
 
-        return $isArtist && $isOwner && $isDraft && $artworkPhotosCount && !$isMain;
+        return $isArtist && $isOwner && $isDraft && $artworkPhotosCount && ! $isMain;
     }
 
     /**

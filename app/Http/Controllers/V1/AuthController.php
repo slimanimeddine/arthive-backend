@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Requests\V1\ChangePasswordRequest;
+use App\Http\Requests\V1\ResetPasswordRequest;
+use App\Http\Requests\V1\SendForgotPasswordCodeRequest;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
 use App\Http\Requests\V1\VerifyEmailCodeRequest;
+use App\Http\Requests\V1\VerifyForgotPasswordCodeRequest;
 use App\Mail\EmailVerifyCode;
+use App\Mail\ForgotPasswordCode;
 use App\Models\EmailVerification;
+use App\Models\ForgotPassword;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,15 +27,12 @@ class AuthController extends ApiController
 {
     /**
      * Sign Up
-     * 
+     *
      * Creates a new user
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "User created successfully",
-     *      "data": {
-     *          "id": 1 
-     *      },
-     *      "status": 200
+     *      "status": 204
      * }
      */
     public function signUp(SignUpRequest $request)
@@ -41,16 +43,14 @@ class AuthController extends ApiController
             'password' => Hash::make($request->password),
         ]);
 
-        return $this->success('User created successfully', [
-            'id' => $user->id
-        ]);
+        return $this->noContent('User created successfully');
     }
 
     /**
      * Sign In
-     * 
+     *
      * Signs in a user and returns an auth token
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "Authenticated",
      *      "data": {
@@ -59,7 +59,6 @@ class AuthController extends ApiController
      *      },
      *      "status": 200
      * }
-     * 
      * @response 401 scenario="Invalid credentials" {
      *      "message": "Invalid credentials",
      *      "status": 401
@@ -67,13 +66,13 @@ class AuthController extends ApiController
      */
     public function signIn(SignInRequest $request)
     {
-        if (!Auth::attempt($request->only('email', 'password'))) {
+        if (! Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::artist()->where('email', $request->email)->first();
 
-        if (!$user) {
+        if (! $user) {
             return $this->error('Invalid credentials', 401);
         }
 
@@ -81,17 +80,17 @@ class AuthController extends ApiController
 
         return $this->success('Authenticated', [
             'token' => $token,
-            'id' => $user->id
+            'id' => $user->id,
         ]);
     }
 
     /**
      * Admin Sign In
-     * 
+     *
      * Signs in an admin user and returns an auth token
-     * 
+     *
      * @unauthenticated
-     * 
+     *
      * @response 200 scenario=success {
      *  "message": "Authenticated",
      *  "data": {
@@ -100,7 +99,6 @@ class AuthController extends ApiController
      *  },
      *  "status": 200
      * }
-     * 
      * @response 401 scenario="Invalid credentials" {
      *      "message": "Invalid credentials",
      *      "status": 401
@@ -108,13 +106,13 @@ class AuthController extends ApiController
      */
     public function adminSignIn(SignInRequest $request)
     {
-        if (!Auth::attempt($request->only('email', 'password'))) {
+        if (! Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::admin()->where('email', $request->email)->first();
 
-        if (!$user) {
+        if (! $user) {
             return $this->error('Invalid credentials', 401);
         }
 
@@ -128,17 +126,15 @@ class AuthController extends ApiController
 
     /**
      * Sign Out
-     * 
+     *
      * Signs out a user and deletes the auth token
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "Signed out successfully",
-     *      "data": null,
-     *      "status": 200
+     *      "status": 204
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
@@ -147,26 +143,23 @@ class AuthController extends ApiController
     {
         $request->user()->currentAccessToken()->delete();
 
-        return $this->success('Signed out successfully');
+        return $this->noContent('Signed out successfully');
     }
 
     /**
      * Change Password
-     * 
+     *
      * Changes the password of the authenticated user
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @response 200 scenario=Success {
      *      "message": "Password updated successfully",
-     *      "data": null,
-     *      "status": 200
+     *      "status": 204
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
-     * 
      * @response 422 scenario="Invalid current password" {
      *      "message": "Invalid current password",
      *      "status": 422
@@ -176,35 +169,32 @@ class AuthController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        if (!Hash::check($request->current_password, $authenticatedUser->password)) {
+        if (! Hash::check($request->current_password, $authenticatedUser->password)) {
             return $this->error('Invalid current password', 422);
         }
 
         $authenticatedUser->update([
-            'password' => Hash::make($request->new_password)
+            'password' => Hash::make($request->new_password),
         ]);
 
-        return $this->success('Password changed successfully');
+        return $this->noContent('Password changed successfully');
     }
 
     /**
      * Send Email Verification Code
-     * 
+     *
      * Sends a verification code to the authenticated user's email
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @response 200 scenario=Success {
      *     "message": "Verification code sent successfully",
-     *     "data": null,
      *    "status": 200
      * }
-     * 
      * @response 400 scenario="Email already verified" {
      *     "message": "Email already verified",
      *    "status": 400
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
@@ -224,36 +214,32 @@ class AuthController extends ApiController
         EmailVerification::create([
             'email' => $email,
             'code' => $code,
-            'code_expires_at' => $code_expires_at
+            'code_expires_at' => $code_expires_at,
         ]);
 
         Mail::to($email)->send(new EmailVerifyCode($code));
 
-        return $this->success('Verification code sent successfully');
+        return $this->noContent('Verification code sent successfully');
     }
 
     /**
      * Verify Email Code
-     * 
+     *
      * Verifies the email verification code
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @response 200 scenario=Success {
      *     "message": "Email verified successfully",
-     *    "data": null,
-     *    "status": 200
+     *    "status": 204
      * }
-     * 
      * @response 400 scenario="Invalid code" {
      *    "message": "Invalid code",
      *   "status": 400
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 400 scenario="Email already verified" {
      *   "message": "Email already verified",
      *  "status": 400
@@ -274,7 +260,7 @@ class AuthController extends ApiController
             ->latest()
             ->first();
 
-        if (!$email_verification) {
+        if (! $email_verification) {
             return $this->error('Invalid code', 400);
         }
 
@@ -291,6 +277,154 @@ class AuthController extends ApiController
 
         $email_verification->delete();
 
-        return $this->success('Email verified successfully');
+        return $this->noContent('Email verified successfully');
+    }
+
+    /**
+     * Send Forgot Password Code
+     *
+     * Sends a forgot password code to the user's email
+     *
+     * @response 200 scenario=Success {
+     *      "message": "Forgot password code sent successfully",
+     *      "status": 204
+     * }
+     */
+    public function sendForgotPasswordCode(SendForgotPasswordCodeRequest $request)
+    {
+        $code = Str::random(6);
+        $token = Str::random(64);
+        $code_expires_at = now()->addMinutes(10);
+
+        ForgotPassword::create([
+            'email' => $request->email,
+            'code' => $code,
+            'code_expires_at' => $code_expires_at,
+            'token' => $token,
+        ]);
+
+        Mail::to($request->email)->send(new ForgotPasswordCode($code));
+
+        return $this->noContent('Forgot password code sent successfully');
+    }
+
+    /**
+     * Verify Forgot Password Code
+     *
+     * Verifies the forgot password code sent to the user's email
+     *
+     * @response 200 scenario=Success {
+     *     "message": "Code verified successfully",
+     *    "data": {
+     *      "token" => "flsqjdfmjfqlsjkf"
+     *      },
+     *     "status": 200
+     * }
+     * @response 400 scenario="Invalid code" {
+     *    "message": "Invalid code",
+     *   "status": 400
+     * }
+     * @response 400 scenario="Code expired" {
+     *   "message": "Code expired",
+     *  "status": 400
+     * }
+     * @response 404 scenario="User not found" {
+     *   "message": "User not found",
+     *  "status": 404
+     * }
+     */
+    public function verifyForgotPasswordCode(VerifyForgotPasswordCodeRequest $request)
+    {
+        $user = User::where('email', $request->email)->first();
+
+        if (! $user) {
+            return $this->notFound('User not found');
+        }
+
+        $forgot_password = ForgotPassword::where('email', $request->email)
+            ->where('code', $request->code)
+            ->latest()
+            ->first();
+
+        if (! $forgot_password) {
+            return $this->error('Invalid code', 400);
+        }
+
+        if ($forgot_password->code !== $request->code) {
+            return $this->error('Invalid code', 400);
+        }
+
+        if ($forgot_password->code_expires_at < now()) {
+            return $this->error('Code expired', 400);
+        }
+
+        return $this->success('Code verified successfully', [
+            'token' => $forgot_password->token,
+        ]);
+    }
+
+    /**
+     * Reset Password
+     *
+     * Resets the user's password
+     *
+     * @response 200 scenario=Success {
+     *      "message": "Password reset successfully",
+     *      "status": 204
+     * }
+     * @response 400 scenario="Invalid token" {
+     *      "message": "Invalid token",
+     *      "status": 400
+     * }
+     * @response 404 scenario="User not found" {
+     *      "message": "User not found",
+     *      "status": 404
+     * }
+     */
+    public function resetPassword(ResetPasswordRequest $request)
+    {
+        $forgot_password = ForgotPassword::where('email', $request->email)
+            ->where('token', $request->token)
+            ->first();
+
+        if (! $forgot_password) {
+            return $this->error('Invalid token', 400);
+        }
+
+        $user = User::where('email', $request->email)->first();
+
+        if (! $user) {
+            return $this->notFound('User not found');
+        }
+
+        $user->password = Hash::make($request->new_password);
+        $user->save();
+
+        $forgot_password->delete();
+
+        return $this->noContent('Password reset successfully');
+    }
+
+    /**
+     * Delete User
+     *
+     * Deletes the authenticated user
+     *
+     * @authenticated
+     *
+     * @response 200 scenario=Success {
+     *      "message": "User deleted successfully",
+     *     "status": 204
+     * }
+     * @response 401 scenario=Unauthenticated {
+     *     "message": "Unauthenticated"
+     * }
+     */
+    public function delete_user(Request $request)
+    {
+        $user = $request->user();
+        $user->delete();
+
+        return $this->noContent('User deleted successfully');
     }
 }

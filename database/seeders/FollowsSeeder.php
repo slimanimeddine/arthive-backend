@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Follow;
 use App\Models\User;
 use App\Notifications\FollowNotification;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class FollowsSeeder extends Seeder

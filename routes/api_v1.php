@@ -19,12 +19,19 @@ Route::post('sign-up', [AuthController::class, 'signUp']);
 Route::post('sign-in', [AuthController::class, 'signIn']);
 Route::post('sign-out', [AuthController::class, 'signOut'])->middleware('auth:sanctum');
 Route::post('change-password', [AuthController::class, 'changePassword'])->middleware('auth:sanctum');
-
 Route::middleware(['throttle:email-verification-code'])->group(function () {
     Route::post('email-verification/send', [AuthController::class, 'sendEmailVerificationCode'])->middleware('auth:sanctum');
 });
-
 Route::post('email-verification/verify', [AuthController::class, 'verifyEmailCode'])->middleware('auth:sanctum');
+
+Route::middleware(['throttle:email-verification-code'])->group(function () {
+    Route::post('/forgot-password-code/send', [AuthController::class, 'sendForgotPasswordCode']);
+});
+
+Route::post('/forgot-password-code/verify', [AuthController::class, 'verifyForgotPasswordCode']);
+Route::post('/password/reset', [AuthController::class, 'resetPassword']);
+
+Route::delete('users/me', [AuthController::class, 'delete_user'])->middleware('auth:sanctum');
 
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);

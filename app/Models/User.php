@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use Laravel\Scout\Searchable;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
@@ -31,7 +31,7 @@ class User extends Authenticatable
         'photo',
         'password',
         'artist_verified_at',
-        'role'
+        'role',
     ];
 
     public function isAdmin(): bool
@@ -137,6 +137,7 @@ class User extends Authenticatable
             'id'
         );
     }
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -145,7 +146,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'pivot'
+        'pivot',
     ];
 
     /**

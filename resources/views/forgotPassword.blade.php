@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Verification</title>
+    <title>Forgot Password Code</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,13 +63,14 @@
 <body>
     <div class="email-container">
         <div class="header">
-            <h1>Email Verification Code</h1>
+            <h1>Password Reset Code</h1>
         </div>
         <div class="content">
             <p>Hello,</p>
-            <p>Thank you for signing up! Please use the following verification code to verify your email address:</p>
-            <span class="code">{{ $email_verification_code }}</span>
-            <p>If you did not request this code, please ignore this email.</p>
+            <p>We received a request to reset your password. Please use the following code to proceed:</p>
+            <span class="code">{{ $forgot_password_code }}</span>
+            <p>If you did not request this code, please ignore this email or contact support if you believe this is an
+                error.</p>
         </div>
         <div class="footer">
             <p>This is an automated message. Please do not reply to this email.</p>

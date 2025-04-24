@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__ . '/../routes/web.php',
-        commands: __DIR__ . '/../routes/console.php',
+        web: __DIR__.'/../routes/web.php',
+        commands: __DIR__.'/../routes/console.php',
         health: '/up',
         then: function () {
             Route::prefix('api/v1')
@@ -17,7 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
         }
     )
     ->withBroadcasting(
-        __DIR__ . '/../routes/channels.php',
+        __DIR__.'/../routes/channels.php',
         ['prefix' => 'api', 'middleware' => ['api', 'auth:sanctum']],
     )
     ->withMiddleware(function (Middleware $middleware) {

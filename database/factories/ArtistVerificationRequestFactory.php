@@ -20,7 +20,7 @@ class ArtistVerificationRequestFactory extends Factory
         return [
             'status' => fake()->randomElement(['pending', 'approved', 'rejected']),
             'reason' => fake()->paragraph(),
-            'user_id' => User::factory()
+            'user_id' => User::factory(),
         ];
     }
 }

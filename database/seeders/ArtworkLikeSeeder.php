@@ -6,7 +6,6 @@ use App\Models\Artwork;
 use App\Models\ArtworkLike;
 use App\Models\User;
 use App\Notifications\ArtworkLikeNotification;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ArtworkLikeSeeder extends Seeder

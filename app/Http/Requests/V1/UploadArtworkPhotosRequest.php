@@ -26,8 +26,8 @@ class UploadArtworkPhotosRequest extends FormRequest
                 'description' => 'The photos of the artwork',
             ],
             'photos.*' => [
-                'description' => 'A photo of the artwork'
-            ]
+                'description' => 'A photo of the artwork',
+            ],
         ];
     }
 }

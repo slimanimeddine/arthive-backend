@@ -21,7 +21,7 @@ class ArtworkCommentFactory extends Factory
         return [
             'comment_text' => fake()->sentence(),
             'artwork_id' => Artwork::factory(),
-            'user_id' => User::factory()
+            'user_id' => User::factory(),
         ];
     }
 }

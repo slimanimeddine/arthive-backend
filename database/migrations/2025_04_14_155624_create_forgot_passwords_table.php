@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('artwork_likes', function (Blueprint $table) {
+        Schema::create('forgot_passwords', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('artwork_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->unique(['user_id', 'artwork_id']);
+            $table->string('email');
+            $table->string('code');
+            $table->timestamp('code_expires_at');
+            $table->string('token');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('artwork_likes');
+        Schema::dropIfExists('forgot_passwords');
     }
 };

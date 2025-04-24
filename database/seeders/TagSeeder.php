@@ -14,49 +14,49 @@ class TagSeeder extends Seeder
     {
         $tags = [
             [
-                'name' => 'painting'
+                'name' => 'painting',
             ],
             [
-                'name' => 'graphic'
+                'name' => 'graphic',
             ],
             [
-                'name' => 'sculpture'
+                'name' => 'sculpture',
             ],
             [
-                'name' => 'folk art'
+                'name' => 'folk art',
             ],
             [
-                'name' => 'textile'
+                'name' => 'textile',
             ],
             [
-                'name' => 'ceramics'
+                'name' => 'ceramics',
             ],
             [
-                'name' => 'stained glass windows'
+                'name' => 'stained glass windows',
             ],
             [
-                'name' => 'beads'
+                'name' => 'beads',
             ],
             [
-                'name' => 'paper'
+                'name' => 'paper',
             ],
             [
-                'name' => 'glass'
+                'name' => 'glass',
             ],
             [
-                'name' => 'dolls'
+                'name' => 'dolls',
             ],
             [
-                'name' => 'jewellery'
+                'name' => 'jewellery',
             ],
             [
-                'name' => 'fresco'
+                'name' => 'fresco',
             ],
             [
-                'name' => 'metal'
+                'name' => 'metal',
             ],
             [
-                'name' => 'mosaic'
+                'name' => 'mosaic',
             ],
         ];
 

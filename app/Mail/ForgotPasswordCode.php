@@ -8,18 +8,18 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class EmailVerifyCode extends Mailable
+class ForgotPasswordCode extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $email_verification_code;
+    public $forgot_password_code;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(string $email_verification_code)
+    public function __construct(string $forgot_password_code)
     {
-        $this->email_verification_code = $email_verification_code;
+        $this->forgot_password_code = $forgot_password_code;
     }
 
     /**
@@ -28,7 +28,7 @@ class EmailVerifyCode extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Email Verify Code',
+            subject: 'Forgot Password Code',
         );
     }
 
@@ -38,7 +38,7 @@ class EmailVerifyCode extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emailVerify',
+            view: 'forgotPassword',
         );
     }
 

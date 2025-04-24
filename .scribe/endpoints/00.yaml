@@ -63,10 +63,7 @@ endpoints:
         content: |-
           {
                "message": "User created successfully",
-               "data": {
-                   "id": 1
-               },
-               "status": 200
+               "status": 204
           }
         headers: []
         description: Success
@@ -183,8 +180,7 @@ endpoints:
         content: |-
           {
                "message": "Signed out successfully",
-               "data": null,
-               "status": 200
+               "status": 204
           }
         headers: []
         description: Success
@@ -202,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f68gebZhkP61ca53aV4DEdv'
+      - 'Bearer ZV38Pa4aEfeDhvcd6bkg516'
     controller: null
     method: null
     route: null
@@ -259,8 +255,7 @@ endpoints:
         content: |-
           {
                "message": "Password updated successfully",
-               "data": null,
-               "status": 200
+               "status": 204
           }
         headers: []
         description: Success
@@ -288,7 +283,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer aPVEkvge1f5d8h3646bDcZa'
+      - 'Bearer ZV6f68e3PavhDdcgk4Eab15'
     controller: null
     method: null
     route: null
@@ -323,7 +318,6 @@ endpoints:
         content: |-
           {
               "message": "Verification code sent successfully",
-              "data": null,
              "status": 200
           }
         headers: []
@@ -352,7 +346,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z1h8eva6g3PfdE4Vkb65aDc'
+      - 'Bearer ca4D5hb813dP6gkZaVEefv6'
     controller: null
     method: null
     route: null
@@ -398,8 +392,7 @@ endpoints:
         content: |-
           {
               "message": "Email verified successfully",
-             "data": null,
-             "status": 200
+             "status": 204
           }
         headers: []
         description: Success
@@ -437,7 +430,299 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer b6egfPa6Z14kVvdhac5E8D3'
+      - 'Bearer 6v1gPdbD5Vaa4h3fek8ZcE6'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/forgot-password-code/send
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send Forgot Password Code'
+      description: "Sends a forgot password code to the user's email"
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email of the user. Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Forgot password code sent successfully",
+               "status": 204
+          }
+        headers: []
+        description: Success
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/forgot-password-code/verify
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Verify Forgot Password Code'
+      description: "Verifies the forgot password code sent to the user's email"
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user requesting password reset. Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      code:
+        name: code
+        description: "The verification code sent to the user's email. Must be 6 characters."
+        required: true
+        example: '123456'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+      code: '123456'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "message": "Code verified successfully",
+             "data": {
+               "token" => "flsqjdfmjfqlsjkf"
+               },
+              "status": 200
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+             "message": "Invalid code",
+            "status": 400
+          }
+        headers: []
+        description: 'Invalid code'
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+            "message": "Code expired",
+           "status": 400
+          }
+        headers: []
+        description: 'Code expired'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "message": "User not found",
+           "status": 404
+          }
+        headers: []
+        description: 'User not found'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/password/reset
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reset Password'
+      description: "Resets the user's password"
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user requesting the password reset. Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      new_password:
+        name: new_password
+        description: 'The new password for the user. Must be at least 8 characters.'
+        required: true
+        example: newpassword123
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      token:
+        name: token
+        description: 'The password reset token.'
+        required: true
+        example: 1234567890abcdef
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+      new_password: newpassword123
+      token: 1234567890abcdef
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Password reset successfully",
+               "status": 204
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+               "message": "Invalid token",
+               "status": 400
+          }
+        headers: []
+        description: 'Invalid token'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+               "message": "User not found",
+               "status": 404
+          }
+        headers: []
+        description: 'User not found'
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/v1/users/me
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete User'
+      description: 'Deletes the authenticated user'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "User deleted successfully",
+              "status": 204
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+              "message": "Unauthenticated"
+          }
+        headers: []
+        description: Unauthenticated
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 5ca4a6e1kbdfP6ghDv3V8EZ'
     controller: null
     method: null
     route: null

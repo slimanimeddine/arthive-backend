@@ -77,7 +77,7 @@ class ArtworkPolicy
             ->where('artwork_id', $artwork->id)
             ->exists();
 
-        return $isUserArtist && !$alreadyLiked && $isPublished;
+        return $isUserArtist && ! $alreadyLiked && $isPublished;
     }
 
     /**
@@ -121,7 +121,7 @@ class ArtworkPolicy
             ->where('artwork_id', $artwork->id)
             ->exists();
 
-        return $isUserArtist && !$alreadyFavorited && $isPublished;
+        return $isUserArtist && ! $alreadyFavorited && $isPublished;
     }
 
     /**

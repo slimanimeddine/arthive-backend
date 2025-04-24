@@ -4,14 +4,15 @@ namespace App\Notifications;
 
 use App\Models\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\BroadcastMessage;
+use Illuminate\Notifications\Notification;
 
 class FollowNotification extends Notification
 {
     use Queueable;
 
     protected $follower;
+
     /**
      * Create a new notification instance.
      */
@@ -65,8 +66,6 @@ class FollowNotification extends Notification
 
     /**
      * Get the notification's database type.
-     *
-     * @return string
      */
     public function databaseType(object $notifiable): string
     {

@@ -17,28 +17,26 @@ class ArtworkCommentController extends ApiController
 {
     /**
      * Post Artwork Comment
-     * 
+     *
      * Post a comment on an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The ID of the artwork to comment on
-     * 
+     *
      * @bodyParam comment_text string required The text of the comment
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
-     * 
+     *
      * @apiResourceModel App\Models\ArtworkComment
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *     "message": "The artwork you are trying to comment on does not exist.",
      *     "status": 404
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to post a comment on this artwork.",
      *     "status": 403
@@ -50,12 +48,12 @@ class ArtworkCommentController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to comment on does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to comment on does not exist.');
         }
 
         if ($authenticatedUser->cannot('postArtworkComment', $artwork)) {
-            return $this->error("You are not authorized to post a comment on this artwork.", 403);
+            return $this->unauthorized('You are not authorized to post a comment on this artwork.');
         }
 
         $artworkComment = ArtworkComment::create([
@@ -71,28 +69,26 @@ class ArtworkCommentController extends ApiController
 
     /**
      * Update Artwork Comment
-     * 
+     *
      * Update a comment on an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkCommentId integer required The ID of the comment to update
-     * 
+     *
      * @bodyParam comment_text string required The text of the comment
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
-     * 
+     *
      * @apiResourceModel App\Models\ArtworkComment
-     * 
+     *
      * @response 403 scenario=Unauthorized {
      *      "message": "You are not authorized to update this comment.",
      *      "status": 403
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
-     * 
      * @response 404 scenario="Comment not found" {
      *    "message": "The comment you are trying to update on does not exist.",
      *    "status": 404
@@ -104,12 +100,12 @@ class ArtworkCommentController extends ApiController
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
 
-        if (!$artworkComment) {
-            return $this->error("The comment you are trying to update on does not exist.", 404);
+        if (! $artworkComment) {
+            return $this->notFound('The comment you are trying to update on does not exist.');
         }
 
         if ($authenticatedUser->cannot('updateArtworkComment', $artworkComment)) {
-            return $this->error("You are not authorized to update this comment.", 403);
+            return $this->unauthorized('You are not authorized to update this comment.');
         }
 
         $artworkComment->update([
@@ -121,28 +117,24 @@ class ArtworkCommentController extends ApiController
 
     /**
      * Delete Artwork Comment
-     * 
+     *
      * Delete a comment on an artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkCommentId integer required The ID of the comment to delete
-     * 
+     *
      * @response 200 scenario=Success {
      *     'message': 'You have successfully deleted the comment.',
-     *     'data': null,
-     *     'status': 200,
+     *     'status': 204,
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to delete this comment.",
      *     "status": 403
      * }
-     * 
      * @response 404 scenario="Comment not found" {
      *    "message": "The comment you are trying to delete does not exist.",
      *    "status": 404
@@ -154,16 +146,16 @@ class ArtworkCommentController extends ApiController
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
 
-        if (!$artworkComment) {
-            return $this->error("The comment you are trying to delete does not exist.", 404);
+        if (! $artworkComment) {
+            return $this->notFound('The comment you are trying to delete does not exist.');
         }
 
         if ($authenticatedUser->cannot('deleteArtworkComment', $artworkComment)) {
-            return $this->error("You are not authorized to delete this comment.", 403);
+            return $this->unauthorized('You are not authorized to delete this comment.');
         }
 
         $artworkComment->delete();
 
-        return $this->success('You have successfully deleted this comment.');
+        return $this->noContent('You have successfully deleted this comment.');
     }
 }

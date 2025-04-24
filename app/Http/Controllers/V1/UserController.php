@@ -6,13 +6,13 @@ use App\Filters\Users\VerifiedFilter;
 use App\Http\Requests\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
+use App\Sorts\Users\NewSort;
+use App\Sorts\Users\PopularSort;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\AllowedSort;
 use Spatie\QueryBuilder\QueryBuilder;
-use App\Sorts\Users\NewSort;
-use App\Sorts\Users\PopularSort;
-use Illuminate\Support\Facades\Storage;
 
 /**
  * @group Users
@@ -21,27 +21,20 @@ class UserController extends ApiController
 {
     /**
      * List Users
-     * 
+     *
      * Retrieve a list of all users
-     * 
+     *
      * @queryParam filter[country] string Filter artworks by country. Example: finland
-     * 
      * @queryParam filter[tag] string Filter artworks by tag. Example: ceramics
-     * 
      * @queryParam filter[verified] boolean Filter artists by verification status. Example: true
-     * 
      * @queryParam include string Include publishedArtworks in the response. Enum: publishedArtworks. Example: publishedArtworks
-     * 
      * @queryParam searchQuery string Search for users by username, first name, or last name. Example: lorem
-     * 
      * @queryParam sort string Sort artworks by new, or popular. Enum: new, popular. Example: new
-     * 
      * @queryParam page string The page number to fetch. Example: 1
-     * 
      * @queryParam perPage string The number of records to retrieve per page. Example: 10
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
-     * 
+     *
      * @apiResourceModel App\Models\User with=publishedArtworks paginate=10
      */
     public function listUsers(Request $request)
@@ -59,12 +52,12 @@ class UserController extends ApiController
                 AllowedFilter::custom('verified', new VerifiedFilter),
             ])
             ->allowedSorts([
-                AllowedSort::custom('new', new NewSort()),
-                AllowedSort::custom('popular', new PopularSort()),
+                AllowedSort::custom('new', new NewSort),
+                AllowedSort::custom('popular', new PopularSort),
             ])
             ->allowedIncludes(['publishedArtworks'])
             ->tap(function ($query) use ($searchIds) {
-                return empty($searchIds) ? $query :  $query->whereIn('users.id', $searchIds);
+                return empty($searchIds) ? $query : $query->whereIn('users.id', $searchIds);
             })
             ->paginate($perPage);
 
@@ -73,15 +66,15 @@ class UserController extends ApiController
 
     /**
      * Show User
-     * 
+     *
      * Retrieve a single user by username
-     * 
+     *
      * @urlParam username string required The username of the user
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
-     * 
+     *
      * @apiResourceModel App\Models\User
-     * 
+     *
      * @response 404 scenario="User not found" {
      *     "message": "The user you are trying to retrieve does not exist.",
      *     "status": 404
@@ -91,8 +84,8 @@ class UserController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve does not exist.');
         }
 
         return new UserResource($user);
@@ -100,21 +93,26 @@ class UserController extends ApiController
 
     /**
      * Show User By Id
-     * 
+     *
      * Retrieve a single user by id
-     * 
+     *
      * @urlParam userId integer required The id of the user
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
-     * 
+     *
      * @apiResourceModel App\Models\User
+     *
+     * @response 404 scenario="User not found" {
+     *     "message": "The user you are trying to retrieve does not exist.",
+     *     "status": 404
+     * }
      */
     public function showUserById(Request $request, int $userId)
     {
         $user = User::artist()->where('id', $userId)->first();
 
-        if (!$user) {
-            return $this->error("The user you are trying to retrieve does not exist.", 404);
+        if (! $user) {
+            return $this->notFound('The user you are trying to retrieve does not exist.');
         }
 
         return new UserResource($user);
@@ -122,15 +120,15 @@ class UserController extends ApiController
 
     /**
      * Show Authenticated User
-     * 
+     *
      * Retrieve the currently authenticated user
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
-     * 
+     *
      * @apiResourceModel App\Models\User
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
@@ -142,33 +140,31 @@ class UserController extends ApiController
 
     /**
      * Update Authenticated User
-     * 
+     *
      * Update the currently authenticated user
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @header Content-Type multipart/form-data
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
-     * 
+     *
      * @apiResourceModel App\Models\User
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to update this user.",
      *     "status": 403
      * }
-     * 
      */
     public function updateAuthenticatedUser(UpdateUserRequest $request)
     {
         $authenticatedUser = $request->user();
 
         if ($authenticatedUser->cannot('updateUser', $authenticatedUser)) {
-            return $this->error("You are not authorized to update this user.", 403);
+            return $this->unauthorized('You are not authorized to update this user.');
         }
 
         $authenticatedUser->update($request->safe()->except('photo'));

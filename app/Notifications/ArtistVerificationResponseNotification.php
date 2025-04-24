@@ -63,8 +63,6 @@ class ArtistVerificationResponseNotification extends Notification
 
     /**
      * Get the notification's database type.
-     *
-     * @return string
      */
     public function databaseType(object $notifiable): string
     {

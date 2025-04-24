@@ -13,7 +13,7 @@ class ArtworkComment extends Model
     protected $fillable = [
         'comment_text',
         'artwork_id',
-        'user_id'
+        'user_id',
     ];
 
     /**

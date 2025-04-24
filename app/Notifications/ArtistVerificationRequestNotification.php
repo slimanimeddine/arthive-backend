@@ -12,6 +12,7 @@ class ArtistVerificationRequestNotification extends Notification
     use Queueable;
 
     protected $user;
+
     /**
      * Create a new notification instance.
      */
@@ -43,7 +44,7 @@ class ArtistVerificationRequestNotification extends Notification
                 'username' => $this->user->username,
                 'first_name' => $this->user->first_name,
                 'last_name' => $this->user->last_name,
-            ]
+            ],
         ];
     }
 
@@ -65,8 +66,6 @@ class ArtistVerificationRequestNotification extends Notification
 
     /**
      * Get the notification's database type.
-     *
-     * @return string
      */
     public function databaseType(object $notifiable): string
     {

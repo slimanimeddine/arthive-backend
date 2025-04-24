@@ -20,7 +20,7 @@ class ArtworkTagFactory extends Factory
     {
         return [
             'artwork_id' => Artwork::factory(),
-            'tag_id' => Tag::factory(),    
+            'tag_id' => Tag::factory(),
         ];
     }
 }

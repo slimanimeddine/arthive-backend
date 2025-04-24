@@ -21,7 +21,7 @@ class ArtworkFactory extends Factory
             'title' => fake()->sentence(3),
             'description' => fake()->paragraph(),
             'status' => fake()->randomElement(['draft', 'published']),
-            'user_id' => User::factory()
+            'user_id' => User::factory(),
         ];
     }
 }

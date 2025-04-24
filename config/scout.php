@@ -246,7 +246,7 @@ return [
                 'search-parameters' => [
                     'query_by' => 'title,description',
                 ],
-            ]
+            ],
         ],
     ],
 

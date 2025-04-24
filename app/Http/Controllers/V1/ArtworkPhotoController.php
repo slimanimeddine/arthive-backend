@@ -16,31 +16,28 @@ class ArtworkPhotoController extends ApiController
 {
     /**
      * Upload Artwork Photos
-     * 
+     *
      * Upload photos to an artwork draft
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkId integer required The id of the artwork
-     * 
+     *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
-     * 
+     *
      * @apiResourceModel App\Models\ArtworkPhoto
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to upload photos to this artwork."
      *     "status": 403
      * }
-     * 
      * @response 404 scenario="Artwork not found" {
      *     "message": "The artwork you are trying to upload photos to does not exist.",
      *     "status": 404
      * }
-     * 
      */
     public function uploadArtworkPhotos(UploadArtworkPhotosRequest $request, int $artworkId)
     {
@@ -48,12 +45,12 @@ class ArtworkPhotoController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
-            return $this->error("The artwork you are trying to upload photos to does not exist.", 404);
+        if (! $artwork) {
+            return $this->notFound('The artwork you are trying to upload photos to does not exist.');
         }
 
         if ($authenticatedUser->cannot('uploadArtworkPhotos', $artwork)) {
-            return $this->error("You are not authorized to upload photos to this artwork.", 403);
+            return $this->unauthorized('You are not authorized to upload photos to this artwork.');
         }
 
         $photos = $request->file('photos');
@@ -70,26 +67,24 @@ class ArtworkPhotoController extends ApiController
 
     /**
      * Set Artwork Photo As Main
-     * 
+     *
      * Set an artwork photo as the main photo of the artwork
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkPhotoId integer required The id of the artwork photo
-     * 
+     *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
-     * 
+     *
      * @apiResourceModel App\Models\ArtworkPhoto
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to set this photo as the main photo of the artwork."
      *    "status": 403
      * }
-     * 
      * @response 404 scenario="Artwork photo not found" {
      *   "message": "The artwork photo you are trying to set as main does not exist.",
      *   "status": 404
@@ -101,14 +96,14 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (!$artworkPhoto) {
-            return $this->error("The artwork photo you are trying to set as main does not exist.", 404);
+        if (! $artworkPhoto) {
+            return $this->notFound('The artwork photo you are trying to set as main does not exist.');
         }
 
         $artwork = $artworkPhoto->artwork;
 
         if ($authenticatedUser->cannot('setArtworkPhotoAsMain', $artworkPhoto)) {
-            return $this->error("You are not authorized to set this photo as the main photo of the artwork.", 403);
+            return $this->unauthorized('You are not authorized to set this photo as the main photo of the artwork.');
         }
 
         $artworkPhotoAlreadyMain = $artwork->artworkPhotos()->where('is_main', true)->first();
@@ -128,33 +123,28 @@ class ArtworkPhotoController extends ApiController
 
     /**
      * Delete Artwork Photo
-     * 
+     *
      * Delete an artwork photo
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkPhotoId integer required The id of the artwork photo
-     * 
+     *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
-     *    "data": null,
-     *    "status": 200
+     *    "status": 204
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to delete this artwork photo.",
      *    "status": 403
      * }
-     * 
      * @response 404 scenario="Artwork photo not found" {
      *    "message": "The artwork photo you are trying to delete does not exist.",
      *    "status": 404
      * }
-     * 
      */
     public function deleteArtworkPhoto(Request $request, int $artworkPhotoId)
     {
@@ -162,48 +152,43 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (!$artworkPhoto) {
-            return $this->error("The artwork photo you are trying to delete does not exist.", 404);
+        if (! $artworkPhoto) {
+            return $this->notFound('The artwork photo you are trying to delete does not exist.');
         }
 
         if ($authenticatedUser->cannot('deleteArtworkPhoto', $artworkPhoto)) {
-            return $this->error("You are not authorized to delete this artwork photo.", 403);
+            return $this->unauthorized('You are not authorized to delete this artwork photo.');
         }
 
         $artworkPhoto->delete();
 
-        return $this->success("Artwork photo deleted successfully");
+        return $this->noContent('Artwork photo deleted successfully');
     }
 
     /**
      * Replace Artwork Photo Path
-     * 
+     *
      * Replace the path of an artwork photo
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @urlParam artworkPhotoId integer required The id of the artwork photo
-     * 
+     *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo replaced successfully",
-     *    "data": null,
-     *    "status": 200
+     *    "status": 204
      * }
-     * 
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *    "message": "You are not authorized to replace this artwork photo.",
      *    "status": 403
      * }
-     * 
      * @response 404 scenario="Artwork photo not found" {
      *    "message": "The artwork photo you are trying to replace does not exist.",
      *    "status": 404
      * }
-     * 
      */
     public function replaceArtworkPhotoPath(ReplaceArtworkPhotoPathRequest $request, int $artworkPhotoId)
     {
@@ -211,12 +196,12 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (!$artworkPhoto) {
-            return $this->error("The artwork photo you are trying to replace does not exist.", 404);
+        if (! $artworkPhoto) {
+            return $this->notFound('The artwork photo you are trying to replace does not exist.');
         }
 
         if ($authenticatedUser->cannot('replaceArtworkPhotoPath', $artworkPhoto)) {
-            return $this->error("You are not authorized to replace this artwork photo.", 403);
+            return $this->unauthorized('You are not authorized to replace this artwork photo.');
         }
 
         $photo = $request->file('photo');
@@ -225,6 +210,6 @@ class ArtworkPhotoController extends ApiController
             'path' => $photo->store('artwork-photos'),
         ]);
 
-        return $this->success("Artwork photo replaced successfully");
+        return $this->noContent('Artwork photo replaced successfully');
     }
 }

@@ -2,23 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 
 class Artwork extends Model
 {
-    use Searchable, HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'title',
         'description',
         'status',
-        'user_id'
+        'user_id',
     ];
 
     public function isPublished(): bool
@@ -119,7 +119,7 @@ class Artwork extends Model
     protected function artworkLikesCount(): Attribute
     {
         return new Attribute(
-            get: fn() => $this->artworkLikes()->count(),
+            get: fn () => $this->artworkLikes()->count(),
         );
     }
 
@@ -129,7 +129,7 @@ class Artwork extends Model
     protected function artworkCommentsCount(): Attribute
     {
         return new Attribute(
-            get: fn() => $this->artworkComments()->count(),
+            get: fn () => $this->artworkComments()->count(),
         );
     }
 
@@ -139,8 +139,9 @@ class Artwork extends Model
     public function artworkMainPhotoPath(): Attribute
     {
         $artworkMainPhoto = $this->artworkPhotos()->where('is_main', true)->first();
+
         return new Attribute(
-            get: fn() => $artworkMainPhoto ? $artworkMainPhoto->path : null,
+            get: fn () => $artworkMainPhoto ? $artworkMainPhoto->path : null,
         );
     }
 

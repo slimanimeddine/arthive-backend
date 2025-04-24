@@ -7,7 +7,6 @@ use App\Models\ArtworkPhoto;
 use App\Models\ArtworkTag;
 use App\Models\Tag;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ArtworkSeeder extends Seeder

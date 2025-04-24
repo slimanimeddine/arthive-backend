@@ -6,7 +6,6 @@ use App\Models\ArtistVerificationRequest;
 use App\Models\User;
 use App\Notifications\ArtistVerificationRequestNotification;
 use App\Notifications\ArtistVerificationResponseNotification;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ArtistVerificationRequestSeeder extends Seeder
@@ -17,7 +16,6 @@ class ArtistVerificationRequestSeeder extends Seeder
     public function run(): void
     {
         $users = User::artist()->unverified()->get();
-
 
         foreach ($users as $user) {
             ArtistVerificationRequest::create([

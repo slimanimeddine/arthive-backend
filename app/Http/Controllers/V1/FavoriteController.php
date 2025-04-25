@@ -44,7 +44,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to mark as favorite
+     * @urlParam artworkId string required The ID of the artwork to mark as favorite
      *
      * @apiResource scenario=Success App\Http\Resources\V1\FavoriteResource
      *
@@ -62,7 +62,7 @@ class FavoriteController extends ApiController
      *    "status": 403
      * }
      */
-    public function markArtworkAsFavorite(Request $request, int $artworkId)
+    public function markArtworkAsFavorite(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -91,7 +91,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to remove from favorites
+     * @urlParam artworkId string required The ID of the artwork to remove from favorites
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully removed this artwork from your favorites.',
@@ -109,7 +109,7 @@ class FavoriteController extends ApiController
      *    "status": 403
      * }
      */
-    public function removeArtworkFromFavorites(Request $request, int $artworkId)
+    public function removeArtworkFromFavorites(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -139,7 +139,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to check if the authenticated user is favoriting
+     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is favoriting
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -154,7 +154,7 @@ class FavoriteController extends ApiController
      *      "message": "Unauthenticated"
      * }
      */
-    public function isAuthenticatedUserFavoriting(Request $request, int $artworkId)
+    public function isAuthenticatedUserFavoriting(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 

@@ -22,7 +22,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to like
+     * @urlParam artworkId string required The ID of the artwork to like
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkLikeResource
      *
@@ -40,7 +40,7 @@ class ArtworkLikeController extends ApiController
      *    "status": 403
      * }
      */
-    public function likeArtwork(Request $request, int $artworkId)
+    public function likeArtwork(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -71,7 +71,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to unlike
+     * @urlParam artworkId string required The ID of the artwork to unlike
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unliked this artwork.',
@@ -89,7 +89,7 @@ class ArtworkLikeController extends ApiController
      *    "status": 403
      * }
      */
-    public function unlikeArtwork(Request $request, int $artworkId)
+    public function unlikeArtwork(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -215,7 +215,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to check if the authenticated user is liking
+     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is liking
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -230,7 +230,7 @@ class ArtworkLikeController extends ApiController
      *      "message": "Unauthenticated"
      * }
      */
-    public function isAuthenticatedUserLiking(Request $request, int $artworkId)
+    public function isAuthenticatedUserLiking(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 

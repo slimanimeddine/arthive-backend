@@ -17,7 +17,9 @@ class EmailVerificationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'email' => fake()->unique()->safeEmail(),
+            'code' => fake()->unique()->numerify('########'),
+            'code_expires_at' => fake()->dateTimeBetween('now', '+1 hour'),
         ];
     }
 }

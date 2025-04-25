@@ -21,7 +21,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -39,7 +39,7 @@ class ArtworkPhotoController extends ApiController
      *     "status": 404
      * }
      */
-    public function uploadArtworkPhotos(UploadArtworkPhotosRequest $request, int $artworkId)
+    public function uploadArtworkPhotos(UploadArtworkPhotosRequest $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -72,7 +72,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId integer required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -90,7 +90,7 @@ class ArtworkPhotoController extends ApiController
      *   "status": 404
      * }
      */
-    public function setArtworkPhotoAsMain(Request $request, int $artworkPhotoId)
+    public function setArtworkPhotoAsMain(Request $request, string $artworkPhotoId)
     {
         $authenticatedUser = $request->user();
 
@@ -128,7 +128,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId integer required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
@@ -146,7 +146,7 @@ class ArtworkPhotoController extends ApiController
      *    "status": 404
      * }
      */
-    public function deleteArtworkPhoto(Request $request, int $artworkPhotoId)
+    public function deleteArtworkPhoto(Request $request, string $artworkPhotoId)
     {
         $authenticatedUser = $request->user();
 
@@ -172,7 +172,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId integer required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo replaced successfully",
@@ -190,7 +190,7 @@ class ArtworkPhotoController extends ApiController
      *    "status": 404
      * }
      */
-    public function replaceArtworkPhotoPath(ReplaceArtworkPhotoPathRequest $request, int $artworkPhotoId)
+    public function replaceArtworkPhotoPath(ReplaceArtworkPhotoPathRequest $request, string $artworkPhotoId)
     {
         $authenticatedUser = $request->user();
 

@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('artwork_tags', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
 
-            $table->foreignId('artwork_id')->constrained()->onDelete('cascade');
-            $table->foreignId('tag_id')->constrained()->onDelete('cascade');
+            $table->foreignUlid('artwork_id')->constrained()->onDelete('cascade');
+            $table->foreignUlid('tag_id')->constrained()->onDelete('cascade');
             $table->unique(['artwork_id', 'tag_id']);
             $table->timestamps();
         });

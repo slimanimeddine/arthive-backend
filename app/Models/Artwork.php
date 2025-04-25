@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -12,7 +13,7 @@ use Laravel\Scout\Searchable;
 
 class Artwork extends Model
 {
-    use HasFactory, Searchable;
+    use HasFactory, HasUlids, Searchable;
 
     protected $fillable = [
         'title',
@@ -83,9 +84,11 @@ class Artwork extends Model
      */
     public function scopeTrending(Builder $query): void
     {
-        $query->withCount(['artworkLikes' => function ($q) {
-            $q->where('created_at', '>=', now()->subDays(7));
-        }])
+        $query->withCount([
+            'artworkLikes' => function ($q) {
+                $q->where('created_at', '>=', now()->subDays(7));
+            },
+        ])
             ->orderBy('likes_count', 'desc');
     }
 

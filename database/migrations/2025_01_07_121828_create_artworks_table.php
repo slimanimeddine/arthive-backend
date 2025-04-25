@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('artworks', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
             $table->string('title');
             $table->longText('description');
             $table->enum('status', ['draft', 'published'])->default('draft');
 
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignUlid('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

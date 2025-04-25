@@ -21,7 +21,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId integer required The ID of the user to follow
+     * @urlParam userId string required The ID of the user to follow
      *
      * @apiResource scenario=Success App\Http\Resources\V1\FollowResource
      *
@@ -39,7 +39,7 @@ class FollowController extends ApiController
      *     "status": 404
      * }
      */
-    public function followUser(Request $request, int $userId)
+    public function followUser(Request $request, string $userId)
     {
         $authenticatedUser = $request->user();
 
@@ -70,7 +70,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId integer required The ID of the user to unfollow
+     * @urlParam userId string required The ID of the user to unfollow
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unfollowed this user.'
@@ -92,7 +92,7 @@ class FollowController extends ApiController
      *   "status": 404
      * }
      */
-    public function unfollowUser(Request $request, int $userId)
+    public function unfollowUser(Request $request, string $userId)
     {
         $authenticatedUser = $request->user();
 
@@ -175,7 +175,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId integer required The ID of the user to check if the authenticated user is following
+     * @urlParam userId string required The ID of the user to check if the authenticated user is following
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -190,7 +190,7 @@ class FollowController extends ApiController
      *      "message": "Unauthenticated"
      * }
      */
-    public function isAuthenticatedUserFollowing(Request $request, int $userId)
+    public function isAuthenticatedUserFollowing(Request $request, string $userId)
     {
         $authenticatedUser = $request->user();
 

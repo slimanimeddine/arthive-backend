@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('forgot_passwords', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
             $table->string('email');
             $table->string('code');
             $table->timestamp('code_expires_at');

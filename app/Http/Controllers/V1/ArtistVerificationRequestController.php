@@ -99,7 +99,7 @@ class ArtistVerificationRequestController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistVerificationRequestId required The ID of the artist verification request to review.
+     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
      *
@@ -117,7 +117,7 @@ class ArtistVerificationRequestController extends ApiController
      *      "status": 404
      * }
      */
-    public function reviewArtistVerificationRequest(ReviewArtistVerificationRequestRequest $request, int $artistVerificationRequestId)
+    public function reviewArtistVerificationRequest(ReviewArtistVerificationRequestRequest $request, string $artistVerificationRequestId)
     {
         $authenticatedUser = $request->user();
 

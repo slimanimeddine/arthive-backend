@@ -96,7 +96,7 @@ class UserController extends ApiController
      *
      * Retrieve a single user by id
      *
-     * @urlParam userId integer required The id of the user
+     * @urlParam userId string required The id of the user
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *
@@ -107,7 +107,7 @@ class UserController extends ApiController
      *     "status": 404
      * }
      */
-    public function showUserById(Request $request, int $userId)
+    public function showUserById(Request $request, string $userId)
     {
         $user = User::artist()->where('id', $userId)->first();
 

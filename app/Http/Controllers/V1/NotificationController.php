@@ -87,7 +87,7 @@ class NotificationController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam notificationId required The id of the notification Example: 1
+     * @urlParam notificationId string required The id of the notification Example: 1
      *
      * @response 200 scenario=Success {
      *      "message": "Notification marked as read",

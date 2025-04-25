@@ -22,7 +22,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The ID of the artwork to comment on
+     * @urlParam artworkId string required The ID of the artwork to comment on
      *
      * @bodyParam comment_text string required The text of the comment
      *
@@ -42,7 +42,7 @@ class ArtworkCommentController extends ApiController
      *     "status": 403
      * }
      */
-    public function postArtworkComment(CreateArtworkCommentRequest $request, int $artworkId)
+    public function postArtworkComment(CreateArtworkCommentRequest $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -74,7 +74,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId integer required The ID of the comment to update
+     * @urlParam artworkCommentId string required The ID of the comment to update
      *
      * @bodyParam comment_text string required The text of the comment
      *
@@ -94,7 +94,7 @@ class ArtworkCommentController extends ApiController
      *    "status": 404
      * }
      */
-    public function updateArtworkComment(UpdateArtworkCommentRequest $request, int $artworkCommentId)
+    public function updateArtworkComment(UpdateArtworkCommentRequest $request, string $artworkCommentId)
     {
         $authenticatedUser = $request->user();
 
@@ -122,7 +122,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId integer required The ID of the comment to delete
+     * @urlParam artworkCommentId string required The ID of the comment to delete
      *
      * @response 200 scenario=Success {
      *     'message': 'You have successfully deleted the comment.',
@@ -140,7 +140,7 @@ class ArtworkCommentController extends ApiController
      *    "status": 404
      * }
      */
-    public function deleteArtworkComment(Request $request, int $artworkCommentId)
+    public function deleteArtworkComment(Request $request, string $artworkCommentId)
     {
         $authenticatedUser = $request->user();
 

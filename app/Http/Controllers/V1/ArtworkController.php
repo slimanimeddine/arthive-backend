@@ -30,8 +30,8 @@ class ArtworkController extends ApiController
      * @queryParam filter[tag] string Filter artworks by tag. Example: graphic
      * @queryParam searchQuery string Search for artworks by title or description. Example: lorem
      * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
-     * @queryParam page integer The page number to fetch. Example: 1
-     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * @queryParam page string The page number to fetch. Example: 1
+     * @queryParam perPage string The number of records to fetch per page. Example: 10
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -68,18 +68,18 @@ class ArtworkController extends ApiController
      *
      * Retrieve a single published artwork by id
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
-     * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,artworkComments.user,artworkLikes.user,tags
+     * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,artworkLikes.user,artworkComments.user,tags
      *
      * @response 404 scenario="Artwork not found" {
      *    "message": "The artwork you are trying to retrieve does not exist.",
      *    "status": 404
      * }
      */
-    public function showPublishedArtwork(Request $request, int $artworkId)
+    public function showPublishedArtwork(Request $request, string $artworkId)
     {
         $artwork = Artwork::published()->where('id', $artworkId)
             ->with([
@@ -91,7 +91,7 @@ class ArtworkController extends ApiController
             ])
             ->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -108,7 +108,7 @@ class ArtworkController extends ApiController
      * @queryParam filter[tag] string Filter artworks by tag. Enum: painting, graphic, sculpture, folk art, textile, ceramics, stained glass windows, beads, paper, glass, dolls, jewellery, fresco, metal, mosaic. Example: graphic
      * @queryParam sort string Sort artworks. Enum: rising, new, popular, trending. Example: trending
      * @queryParam page string The page number to fetch. Example: 1
-     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * @queryParam perPage string The number of records to fetch per page. Example: 10
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -123,7 +123,7 @@ class ArtworkController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve his artworks does not exist.');
         }
 
@@ -152,8 +152,8 @@ class ArtworkController extends ApiController
      * @authenticated
      *
      * @queryParam filter[status] string Filter artworks by status. Enum: draft, published. Example: published
-     * @queryParam page integer The page number to fetch. Example: 1
-     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * @queryParam page string The page number to fetch. Example: 1
+     * @queryParam perPage string The number of records to fetch per page. Example: 10
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -183,7 +183,7 @@ class ArtworkController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -197,7 +197,7 @@ class ArtworkController extends ApiController
      *     "message": "Unauthenticated"
      * }
      */
-    public function showAuthenticatedUserArtwork(Request $request, int $artworkId)
+    public function showAuthenticatedUserArtwork(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
@@ -206,7 +206,7 @@ class ArtworkController extends ApiController
             'tags',
         ])->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -275,7 +275,7 @@ class ArtworkController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -293,13 +293,13 @@ class ArtworkController extends ApiController
      *   "status": 404
      * }
      */
-    public function updateArtwork(UpdateArtworkRequest $request, int $artworkId)
+    public function updateArtwork(UpdateArtworkRequest $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to update does not exist.');
         }
 
@@ -331,7 +331,7 @@ class ArtworkController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -349,13 +349,13 @@ class ArtworkController extends ApiController
      * "status": 404
      * }
      */
-    public function publishArtwork(Request $request, int $artworkId)
+    public function publishArtwork(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to publish does not exist.');
         }
 
@@ -375,7 +375,7 @@ class ArtworkController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId integer required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork
      *
      * @response 200 scenario=Success {
      *      "message": "Artwork deleted successfully"
@@ -394,13 +394,13 @@ class ArtworkController extends ApiController
      *   "status": 404
      * }
      */
-    public function deleteArtwork(Request $request, int $artworkId)
+    public function deleteArtwork(Request $request, string $artworkId)
     {
         $authenticatedUser = $request->user();
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to delete does not exist.');
         }
 

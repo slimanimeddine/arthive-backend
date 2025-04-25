@@ -65,7 +65,7 @@
     "pint": [
       "./vendor/bin/pint"
     ],
-    "gen:docs": [
+    "doc:gen": [
       "@php artisan scribe:generate --verbose"
     ]
   },

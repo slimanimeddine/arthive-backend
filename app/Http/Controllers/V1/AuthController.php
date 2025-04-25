@@ -55,7 +55,7 @@ class AuthController extends ApiController
      *      "message": "Authenticated",
      *      "data": {
      *          "token": "{YOUR_AUTH_KEY}",
-     *          "id": 1
+     *          "id": "01jsn7h28c20dfrbybdt530p1d"
      *      },
      *      "status": 200
      * }

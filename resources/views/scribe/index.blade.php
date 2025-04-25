@@ -1706,49 +1706,49 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb419mdm5cx8cgph9mn384&quot;,
-            &quot;user_id&quot;: &quot;01jsnb419f9ejyd52gqhjdqncd&quot;,
+            &quot;id&quot;: &quot;01jsncnkfr9gwrk38wzbr5yaep&quot;,
+            &quot;user_id&quot;: &quot;01jsncnkevsaqy68amrhkbt0gm&quot;,
             &quot;status&quot;: &quot;pending&quot;,
-            &quot;reason&quot;: &quot;Voluptas consectetur magnam suscipit alias dolor. Quos sequi fugit aut dolores. Id fuga nihil sint quaerat est et.&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;reason&quot;: &quot;Ex voluptates fugit eius natus dolorum necessitatibus omnis. Repellat omnis fugiat modi velit beatae sed. Et doloribus repellendus quas voluptatem.&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jsnb419f9ejyd52gqhjdqncd&quot;,
-                &quot;username&quot;: &quot;tevin59&quot;,
-                &quot;first_name&quot;: &quot;Karlie&quot;,
-                &quot;last_name&quot;: &quot;Fritsch&quot;,
-                &quot;email&quot;: &quot;drunolfsdottir@example.org&quot;,
-                &quot;country&quot;: &quot;Japan&quot;,
-                &quot;bio&quot;: &quot;Aut nulla esse commodi earum et. Nisi saepe qui enim ex voluptas et ut soluta. Libero omnis doloremque aut et rerum.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/31.jpeg&quot;,
+                &quot;id&quot;: &quot;01jsncnkevsaqy68amrhkbt0gm&quot;,
+                &quot;username&quot;: &quot;zabbott&quot;,
+                &quot;first_name&quot;: &quot;Dixie&quot;,
+                &quot;last_name&quot;: &quot;Larson&quot;,
+                &quot;email&quot;: &quot;xavier42@example.org&quot;,
+                &quot;country&quot;: &quot;Seychelles&quot;,
+                &quot;bio&quot;: &quot;Et eum culpa consequatur aut. Voluptatum in voluptatum nam esse quia voluptatibus velit. A tempore eos quia enim officia sunt unde. Voluptatem veniam quod cupiditate adipisci similique sed.&quot;,
+                &quot;photo&quot;: null,
                 &quot;artist_verified_at&quot;: null,
                 &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
             }
         },
         {
-            &quot;id&quot;: &quot;01jsnb41a1a99stht89zxyskfw&quot;,
-            &quot;user_id&quot;: &quot;01jsnb419sd77pv426kt8gpwke&quot;,
-            &quot;status&quot;: &quot;approved&quot;,
-            &quot;reason&quot;: &quot;Eius earum explicabo ut vel impedit perferendis. Et et sapiente corrupti necessitatibus harum. Qui temporibus nesciunt perferendis beatae fuga voluptates nihil.&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;id&quot;: &quot;01jsncnkgzgkqezsk8x8f7tq31&quot;,
+            &quot;user_id&quot;: &quot;01jsncnkg08dvbz3yht2925gmq&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;reason&quot;: &quot;Delectus adipisci maxime nam hic asperiores ex. Magni architecto qui illo quo qui dolores. Rerum asperiores nam molestiae et culpa. Sunt dolor animi labore accusantium sed perspiciatis quis.&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jsnb419sd77pv426kt8gpwke&quot;,
-                &quot;username&quot;: &quot;ybradtke&quot;,
-                &quot;first_name&quot;: &quot;Dennis&quot;,
-                &quot;last_name&quot;: &quot;Okuneva&quot;,
-                &quot;email&quot;: &quot;treva20@example.com&quot;,
-                &quot;country&quot;: &quot;Sri Lanka&quot;,
-                &quot;bio&quot;: &quot;Ea aut dignissimos odit illum qui laudantium. Et quidem autem quia nihil. Aut doloribus aperiam omnis facilis.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/36.jpeg&quot;,
+                &quot;id&quot;: &quot;01jsncnkg08dvbz3yht2925gmq&quot;,
+                &quot;username&quot;: &quot;ldaugherty&quot;,
+                &quot;first_name&quot;: &quot;Bernadine&quot;,
+                &quot;last_name&quot;: &quot;Mayer&quot;,
+                &quot;email&quot;: &quot;luis31@example.com&quot;,
+                &quot;country&quot;: &quot;Israel&quot;,
+                &quot;bio&quot;: &quot;Laudantium odio ipsam minima. Blanditiis perspiciatis nulla eos soluta quaerat. Qui nemo quod et dolor dolores et possimus necessitatibus.&quot;,
+                &quot;photo&quot;: null,
                 &quot;artist_verified_at&quot;: null,
-                &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
             }
         }
     ],
@@ -2160,12 +2160,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb41azr227c1f1qv0e80k2&quot;,
-        &quot;user_id&quot;: &quot;01jsnb41aeh0ydm9dvq67x7wgk&quot;,
-        &quot;status&quot;: &quot;pending&quot;,
-        &quot;reason&quot;: &quot;Ratione eum repudiandae qui doloremque atque accusamus pariatur. Alias sed hic voluptatem nostrum nemo. Optio molestias dolores perferendis. Voluptas explicabo voluptatibus ipsum omnis cupiditate asperiores cum. Qui ipsum ipsum reprehenderit deleniti.&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnkjm6vkrhzyzdmkf28qn&quot;,
+        &quot;user_id&quot;: &quot;01jsncnkhpy5nyy12ktqgge9e5&quot;,
+        &quot;status&quot;: &quot;rejected&quot;,
+        &quot;reason&quot;: &quot;Qui et reprehenderit quia soluta. Et nobis vitae voluptate in est pariatur sunt. Et sit laboriosam exercitationem quis quas quia voluptatem. Officiis suscipit voluptatem delectus.&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -2363,7 +2363,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        incidunt
+                        veniam
                     </div>
                 </div>
             </div>
@@ -2552,7 +2552,7 @@ fetch(url, {
                                         <input aria-label="artistVerificationRequestId" name="artistVerificationRequestId"
                                                id="urlparam-PUTapi-v1-artist-verification-requests--artistVerificationRequestId--artistVerificationRequestId"
                                                placeholder="The ID of the artist verification request to review."
-                                               value="incidunt" data-component="url"
+                                               value="veniam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -2676,7 +2676,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artist-verification-requests/incidunt" \
+    "http://localhost:8000/api/v1/artist-verification-requests/veniam" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -2692,7 +2692,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artist-verification-requests/incidunt"
+    "http://localhost:8000/api/v1/artist-verification-requests/veniam"
 );
 
 const headers = {
@@ -2753,12 +2753,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb41c7jegs4h6s7kqbkq9y&quot;,
-        &quot;user_id&quot;: &quot;01jsnb41bxcjvqc56s5snmn9mj&quot;,
-        &quot;status&quot;: &quot;approved&quot;,
-        &quot;reason&quot;: &quot;Quis aut labore rerum ipsa. Nulla accusamus dolores et repellat laboriosam impedit eius maiores. Molestias sapiente alias fuga temporibus.&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnkm2p057747nshjsfnmt&quot;,
+        &quot;user_id&quot;: &quot;01jsncnkk4229qy6c82ygcxca0&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;reason&quot;: &quot;Sunt adipisci qui unde excepturi veritatis. Saepe quis et vero et cumque qui expedita. Enim similique deleniti quam aspernatur.&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -2931,7 +2931,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ea
+                        accusantium
                     </div>
                 </div>
             </div>
@@ -2965,7 +2965,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        pariatur
+                        ea
                     </div>
                 </div>
             </div>
@@ -3097,7 +3097,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-comments-artworkId"
                                                placeholder="The ID of the artwork to comment on"
-                                               value="ea" data-component="url"
+                                               value="accusantium" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3128,7 +3128,7 @@ fetch(url, {
                                      id="json-body-POSTapi-v1-artworks--artworkId--artwork-comments"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "comment_text": "pariatur"
+    "comment_text": "ea"
 }</div>
                             </div>
                                             </div>
@@ -3220,12 +3220,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/ea/artwork-comments" \
+    "http://localhost:8000/api/v1/artworks/accusantium/artwork-comments" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"pariatur\"
+    \"comment_text\": \"ea\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -3235,7 +3235,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/ea/artwork-comments"
+    "http://localhost:8000/api/v1/artworks/accusantium/artwork-comments"
 );
 
 const headers = {
@@ -3245,7 +3245,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "pariatur"
+    "comment_text": "ea"
 };
 
 fetch(url, {
@@ -3295,12 +3295,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb4129cn17f13b51g94wj7&quot;,
-        &quot;comment_text&quot;: &quot;A recusandae earum velit debitis.&quot;,
-        &quot;artwork_id&quot;: &quot;01jsnb411zrpnrnxdt10rwra76&quot;,
-        &quot;user_id&quot;: &quot;01jsnb41241gqasvt6s3w7hrep&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnk06xm9kpdng83fczdfz&quot;,
+        &quot;comment_text&quot;: &quot;Nulla sed odit assumenda quia non corrupti rerum.&quot;,
+        &quot;artwork_id&quot;: &quot;01jsncnjy8xj8c90z8rgtv67kp&quot;,
+        &quot;user_id&quot;: &quot;01jsncnjz789k23795bpkzxxrr&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -3465,7 +3465,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        placeat
+                        laboriosam
                     </div>
                 </div>
             </div>
@@ -3598,7 +3598,7 @@ fetch(url, {
                                         <input aria-label="artworkCommentId" name="artworkCommentId"
                                                id="urlparam-DELETEapi-v1-artwork-comments--artworkCommentId--artworkCommentId"
                                                placeholder="The ID of the comment to delete"
-                                               value="placeat" data-component="url"
+                                               value="laboriosam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3694,7 +3694,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-comments/placeat" \
+    "http://localhost:8000/api/v1/artwork-comments/laboriosam" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3705,7 +3705,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/placeat"
+    "http://localhost:8000/api/v1/artwork-comments/laboriosam"
 );
 
 const headers = {
@@ -3924,7 +3924,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequatur
+                        repudiandae
                     </div>
                 </div>
             </div>
@@ -3958,7 +3958,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        deserunt
+                        dignissimos
                     </div>
                 </div>
             </div>
@@ -4090,7 +4090,7 @@ fetch(url, {
                                         <input aria-label="artworkCommentId" name="artworkCommentId"
                                                id="urlparam-PUTapi-v1-artwork-comments--artworkCommentId--artworkCommentId"
                                                placeholder="The ID of the comment to update"
-                                               value="consequatur" data-component="url"
+                                               value="repudiandae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4121,7 +4121,7 @@ fetch(url, {
                                      id="json-body-PUTapi-v1-artwork-comments--artworkCommentId-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "comment_text": "deserunt"
+    "comment_text": "dignissimos"
 }</div>
                             </div>
                                             </div>
@@ -4213,12 +4213,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-comments/consequatur" \
+    "http://localhost:8000/api/v1/artwork-comments/repudiandae" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"deserunt\"
+    \"comment_text\": \"dignissimos\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4228,7 +4228,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/consequatur"
+    "http://localhost:8000/api/v1/artwork-comments/repudiandae"
 );
 
 const headers = {
@@ -4238,7 +4238,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "deserunt"
+    "comment_text": "dignissimos"
 };
 
 fetch(url, {
@@ -4288,12 +4288,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb413r0m7q4qz4jwppgbfe&quot;,
-        &quot;comment_text&quot;: &quot;Ut nisi hic accusamus.&quot;,
-        &quot;artwork_id&quot;: &quot;01jsnb413azrpvp27jpqzwjh03&quot;,
-        &quot;user_id&quot;: &quot;01jsnb413hghchbtjj375fazwm&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnk31jgc5q98vrjwprx0n&quot;,
+        &quot;comment_text&quot;: &quot;Itaque ullam est voluptatibus illum voluptate.&quot;,
+        &quot;artwork_id&quot;: &quot;01jsncnk1yb0pgxwcj4sck27br&quot;,
+        &quot;user_id&quot;: &quot;01jsncnk24cwww8pswnb8j0hxa&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -4444,7 +4444,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sequi
+                        reiciendis
                     </div>
                 </div>
             </div>
@@ -4541,7 +4541,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-likes-received-count-by-tag-username"
                                                placeholder="The username of the user"
-                                               value="sequi" data-component="url"
+                                               value="reiciendis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4637,7 +4637,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/sequi/artwork-likes/received/count/by-tag" \
+    --get "http://localhost:8000/api/v1/users/reiciendis/artwork-likes/received/count/by-tag" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -4647,7 +4647,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/sequi/artwork-likes/received/count/by-tag"
+    "http://localhost:8000/api/v1/users/reiciendis/artwork-likes/received/count/by-tag"
 );
 
 const headers = {
@@ -4837,7 +4837,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        est
+                        officiis
                     </div>
                 </div>
             </div>
@@ -4934,7 +4934,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-likes-received-count-username"
                                                placeholder="The username of the user"
-                                               value="est" data-component="url"
+                                               value="officiis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5030,7 +5030,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/est/artwork-likes/received/count" \
+    --get "http://localhost:8000/api/v1/users/officiis/artwork-likes/received/count" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -5040,7 +5040,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/est/artwork-likes/received/count"
+    "http://localhost:8000/api/v1/users/officiis/artwork-likes/received/count"
 );
 
 const headers = {
@@ -5236,7 +5236,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ipsa
+                        vero
                     </div>
                 </div>
             </div>
@@ -5369,7 +5369,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-likes-artworkId"
                                                placeholder="The ID of the artwork to like"
-                                               value="ipsa" data-component="url"
+                                               value="vero" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5465,7 +5465,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/ipsa/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/vero/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5476,7 +5476,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/ipsa/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/vero/artwork-likes"
 );
 
 const headers = {
@@ -5531,11 +5531,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb410fdhq611k005nnzs83&quot;,
-        &quot;artwork_id&quot;: &quot;01jsnb4103babwnsxw20xj8f20&quot;,
-        &quot;user_id&quot;: &quot;01jsnb41095q7sfn8nk1rtc07f&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnjwcsqbh2rkt436besqv&quot;,
+        &quot;artwork_id&quot;: &quot;01jsncnjvb9d0nfya8zj00jesa&quot;,
+        &quot;user_id&quot;: &quot;01jsncnjvjv7qxg82nbvt76rqj&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -5700,7 +5700,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequatur
+                        provident
                     </div>
                 </div>
             </div>
@@ -5833,7 +5833,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--artwork-likes-artworkId"
                                                placeholder="The ID of the artwork to unlike"
-                                               value="consequatur" data-component="url"
+                                               value="provident" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5929,7 +5929,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/consequatur/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/provident/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5940,7 +5940,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/consequatur/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/provident/artwork-likes"
 );
 
 const headers = {
@@ -6159,7 +6159,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quod
+                        vitae
                     </div>
                 </div>
             </div>
@@ -6292,7 +6292,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--is-liking-artworkId"
                                                placeholder="The ID of the artwork to check if the authenticated user is liking"
-                                               value="quod" data-component="url"
+                                               value="vitae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6388,7 +6388,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/quod/is-liking" \
+    --get "http://localhost:8000/api/v1/artworks/vitae/is-liking" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6399,7 +6399,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/quod/is-liking"
+    "http://localhost:8000/api/v1/artworks/vitae/is-liking"
 );
 
 const headers = {
@@ -6615,7 +6615,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        qui
+                        ut
                     </div>
                 </div>
             </div>
@@ -6781,7 +6781,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-photos-artworkId"
                                                placeholder="The id of the artwork"
-                                               value="qui" data-component="url"
+                                               value="ut" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6911,11 +6911,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/qui/artwork-photos" \
+    "http://localhost:8000/api/v1/artworks/ut/artwork-photos" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "photos[]=@/tmp/php3b6v9g6ag1hf4okoKGF" </code></pre>                                        </div>
+    --form "photos[]=@/tmp/phpig0d807rm9tv1EmPceg" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -6923,7 +6923,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/qui/artwork-photos"
+    "http://localhost:8000/api/v1/artworks/ut/artwork-photos"
 );
 
 const headers = {
@@ -6983,20 +6983,20 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb415qb1kgz8hyn0bsmves&quot;,
-            &quot;path&quot;: &quot;artwork-seeding-photos/10.jpeg&quot;,
+            &quot;id&quot;: &quot;01jsncnk6neykzcv9ye4bd279r&quot;,
+            &quot;path&quot;: &quot;artwork-seeding-photos/12.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: &quot;01jsnb415kj9vbvey8mewjmhac&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;artwork_id&quot;: &quot;01jsncnk5nxg0t1xnw2k53tezh&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jsnb4167q40e5p9wkrs0eq1m&quot;,
-            &quot;path&quot;: &quot;artwork-seeding-photos/19.jpeg&quot;,
+            &quot;id&quot;: &quot;01jsncnk93eh2aj9kgk0jfqt8h&quot;,
+            &quot;path&quot;: &quot;artwork-seeding-photos/21.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: &quot;01jsnb41629p4pv8f5pkx65de6&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;artwork_id&quot;: &quot;01jsncnk80ba11xhakfmhe0jg2&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -7162,7 +7162,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quos
+                        et
                     </div>
                 </div>
             </div>
@@ -7295,7 +7295,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-PUTapi-v1-artwork-photos--artworkPhotoId--artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="quos" data-component="url"
+                                               value="et" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7391,7 +7391,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-photos/quos" \
+    "http://localhost:8000/api/v1/artwork-photos/et" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -7402,7 +7402,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/quos"
+    "http://localhost:8000/api/v1/artwork-photos/et"
 );
 
 const headers = {
@@ -7457,12 +7457,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb41711wfn0kp26pah9m6j&quot;,
-        &quot;path&quot;: &quot;artwork-seeding-photos/9.jpeg&quot;,
+        &quot;id&quot;: &quot;01jsncnkccz7mxyp7v1gptsmg1&quot;,
+        &quot;path&quot;: &quot;artwork-seeding-photos/27.jpeg&quot;,
         &quot;is_main&quot;: 0,
-        &quot;artwork_id&quot;: &quot;01jsnb416x633h031np71h3qer&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;artwork_id&quot;: &quot;01jsncnkbhrv498m3da8ymrtqc&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -7627,7 +7627,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        molestiae
+                        deserunt
                     </div>
                 </div>
             </div>
@@ -7760,7 +7760,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-DELETEapi-v1-artwork-photos--artworkPhotoId--artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="molestiae" data-component="url"
+                                               value="deserunt" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7856,7 +7856,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-photos/molestiae" \
+    "http://localhost:8000/api/v1/artwork-photos/deserunt" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -7867,7 +7867,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/molestiae"
+    "http://localhost:8000/api/v1/artwork-photos/deserunt"
 );
 
 const headers = {
@@ -8086,7 +8086,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        delectus
+                        ratione
                     </div>
                 </div>
             </div>
@@ -8120,7 +8120,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phppsvf9kmkhace0JBNDbH
+                        /tmp/phpqfn304gtm36o8fKDlco
                     </div>
                 </div>
             </div>
@@ -8252,7 +8252,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-PUTapi-v1-artwork-photos--artworkPhotoId--path-artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="delectus" data-component="url"
+                                               value="ratione" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8381,11 +8381,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-photos/delectus/path" \
+    "http://localhost:8000/api/v1/artwork-photos/ratione/path" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "photo=@/tmp/phppsvf9kmkhace0JBNDbH" </code></pre>                                        </div>
+    --form "photo=@/tmp/phpqfn304gtm36o8fKDlco" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -8393,7 +8393,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/delectus/path"
+    "http://localhost:8000/api/v1/artwork-photos/ratione/path"
 );
 
 const headers = {
@@ -8602,7 +8602,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        id
+                        et
                     </div>
                 </div>
             </div>
@@ -8699,7 +8699,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-tags-username"
                                                placeholder="The username of the user"
-                                               value="id" data-component="url"
+                                               value="et" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8795,7 +8795,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/id/artwork-tags" \
+    --get "http://localhost:8000/api/v1/users/et/artwork-tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -8805,7 +8805,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/id/artwork-tags"
+    "http://localhost:8000/api/v1/users/et/artwork-tags"
 );
 
 const headers = {
@@ -9180,16 +9180,16 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb414ey41q3fwpeqm0rsa7&quot;,
-            &quot;name&quot;: &quot;Mr. Wilbert Franecki&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;id&quot;: &quot;01jsncnk3sn4trhsym8gx5dpst&quot;,
+            &quot;name&quot;: &quot;Ms. Clotilde Ledner I&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jsnb414h3hp1yvv3d9gt0dxp&quot;,
-            &quot;name&quot;: &quot;Miss Cora McGlynn MD&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;id&quot;: &quot;01jsncnk3v7tmsavxsqj7brzan&quot;,
+            &quot;name&quot;: &quot;Kari Hill&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -9715,57 +9715,57 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb4093njzqnx731fxbkke7&quot;,
-            &quot;title&quot;: &quot;Quasi eius dicta.&quot;,
-            &quot;description&quot;: &quot;Numquam perspiciatis vel et suscipit adipisci. Laborum animi numquam soluta autem natus ea veniam. Et voluptatibus dolorum commodi rerum sed et. Sit ducimus saepe ipsam voluptatem.&quot;,
+            &quot;id&quot;: &quot;01jsncnh49bk6b78th8wcwcs7q&quot;,
+            &quot;title&quot;: &quot;Est incidunt deleniti maxime.&quot;,
+            &quot;description&quot;: &quot;Quod qui aliquid eum et consequuntur doloremque veniam. Quos est ipsum ea est beatae voluptas. Sunt labore qui assumenda consequatur nihil delectus molestias.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jsnb4082qys909rnfgejfs61&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnh2gtyr0ncdhp8ngpscn&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jsnb4082qys909rnfgejfs61&quot;,
-                &quot;username&quot;: &quot;berge.austin&quot;,
-                &quot;first_name&quot;: &quot;Wilburn&quot;,
-                &quot;last_name&quot;: &quot;Stamm&quot;,
-                &quot;email&quot;: &quot;manuel68@example.org&quot;,
-                &quot;country&quot;: &quot;Saint Vincent and the Grenadines&quot;,
-                &quot;bio&quot;: &quot;Et nostrum unde ea sint. Dolores culpa sunt distinctio voluptatem sint. Veritatis nobis aut nemo magnam libero est numquam. Dicta et ea esse id aspernatur voluptate quasi.&quot;,
+                &quot;id&quot;: &quot;01jsncnh2gtyr0ncdhp8ngpscn&quot;,
+                &quot;username&quot;: &quot;rkshlerin&quot;,
+                &quot;first_name&quot;: &quot;Rosemary&quot;,
+                &quot;last_name&quot;: &quot;Carroll&quot;,
+                &quot;email&quot;: &quot;heaney.abraham@example.com&quot;,
+                &quot;country&quot;: &quot;Denmark&quot;,
+                &quot;bio&quot;: &quot;Facilis minus aut omnis neque aspernatur fuga sit. Molestiae non aut consequatur cupiditate voluptatem maiores. Quo laboriosam neque amet animi ab ipsa laboriosam.&quot;,
                 &quot;photo&quot;: null,
-                &quot;artist_verified_at&quot;: &quot;2025-04-25 02:06:12&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+                &quot;artist_verified_at&quot;: &quot;2025-04-25 02:33:15&quot;,
+                &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;
             }
         },
         {
-            &quot;id&quot;: &quot;01jsnb409ncwz2q5ykhq21b2k0&quot;,
-            &quot;title&quot;: &quot;Sed voluptatum voluptas.&quot;,
-            &quot;description&quot;: &quot;Ipsum quo nulla amet dolore. Sapiente quaerat natus voluptas non ut placeat at voluptas. Modi quas iusto cumque nemo quo numquam. Iusto alias animi blanditiis dolor consequatur et id. Consequatur vitae quia optio et nesciunt ipsam illum.&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jsnb409f82ecg5dzgfmv3m0f&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+            &quot;id&quot;: &quot;01jsncnh76zc799kdry20mt519&quot;,
+            &quot;title&quot;: &quot;Magni animi libero.&quot;,
+            &quot;description&quot;: &quot;Repudiandae ea commodi sapiente pariatur facilis commodi. Unde quo blanditiis error occaecati vero. Ratione ex consequuntur provident dolores blanditiis et voluptate nam.&quot;,
+            &quot;status&quot;: &quot;draft&quot;,
+            &quot;user_id&quot;: &quot;01jsncnh5z47h0dfg434s17e0v&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jsnb409f82ecg5dzgfmv3m0f&quot;,
-                &quot;username&quot;: &quot;jamel.mclaughlin&quot;,
-                &quot;first_name&quot;: &quot;Daisy&quot;,
-                &quot;last_name&quot;: &quot;Howell&quot;,
-                &quot;email&quot;: &quot;ymcdermott@example.net&quot;,
-                &quot;country&quot;: &quot;Iran&quot;,
-                &quot;bio&quot;: &quot;Tempora est quidem aliquam sit tenetur pariatur. Eos recusandae eius quibusdam eum animi delectus repudiandae non. Tenetur facere expedita earum.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/16.jpeg&quot;,
-                &quot;artist_verified_at&quot;: null,
-                &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+                &quot;id&quot;: &quot;01jsncnh5z47h0dfg434s17e0v&quot;,
+                &quot;username&quot;: &quot;koelpin.brandy&quot;,
+                &quot;first_name&quot;: &quot;Rebeca&quot;,
+                &quot;last_name&quot;: &quot;Hessel&quot;,
+                &quot;email&quot;: &quot;emelia63@example.com&quot;,
+                &quot;country&quot;: &quot;Barbados&quot;,
+                &quot;bio&quot;: &quot;Dolor doloribus eveniet magnam vel omnis. Et explicabo quidem voluptates. Enim nobis nobis ipsam et laborum. Debitis commodi voluptatem nobis officia aspernatur fugiat non.&quot;,
+                &quot;photo&quot;: null,
+                &quot;artist_verified_at&quot;: &quot;2025-04-25 02:33:15&quot;,
+                &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:33:15.000000Z&quot;
             }
         }
     ],
@@ -9910,7 +9910,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        occaecati
+                        magni
                     </div>
                 </div>
             </div>
@@ -10007,7 +10007,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="occaecati" data-component="url"
+                                               value="magni" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10103,7 +10103,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/occaecati" \
+    --get "http://localhost:8000/api/v1/artworks/magni" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -10113,7 +10113,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/occaecati"
+    "http://localhost:8000/api/v1/artworks/magni"
 );
 
 const headers = {
@@ -10165,13 +10165,102 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;title&quot;: &quot;Incidunt eos.&quot;,
-        &quot;description&quot;: &quot;Voluptas fugiat quia iste eos qui mollitia. Ut quidem blanditiis ut distinctio facilis eum ipsam. Cumque suscipit quod et reiciendis ut voluptatem laborum. Voluptatem deserunt consequatur et numquam.&quot;,
+        &quot;id&quot;: &quot;01jsncem6cbgjvt500tkbs1zec&quot;,
+        &quot;title&quot;: &quot;Quasi doloribus omnis aut.&quot;,
+        &quot;description&quot;: &quot;Id rerum laboriosam quia voluptates ad. Ut harum architecto iste eveniet. Earum saepe nesciunt commodi ipsa aut voluptas occaecati. Numquam et rem soluta laborum omnis recusandae.&quot;,
         &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: &quot;01jsnb40d3q0m0z18wh6k0h2hs&quot;,
-        &quot;artwork_likes_count&quot;: 0,
-        &quot;artwork_comments_count&quot;: 0,
-        &quot;artwork_main_photo_path&quot;: null
+        &quot;user_id&quot;: &quot;01jsncem628ssxmvrzrxd3qfv9&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+        &quot;artwork_likes_count&quot;: 1,
+        &quot;artwork_comments_count&quot;: 1,
+        &quot;artwork_main_photo_path&quot;: null,
+        &quot;user&quot;: {
+            &quot;id&quot;: &quot;01jsncem628ssxmvrzrxd3qfv9&quot;,
+            &quot;username&quot;: &quot;trinity.ryan&quot;,
+            &quot;first_name&quot;: &quot;Natalia&quot;,
+            &quot;last_name&quot;: &quot;Wyman&quot;,
+            &quot;email&quot;: &quot;camila.ortiz@example.com&quot;,
+            &quot;country&quot;: &quot;Mauritius&quot;,
+            &quot;bio&quot;: &quot;Accusamus reprehenderit ad quia harum omnis et. Unde quia et dolor est omnis. Repellat dolore odio aut id ad. Veniam consequatur non facere at dolorum. Dicta sunt dolorem eligendi modi.&quot;,
+            &quot;photo&quot;: null,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+            &quot;role&quot;: &quot;artist&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;
+        },
+        &quot;artwork_photos&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsncem6mmddbbd38rtwqz5zf&quot;,
+                &quot;path&quot;: &quot;artwork-seeding-photos/14.jpeg&quot;,
+                &quot;is_main&quot;: 0,
+                &quot;artwork_id&quot;: &quot;01jsncem6cbgjvt500tkbs1zec&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;
+            }
+        ],
+        &quot;artwork_likes&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsncem6z9z46cxyh2m24tpxk&quot;,
+                &quot;artwork_id&quot;: &quot;01jsncem6cbgjvt500tkbs1zec&quot;,
+                &quot;user_id&quot;: &quot;01jsncem6qxfxazjx5b1mqtt1d&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;user&quot;: {
+                    &quot;id&quot;: &quot;01jsncem6qxfxazjx5b1mqtt1d&quot;,
+                    &quot;username&quot;: &quot;katelynn.sanford&quot;,
+                    &quot;first_name&quot;: &quot;Oda&quot;,
+                    &quot;last_name&quot;: &quot;Gleichner&quot;,
+                    &quot;email&quot;: &quot;reanna47@example.com&quot;,
+                    &quot;country&quot;: &quot;Bangladesh&quot;,
+                    &quot;bio&quot;: &quot;Commodi ab quasi reprehenderit. Totam occaecati saepe possimus. Cum voluptatem impedit neque beatae nisi incidunt autem sint. Doloremque ullam et atque ad laborum.&quot;,
+                    &quot;photo&quot;: null,
+                    &quot;artist_verified_at&quot;: null,
+                    &quot;email_verified_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;role&quot;: &quot;artist&quot;,
+                    &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;
+                }
+            }
+        ],
+        &quot;artwork_comments&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsncem773yxkft0nkey37ab2&quot;,
+                &quot;comment_text&quot;: &quot;Sunt perspiciatis facilis possimus quia.&quot;,
+                &quot;artwork_id&quot;: &quot;01jsncem6cbgjvt500tkbs1zec&quot;,
+                &quot;user_id&quot;: &quot;01jsncem71mr648nzq0zxssh1c&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;user&quot;: {
+                    &quot;id&quot;: &quot;01jsncem71mr648nzq0zxssh1c&quot;,
+                    &quot;username&quot;: &quot;ali.swift&quot;,
+                    &quot;first_name&quot;: &quot;Destin&quot;,
+                    &quot;last_name&quot;: &quot;Deckow&quot;,
+                    &quot;email&quot;: &quot;wcole@example.org&quot;,
+                    &quot;country&quot;: &quot;Paraguay&quot;,
+                    &quot;bio&quot;: &quot;Ad nemo dolorem cum atque aut non. Dicta neque officiis est reiciendis. Numquam error enim molestiae ut.&quot;,
+                    &quot;photo&quot;: &quot;artwork-seeding-photos/28.jpeg&quot;,
+                    &quot;artist_verified_at&quot;: null,
+                    &quot;email_verified_at&quot;: null,
+                    &quot;role&quot;: &quot;artist&quot;,
+                    &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;
+                }
+            }
+        ],
+        &quot;tags&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsn7h28yfjvatt924xhyyrmt&quot;,
+                &quot;name&quot;: &quot;fresco&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T01:03:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T01:03:26.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;artwork_id&quot;: &quot;01jsn7h4g8trw6fv91pkywcwp2&quot;,
+                    &quot;tag_id&quot;: &quot;01jsn7h28yfjvatt924xhyyrmt&quot;
+                }
+            }
+        ]
     }
 }</code></pre>
                                                                             </div>
@@ -10688,25 +10777,25 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb40dz8fhfeav4ztr2nhdz&quot;,
-            &quot;title&quot;: &quot;Sapiente neque totam recusandae.&quot;,
-            &quot;description&quot;: &quot;Itaque temporibus praesentium amet quod. Omnis sint quasi doloremque dolor voluptatum sequi fugiat vel.&quot;,
+            &quot;id&quot;: &quot;01jsncnhf36k1646aznrsqf0hp&quot;,
+            &quot;title&quot;: &quot;Fugiat aut eos.&quot;,
+            &quot;description&quot;: &quot;At est doloremque quia assumenda. Nostrum magni qui est quos minus. Dolorem ab dolorem quidem voluptatem error distinctio ad. Vitae voluptatum sint in provident.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jsnb40dpn2p6515fpjv88cbh&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnhdzjjgvnxs8bz2ysysd&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jsnb40ehczfcpmh6m5qw701z&quot;,
-            &quot;title&quot;: &quot;Aut est ad.&quot;,
-            &quot;description&quot;: &quot;Voluptatem ut rerum iusto ducimus. Nemo delectus incidunt velit ea. Incidunt illum commodi repellat quia quia suscipit fugiat. Sed dolor rerum minima aut qui omnis molestiae.&quot;,
-            &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jsnb40eajx07czgsz94jdmbh&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:12.000000Z&quot;,
+            &quot;id&quot;: &quot;01jsncnhhhbnqc2p77n01fgy8h&quot;,
+            &quot;title&quot;: &quot;Quia nobis.&quot;,
+            &quot;description&quot;: &quot;Quae dolores qui itaque amet. Aut sapiente dignissimos deserunt quia ex sit repudiandae sit.&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;user_id&quot;: &quot;01jsncnhgbf3h0y1an42hgs8jy&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -10885,7 +10974,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        maiores
+                        natus
                     </div>
                 </div>
             </div>
@@ -11018,7 +11107,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-users-me-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="maiores" data-component="url"
+                                               value="natus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11114,7 +11203,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/me/artworks/maiores" \
+    --get "http://localhost:8000/api/v1/users/me/artworks/natus" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -11125,7 +11214,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/me/artworks/maiores"
+    "http://localhost:8000/api/v1/users/me/artworks/natus"
 );
 
 const headers = {
@@ -11179,13 +11268,38 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;title&quot;: &quot;Libero eveniet dolor.&quot;,
-        &quot;description&quot;: &quot;Expedita hic fuga sed aspernatur qui odit quis pariatur. Rerum neque eveniet fugit qui nemo. Qui voluptas doloremque ut odit dolorum.&quot;,
+        &quot;id&quot;: &quot;01jsncem9kz382cktx2ahxhwxb&quot;,
+        &quot;title&quot;: &quot;Dolore id beatae voluptate.&quot;,
+        &quot;description&quot;: &quot;Eum nihil cumque eum excepturi velit. Dolores sed sequi quis unde ut. Odio corrupti et aut ut unde. Tenetur laborum qui laudantium beatae quas.&quot;,
         &quot;status&quot;: &quot;draft&quot;,
-        &quot;user_id&quot;: &quot;01jsnb40fxpcx738n3r53nqc0q&quot;,
+        &quot;user_id&quot;: &quot;01jsncem996aet50w7a1v0hgq6&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
-        &quot;artwork_main_photo_path&quot;: null
+        &quot;artwork_main_photo_path&quot;: null,
+        &quot;artwork_photos&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsncem9t3zffraa3mk25v6ys&quot;,
+                &quot;path&quot;: &quot;artwork-seeding-photos/4.jpeg&quot;,
+                &quot;is_main&quot;: 0,
+                &quot;artwork_id&quot;: &quot;01jsncem9kz382cktx2ahxhwxb&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;
+            }
+        ],
+        &quot;tags&quot;: [
+            {
+                &quot;id&quot;: &quot;01jsn7h28yfjvatt924xhyyrmt&quot;,
+                &quot;name&quot;: &quot;fresco&quot;,
+                &quot;created_at&quot;: &quot;2025-04-25T01:03:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-04-25T01:03:26.000000Z&quot;,
+                &quot;pivot&quot;: {
+                    &quot;artwork_id&quot;: &quot;01jsn7h4g8trw6fv91pkywcwp2&quot;,
+                    &quot;tag_id&quot;: &quot;01jsn7h28yfjvatt924xhyyrmt&quot;
+                }
+            }
+        ]
     }
 }</code></pre>
                                                                             </div>
@@ -11317,7 +11431,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        laboriosam
+                        optio
                     </div>
                 </div>
             </div>
@@ -11512,7 +11626,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artworks-username"
                                                placeholder="The username of the user"
-                                               value="laboriosam" data-component="url"
+                                               value="optio" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11681,7 +11795,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/laboriosam/artworks?filter%5Btag%5D=graphic&amp;sort=trending&amp;page=1&amp;perPage=10" \
+    --get "http://localhost:8000/api/v1/users/optio/artworks?filter%5Btag%5D=graphic&amp;sort=trending&amp;page=1&amp;perPage=10" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -11691,7 +11805,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/laboriosam/artworks"
+    "http://localhost:8000/api/v1/users/optio/artworks"
 );
 
 const params = {
@@ -11753,25 +11867,25 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb40gvpzpd7r24sgkjs5bt&quot;,
-            &quot;title&quot;: &quot;Dolores voluptatem nisi.&quot;,
-            &quot;description&quot;: &quot;Explicabo voluptas itaque officia sint aperiam et. Sint dolorem nihil quisquam itaque laudantium quas autem. Laudantium voluptas eligendi suscipit repellat. Rerum et consectetur doloribus voluptatem.&quot;,
+            &quot;id&quot;: &quot;01jsncnhtfbyxewadk3zmfh01n&quot;,
+            &quot;title&quot;: &quot;Fugit eos assumenda.&quot;,
+            &quot;description&quot;: &quot;Ullam voluptas eveniet culpa. Esse optio nobis deserunt. Amet ut rerum velit aspernatur autem.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jsnb40gkyfmp6epg05cww54p&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnhrwnmx0mn5s3tty1mc7&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jsnb40hjq8v00x9bcb176kza&quot;,
-            &quot;title&quot;: &quot;Eveniet nesciunt quod.&quot;,
-            &quot;description&quot;: &quot;Pariatur ut voluptatum neque dolor id qui. Cum ut quia amet qui non est ducimus. Ea nihil recusandae id aliquam qui. Iste ea saepe quia sint recusandae.&quot;,
+            &quot;id&quot;: &quot;01jsncnhwq414ns2byj2r6yfyw&quot;,
+            &quot;title&quot;: &quot;Ut vitae blanditiis quo.&quot;,
+            &quot;description&quot;: &quot;Veritatis cum cumque nostrum nostrum est sit ipsam. Hic dolores eveniet similique debitis. Laudantium quis quia ut. Tenetur non fugit maxime et.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jsnb40h8cvn9khytmad9xxq2&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnhved6av29f2x090n0wb&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -12063,7 +12177,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php807fpbs3nsr75FnGkad
+                        /tmp/php1f6dv188qm3i6gJILbb
                     </div>
                 </div>
             </div>
@@ -12368,7 +12482,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "description=This is an artwork description"\
     --form "tags[]=abstract"\
     --form "photos[][is_main]=1"\
-    --form "photos[][file]=@/tmp/php807fpbs3nsr75FnGkad" </code></pre>                                        </div>
+    --form "photos[][file]=@/tmp/php1f6dv188qm3i6gJILbb" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -12438,13 +12552,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40kdc48mf55jjzwzg4xe&quot;,
-        &quot;title&quot;: &quot;Voluptatem corrupti eaque soluta.&quot;,
-        &quot;description&quot;: &quot;Eum rem et eos enim. Nobis est fuga dolores et dicta ducimus quis. Accusantium reprehenderit et corrupti et saepe id.&quot;,
+        &quot;id&quot;: &quot;01jsncnj2ef3j3ht1g1r60v452&quot;,
+        &quot;title&quot;: &quot;A ut id.&quot;,
+        &quot;description&quot;: &quot;Est et velit quae ipsa molestias earum non. Harum eos velit dolore vero qui eos et ut. Amet voluptatem et modi quia assumenda voluptatibus non.&quot;,
         &quot;status&quot;: &quot;draft&quot;,
-        &quot;user_id&quot;: &quot;01jsnb40k410mm40tjf90r9rjv&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+        &quot;user_id&quot;: &quot;01jsncnj11qcqz2n1zc0f985c0&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -12601,7 +12715,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        magni
+                        sit
                     </div>
                 </div>
             </div>
@@ -12815,7 +12929,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-PUTapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="magni" data-component="url"
+                                               value="sit" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -12942,7 +13056,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artworks/magni" \
+    "http://localhost:8000/api/v1/artworks/sit" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -12961,7 +13075,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/magni"
+    "http://localhost:8000/api/v1/artworks/sit"
 );
 
 const headers = {
@@ -13025,13 +13139,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40mrh7jg2djz6pnpsxf6&quot;,
-        &quot;title&quot;: &quot;Voluptatibus quaerat doloribus quo.&quot;,
-        &quot;description&quot;: &quot;Nulla deserunt veniam minima. Qui ipsum maxime dolor eos incidunt ut. Impedit distinctio voluptas neque.&quot;,
-        &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: &quot;01jsnb40mexr76dsen6kmfgmqa&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+        &quot;id&quot;: &quot;01jsncnj475bgm093e0q7evqj2&quot;,
+        &quot;title&quot;: &quot;Rerum molestias officiis voluptas.&quot;,
+        &quot;description&quot;: &quot;Dolorum soluta aspernatur consequuntur sunt totam quos. Nihil sit voluptatem dolorem labore nam aspernatur modi ut. In reiciendis aut hic maxime. Nostrum dolor et ducimus tempore reprehenderit aliquam.&quot;,
+        &quot;status&quot;: &quot;draft&quot;,
+        &quot;user_id&quot;: &quot;01jsncnj33bw4f16fxcb5qtgfy&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -13199,7 +13313,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eveniet
+                        ullam
                     </div>
                 </div>
             </div>
@@ -13332,7 +13446,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-PUTapi-v1-artworks--artworkId--publish-artworkId"
                                                placeholder="The id of the artwork"
-                                               value="eveniet" data-component="url"
+                                               value="ullam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -13428,7 +13542,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artworks/eveniet/publish" \
+    "http://localhost:8000/api/v1/artworks/ullam/publish" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -13439,7 +13553,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/eveniet/publish"
+    "http://localhost:8000/api/v1/artworks/ullam/publish"
 );
 
 const headers = {
@@ -13494,13 +13608,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40nxvag7ynjtjxhjnmq7&quot;,
-        &quot;title&quot;: &quot;Suscipit beatae hic deleniti.&quot;,
-        &quot;description&quot;: &quot;Et at aut ut reprehenderit dolores. Nulla praesentium ut aperiam sint in sed. Quo asperiores est vel repudiandae qui.&quot;,
-        &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: &quot;01jsnb40np1zexm4ynp0c1yxs4&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+        &quot;id&quot;: &quot;01jsncnj6pnsm1e950qd5az3dw&quot;,
+        &quot;title&quot;: &quot;Consectetur optio.&quot;,
+        &quot;description&quot;: &quot;Sed dicta porro qui facere. Nostrum non dolor enim et. Maxime sint ratione soluta totam porro eum. Aliquid corrupti sint unde harum assumenda aut.&quot;,
+        &quot;status&quot;: &quot;draft&quot;,
+        &quot;user_id&quot;: &quot;01jsncnj5ggrwjc5kth31b99pk&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -13668,7 +13782,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        distinctio
+                        saepe
                     </div>
                 </div>
             </div>
@@ -13801,7 +13915,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="distinctio" data-component="url"
+                                               value="saepe" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -13897,7 +14011,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/distinctio" \
+    "http://localhost:8000/api/v1/artworks/saepe" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -13908,7 +14022,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/distinctio"
+    "http://localhost:8000/api/v1/artworks/saepe"
 );
 
 const headers = {
@@ -18915,16 +19029,16 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb41g1xkm2zwnvnm6q78wm&quot;,
-            &quot;name&quot;: &quot;French Polynesia&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:14.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:14.000000Z&quot;
+            &quot;id&quot;: &quot;01jsncnktkgj66j3xrdv5ef9vs&quot;,
+            &quot;name&quot;: &quot;Morocco&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jsnb41g4h22gzd0e8hx4xge6&quot;,
-            &quot;name&quot;: &quot;Tunisia&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:14.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:14.000000Z&quot;
+            &quot;id&quot;: &quot;01jsncnktn2pryb4f39q1nqzpv&quot;,
+            &quot;name&quot;: &quot;Argentina&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -19636,25 +19750,25 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb41d4vqsz4g9mvkj9wcd2&quot;,
-            &quot;title&quot;: &quot;Maiores aliquid qui.&quot;,
-            &quot;description&quot;: &quot;Magnam tempora ducimus adipisci. Distinctio quis totam optio a recusandae ut quam harum. Eveniet atque dolor provident adipisci et quae fugiat.&quot;,
+            &quot;id&quot;: &quot;01jsncnknjw3p6tqdbt1prxz6w&quot;,
+            &quot;title&quot;: &quot;Officia omnis nostrum explicabo.&quot;,
+            &quot;description&quot;: &quot;Rerum nihil nemo similique et ipsa accusamus omnis. Sapiente aut excepturi ex porro in magni. Sint aut beatae eaque perferendis excepturi voluptatum eius. Commodi vel a consequatur autem molestiae.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jsnb41cvq9qa0j4yk676bp4a&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnkmhbzvx3c65r7kmbf2h&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jsnb41dppd2s081kmgs8mcmf&quot;,
-            &quot;title&quot;: &quot;Explicabo rerum aut.&quot;,
-            &quot;description&quot;: &quot;Aut aut iure architecto numquam adipisci aut. Et nihil est laborum odit ad.&quot;,
+            &quot;id&quot;: &quot;01jsncnkpptczq9njxfz4md8b7&quot;,
+            &quot;title&quot;: &quot;Cumque nemo consectetur saepe consequatur.&quot;,
+            &quot;description&quot;: &quot;Dolore consequatur rerum eaque sint est corporis. Ipsa ut dolore velit deserunt adipisci doloribus. At quod libero ut sint magni. Ab eos esse aut soluta est.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jsnb41dd5z2x8xgp571jyq9m&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jsncnknt6abr351vb0jy8mrn&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -19801,7 +19915,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        minima
                     </div>
                 </div>
             </div>
@@ -19934,7 +20048,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--favorites-artworkId"
                                                placeholder="The ID of the artwork to mark as favorite"
-                                               value="et" data-component="url"
+                                               value="minima" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20030,7 +20144,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/et/favorites" \
+    "http://localhost:8000/api/v1/artworks/minima/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -20041,7 +20155,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/et/favorites"
+    "http://localhost:8000/api/v1/artworks/minima/favorites"
 );
 
 const headers = {
@@ -20096,11 +20210,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb41f13xhc8tjah7kb6c1q&quot;,
-        &quot;artwork_id&quot;: &quot;01jsnb41epsjqwjb3y5bxeyzt7&quot;,
-        &quot;user_id&quot;: &quot;01jsnb41ev32qbeydgrqsbd4e5&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnksr414vdwbff2mk7fwb&quot;,
+        &quot;artwork_id&quot;: &quot;01jsncnkrna3bpq17cx4bvnqky&quot;,
+        &quot;user_id&quot;: &quot;01jsncnkrv6m0vvt4z33y0n4cd&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:18.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -20265,7 +20379,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        numquam
+                        temporibus
                     </div>
                 </div>
             </div>
@@ -20398,7 +20512,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--favorites-artworkId"
                                                placeholder="The ID of the artwork to remove from favorites"
-                                               value="numquam" data-component="url"
+                                               value="temporibus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20494,7 +20608,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/numquam/favorites" \
+    "http://localhost:8000/api/v1/artworks/temporibus/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -20505,7 +20619,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/numquam/favorites"
+    "http://localhost:8000/api/v1/artworks/temporibus/favorites"
 );
 
 const headers = {
@@ -20724,7 +20838,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        maxime
+                        quia
                     </div>
                 </div>
             </div>
@@ -20857,7 +20971,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--favorites-is-favoriting-artworkId"
                                                placeholder="The ID of the artwork to check if the authenticated user is favoriting"
-                                               value="maxime" data-component="url"
+                                               value="quia" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20953,7 +21067,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/maxime/favorites/is-favoriting" \
+    --get "http://localhost:8000/api/v1/artworks/quia/favorites/is-favoriting" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -20964,7 +21078,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/maxime/favorites/is-favoriting"
+    "http://localhost:8000/api/v1/artworks/quia/favorites/is-favoriting"
 );
 
 const headers = {
@@ -21411,34 +21525,34 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb40vdvytk2s3zdwd8r00m&quot;,
-            &quot;username&quot;: &quot;kristy.hoeger&quot;,
-            &quot;first_name&quot;: &quot;Monserrat&quot;,
-            &quot;last_name&quot;: &quot;Kertzmann&quot;,
-            &quot;email&quot;: &quot;jude21@example.org&quot;,
-            &quot;country&quot;: &quot;Netherlands&quot;,
-            &quot;bio&quot;: &quot;Eos beatae amet nihil sapiente nisi mollitia odio vitae. Et corporis et esse voluptatem impedit. Velit sapiente consequatur cupiditate aut.&quot;,
-            &quot;photo&quot;: &quot;artwork-seeding-photos/31.jpeg&quot;,
-            &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;id&quot;: &quot;01jsncnjjkcy5kjb58y9phjrec&quot;,
+            &quot;username&quot;: &quot;lucas34&quot;,
+            &quot;first_name&quot;: &quot;Catharine&quot;,
+            &quot;last_name&quot;: &quot;White&quot;,
+            &quot;email&quot;: &quot;chris.moore@example.org&quot;,
+            &quot;country&quot;: &quot;Oman&quot;,
+            &quot;bio&quot;: &quot;Adipisci voluptas voluptatem quae fugiat sit aut. Molestiae corporis quis vel nihil.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/32.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:33:17&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jsnb40vnbm01fqn826946rht&quot;,
-            &quot;username&quot;: &quot;olson.cullen&quot;,
-            &quot;first_name&quot;: &quot;Felipe&quot;,
-            &quot;last_name&quot;: &quot;Roob&quot;,
-            &quot;email&quot;: &quot;flavie.leuschke@example.net&quot;,
-            &quot;country&quot;: &quot;Tanzania&quot;,
-            &quot;bio&quot;: &quot;Voluptas nisi praesentium autem consectetur fugiat molestiae mollitia. Ut voluptatem hic magni beatae. Nisi dicta tempore id numquam iure praesentium repellat voluptate. Exercitationem nisi doloribus ut.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:06:13&quot;,
-            &quot;email_verified_at&quot;: null,
+            &quot;id&quot;: &quot;01jsncnjkykew7p7g63602pgrt&quot;,
+            &quot;username&quot;: &quot;loren.streich&quot;,
+            &quot;first_name&quot;: &quot;Maddison&quot;,
+            &quot;last_name&quot;: &quot;Herzog&quot;,
+            &quot;email&quot;: &quot;marlee.gleichner@example.com&quot;,
+            &quot;country&quot;: &quot;Montenegro&quot;,
+            &quot;bio&quot;: &quot;Et doloremque optio quisquam vero et. Saepe ut in dolor maiores repudiandae saepe quam aut. Minus alias vitae numquam non eum. Qui ut ut natus nostrum alias perspiciatis.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/39.jpeg&quot;,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -21813,34 +21927,34 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb40w8g416dyr2xzy3gdfv&quot;,
-            &quot;username&quot;: &quot;greta80&quot;,
-            &quot;first_name&quot;: &quot;Effie&quot;,
-            &quot;last_name&quot;: &quot;Morar&quot;,
-            &quot;email&quot;: &quot;blanda.jonatan@example.net&quot;,
-            &quot;country&quot;: &quot;Northern Mariana Islands&quot;,
-            &quot;bio&quot;: &quot;Dolores aut saepe culpa veritatis et qui excepturi. Saepe aut dolor eum voluptatibus itaque et. Iusto odio totam maiores nostrum non aut dolorem.&quot;,
-            &quot;photo&quot;: &quot;artwork-seeding-photos/31.jpeg&quot;,
-            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:06:13&quot;,
+            &quot;id&quot;: &quot;01jsncnjn4avb0gdmme92mjtvt&quot;,
+            &quot;username&quot;: &quot;lizeth80&quot;,
+            &quot;first_name&quot;: &quot;Lois&quot;,
+            &quot;last_name&quot;: &quot;Brown&quot;,
+            &quot;email&quot;: &quot;htorphy@example.org&quot;,
+            &quot;country&quot;: &quot;Austria&quot;,
+            &quot;bio&quot;: &quot;Dolore fugiat voluptas suscipit. Quisquam dolores sit quas hic eius. Voluptas culpa est maxime facere. Voluptate sed est ex numquam quia nisi quaerat.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/34.jpeg&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:33:17&quot;,
             &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jsnb40wnz31g6bsahknkhchg&quot;,
-            &quot;username&quot;: &quot;smith.oliver&quot;,
-            &quot;first_name&quot;: &quot;Ressie&quot;,
-            &quot;last_name&quot;: &quot;Bauch&quot;,
-            &quot;email&quot;: &quot;unitzsche@example.com&quot;,
-            &quot;country&quot;: &quot;French Southern Territories&quot;,
-            &quot;bio&quot;: &quot;Distinctio et quae ut. Voluptatem dicta expedita consequatur aut odit ut natus atque. Enim quam soluta dolorem suscipit laudantium recusandae debitis deleniti.&quot;,
+            &quot;id&quot;: &quot;01jsncnjp21jj0ta5gtd44pjjv&quot;,
+            &quot;username&quot;: &quot;elyssa18&quot;,
+            &quot;first_name&quot;: &quot;Destany&quot;,
+            &quot;last_name&quot;: &quot;Stehr&quot;,
+            &quot;email&quot;: &quot;fcollins@example.org&quot;,
+            &quot;country&quot;: &quot;Israel&quot;,
+            &quot;bio&quot;: &quot;Expedita tenetur eaque sit minus ducimus possimus reprehenderit. Molestiae unde ab voluptatem nihil. Quia itaque recusandae dicta quia assumenda. Error maiores suscipit aut incidunt. Quis unde beatae commodi aut.&quot;,
             &quot;photo&quot;: null,
             &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -21984,7 +22098,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sapiente
+                        facere
                     </div>
                 </div>
             </div>
@@ -22117,7 +22231,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-POSTapi-v1-follows-users--userId--userId"
                                                placeholder="The ID of the user to follow"
-                                               value="sapiente" data-component="url"
+                                               value="facere" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -22213,7 +22327,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/follows/users/sapiente" \
+    "http://localhost:8000/api/v1/follows/users/facere" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -22224,7 +22338,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/sapiente"
+    "http://localhost:8000/api/v1/follows/users/facere"
 );
 
 const headers = {
@@ -22279,11 +22393,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40y549tw6x2k63qsyab7&quot;,
-        &quot;follower_id&quot;: &quot;01jsnb40xhb5e3by65m698wq34&quot;,
-        &quot;followed_id&quot;: &quot;01jsnb40xvxgeb8my5sk389ccc&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;id&quot;: &quot;01jsncnjrz8p7f790eegkvc0mq&quot;,
+        &quot;follower_id&quot;: &quot;01jsncnjq6f3s4sm3g58zym6xc&quot;,
+        &quot;followed_id&quot;: &quot;01jsncnjr2bp3eb4xaq43kwh6j&quot;,
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -22448,7 +22562,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        cum
+                        delectus
                     </div>
                 </div>
             </div>
@@ -22581,7 +22695,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-DELETEapi-v1-follows-users--userId--userId"
                                                placeholder="The ID of the user to unfollow"
-                                               value="cum" data-component="url"
+                                               value="delectus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -22677,7 +22791,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/follows/users/cum" \
+    "http://localhost:8000/api/v1/follows/users/delectus" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -22688,7 +22802,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/cum"
+    "http://localhost:8000/api/v1/follows/users/delectus"
 );
 
 const headers = {
@@ -22919,7 +23033,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        laborum
+                        quidem
                     </div>
                 </div>
             </div>
@@ -23052,7 +23166,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-GETapi-v1-users--userId--is-following-userId"
                                                placeholder="The ID of the user to check if the authenticated user is following"
-                                               value="laborum" data-component="url"
+                                               value="quidem" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -23148,7 +23262,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/laborum/is-following" \
+    --get "http://localhost:8000/api/v1/users/quidem/is-following" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -23159,7 +23273,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/laborum/is-following"
+    "http://localhost:8000/api/v1/users/quidem/is-following"
 );
 
 const headers = {
@@ -26038,28 +26152,28 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jsnb40q1xrrjtxxhw93vb5jz&quot;,
-            &quot;username&quot;: &quot;ttowne&quot;,
-            &quot;first_name&quot;: &quot;Winnifred&quot;,
-            &quot;last_name&quot;: &quot;Funk&quot;,
-            &quot;email&quot;: &quot;kian.steuber@example.com&quot;,
-            &quot;country&quot;: &quot;Liberia&quot;,
-            &quot;bio&quot;: &quot;Tenetur quisquam ex doloribus non possimus. Tempore quia aut alias. Numquam fuga ex aut ducimus dolores sed.&quot;,
-            &quot;photo&quot;: null,
+            &quot;id&quot;: &quot;01jsncemgcwyh3hw4nvr1r194h&quot;,
+            &quot;username&quot;: &quot;hand.candida&quot;,
+            &quot;first_name&quot;: &quot;Clark&quot;,
+            &quot;last_name&quot;: &quot;Feeney&quot;,
+            &quot;email&quot;: &quot;dorcas96@example.net&quot;,
+            &quot;country&quot;: &quot;Nigeria&quot;,
+            &quot;bio&quot;: &quot;Dolores aut sint dicta harum. Est consectetur voluptatum deserunt rerum commodi ipsum harum id. Vero nam consequatur eius totam nisi aperiam voluptatibus. Eum temporibus ullam quod rerum itaque quisquam corrupti.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/28.jpeg&quot;,
             &quot;artist_verified_at&quot;: null,
             &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
             &quot;published_artworks&quot;: [
                 {
-                    &quot;id&quot;: &quot;01jsnb40qbz89jxmwaayazjk9a&quot;,
-                    &quot;title&quot;: &quot;Placeat quaerat recusandae.&quot;,
-                    &quot;description&quot;: &quot;Eligendi dicta aperiam laboriosam cumque expedita omnis. Reprehenderit vel nihil est ratione a reiciendis. Quam blanditiis reiciendis doloribus rem atque voluptatem.&quot;,
+                    &quot;id&quot;: &quot;01jsncemh1ag7373vcehy3534j&quot;,
+                    &quot;title&quot;: &quot;Ut aperiam et.&quot;,
+                    &quot;description&quot;: &quot;Est repellat omnis doloribus voluptatem. Optio placeat iusto rerum nihil qui. Blanditiis neque vel eaque quis impedit.&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;user_id&quot;: &quot;01jsnb40q1xrrjtxxhw93vb5jz&quot;,
-                    &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+                    &quot;user_id&quot;: &quot;01jsncemgshp2r2srgtstma055&quot;,
+                    &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
                     &quot;artwork_likes_count&quot;: 0,
                     &quot;artwork_comments_count&quot;: 0,
                     &quot;artwork_main_photo_path&quot;: null
@@ -26067,20 +26181,33 @@ fetch(url, {
             ]
         },
         {
-            &quot;id&quot;: &quot;01jsnb40qp0szfxdvgcadzqfdm&quot;,
-            &quot;username&quot;: &quot;ruben52&quot;,
-            &quot;first_name&quot;: &quot;Rickie&quot;,
-            &quot;last_name&quot;: &quot;Sauer&quot;,
-            &quot;email&quot;: &quot;feeney.nora@example.com&quot;,
-            &quot;country&quot;: &quot;Kyrgyz Republic&quot;,
-            &quot;bio&quot;: &quot;Est itaque quidem omnis ut ducimus eaque optio. Ipsum voluptate in inventore nulla. Enim commodi deleniti omnis nihil repellat fugiat omnis officiis. Sit rerum eos minus nihil officiis et.&quot;,
+            &quot;id&quot;: &quot;01jsncemgshp2r2srgtstma055&quot;,
+            &quot;username&quot;: &quot;miller.aida&quot;,
+            &quot;first_name&quot;: &quot;Vella&quot;,
+            &quot;last_name&quot;: &quot;Hagenes&quot;,
+            &quot;email&quot;: &quot;olen.morissette@example.net&quot;,
+            &quot;country&quot;: &quot;French Southern Territories&quot;,
+            &quot;bio&quot;: &quot;Sit nisi qui est quas quia et ut. Assumenda soluta et rerum. Et ducimus laudantium voluptatem odio ea consequatur consequuntur. Commodi quidem eum illum fugiat occaecati in soluta.&quot;,
             &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:06:13&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+            &quot;artist_verified_at&quot;: &quot;2025-04-25 02:29:29&quot;,
+            &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-            &quot;published_artworks&quot;: []
+            &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+            &quot;published_artworks&quot;: [
+                {
+                    &quot;id&quot;: &quot;01jsncemh1ag7373vcehy3534j&quot;,
+                    &quot;title&quot;: &quot;Ut aperiam et.&quot;,
+                    &quot;description&quot;: &quot;Est repellat omnis doloribus voluptatem. Optio placeat iusto rerum nihil qui. Blanditiis neque vel eaque quis impedit.&quot;,
+                    &quot;status&quot;: &quot;published&quot;,
+                    &quot;user_id&quot;: &quot;01jsncemgshp2r2srgtstma055&quot;,
+                    &quot;created_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-04-25T02:29:29.000000Z&quot;,
+                    &quot;artwork_likes_count&quot;: 0,
+                    &quot;artwork_comments_count&quot;: 0,
+                    &quot;artwork_main_photo_path&quot;: null
+                }
+            ]
         }
     ],
     &quot;links&quot;: {
@@ -26224,7 +26351,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        voluptate
+                        praesentium
                     </div>
                 </div>
             </div>
@@ -26321,7 +26448,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-GETapi-v1-users--userId--userId"
                                                placeholder="The id of the user"
-                                               value="voluptate" data-component="url"
+                                               value="praesentium" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -26417,7 +26544,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/voluptate" \
+    --get "http://localhost:8000/api/v1/users/praesentium" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -26427,7 +26554,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/voluptate"
+    "http://localhost:8000/api/v1/users/praesentium"
 );
 
 const headers = {
@@ -26479,19 +26606,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40rrftz7p1eeshha79c2&quot;,
-        &quot;username&quot;: &quot;nmarvin&quot;,
-        &quot;first_name&quot;: &quot;Niko&quot;,
-        &quot;last_name&quot;: &quot;Schulist&quot;,
-        &quot;email&quot;: &quot;fisher.pedro@example.net&quot;,
-        &quot;country&quot;: &quot;Tajikistan&quot;,
-        &quot;bio&quot;: &quot;Perspiciatis omnis reprehenderit consequatur eos rerum explicabo quia et. Omnis eos voluptatum quae aut.&quot;,
+        &quot;id&quot;: &quot;01jsncnjaxnn3sm1k635tcx4h8&quot;,
+        &quot;username&quot;: &quot;hazel.bednar&quot;,
+        &quot;first_name&quot;: &quot;Nicola&quot;,
+        &quot;last_name&quot;: &quot;Skiles&quot;,
+        &quot;email&quot;: &quot;pmitchell@example.org&quot;,
+        &quot;country&quot;: &quot;Madagascar&quot;,
+        &quot;bio&quot;: &quot;Porro velit minima voluptas non labore inventore qui dolorem. Illum eius debitis et et veniam quia ab. Dolorum voluptatem dignissimos accusamus quia autem id ipsa.&quot;,
         &quot;photo&quot;: null,
-        &quot;artist_verified_at&quot;: null,
+        &quot;artist_verified_at&quot;: &quot;2025-04-25 02:33:16&quot;,
         &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -26865,19 +26992,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40scsh5869c0xs3xr070&quot;,
-        &quot;username&quot;: &quot;jkerluke&quot;,
-        &quot;first_name&quot;: &quot;Bailee&quot;,
-        &quot;last_name&quot;: &quot;Ruecker&quot;,
-        &quot;email&quot;: &quot;zlockman@example.com&quot;,
-        &quot;country&quot;: &quot;Ethiopia&quot;,
-        &quot;bio&quot;: &quot;Fugiat iure atque qui sed a veniam. Consectetur omnis voluptatem sit repudiandae modi a. Quia optio nihil officia fuga iste quo. Et ipsa exercitationem qui.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/5.jpeg&quot;,
+        &quot;id&quot;: &quot;01jsncnjckckgtdxf3fcq45p4m&quot;,
+        &quot;username&quot;: &quot;afton34&quot;,
+        &quot;first_name&quot;: &quot;Grant&quot;,
+        &quot;last_name&quot;: &quot;Ebert&quot;,
+        &quot;email&quot;: &quot;lavina.predovic@example.net&quot;,
+        &quot;country&quot;: &quot;Nigeria&quot;,
+        &quot;bio&quot;: &quot;Molestiae itaque harum nostrum aut. Doloribus iste quia et eius tempora. Aut praesentium voluptatem perferendis accusamus facere iste asperiores.&quot;,
+        &quot;photo&quot;: null,
         &quot;artist_verified_at&quot;: null,
-        &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+        &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -26998,7 +27125,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consequuntur
+                        repellendus
                     </div>
                 </div>
             </div>
@@ -27095,7 +27222,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--username"
                                                placeholder="The username of the user"
-                                               value="consequuntur" data-component="url"
+                                               value="repellendus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -27191,7 +27318,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/consequuntur" \
+    --get "http://localhost:8000/api/v1/users/repellendus" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -27201,7 +27328,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/consequuntur"
+    "http://localhost:8000/api/v1/users/repellendus"
 );
 
 const headers = {
@@ -27253,19 +27380,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40syjpsdmxw9gw4bm1nw&quot;,
-        &quot;username&quot;: &quot;erling.bins&quot;,
-        &quot;first_name&quot;: &quot;Noah&quot;,
-        &quot;last_name&quot;: &quot;Pouros&quot;,
-        &quot;email&quot;: &quot;marcelina45@example.net&quot;,
-        &quot;country&quot;: &quot;Italy&quot;,
-        &quot;bio&quot;: &quot;Voluptatem quia rerum similique illo eum eos alias. Eos ipsum aut voluptas sapiente dolorem inventore ut. Qui quod modi dolorem facere aut iusto voluptatum.&quot;,
-        &quot;photo&quot;: null,
+        &quot;id&quot;: &quot;01jsncnjdr6v8efrcgfpdzr9mj&quot;,
+        &quot;username&quot;: &quot;henriette.grady&quot;,
+        &quot;first_name&quot;: &quot;Geovanny&quot;,
+        &quot;last_name&quot;: &quot;Kunde&quot;,
+        &quot;email&quot;: &quot;loraine.shields@example.org&quot;,
+        &quot;country&quot;: &quot;Tonga&quot;,
+        &quot;bio&quot;: &quot;Animi magnam in expedita. Reiciendis modi non est odit molestias sed. Minima aut et ea sed expedita necessitatibus.&quot;,
+        &quot;photo&quot;: &quot;artwork-seeding-photos/32.jpeg&quot;,
         &quot;artist_verified_at&quot;: null,
-        &quot;email_verified_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
+        &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:16.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -27561,7 +27688,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phppf31j2njsg000aJaBAl
+                        /tmp/phpcfpk77loim7p9kMgFBC
                     </div>
                 </div>
             </div>
@@ -27877,7 +28004,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "email=johndoe@gmail.com"\
     --form "country=United States"\
     --form "bio=This is a bio"\
-    --form "photo=@/tmp/phppf31j2njsg000aJaBAl" </code></pre>                                        </div>
+    --form "photo=@/tmp/phpcfpk77loim7p9kMgFBC" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -27949,19 +28076,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jsnb40tprcrzn47ypnmgm44f&quot;,
-        &quot;username&quot;: &quot;wcronin&quot;,
-        &quot;first_name&quot;: &quot;Eduardo&quot;,
-        &quot;last_name&quot;: &quot;Batz&quot;,
-        &quot;email&quot;: &quot;ihahn@example.net&quot;,
-        &quot;country&quot;: &quot;Greenland&quot;,
-        &quot;bio&quot;: &quot;Deserunt id qui inventore eum perferendis harum earum reprehenderit. Aut harum soluta quidem ut. Ducimus sequi porro rerum inventore explicabo quaerat quis.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/22.jpeg&quot;,
+        &quot;id&quot;: &quot;01jsncnjgvj99khgpazhzg8yc9&quot;,
+        &quot;username&quot;: &quot;cora.okeefe&quot;,
+        &quot;first_name&quot;: &quot;Maxwell&quot;,
+        &quot;last_name&quot;: &quot;Greenholt&quot;,
+        &quot;email&quot;: &quot;gcasper@example.org&quot;,
+        &quot;country&quot;: &quot;Turks and Caicos Islands&quot;,
+        &quot;bio&quot;: &quot;Autem nesciunt consequatur qui eveniet voluptas. Qui temporibus beatae qui qui ut. Nam rerum deleniti libero numquam. Facilis et fugiat omnis natus natus omnis.&quot;,
+        &quot;photo&quot;: null,
         &quot;artist_verified_at&quot;: null,
         &quot;email_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-04-25T02:06:13.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-04-25T02:33:17.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>

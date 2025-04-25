@@ -91,7 +91,7 @@ class ArtworkController extends ApiController
             ])
             ->first();
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -123,7 +123,7 @@ class ArtworkController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (!$user) {
+        if (! $user) {
             return $this->notFound('The user you are trying to retrieve his artworks does not exist.');
         }
 
@@ -206,7 +206,7 @@ class ArtworkController extends ApiController
             'tags',
         ])->first();
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -299,7 +299,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to update does not exist.');
         }
 
@@ -355,7 +355,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to publish does not exist.');
         }
 
@@ -400,7 +400,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to delete does not exist.');
         }
 

@@ -24,11 +24,11 @@ class ArtworkTagController extends ApiController
      * @response 200 scenario=Success {
      *      "data": [
      *          {
-     *              "id": 1,
+     *              "id": "01jsn7h28c20dfrbybdt530p1d",
      *              "name": "abstract"
      *          },
      *          {
-     *              "id": 5,
+     *              "id": "01jsn7h28c20dfrbybdt530p1d",
      *              "name": "portrait"
      *          }
      *      ],

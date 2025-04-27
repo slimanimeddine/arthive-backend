@@ -189,7 +189,7 @@ class AuthController extends ApiController
      *
      * @response 200 scenario=Success {
      *     "message": "Verification code sent successfully",
-     *    "status": 200
+     *    "status": 204
      * }
      * @response 400 scenario="Email already verified" {
      *     "message": "Email already verified",
@@ -316,7 +316,7 @@ class AuthController extends ApiController
      * @response 200 scenario=Success {
      *     "message": "Code verified successfully",
      *    "data": {
-     *      "token" => "flsqjdfmjfqlsjkf"
+     *      "token": "flsqjdfmjfqlsjkf"
      *      },
      *     "status": 200
      * }

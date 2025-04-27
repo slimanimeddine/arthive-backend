@@ -379,7 +379,6 @@ class ArtworkController extends ApiController
      *
      * @response 200 scenario=Success {
      *      "message": "Artwork deleted successfully"
-     *      "data": null,
      *     "status": 200
      * }
      * @response 403 scenario=Unauthorized {
@@ -410,6 +409,6 @@ class ArtworkController extends ApiController
 
         $artwork->delete();
 
-        return $this->success('Artwork deleted successfully.');
+        return $this->noContent('Artwork deleted successfully.');
     }
 }

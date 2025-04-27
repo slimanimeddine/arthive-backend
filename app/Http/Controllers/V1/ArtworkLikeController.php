@@ -133,10 +133,6 @@ class ArtworkLikeController extends ApiController
      *      ],
      *      "status": 200
      * }
-     * @response 204 scenario="No Content" {
-     *     "message": "No Content",
-     *     "status": 204
-     * }
      * @response 404 scenario="User not found" {
      *      "message": "The user you are trying to retrieve likes for does not exist.",
      *      "status": 404

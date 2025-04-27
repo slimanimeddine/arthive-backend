@@ -129,7 +129,7 @@ endpoints:
                "message": "Authenticated",
                "data": {
                    "token": "{YOUR_AUTH_KEY}",
-                   "id": 1
+                   "id": "01jsn7h28c20dfrbybdt530p1d"
                },
                "status": 200
           }
@@ -200,7 +200,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6kfa8c13EeP4ha5bgZ6VDvd'
+      - 'Bearer f1Da84Vkeha66EgdPZ53bvc'
     controller: null
     method: null
     route: null
@@ -285,7 +285,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer PZc4ha1k3EDgVvdfae65b68'
+      - 'Bearer 35cf1dvDgkEbaP8V6eZ64ha'
     controller: null
     method: null
     route: null
@@ -320,7 +320,7 @@ endpoints:
         content: |-
           {
               "message": "Verification code sent successfully",
-             "status": 200
+             "status": 204
           }
         headers: []
         description: Success
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kaZg66aVD5cvfe3dbh8EP41'
+      - 'Bearer fc5ZDdh1kPgEa66ebVav384'
     controller: null
     method: null
     route: null
@@ -432,7 +432,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8cafgb615EaZ3he4DdPvVk6'
+      - 'Bearer v6b5EZhDfP18V4d6gcke3aa'
     controller: null
     method: null
     route: null
@@ -540,7 +540,7 @@ endpoints:
           {
               "message": "Code verified successfully",
              "data": {
-               "token" => "flsqjdfmjfqlsjkf"
+               "token": "flsqjdfmjfqlsjkf"
                },
               "status": 200
           }
@@ -724,7 +724,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4v6f6aEVc5k38haZgDPdeb1'
+      - 'Bearer dfEh56e3P68Z4kaagDcVv1b'
     controller: null
     method: null
     route: null

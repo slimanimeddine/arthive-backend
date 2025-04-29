@@ -128,7 +128,6 @@ class CountriesSeeder extends Seeder
             'Kenya',
             'Kiribati',
             'Korea',
-            'Korea',
             'Kuwait',
             'Kyrgyz Republic',
             'Lao People\'s Democratic Republic',

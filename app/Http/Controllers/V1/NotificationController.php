@@ -67,7 +67,7 @@ class NotificationController extends ApiController
 
         $readStatus = $request->query('readStatus');
         if ($readStatus !== null) {
-            if (! in_array($readStatus, ['read', 'unread'])) {
+            if (!in_array($readStatus, ['read', 'unread'])) {
                 return $this->error('Invalid readStatus', 400);
             }
 
@@ -75,9 +75,10 @@ class NotificationController extends ApiController
         }
 
         $perPage = $request->query('perPage', 10);
+
         $notifications = $query->paginate($perPage);
 
-        return $this->success('', $notifications);
+        return response()->json($notifications);
     }
 
     /**
@@ -107,7 +108,7 @@ class NotificationController extends ApiController
 
         $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->first();
 
-        if (! $unreadNotification) {
+        if (!$unreadNotification) {
             return $this->notFound('The notification you are trying to retrieve does not exist.');
         }
 

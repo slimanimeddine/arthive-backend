@@ -6,6 +6,7 @@ use App\Http\Requests\V1\CreateArtworkRequest;
 use App\Http\Requests\V1\UpdateArtworkRequest;
 use App\Http\Resources\V1\ArtworkResource;
 use App\Models\Artwork;
+use App\Models\ArtworkTag;
 use App\Models\Tag;
 use App\Models\User;
 use App\Sorts\Artworks\NewSort;
@@ -91,7 +92,7 @@ class ArtworkController extends ApiController
             ])
             ->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -123,7 +124,7 @@ class ArtworkController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve his artworks does not exist.');
         }
 
@@ -206,7 +207,7 @@ class ArtworkController extends ApiController
             'tags',
         ])->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -262,7 +263,10 @@ class ArtworkController extends ApiController
         foreach ($tags as $tagName) {
             $tag = Tag::where('name', $tagName)->firstOrFail();
 
-            $artwork->tags()->attach($tag->id);
+            ArtworkTag::create([
+                'artwork_id' => $artwork->id,
+                'tag_id' => $tag->id,
+            ]);
         }
 
         return new ArtworkResource($artwork);
@@ -299,7 +303,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to update does not exist.');
         }
 
@@ -312,12 +316,15 @@ class ArtworkController extends ApiController
         if ($request->has('tags')) {
             $tags = $request->tags;
 
-            $artwork->tags()->detach();
+            ArtworkTag::where('artwork_id', $artwork->id)->delete();
 
             foreach ($tags as $tagName) {
                 $tag = Tag::where('name', $tagName)->firstOrFail();
 
-                $artwork->tags()->attach($tag->id);
+                ArtworkTag::create([
+                    'artwork_id' => $artwork->id,
+                    'tag_id' => $tag->id,
+                ]);
             }
         }
 
@@ -355,7 +362,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to publish does not exist.');
         }
 
@@ -399,7 +406,7 @@ class ArtworkController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to delete does not exist.');
         }
 

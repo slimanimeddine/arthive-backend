@@ -106,6 +106,7 @@ Route::post('admin/sign-in', [AuthController::class, 'adminSignIn']);
 // artist verification request routes
 Route::get('artist-verification-requests', [ArtistVerificationRequestController::class, 'listArtistVerificationRequests']);
 Route::post('users/me/artist-verification-requests', [ArtistVerificationRequestController::class, 'submitArtistVerificationRequest'])->middleware('auth:sanctum');
+Route::get('users/me/artist-verification-requests', [ArtistVerificationRequestController::class, 'getAuthenticatedUserArtistVerificationRequests'])->middleware('auth:sanctum');
 Route::put('artist-verification-requests/{artistVerificationRequestId}', [ArtistVerificationRequestController::class, 'reviewArtistVerificationRequest'])->middleware('auth:sanctum')->whereUlid('artistVerificationRequestId');
 
 // favorite routes

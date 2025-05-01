@@ -66,13 +66,13 @@ class AuthController extends ApiController
      */
     public function signIn(SignInRequest $request)
     {
-        if (! Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::artist()->where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->error('Invalid credentials', 401);
         }
 
@@ -106,13 +106,13 @@ class AuthController extends ApiController
      */
     public function adminSignIn(SignInRequest $request)
     {
-        if (! Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::admin()->where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->error('Invalid credentials', 401);
         }
 
@@ -169,7 +169,7 @@ class AuthController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        if (! Hash::check($request->current_password, $authenticatedUser->password)) {
+        if (!Hash::check($request->current_password, $authenticatedUser->password)) {
             return $this->error('Invalid current password', 422);
         }
 
@@ -260,7 +260,7 @@ class AuthController extends ApiController
             ->latest()
             ->first();
 
-        if (! $email_verification) {
+        if (!$email_verification) {
             return $this->error('Invalid code', 400);
         }
 
@@ -337,7 +337,7 @@ class AuthController extends ApiController
     {
         $user = User::where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('User not found');
         }
 
@@ -346,7 +346,7 @@ class AuthController extends ApiController
             ->latest()
             ->first();
 
-        if (! $forgot_password) {
+        if (!$forgot_password) {
             return $this->error('Invalid code', 400);
         }
 
@@ -387,13 +387,13 @@ class AuthController extends ApiController
             ->where('token', $request->token)
             ->first();
 
-        if (! $forgot_password) {
+        if (!$forgot_password) {
             return $this->error('Invalid token', 400);
         }
 
         $user = User::where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('User not found');
         }
 

@@ -32,10 +32,23 @@ class ArtistVerificationRequestSeeder extends Seeder
         $artistverificationRequests = ArtistVerificationRequest::all();
 
         foreach ($artistverificationRequests as $artistverificationRequest) {
-            $artistverificationRequest->update([
-                'status' => fake()->randomElement(['approved', 'rejected']),
-                'reason' => fake()->paragraph(),
-            ]);
+            $isArtistVerified = $artistverificationRequest->user->artist_verified_at;
+
+            if ($isArtistVerified) {
+                $artistverificationRequest->update([
+                    'status' => fake()->randomElement(['approved']),
+                ]);
+            } else {
+                $status = fake()->randomElement(['pending', 'rejected']);
+
+                $reason = $status === 'rejected'
+                    ? fake()->paragraph()
+                    : null;
+                $artistverificationRequest->update([
+                    'status' => $status,
+                    'reason' => $reason,
+                ]);
+            }
 
             $artistverificationRequest->user->notify(new ArtistVerificationResponseNotification($artistverificationRequest));
         }

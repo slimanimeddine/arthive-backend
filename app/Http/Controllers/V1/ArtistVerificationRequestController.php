@@ -123,7 +123,7 @@ class ArtistVerificationRequestController extends ApiController
 
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
 
-        if (! $artistVerificationRequest) {
+        if (!$artistVerificationRequest) {
             return $this->notFound('The artist verification request you are trying to review does not exist.');
         }
 
@@ -176,6 +176,30 @@ class ArtistVerificationRequestController extends ApiController
             ->allowedSorts(['created_at', 'status'])
             ->defaultSort('-created_at')
             ->paginate($perPage);
+
+        return ArtistVerificationRequestResource::collection($query);
+    }
+
+    /**
+     * Get Authenticated User Artist Verification Requests
+     * 
+     * Retrieve a list of artist verification requests submitted by the authenticated user.
+     * 
+     * @authenticated
+     * 
+     * @apiResourceCollection App\Http\Resources\V1\ArtistVerificationRequestResource
+     *
+     * @apiResourceModel App\Models\ArtistVerificationRequest paginate=10
+     * 
+     * @response 401 scenario=Unauthenticated {
+     *     "message": "Unauthenticated"
+     * }
+     */
+    public function getAuthenticatedUserArtistVerificationRequests(Request $request)
+    {
+        $authenticatedUser = $request->user();
+
+        $query = ArtistVerificationRequest::where('user_id', $authenticatedUser->id)->paginate();
 
         return ArtistVerificationRequestResource::collection($query);
     }

@@ -26,7 +26,7 @@ class UserFactory extends Factory
         $selectedPhoto = fake()->numberBetween(1, 40);
 
         return [
-            'username' => fake()->unique()->userName(),
+            'username' => fake()->unique()->firstName(),
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),

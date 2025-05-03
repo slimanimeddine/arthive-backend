@@ -31,7 +31,7 @@ Route::middleware(['throttle:email-verification-code'])->group(function () {
 Route::post('/forgot-password-code/verify', [AuthController::class, 'verifyForgotPasswordCode']);
 Route::post('/password/reset', [AuthController::class, 'resetPassword']);
 
-Route::delete('users/me', [AuthController::class, 'delete_user'])->middleware('auth:sanctum');
+Route::delete('users/me', [AuthController::class, 'deleteUser'])->middleware('auth:sanctum');
 
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);

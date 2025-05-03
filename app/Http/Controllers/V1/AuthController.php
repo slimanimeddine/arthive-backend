@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Requests\V1\ChangePasswordRequest;
+use App\Http\Requests\V1\DeleteUserRequest;
 use App\Http\Requests\V1\ResetPasswordRequest;
 use App\Http\Requests\V1\SendForgotPasswordCodeRequest;
 use App\Http\Requests\V1\SignInRequest;
@@ -416,13 +417,20 @@ class AuthController extends ApiController
      *      "message": "User deleted successfully",
      *     "status": 204
      * }
+     * @response 400 scenario="Incorrect password" {
+     *      "message": "Incorrect password.",
+     *      "status": 400
+     * }
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
      */
-    public function delete_user(Request $request)
+    public function deleteUser(DeleteUserRequest $request)
     {
         $user = $request->user();
+
+        $request->user()->currentAccessToken()->delete();
+
         $user->delete();
 
         return $this->noContent('User deleted successfully');

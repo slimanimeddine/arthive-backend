@@ -200,7 +200,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ahVv3e6bk1D4d8gEf5cZPa6'
+      - 'Bearer Vke5Z8chv64abfg31DdaE6P'
     controller: null
     method: null
     route: null
@@ -285,7 +285,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Dd6P1hvf48baEegZa536kVc'
+      - 'Bearer c1dEf658D6kvabV4Z3egaPh'
     controller: null
     method: null
     route: null
@@ -348,7 +348,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a586EdZfDb1egPackv46h3V'
+      - 'Bearer 6aZ8fk413aEvbVgcPe6d5Dh'
     controller: null
     method: null
     route: null
@@ -432,7 +432,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fEadhPg45Ze6kV63av1b8Dc'
+      - 'Bearer v5Pa36hZ8kgbe1f6V4dDaEc'
     controller: null
     method: null
     route: null
@@ -697,8 +697,19 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: 'The password of the user attempting to delete their account. Must be at least 8 characters.'
+        required: true
+        example: password
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      password: password
     fileParameters: []
     responses:
       -
@@ -710,6 +721,16 @@ endpoints:
           }
         headers: []
         description: Success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+               "message": "Incorrect password.",
+               "status": 400
+          }
+        headers: []
+        description: 'Incorrect password'
         custom: []
       -
         status: 401
@@ -724,7 +745,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer EbZ1PakVg4ehv856D63acdf'
+      - 'Bearer bEP1h3Zkf45cgaV6v8Da6de'
     controller: null
     method: null
     route: null

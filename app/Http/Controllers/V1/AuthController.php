@@ -4,6 +4,8 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Requests\V1\ChangePasswordRequest;
 use App\Http\Requests\V1\DeleteUserRequest;
+use App\Http\Requests\V1\ResetPasswordRequest;
+use App\Http\Requests\V1\SendPasswordResetLinkRequest;
 use App\Http\Requests\V1\SignInRequest;
 use App\Http\Requests\V1\SignUpRequest;
 use App\Models\User;
@@ -11,7 +13,9 @@ use App\Notifications\VerifyEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Password;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Str;
 /**
  * @group Authentication
  */
@@ -190,6 +194,10 @@ class AuthController extends ApiController
      *      "message": "Invalid url",
      *      "status": 403
      * }
+     * @response 403 scenario="Email already verified" {
+     *      "message": "Email already verified",
+     *      "status": 403
+     * }
      */
     public function verifyEmail(Request $request)
     {
@@ -201,6 +209,10 @@ class AuthController extends ApiController
 
         if (!hash_equals(sha1($authenticatedUser->getEmailForVerification()), (string) $request->route('hash'))) {
             return $this->unauthorized('Invalid url');
+        }
+
+        if ($authenticatedUser->hasVerifiedEmail()) {
+            return $this->unauthorized('Email already verified');
         }
 
         if (!$authenticatedUser->hasVerifiedEmail()) {
@@ -232,6 +244,64 @@ class AuthController extends ApiController
         return $this->noContent('Verification link sent!');
     }
 
+    /**
+     * Send Password Reset Link
+     * 
+     * Sends a password reset link to the user's email
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Reset link sent successfully",
+     *      "status": 204
+     * }
+     * @response 400 scenario=Failure {
+     *     "message": "Failed to send reset link"
+     *     "status": 400
+     * }
+     */
+    public function sendPasswordResetLink(SendPasswordResetLinkRequest $request)
+    {
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::ResetLinkSent
+            ? $this->noContent('Reset link sent successfully')
+            : $this->error('Failed to send reset link', 400);
+    }
+
+    /**
+     * Reset Password
+     * 
+     * Resets the password of the user
+     * 
+     * @response 200 scenario=Success {
+     *      "message": "Password reset successfully",
+     *      "status": 204
+     * }
+     * @response 400 scenario=Failure {
+     *     "message": "Failed to reset password"
+     *     "status": 400
+     * }
+     */
+    public function resetPassword(ResetPasswordRequest $request)
+    {
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function (User $user, string $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+
+                event(new PasswordReset($user));
+            }
+        );
+
+        return $status === Password::PasswordReset
+            ? $this->noContent('Password reset successfully')
+            : $this->error('Failed to reset password', 400);
+    }
     /**
      * Delete User
      *

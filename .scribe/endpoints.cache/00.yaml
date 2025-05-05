@@ -200,7 +200,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Dah8vEPafdc45egZ6V6bk31'
+      - 'Bearer fhD63ega45bVZ1EcadP8v6k'
     controller: null
     method: null
     route: null
@@ -285,14 +285,14 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer b34gcEP56Ze6hkvVfa8d1Da'
+      - 'Bearer hd63v65DfcPVEkZgaba184e'
     controller: null
     method: null
     route: null
     custom: []
   -
     httpMethods:
-      - POST
+      - GET
     uri: 'api/v1/email/verify/{id}/{hash}'
     metadata:
       groupName: Authentication
@@ -312,7 +312,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: ad
+        example: suscipit
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -322,15 +322,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: totam
+        example: esse
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: ad
-      hash: totam
+      id: suscipit
+      hash: esse
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -366,11 +366,21 @@ endpoints:
         headers: []
         description: 'Invalid url'
         custom: []
+      -
+        status: 403
+        content: |-
+          {
+               "message": "Email already verified",
+               "status": 403
+          }
+        headers: []
+        description: 'Email already verified'
+        custom: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer Vc6f85vkZ1De3bgP4dE6aha'
+      - 'Bearer DcVh1fZa8E5366b4ePvdgka'
     controller: null
     method: null
     route: null
@@ -423,7 +433,151 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer ca61k4f6g5DEPea3vZVbhd8'
+      - 'Bearer D66haZk8cV3b1vfPeE45agd'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/forgot-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send Password Reset Link'
+      description: "Sends a password reset link to the user's email"
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user requesting the password reset link. Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@gmail.com
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Reset link sent successfully",
+               "status": 204
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+              "message": "Failed to send reset link"
+              "status": 400
+          }
+        headers: []
+        description: Failure
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/reset-password
+    metadata:
+      groupName: Authentication
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reset Password'
+      description: 'Resets the password of the user'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: 'The password reset token.'
+        required: true
+        example: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'The email address of the user. Must be a valid email address. The <code>email</code> of an existing record in the users table.'
+        required: true
+        example: johndoe@gmail.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The new password for the user. Must be at least 8 characters.'
+        required: true
+        example: newpassword123
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      token: 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+      email: johndoe@gmail.com
+      password: newpassword123
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+               "message": "Password reset successfully",
+               "status": 204
+          }
+        headers: []
+        description: Success
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+              "message": "Failed to reset password"
+              "status": 400
+          }
+        headers: []
+        description: Failure
+        custom: []
+    responseFields: []
+    auth: []
     controller: null
     method: null
     route: null
@@ -497,7 +651,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer P68haEZevd5fkbg1D463caV'
+      - 'Bearer 1Da5h6Vb46ZfPde8g3kvcEa'
     controller: null
     method: null
     route: null

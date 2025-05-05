@@ -6,13 +6,11 @@ use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
 use App\Models\ArtworkPhoto;
-use App\Models\EmailVerification;
 use App\Models\User;
 use App\Policies\ArtistVerificationRequestPolicy;
 use App\Policies\ArtworkCommentPolicy;
 use App\Policies\ArtworkPhotoPolicy;
 use App\Policies\ArtworkPolicy;
-use App\Policies\EmailVerificationPolicy;
 use App\Policies\UserPolicy;
 use App\Traits\ApiResponses;
 use Illuminate\Cache\RateLimiting\Limit;
@@ -44,7 +42,6 @@ class AppServiceProvider extends ServiceProvider
         Gate::policy(Artwork::class, ArtworkPolicy::class);
         Gate::policy(ArtworkPhoto::class, ArtworkPhotoPolicy::class);
         Gate::policy(ArtistVerificationRequest::class, ArtistVerificationRequestPolicy::class);
-        Gate::policy(EmailVerification::class, EmailVerificationPolicy::class);
 
         // rate limiting
         RateLimiter::for('follow', function (Request $request) {

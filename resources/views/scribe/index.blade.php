@@ -803,11 +803,11 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTapi-v1-email-verification-send">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Send Email Verification Code">
+                                             id="toc-item-authentication-POSTapi-v1-email-verify--id---hash-">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Verify Email">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTapi-v1-email-verification-send">
-                                                    Send Email Verification Code
+                                                   href="#authentication-POSTapi-v1-email-verify--id---hash-">
+                                                    Verify Email
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -815,47 +815,11 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTapi-v1-email-verification-verify">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Verify Email Code">
+                                             id="toc-item-authentication-POSTapi-v1-email-verification-notification">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Resend Email Verification">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTapi-v1-email-verification-verify">
-                                                    Verify Email Code
-                                                </a>
-                                            </div>
-                                                                                    </div>
-
-                                                                            </div>
-                                                                    <div class="expandable">
-                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTapi-v1-forgot-password-code-send">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Send Forgot Password Code">
-                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTapi-v1-forgot-password-code-send">
-                                                    Send Forgot Password Code
-                                                </a>
-                                            </div>
-                                                                                    </div>
-
-                                                                            </div>
-                                                                    <div class="expandable">
-                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTapi-v1-forgot-password-code-verify">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Verify Forgot Password Code">
-                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTapi-v1-forgot-password-code-verify">
-                                                    Verify Forgot Password Code
-                                                </a>
-                                            </div>
-                                                                                    </div>
-
-                                                                            </div>
-                                                                    <div class="expandable">
-                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
-                                             id="toc-item-authentication-POSTapi-v1-password-reset">
-                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="Reset Password">
-                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
-                                                   href="#authentication-POSTapi-v1-password-reset">
-                                                    Reset Password
+                                                   href="#authentication-POSTapi-v1-email-verification-notification">
+                                                    Resend Email Verification
                                                 </a>
                                             </div>
                                                                                     </div>
@@ -1245,7 +1209,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: May 3, 2025
+            Last updated: May 4, 2025
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -1718,31 +1682,49 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;status&quot;: &quot;pending&quot;,
-            &quot;reason&quot;: &quot;Dolorum et error eos vel. Qui quibusdam voluptas perferendis non. Quaerat optio incidunt voluptas et facere voluptatum.&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rf37f6em89zff1dm5dq&quot;
-        },
-        {
-            &quot;id&quot;: &quot;01jt9s1rfn9zcpq0rkmt4j2vf8&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rfe5fvjp4cjmr3x9gh3&quot;,
-            &quot;status&quot;: &quot;approved&quot;,
-            &quot;reason&quot;: &quot;Ut qui quis molestiae aut. Vel commodi soluta ipsum molestiae. Unde distinctio temporibus incidunt molestiae. Autem debitis labore iste quo culpa quas.&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;id&quot;: &quot;01jtetwrhck0r3834hxh9ext6g&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrh0w4587dtjf8abmd2c&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;reason&quot;: &quot;Omnis atque possimus non sapiente. Et earum voluptatem enim porro aspernatur. Sunt ea facere eius recusandae.&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jt9s1rfe5fvjp4cjmr3x9gh3&quot;,
-                &quot;username&quot;: &quot;Kaleb&quot;,
-                &quot;first_name&quot;: &quot;Carson&quot;,
-                &quot;last_name&quot;: &quot;Bins&quot;,
-                &quot;email&quot;: &quot;cesar.boyer@example.org&quot;,
-                &quot;country&quot;: &quot;Madagascar&quot;,
-                &quot;bio&quot;: &quot;Officiis dolore similique modi eum incidunt illo. Aperiam odit consequatur corporis quis. Magnam eum neque culpa assumenda.&quot;,
-                &quot;photo&quot;: null,
-                &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
+                &quot;id&quot;: &quot;01jtetwrh0w4587dtjf8abmd2c&quot;,
+                &quot;username&quot;: &quot;Emmitt&quot;,
+                &quot;first_name&quot;: &quot;Osvaldo&quot;,
+                &quot;last_name&quot;: &quot;Dickinson&quot;,
+                &quot;email&quot;: &quot;ohessel@example.org&quot;,
+                &quot;country&quot;: &quot;Northern Mariana Islands&quot;,
+                &quot;bio&quot;: &quot;Ducimus aperiam consequatur facere suscipit. Quo aut qui asperiores modi. Ratione consequatur harum sed esse. Accusantium libero voluptatem ad non magnam tempore aut. Repudiandae assumenda consectetur aut dolores aut.&quot;,
+                &quot;photo&quot;: &quot;artwork-seeding-photos/12.jpeg&quot;,
+                &quot;artist_verified_at&quot;: null,
                 &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;01jtetwrhvtjmb1jh3dm080e7g&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrhkyrqty6xbbn45hzek&quot;,
+            &quot;status&quot;: &quot;rejected&quot;,
+            &quot;reason&quot;: &quot;Et libero natus debitis nihil qui magnam placeat. Eaque corrupti error qui nam. Laborum esse qui aut voluptatem et consequatur. Voluptatem reprehenderit aut voluptas.&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;user&quot;: {
+                &quot;id&quot;: &quot;01jtetwrhkyrqty6xbbn45hzek&quot;,
+                &quot;username&quot;: &quot;Kane&quot;,
+                &quot;first_name&quot;: &quot;Santiago&quot;,
+                &quot;last_name&quot;: &quot;Cruickshank&quot;,
+                &quot;email&quot;: &quot;lorna01@example.org&quot;,
+                &quot;country&quot;: &quot;Ethiopia&quot;,
+                &quot;bio&quot;: &quot;Magni in odit qui dolorum ducimus. Exercitationem dignissimos ab beatae placeat. Sint alias ullam placeat hic.&quot;,
+                &quot;photo&quot;: null,
+                &quot;artist_verified_at&quot;: null,
+                &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+                &quot;role&quot;: &quot;artist&quot;,
+                &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
             }
         }
     ],
@@ -2154,12 +2136,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1rgfzzm4k2yny8f5dff0&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1rg64wzsnya4yhrqxwzp&quot;,
-        &quot;status&quot;: &quot;pending&quot;,
-        &quot;reason&quot;: &quot;Quia autem culpa omnis. Eveniet commodi suscipit perferendis veniam. Quos voluptatem odio quo cum at ipsa vel aliquid. Sapiente est ut cum vitae labore cumque impedit suscipit.&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwrjscbxgawtkfva1fck3&quot;,
+        &quot;user_id&quot;: &quot;01jtetwrjf3525dzt8yhqgbnbq&quot;,
+        &quot;status&quot;: &quot;rejected&quot;,
+        &quot;reason&quot;: &quot;Qui repudiandae itaque nesciunt sint labore facere expedita. Qui ducimus qui a laborum facere. Non architecto dolore minima sunt et qui. Nulla molestiae assumenda est eos vero nisi velit nulla.&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -2588,20 +2570,20 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1rh5c6qvkm2rae394bm6&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rgwy93jp9ee45nwexad&quot;,
-            &quot;status&quot;: &quot;rejected&quot;,
-            &quot;reason&quot;: &quot;Id nemo asperiores magni nesciunt. Earum ratione vero beatae voluptas. Reiciendis dolorem sed adipisci quis rerum.&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwrkbczhcr8rmmk5vt2gb&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrk5tm5gh24k8vefx6ve&quot;,
+            &quot;status&quot;: &quot;pending&quot;,
+            &quot;reason&quot;: &quot;Blanditiis esse quo similique porro. Eos illum perferendis ipsum impedit unde voluptatem.&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1rhe7762ce0h9r70b11h&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rh875qfyqfh1e2jzqcd&quot;,
-            &quot;status&quot;: &quot;rejected&quot;,
-            &quot;reason&quot;: &quot;Nostrum voluptatem soluta ea sed. Facere consectetur officiis illo. Optio eligendi nostrum consectetur necessitatibus officia illo. Quia magni nihil sint excepturi laboriosam omnis.&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwrkr7z73p2d5t4617ndf&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrkfgsqpsbzz4mv9aafj&quot;,
+            &quot;status&quot;: &quot;approved&quot;,
+            &quot;reason&quot;: &quot;Facilis aspernatur voluptatibus incidunt assumenda. Cupiditate molestiae illum aut. Nesciunt harum id ut architecto. Quae nihil aut sunt neque in atque.&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
@@ -2777,7 +2759,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        nemo
+                        atque
                     </div>
                 </div>
             </div>
@@ -2966,7 +2948,7 @@ fetch(url, {
                                         <input aria-label="artistVerificationRequestId" name="artistVerificationRequestId"
                                                id="urlparam-PUTapi-v1-artist-verification-requests--artistVerificationRequestId--artistVerificationRequestId"
                                                placeholder="The ID of the artist verification request to review."
-                                               value="nemo" data-component="url"
+                                               value="atque" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3090,7 +3072,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artist-verification-requests/nemo" \
+    "http://localhost:8000/api/v1/artist-verification-requests/atque" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -3106,7 +3088,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artist-verification-requests/nemo"
+    "http://localhost:8000/api/v1/artist-verification-requests/atque"
 );
 
 const headers = {
@@ -3167,12 +3149,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1rj6f3fgadhrknzntngj&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1rhyyqc8jdjetfjkrbb4&quot;,
-        &quot;status&quot;: &quot;rejected&quot;,
-        &quot;reason&quot;: &quot;Temporibus ut accusamus laboriosam blanditiis eaque nam. Quas ipsum labore est iusto qui iste voluptatem. Voluptatem distinctio quia voluptas a enim voluptatem exercitationem. Esse iste qui aspernatur.&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwrmqkfw4djybgxsjnvzb&quot;,
+        &quot;user_id&quot;: &quot;01jtetwrmde4vq32atwsa9a6yk&quot;,
+        &quot;status&quot;: &quot;pending&quot;,
+        &quot;reason&quot;: &quot;Et quaerat cupiditate repudiandae corrupti sed veniam. Commodi sint vel modi et non officiis velit. Et maiores perspiciatis minima est neque dignissimos. Ut labore qui aut consequatur beatae.&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -3345,7 +3327,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        natus
                     </div>
                 </div>
             </div>
@@ -3379,7 +3361,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        delectus
+                        praesentium
                     </div>
                 </div>
             </div>
@@ -3511,7 +3493,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-comments-artworkId"
                                                placeholder="The ID of the artwork to comment on"
-                                               value="et" data-component="url"
+                                               value="natus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3542,7 +3524,7 @@ fetch(url, {
                                      id="json-body-POSTapi-v1-artworks--artworkId--artwork-comments"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "comment_text": "delectus"
+    "comment_text": "praesentium"
 }</div>
                             </div>
                                             </div>
@@ -3634,12 +3616,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/et/artwork-comments" \
+    "http://localhost:8000/api/v1/artworks/natus/artwork-comments" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"delectus\"
+    \"comment_text\": \"praesentium\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -3649,7 +3631,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/et/artwork-comments"
+    "http://localhost:8000/api/v1/artworks/natus/artwork-comments"
 );
 
 const headers = {
@@ -3659,7 +3641,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "delectus"
+    "comment_text": "praesentium"
 };
 
 fetch(url, {
@@ -3709,12 +3691,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1r6tgzvn6pss2gxjyyy7&quot;,
-        &quot;comment_text&quot;: &quot;Sequi ipsa esse illum consequuntur.&quot;,
-        &quot;artwork_id&quot;: &quot;01jt9s1r6ac107xwzh8b0vvdnf&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1r6jwykx27rrzm89xbr8&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwr7x5wrfhzjkqskw75ek&quot;,
+        &quot;comment_text&quot;: &quot;In labore mollitia id soluta.&quot;,
+        &quot;artwork_id&quot;: &quot;01jtetwr7ka4yd6jkw242tgc9s&quot;,
+        &quot;user_id&quot;: &quot;01jtetwr7r5gpjnejhcm0kmmjb&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -3879,7 +3861,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eligendi
+                        eaque
                     </div>
                 </div>
             </div>
@@ -4012,7 +3994,7 @@ fetch(url, {
                                         <input aria-label="artworkCommentId" name="artworkCommentId"
                                                id="urlparam-DELETEapi-v1-artwork-comments--artworkCommentId--artworkCommentId"
                                                placeholder="The ID of the comment to delete"
-                                               value="eligendi" data-component="url"
+                                               value="eaque" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4108,7 +4090,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-comments/eligendi" \
+    "http://localhost:8000/api/v1/artwork-comments/eaque" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4119,7 +4101,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/eligendi"
+    "http://localhost:8000/api/v1/artwork-comments/eaque"
 );
 
 const headers = {
@@ -4338,7 +4320,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        illum
+                        doloribus
                     </div>
                 </div>
             </div>
@@ -4372,7 +4354,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        sapiente
                     </div>
                 </div>
             </div>
@@ -4504,7 +4486,7 @@ fetch(url, {
                                         <input aria-label="artworkCommentId" name="artworkCommentId"
                                                id="urlparam-PUTapi-v1-artwork-comments--artworkCommentId--artworkCommentId"
                                                placeholder="The ID of the comment to update"
-                                               value="illum" data-component="url"
+                                               value="doloribus" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4535,7 +4517,7 @@ fetch(url, {
                                      id="json-body-PUTapi-v1-artwork-comments--artworkCommentId-"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "comment_text": "aut"
+    "comment_text": "sapiente"
 }</div>
                             </div>
                                             </div>
@@ -4627,12 +4609,12 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-comments/illum" \
+    "http://localhost:8000/api/v1/artwork-comments/doloribus" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment_text\": \"aut\"
+    \"comment_text\": \"sapiente\"
 }"
 </code></pre>                                        </div>
                                     </div>
@@ -4642,7 +4624,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-comments/illum"
+    "http://localhost:8000/api/v1/artwork-comments/doloribus"
 );
 
 const headers = {
@@ -4652,7 +4634,7 @@ const headers = {
 };
 
 let body = {
-    "comment_text": "aut"
+    "comment_text": "sapiente"
 };
 
 fetch(url, {
@@ -4702,12 +4684,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1r8atzn7nwhgwqr1p15w&quot;,
-        &quot;comment_text&quot;: &quot;Repellat quidem ut quidem itaque quo.&quot;,
-        &quot;artwork_id&quot;: &quot;01jt9s1r80cvj4d414aw1c06aj&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1r840nns6z8azvykwh67&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwr9m68jzq0yea50d0fhc&quot;,
+        &quot;comment_text&quot;: &quot;Distinctio laboriosam consequuntur amet accusamus ea et.&quot;,
+        &quot;artwork_id&quot;: &quot;01jtetwr910fb8t6a5ysqbbmdf&quot;,
+        &quot;user_id&quot;: &quot;01jtetwr9aq2zejk51pbta1nkj&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -4858,7 +4840,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        nemo
+                        quam
                     </div>
                 </div>
             </div>
@@ -4955,7 +4937,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-likes-received-count-by-tag-username"
                                                placeholder="The username of the user"
-                                               value="nemo" data-component="url"
+                                               value="quam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5051,7 +5033,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/nemo/artwork-likes/received/count/by-tag" \
+    --get "http://localhost:8000/api/v1/users/quam/artwork-likes/received/count/by-tag" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -5061,7 +5043,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/nemo/artwork-likes/received/count/by-tag"
+    "http://localhost:8000/api/v1/users/quam/artwork-likes/received/count/by-tag"
 );
 
 const headers = {
@@ -5244,7 +5226,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        consectetur
+                        vel
                     </div>
                 </div>
             </div>
@@ -5341,7 +5323,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-likes-received-count-username"
                                                placeholder="The username of the user"
-                                               value="consectetur" data-component="url"
+                                               value="vel" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5437,7 +5419,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/consectetur/artwork-likes/received/count" \
+    --get "http://localhost:8000/api/v1/users/vel/artwork-likes/received/count" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -5447,7 +5429,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/consectetur/artwork-likes/received/count"
+    "http://localhost:8000/api/v1/users/vel/artwork-likes/received/count"
 );
 
 const headers = {
@@ -5643,7 +5625,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        hic
                     </div>
                 </div>
             </div>
@@ -5776,7 +5758,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-likes-artworkId"
                                                placeholder="The ID of the artwork to like"
-                                               value="et" data-component="url"
+                                               value="hic" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -5872,7 +5854,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/et/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/hic/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -5883,7 +5865,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/et/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/hic/artwork-likes"
 );
 
 const headers = {
@@ -5938,11 +5920,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1r4x8xg5n7akvb48rrtk&quot;,
-        &quot;artwork_id&quot;: &quot;01jt9s1r4gw9v0tvwnpepswdxr&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1r4n7s6dzxs3wpr4eng3&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwr5v42pq6hzq4j0rdp1y&quot;,
+        &quot;artwork_id&quot;: &quot;01jtetwr5cpg3aq7t2acz70jf0&quot;,
+        &quot;user_id&quot;: &quot;01jtetwr5mf0f0qtvba7tnjzxj&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -6107,7 +6089,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        vitae
+                        placeat
                     </div>
                 </div>
             </div>
@@ -6240,7 +6222,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--artwork-likes-artworkId"
                                                placeholder="The ID of the artwork to unlike"
-                                               value="vitae" data-component="url"
+                                               value="placeat" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6336,7 +6318,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/vitae/artwork-likes" \
+    "http://localhost:8000/api/v1/artworks/placeat/artwork-likes" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6347,7 +6329,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/vitae/artwork-likes"
+    "http://localhost:8000/api/v1/artworks/placeat/artwork-likes"
 );
 
 const headers = {
@@ -6566,7 +6548,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        in
+                        omnis
                     </div>
                 </div>
             </div>
@@ -6699,7 +6681,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--is-liking-artworkId"
                                                placeholder="The ID of the artwork to check if the authenticated user is liking"
-                                               value="in" data-component="url"
+                                               value="omnis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -6795,7 +6777,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/in/is-liking" \
+    --get "http://localhost:8000/api/v1/artworks/omnis/is-liking" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -6806,7 +6788,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/in/is-liking"
+    "http://localhost:8000/api/v1/artworks/omnis/is-liking"
 );
 
 const headers = {
@@ -7022,7 +7004,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        mollitia
+                        nulla
                     </div>
                 </div>
             </div>
@@ -7188,7 +7170,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--artwork-photos-artworkId"
                                                placeholder="The id of the artwork"
-                                               value="mollitia" data-component="url"
+                                               value="nulla" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7318,11 +7300,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/mollitia/artwork-photos" \
+    "http://localhost:8000/api/v1/artworks/nulla/artwork-photos" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "photos[]=@/tmp/phpes8evev3vbq21JhFKKd" </code></pre>                                        </div>
+    --form "photos[]=@/tmp/phpnldufnnuj4su0fKfIbJ" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -7330,7 +7312,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/mollitia/artwork-photos"
+    "http://localhost:8000/api/v1/artworks/nulla/artwork-photos"
 );
 
 const headers = {
@@ -7390,20 +7372,20 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1raq9sn62rptc4ft5pq5&quot;,
-            &quot;path&quot;: &quot;artwork-seeding-photos/16.jpeg&quot;,
+            &quot;id&quot;: &quot;01jtetwrc2fncx08dek20w1t2k&quot;,
+            &quot;path&quot;: &quot;artwork-seeding-photos/12.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: &quot;01jt9s1rafdph2mvm4yqqv7zxv&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;artwork_id&quot;: &quot;01jtetwrbv2a7ewkd2vn918rgs&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1rbbf0v514cp4828r5dp&quot;,
-            &quot;path&quot;: &quot;artwork-seeding-photos/6.jpeg&quot;,
+            &quot;id&quot;: &quot;01jtetwrcpfg1brzfn0897qb7v&quot;,
+            &quot;path&quot;: &quot;artwork-seeding-photos/2.jpeg&quot;,
             &quot;is_main&quot;: 0,
-            &quot;artwork_id&quot;: &quot;01jt9s1rb640sxcvh1fgkzgr2k&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;artwork_id&quot;: &quot;01jtetwrcjpfw18hwsr5b8207h&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -7569,7 +7551,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sed
+                        praesentium
                     </div>
                 </div>
             </div>
@@ -7702,7 +7684,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-PUTapi-v1-artwork-photos--artworkPhotoId--artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="sed" data-component="url"
+                                               value="praesentium" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -7798,7 +7780,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artwork-photos/sed" \
+    "http://localhost:8000/api/v1/artwork-photos/praesentium" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -7809,7 +7791,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/sed"
+    "http://localhost:8000/api/v1/artwork-photos/praesentium"
 );
 
 const headers = {
@@ -7864,12 +7846,12 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1rcgshntnqb4k40s3bm3&quot;,
-        &quot;path&quot;: &quot;artwork-seeding-photos/5.jpeg&quot;,
+        &quot;id&quot;: &quot;01jtetwrdm1pt9dz2rn9ry8rcx&quot;,
+        &quot;path&quot;: &quot;artwork-seeding-photos/12.jpeg&quot;,
         &quot;is_main&quot;: 0,
-        &quot;artwork_id&quot;: &quot;01jt9s1rc627jqjfj0cana7mem&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;artwork_id&quot;: &quot;01jtetwrdc7d0py9p7d3bsqf32&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -8034,7 +8016,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        unde
+                        voluptas
                     </div>
                 </div>
             </div>
@@ -8167,7 +8149,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-DELETEapi-v1-artwork-photos--artworkPhotoId--artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="unde" data-component="url"
+                                               value="voluptas" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8263,7 +8245,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artwork-photos/unde" \
+    "http://localhost:8000/api/v1/artwork-photos/voluptas" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -8274,7 +8256,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/unde"
+    "http://localhost:8000/api/v1/artwork-photos/voluptas"
 );
 
 const headers = {
@@ -8493,7 +8475,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        doloremque
+                        ut
                     </div>
                 </div>
             </div>
@@ -8527,7 +8509,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php9qc39mvsi6a0bipAgIg
+                        /tmp/phpj7hsqc6h98ef9LFmofM
                     </div>
                 </div>
             </div>
@@ -8659,7 +8641,7 @@ fetch(url, {
                                         <input aria-label="artworkPhotoId" name="artworkPhotoId"
                                                id="urlparam-POSTapi-v1-artwork-photos--artworkPhotoId--path-artworkPhotoId"
                                                placeholder="The id of the artwork photo"
-                                               value="doloremque" data-component="url"
+                                               value="ut" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -8788,11 +8770,11 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artwork-photos/doloremque/path" \
+    "http://localhost:8000/api/v1/artwork-photos/ut/path" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "photo=@/tmp/php9qc39mvsi6a0bipAgIg" </code></pre>                                        </div>
+    --form "photo=@/tmp/phpj7hsqc6h98ef9LFmofM" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -8800,7 +8782,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artwork-photos/doloremque/path"
+    "http://localhost:8000/api/v1/artwork-photos/ut/path"
 );
 
 const headers = {
@@ -9009,7 +8991,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rem
+                        odit
                     </div>
                 </div>
             </div>
@@ -9106,7 +9088,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artwork-tags-username"
                                                placeholder="The username of the user"
-                                               value="rem" data-component="url"
+                                               value="odit" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -9202,7 +9184,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/rem/artwork-tags" \
+    --get "http://localhost:8000/api/v1/users/odit/artwork-tags" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -9212,7 +9194,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/rem/artwork-tags"
+    "http://localhost:8000/api/v1/users/odit/artwork-tags"
 );
 
 const headers = {
@@ -9587,16 +9569,16 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1r98kkywra59bz7kvxfr&quot;,
-            &quot;name&quot;: &quot;Isabell Welch&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwrac0r4mtexec6rs67pd&quot;,
+            &quot;name&quot;: &quot;Ahmad Langosh DDS&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1r9bv94smns1tej35vq9&quot;,
-            &quot;name&quot;: &quot;Minnie Hilpert&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwraedjaqkgrj3zskme1w&quot;,
+            &quot;name&quot;: &quot;Angela Hammes&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -10122,57 +10104,57 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1qfc3kz8f7t98qk2e636&quot;,
-            &quot;title&quot;: &quot;Veritatis iste quidem.&quot;,
-            &quot;description&quot;: &quot;Odio perspiciatis est aut ut cupiditate. Et aut saepe et est occaecati velit quo. Perferendis omnis quidem tempora voluptas sed exercitationem. Ea libero dolorum accusamus animi non eaque.&quot;,
-            &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qekwf19pj5z3z8jm1nw&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
+            &quot;id&quot;: &quot;01jtetwqeesz9jgw0fy723jq4y&quot;,
+            &quot;title&quot;: &quot;Corrupti et.&quot;,
+            &quot;description&quot;: &quot;Perspiciatis tempore dolores omnis iste voluptatem dolores alias minus. Voluptatem nostrum atque deserunt rem neque. Et dolores repudiandae eaque tenetur harum quidem vel.&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqdqqaq21kenv8c8evqr&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null,
             &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jt9s1qekwf19pj5z3z8jm1nw&quot;,
-                &quot;username&quot;: &quot;Neil&quot;,
-                &quot;first_name&quot;: &quot;Hassan&quot;,
-                &quot;last_name&quot;: &quot;Howell&quot;,
-                &quot;email&quot;: &quot;kamryn04@example.com&quot;,
-                &quot;country&quot;: &quot;Antarctica (the territory South of 60 deg S)&quot;,
-                &quot;bio&quot;: &quot;Fugiat et consequuntur laboriosam voluptatem rerum. Nobis velit aut et necessitatibus qui distinctio consequatur. In ut rerum placeat.&quot;,
+                &quot;id&quot;: &quot;01jtetwqdqqaq21kenv8c8evqr&quot;,
+                &quot;username&quot;: &quot;Josie&quot;,
+                &quot;first_name&quot;: &quot;Brayan&quot;,
+                &quot;last_name&quot;: &quot;Wolff&quot;,
+                &quot;email&quot;: &quot;zieme.judge@example.net&quot;,
+                &quot;country&quot;: &quot;Mozambique&quot;,
+                &quot;bio&quot;: &quot;Totam assumenda repellat vitae facere aliquam optio placeat illo. Alias consequatur excepturi nam animi dicta accusantium odio. Quidem velit voluptas similique. Earum eligendi neque ducimus dolores optio molestias est iste.&quot;,
                 &quot;photo&quot;: null,
-                &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:26&quot;,
-                &quot;email_verified_at&quot;: null,
-                &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: &quot;01jt9s1qfsywdbm0a7sf90c7q6&quot;,
-            &quot;title&quot;: &quot;Adipisci earum alias.&quot;,
-            &quot;description&quot;: &quot;Nemo eveniet molestias amet molestias. Perferendis blanditiis sunt voluptatum et occaecati fugit reprehenderit. Blanditiis et aut quam aut. Dignissimos quos placeat architecto esse natus.&quot;,
-            &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qfmtth8a6es2yyk1360&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
-            &quot;artwork_likes_count&quot;: 0,
-            &quot;artwork_comments_count&quot;: 0,
-            &quot;artwork_main_photo_path&quot;: null,
-            &quot;user&quot;: {
-                &quot;id&quot;: &quot;01jt9s1qfmtth8a6es2yyk1360&quot;,
-                &quot;username&quot;: &quot;Keeley&quot;,
-                &quot;first_name&quot;: &quot;Jane&quot;,
-                &quot;last_name&quot;: &quot;Johns&quot;,
-                &quot;email&quot;: &quot;jboyer@example.net&quot;,
-                &quot;country&quot;: &quot;Wallis and Futuna&quot;,
-                &quot;bio&quot;: &quot;Omnis dolorum iure placeat. Fugit quo iusto vero. Quia praesentium facere velit fuga molestias iusto.&quot;,
-                &quot;photo&quot;: &quot;artwork-seeding-photos/23.jpeg&quot;,
                 &quot;artist_verified_at&quot;: null,
                 &quot;email_verified_at&quot;: null,
                 &quot;role&quot;: &quot;artist&quot;,
-                &quot;created_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-05-03T00:34:26.000000Z&quot;
+                &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: &quot;01jtetwqexk077by8bmkkm3gch&quot;,
+            &quot;title&quot;: &quot;Quae velit dicta.&quot;,
+            &quot;description&quot;: &quot;Nemo rerum sapiente dolores perferendis eaque. Velit porro autem sunt veritatis dolorum autem. Reiciendis eaque ut consequatur officiis dolorem eveniet aut. Iusto vitae dolore consequatur.&quot;,
+            &quot;status&quot;: &quot;published&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqeqm3bm6nf9fz9vynk7&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;artwork_likes_count&quot;: 0,
+            &quot;artwork_comments_count&quot;: 0,
+            &quot;artwork_main_photo_path&quot;: null,
+            &quot;user&quot;: {
+                &quot;id&quot;: &quot;01jtetwqeqm3bm6nf9fz9vynk7&quot;,
+                &quot;username&quot;: &quot;Terrill&quot;,
+                &quot;first_name&quot;: &quot;Casper&quot;,
+                &quot;last_name&quot;: &quot;Smith&quot;,
+                &quot;email&quot;: &quot;flavie.hill@example.net&quot;,
+                &quot;country&quot;: &quot;Ukraine&quot;,
+                &quot;bio&quot;: &quot;Blanditiis quia explicabo qui pariatur dolores. Et eum hic explicabo aut. Velit labore error ut. Praesentium eligendi doloribus ea illum ad.&quot;,
+                &quot;photo&quot;: null,
+                &quot;artist_verified_at&quot;: &quot;2025-05-04 23:42:52&quot;,
+                &quot;email_verified_at&quot;: null,
+                &quot;role&quot;: &quot;artist&quot;,
+                &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
             }
         }
     ],
@@ -10317,7 +10299,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        doloribus
+                        id
                     </div>
                 </div>
             </div>
@@ -10414,7 +10396,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="doloribus" data-component="url"
+                                               value="id" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -10510,7 +10492,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/doloribus" \
+    --get "http://localhost:8000/api/v1/artworks/id" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -10520,7 +10502,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/doloribus"
+    "http://localhost:8000/api/v1/artworks/id"
 );
 
 const headers = {
@@ -10572,10 +10554,10 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;title&quot;: &quot;Ut numquam unde ut.&quot;,
-        &quot;description&quot;: &quot;Enim omnis provident qui sequi qui. Adipisci ducimus ipsa odit minus aut doloremque non et. Officiis et a est et nemo rerum. Rerum et iste provident reprehenderit ut totam sint.&quot;,
+        &quot;title&quot;: &quot;Blanditiis veritatis cumque sapiente.&quot;,
+        &quot;description&quot;: &quot;Qui recusandae facere assumenda vel. Quas id nobis eum culpa modi ipsa aut. Amet sequi a impedit fugit. Temporibus aperiam eum odit mollitia et.&quot;,
         &quot;status&quot;: &quot;draft&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1qhqba0e1gm0bs24jzyj&quot;,
+        &quot;user_id&quot;: &quot;01jtetwqgaj7kpttkxan9j9hq7&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -11095,25 +11077,22 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1qjhjby0t0jn4t80gjb9&quot;,
-            &quot;title&quot;: &quot;Harum fuga nulla.&quot;,
-            &quot;description&quot;: &quot;Non ipsa incidunt facere quia doloribus eos. Repudiandae illo fugit necessitatibus repellendus animi non qui. Molestiae officiis harum qui.&quot;,
-            &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qja90nmvacthm9qcp8b&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;id&quot;: &quot;01jtetwqh31mqrr2s16rc5yah0&quot;,
+            &quot;title&quot;: &quot;Laborum commodi molestiae dignissimos.&quot;,
+            &quot;description&quot;: &quot;Et expedita qui totam eveniet in quibusdam aut. Impedit quibusdam nulla assumenda optio qui veniam. Nisi est delectus est expedita veritatis molestiae tenetur. Sunt quaerat ipsum blanditiis.&quot;,
+            &quot;status&quot;: &quot;draft&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqgxekk059jq2map74cp&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jt9s1qjxmxsxsbmqr4xtvj4v&quot;,
-            &quot;title&quot;: &quot;Cumque praesentium.&quot;,
-            &quot;description&quot;: &quot;Nihil sunt modi maiores minima. In aliquam qui aut libero recusandae ratione est qui. Unde consequatur odit nam blanditiis accusantium velit sapiente. Expedita neque doloremque nostrum vel. Nulla iusto mollitia dolores iste voluptatem.&quot;,
+            &quot;title&quot;: &quot;Accusamus voluptate enim ducimus.&quot;,
+            &quot;description&quot;: &quot;Et quis neque reiciendis sit consequatur. Autem eum excepturi dicta optio perspiciatis. Harum occaecati et id sed eos autem cumque impedit. Temporibus dolor numquam numquam laudantium a enim dolorum quos.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qjrt2wp144c70xe6pte&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqhfk4z4qryp11msaacj&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -11292,7 +11271,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        laudantium
+                        omnis
                     </div>
                 </div>
             </div>
@@ -11425,7 +11404,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-users-me-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="laudantium" data-component="url"
+                                               value="omnis" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -11521,7 +11500,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/me/artworks/laudantium" \
+    --get "http://localhost:8000/api/v1/users/me/artworks/omnis" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -11532,7 +11511,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/me/artworks/laudantium"
+    "http://localhost:8000/api/v1/users/me/artworks/omnis"
 );
 
 const headers = {
@@ -11586,10 +11565,10 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;title&quot;: &quot;Quasi est quos.&quot;,
-        &quot;description&quot;: &quot;Quibusdam ea architecto distinctio sint cum quam molestiae. Repellat aut sit perferendis et qui eum ipsa. Quasi eius voluptatem provident fuga rem enim autem. Et autem tenetur velit occaecati.&quot;,
+        &quot;title&quot;: &quot;Modi laboriosam.&quot;,
+        &quot;description&quot;: &quot;Cupiditate expedita totam et sapiente. Quae sed sint in eos explicabo dolorum laboriosam. Consectetur repellat reprehenderit ullam dolore repudiandae placeat.&quot;,
         &quot;status&quot;: &quot;draft&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1qmaj0sdt0c54yb9szr6&quot;,
+        &quot;user_id&quot;: &quot;01jtetwqkm9mvsas4dqacb5e0r&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -11724,7 +11703,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        facilis
+                        maiores
                     </div>
                 </div>
             </div>
@@ -11919,7 +11898,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--artworks-username"
                                                placeholder="The username of the user"
-                                               value="facilis" data-component="url"
+                                               value="maiores" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -12088,7 +12067,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/facilis/artworks?filter%5Btag%5D=graphic&amp;sort=trending&amp;page=1&amp;perPage=10" \
+    --get "http://localhost:8000/api/v1/users/maiores/artworks?filter%5Btag%5D=graphic&amp;sort=trending&amp;page=1&amp;perPage=10" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -12098,7 +12077,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/facilis/artworks"
+    "http://localhost:8000/api/v1/users/maiores/artworks"
 );
 
 const params = {
@@ -12160,25 +12139,25 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1qnd1grevcq0cz2er6d4&quot;,
-            &quot;title&quot;: &quot;Modi voluptates distinctio voluptatibus.&quot;,
-            &quot;description&quot;: &quot;Fuga earum inventore sed et sunt et maiores. Qui est vel voluptate. Nisi occaecati et voluptas aut iste voluptatibus. Sit accusamus impedit occaecati possimus aliquam aliquid.&quot;,
+            &quot;id&quot;: &quot;01jtetwqnprdq2fvhrba6tjnnc&quot;,
+            &quot;title&quot;: &quot;Illo quia aliquam nostrum.&quot;,
+            &quot;description&quot;: &quot;Aliquam voluptas tempore pariatur exercitationem delectus. Nobis architecto atque similique rerum voluptatem quis. Voluptatem odit ut ut fugit ea.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qn3gnc68s345se70jke&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqn8b7mmyv7xt1cw8whf&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jt9s1qnt3sw3x0sawk7zzsj3&quot;,
-            &quot;title&quot;: &quot;Eos laboriosam ut possimus quos.&quot;,
-            &quot;description&quot;: &quot;At non aspernatur sunt ad illum dolorem. Molestias id laborum itaque ullam. Ullam consequatur explicabo sint. Inventore deserunt ut fuga iste ullam.&quot;,
+            &quot;id&quot;: &quot;01jtetwqp9whsj2ftzazg6yq24&quot;,
+            &quot;title&quot;: &quot;Incidunt fugit ut voluptas.&quot;,
+            &quot;description&quot;: &quot;Porro aut earum quisquam molestiae. Alias eos a in. Iste eum architecto iste quam.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1qnk2wg1266f26tyxqjf&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jtetwqnzmykhf2sncvxrvzzf&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -12470,7 +12449,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/phpsqdvohhftquldljPnJB
+                        /tmp/phpuknt75pv6u0rfOpadge
                     </div>
                 </div>
             </div>
@@ -12775,7 +12754,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "description=This is an artwork description"\
     --form "tags[]=abstract"\
     --form "photos[][is_main]=1"\
-    --form "photos[][file]=@/tmp/phpsqdvohhftquldljPnJB" </code></pre>                                        </div>
+    --form "photos[][file]=@/tmp/phpuknt75pv6u0rfOpadge" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -12845,13 +12824,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qqt577bamh2a7w0kd7s&quot;,
-        &quot;title&quot;: &quot;Magnam ducimus praesentium.&quot;,
-        &quot;description&quot;: &quot;Vero aut repellendus ipsam culpa occaecati laboriosam tempora quibusdam. Tenetur quia libero expedita sed voluptate nisi. Amet alias molestias deleniti ipsam delectus rem autem natus. Eos sit repellat ea similique quam quia.&quot;,
+        &quot;id&quot;: &quot;01jtetwqrwnsxsymwg8z5k4aqt&quot;,
+        &quot;title&quot;: &quot;Ex dolorum non.&quot;,
+        &quot;description&quot;: &quot;Impedit est sed rerum recusandae ipsam et blanditiis. Quas reprehenderit molestiae aut a et corporis sint. Labore libero et soluta molestiae. Reiciendis voluptatem reiciendis voluptatibus sunt qui non nostrum. Eos dolorem aut asperiores veniam maxime enim eum atque.&quot;,
         &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1qqk5wxamy8sm2ef8fxs&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+        &quot;user_id&quot;: &quot;01jtetwqrmv74dam2yzh39cf6w&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -13008,7 +12987,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        error
+                        tenetur
                     </div>
                 </div>
             </div>
@@ -13222,7 +13201,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-PUTapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="error" data-component="url"
+                                               value="tenetur" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -13349,7 +13328,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artworks/error" \
+    "http://localhost:8000/api/v1/artworks/tenetur" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
@@ -13368,7 +13347,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/error"
+    "http://localhost:8000/api/v1/artworks/tenetur"
 );
 
 const headers = {
@@ -13432,13 +13411,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qs215ge6gj6k9cqqw9f&quot;,
-        &quot;title&quot;: &quot;Voluptas ducimus omnis et.&quot;,
-        &quot;description&quot;: &quot;Est dolor ut dolores enim nihil itaque dolor. Et explicabo sed iure voluptatem. Autem saepe harum quam quia quis. Est consequatur laborum incidunt corporis.&quot;,
+        &quot;id&quot;: &quot;01jtetwqtajk9bj4x3g4fcshp1&quot;,
+        &quot;title&quot;: &quot;Ut architecto soluta eius.&quot;,
+        &quot;description&quot;: &quot;Quia sint odit qui non et velit. Placeat rem repellendus dicta sit. In non qui est qui numquam aliquam earum. Alias incidunt sit minus consequatur.&quot;,
         &quot;status&quot;: &quot;draft&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1qrp02n2zycqdj3jw4cy&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+        &quot;user_id&quot;: &quot;01jtetwqsyyw5f1p4b8xcg0kcx&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -13606,7 +13585,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sit
+                        qui
                     </div>
                 </div>
             </div>
@@ -13739,7 +13718,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-PUTapi-v1-artworks--artworkId--publish-artworkId"
                                                placeholder="The id of the artwork"
-                                               value="sit" data-component="url"
+                                               value="qui" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -13835,7 +13814,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/v1/artworks/sit/publish" \
+    "http://localhost:8000/api/v1/artworks/qui/publish" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -13846,7 +13825,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/sit/publish"
+    "http://localhost:8000/api/v1/artworks/qui/publish"
 );
 
 const headers = {
@@ -13901,13 +13880,13 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qszh8azcx98j1zgsz7v&quot;,
-        &quot;title&quot;: &quot;Culpa quos hic vero.&quot;,
-        &quot;description&quot;: &quot;Pariatur illum ratione alias exercitationem autem nemo. Dolor hic repellat ut ad debitis aut. Magnam quaerat beatae magnam quis.&quot;,
-        &quot;status&quot;: &quot;published&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1qssmvq94pxwcynjzky6&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+        &quot;id&quot;: &quot;01jtetwqvfdnhmd90spse0j01n&quot;,
+        &quot;title&quot;: &quot;Earum atque ducimus aut.&quot;,
+        &quot;description&quot;: &quot;Accusantium eos commodi deleniti et unde. Ut rerum vel sed quibusdam et itaque ex qui. Vel eos tenetur qui est aut cumque fugit. Velit aliquid rerum a.&quot;,
+        &quot;status&quot;: &quot;draft&quot;,
+        &quot;user_id&quot;: &quot;01jtetwqty1jrzs7nz19emf32y&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;artwork_likes_count&quot;: 0,
         &quot;artwork_comments_count&quot;: 0,
         &quot;artwork_main_photo_path&quot;: null
@@ -14075,7 +14054,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ipsum
+                        molestiae
                     </div>
                 </div>
             </div>
@@ -14208,7 +14187,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--artworkId"
                                                placeholder="The id of the artwork"
-                                               value="ipsum" data-component="url"
+                                               value="molestiae" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -14304,7 +14283,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/ipsum" \
+    "http://localhost:8000/api/v1/artworks/molestiae" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -14315,7 +14294,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/ipsum"
+    "http://localhost:8000/api/v1/artworks/molestiae"
 );
 
 const headers = {
@@ -16125,14 +16104,14 @@ fetch(url, {
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTapi-v1-email-verification-send">
-                    Send Email Verification Code
+                    id="authentication-POSTapi-v1-email-verify--id---hash-">
+                    Verify Email
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://localhost:8000/api/v1/email-verification/send"
+            <div title="http://localhost:8000/api/v1/email/verify/{id}/{hash}"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -16143,7 +16122,7 @@ fetch(url, {
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:8000</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/email-verification/send</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/email/verify/{id}/{hash}</div>
                     </div>
 
                                                     <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
@@ -16153,7 +16132,7 @@ fetch(url, {
                                     </div>
         </div>
 
-        <p>Sends a verification code to the authenticated user's email</p>
+        <p>Verifies the email of the authenticated user</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -16221,6 +16200,57 @@ fetch(url, {
                                                             </div>
                         </div>
                     
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">URL Parameters</h3>
+
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">id</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The ID of the verify.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        ad
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">hash</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        totam
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
                     
 
                     
@@ -16236,7 +16266,7 @@ fetch(url, {
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
-              data-path="api/v1/email-verification/send"
+              data-path="api/v1/email/verify/{id}/{hash}"
               data-hasfiles="0"
               data-hasjsonbody="0">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
@@ -16258,13 +16288,13 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                             <label aria-hidden="true"
-                                   for="auth-POSTapi-v1-email-verification-send">Authorization</label>
+                                   for="auth-POSTapi-v1-email-verify--id---hash-">Authorization</label>
                             <span class="sl-mx-3">:</span>
                             <div class="sl-flex sl-flex-1">
                                 <div class="sl-input sl-flex-1 sl-relative">
                                     <code>Bearer </code>
                                     <input aria-label="Authorization"
-                                           id="auth-POSTapi-v1-email-verification-send"
+                                           id="auth-POSTapi-v1-email-verify--id---hash-"
                                            data-component="header"
                                            data-prefix="Bearer "
                                            name="Authorization"
@@ -16295,24 +16325,70 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                                                             <label aria-hidden="true"
-                                       for="header-POSTapi-v1-email-verification-send-Content-Type">Content-Type</label>
+                                       for="header-POSTapi-v1-email-verify--id---hash--Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTapi-v1-email-verification-send-Content-Type"
+                                               id="header-POSTapi-v1-email-verify--id---hash--Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTapi-v1-email-verification-send-Accept">Accept</label>
+                                       for="header-POSTapi-v1-email-verify--id---hash--Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-POSTapi-v1-email-verification-send-Accept"
+                                               id="header-POSTapi-v1-email-verify--id---hash--Accept"
                                                value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            URL Parameters
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                            <label aria-hidden="true"
+                                       for="urlparam-POSTapi-v1-email-verify--id---hash--id">id</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="id" name="id"
+                                               id="urlparam-POSTapi-v1-email-verify--id---hash--id"
+                                               placeholder="The ID of the verify."
+                                               value="ad" data-component="url"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                            <label aria-hidden="true"
+                                       for="urlparam-POSTapi-v1-email-verify--id---hash--hash">hash</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="hash" name="hash"
+                                               id="urlparam-POSTapi-v1-email-verify--id---hash--hash"
+                                               placeholder=""
+                                               value="totam" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -16322,10 +16398,9 @@ fetch(url, {
             
             
             
-            
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTapi-v1-email-verification-send"
+                    <button type="button" data-endpoint="POSTapi-v1-email-verify--id---hash-"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -16333,7 +16408,7 @@ fetch(url, {
                 </div>
             </div>
 
-            <div data-endpoint="POSTapi-v1-email-verification-send"
+            <div data-endpoint="POSTapi-v1-email-verify--id---hash-"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -16360,7 +16435,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="POSTapi-v1-email-verification-send"
+                <div data-endpoint="POSTapi-v1-email-verify--id---hash-"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -16409,7 +16484,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/email-verification/send" \
+    "http://localhost:8000/api/v1/email/verify/ad/totam" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -16420,7 +16495,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/email-verification/send"
+    "http://localhost:8000/api/v1/email/verify/ad/totam"
 );
 
 const headers = {
@@ -16445,12 +16520,12 @@ fetch(url, {
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-POSTapi-v1-email-verification-send-toggle sl-text-base"
+                                                        class="example-response-POSTapi-v1-email-verify--id---hash--toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('POSTapi-v1-email-verification-send', event.target.value);">
+                                                        onchange="switchExampleResponse('POSTapi-v1-email-verify--id---hash-', event.target.value);">
                                                                                                             <option value="0">200, Success</option>
-                                                                                                            <option value="1">400, Email already verified</option>
-                                                                                                            <option value="2">401, Unauthenticated</option>
+                                                                                                            <option value="1">401, Unauthenticated</option>
+                                                                                                            <option value="2">403, Invalid url</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -16467,35 +16542,35 @@ fetch(url, {
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-send example-response-POSTapi-v1-email-verification-send-0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verify--id---hash- example-response-POSTapi-v1-email-verify--id---hash--0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Verification code sent successfully&quot;,
+    &quot;message&quot;: &quot;Email verified successfully&quot;,
     &quot;status&quot;: 204
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-send example-response-POSTapi-v1-email-verification-send-1"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Email already verified&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-send example-response-POSTapi-v1-email-verification-send-2"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verify--id---hash- example-response-POSTapi-v1-email-verify--id---hash--1"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;message&quot;: &quot;Unauthenticated&quot;
+}</code></pre>
+                                                                            </div>
+                                </div>
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verify--id---hash- example-response-POSTapi-v1-email-verify--id---hash--2"
+                                     style=" display: none;"
+                                >
+                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
+                                            <pre><code style="max-height: 300px;"
+                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
+    &quot;message&quot;: &quot;Invalid url&quot;,
+    &quot;status&quot;: 403
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -16509,14 +16584,14 @@ fetch(url, {
         <div class="sl-relative">
             <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
                 <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTapi-v1-email-verification-verify">
-                    Verify Email Code
+                    id="authentication-POSTapi-v1-email-verification-notification">
+                    Resend Email Verification
                 </h2>
             </div>
         </div>
 
         <div class="sl-relative">
-            <div title="http://localhost:8000/api/v1/email-verification/verify"
+            <div title="http://localhost:8000/api/v1/email/verification-notification"
                      class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
                 >
                                             <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
@@ -16527,7 +16602,7 @@ fetch(url, {
                                         <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
                         <div dir="rtl"
                              class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:8000</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/email-verification/verify</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/email/verification-notification</div>
                     </div>
 
                                                     <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
@@ -16537,7 +16612,7 @@ fetch(url, {
                                     </div>
         </div>
 
-        <p>Verifies the email verification code</p>
+        <p>Resends the email verification notification to the authenticated user</p>
     </div>
     <div class="sl-flex">
         <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
@@ -16608,39 +16683,6 @@ fetch(url, {
                     
 
                     
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">code</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The verification code sent to the user's email.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        123456
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-                            </div>
-                        </div>
                     
                                     </div>
             </div>
@@ -16653,9 +16695,9 @@ fetch(url, {
     <div class="sl-overflow-y-hidden sl-rounded-lg">
         <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
               data-method="POST"
-              data-path="api/v1/email-verification/verify"
+              data-path="api/v1/email/verification-notification"
               data-hasfiles="0"
-              data-hasjsonbody="1">
+              data-hasjsonbody="0">
                             <div class="sl-panel sl-outline-none sl-w-full expandable">
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -16675,13 +16717,13 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                             <label aria-hidden="true"
-                                   for="auth-POSTapi-v1-email-verification-verify">Authorization</label>
+                                   for="auth-POSTapi-v1-email-verification-notification">Authorization</label>
                             <span class="sl-mx-3">:</span>
                             <div class="sl-flex sl-flex-1">
                                 <div class="sl-input sl-flex-1 sl-relative">
                                     <code>Bearer </code>
                                     <input aria-label="Authorization"
-                                           id="auth-POSTapi-v1-email-verification-verify"
+                                           id="auth-POSTapi-v1-email-verification-notification"
                                            data-component="header"
                                            data-prefix="Bearer "
                                            name="Authorization"
@@ -16712,23 +16754,23 @@ fetch(url, {
                     <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
                         <div class="ParameterGrid sl-p-4">
                                                                                                                             <label aria-hidden="true"
-                                       for="header-POSTapi-v1-email-verification-verify-Content-Type">Content-Type</label>
+                                       for="header-POSTapi-v1-email-verification-notification-Content-Type">Content-Type</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTapi-v1-email-verification-verify-Content-Type"
+                                               id="header-POSTapi-v1-email-verification-notification-Content-Type"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
                                                                                             <label aria-hidden="true"
-                                       for="header-POSTapi-v1-email-verification-verify-Accept">Accept</label>
+                                       for="header-POSTapi-v1-email-verification-notification-Accept">Accept</label>
                                 <span class="sl-mx-3">:</span>
                                 <div class="sl-flex sl-flex-1">
                                     <div class="sl-input sl-flex-1 sl-relative">
                                         <input aria-label="Accept" name="Accept"
-                                               id="header-POSTapi-v1-email-verification-verify-Accept"
+                                               id="header-POSTapi-v1-email-verification-notification-Accept"
                                                value="application/json" data-component="header"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
@@ -16739,37 +16781,10 @@ fetch(url, {
             
             
             
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Body
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-v1-email-verification-verify"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "code": "123456"
-}</div>
-                            </div>
-                                            </div>
-                </div>
             
             <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
                 <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTapi-v1-email-verification-verify"
+                    <button type="button" data-endpoint="POSTapi-v1-email-verification-notification"
                             class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
                     >
                         Send Request 💥
@@ -16777,7 +16792,7 @@ fetch(url, {
                 </div>
             </div>
 
-            <div data-endpoint="POSTapi-v1-email-verification-verify"
+            <div data-endpoint="POSTapi-v1-email-verification-notification"
                  class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
                 <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                      role="button">
@@ -16804,7 +16819,7 @@ You can check the Dev Tools console for debugging information.</p>
                 </div>
             </div>
 
-                <div data-endpoint="POSTapi-v1-email-verification-verify"
+                <div data-endpoint="POSTapi-v1-email-verification-notification"
                      class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
                     <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
                          role="button">
@@ -16853,14 +16868,10 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/email-verification/verify" \
+    "http://localhost:8000/api/v1/email/verification-notification" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"code\": \"123456\"
-}"
-</code></pre>                                        </div>
+    --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -16868,7 +16879,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/email-verification/verify"
+    "http://localhost:8000/api/v1/email/verification-notification"
 );
 
 const headers = {
@@ -16877,14 +16888,9 @@ const headers = {
     "Accept": "application/json",
 };
 
-let body = {
-    "code": "123456"
-};
-
 fetch(url, {
     method: "POST",
     headers,
-    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre>                                        </div>
                                     </div>
                                 </div>
@@ -16898,13 +16904,11 @@ fetch(url, {
                                             <div class="sl-mb-2 sl-inline-block">Example response:</div>
                                             <div class="sl-mb-2 sl-inline-block">
                                                 <select
-                                                        class="example-response-POSTapi-v1-email-verification-verify-toggle sl-text-base"
+                                                        class="example-response-POSTapi-v1-email-verification-notification-toggle sl-text-base"
                                                         aria-label="Response sample"
-                                                        onchange="switchExampleResponse('POSTapi-v1-email-verification-verify', event.target.value);">
+                                                        onchange="switchExampleResponse('POSTapi-v1-email-verification-notification', event.target.value);">
                                                                                                             <option value="0">200, Success</option>
-                                                                                                            <option value="1">400, Invalid code</option>
-                                                                                                            <option value="2">400, Email already verified</option>
-                                                                                                            <option value="3">401, Unauthenticated</option>
+                                                                                                            <option value="1">401, Unauthenticated</option>
                                                                                                     </select></div>
                                         </div>
                                     </div>
@@ -16921,1309 +16925,24 @@ fetch(url, {
                                     </div>
                                 </button>
                             </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-verify example-response-POSTapi-v1-email-verification-verify-0"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-notification example-response-POSTapi-v1-email-verification-notification-0"
                                      style=" "
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Email verified successfully&quot;,
+    &quot;message&quot;: &quot;Verification link sent!&quot;,
     &quot;status&quot;: 204
 }</code></pre>
                                                                             </div>
                                 </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-verify example-response-POSTapi-v1-email-verification-verify-1"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Invalid code&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-verify example-response-POSTapi-v1-email-verification-verify-2"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Email already verified&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-verify example-response-POSTapi-v1-email-verification-verify-3"
+                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-email-verification-notification example-response-POSTapi-v1-email-verification-notification-1"
                                      style=" display: none;"
                                 >
                                     <div class="sl-panel__content sl-p-0">                                                                                                                                
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;message&quot;: &quot;Unauthenticated&quot;
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                    </div>
-                            </div>
-    </div>
-</div>
-
-                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
-    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-        <div class="sl-relative">
-            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
-                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTapi-v1-forgot-password-code-send">
-                    Send Forgot Password Code
-                </h2>
-            </div>
-        </div>
-
-        <div class="sl-relative">
-            <div title="http://localhost:8000/api/v1/forgot-password-code/send"
-                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
-                >
-                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
-                             style="background-color: black;"
-                        >
-                            POST
-                        </div>
-                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
-                        <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:8000</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/forgot-password-code/send</div>
-                    </div>
-
-                                    </div>
-        </div>
-
-        <p>Sends a forgot password code to the user's email</p>
-    </div>
-    <div class="sl-flex">
-        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
-            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
-                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
-                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
-                                Headers
-                            </h3>
-                            <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                            </div>
-                        </div>
-                    
-                    
-
-                    
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">email</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The email of the user. Must be a valid email address. The <code>email</code> of an existing record in the users table.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        johndoe@gmail.com
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-                            </div>
-                        </div>
-                    
-                                    </div>
-            </div>
-        </div>
-
-        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
-            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-
-                                    <div class="sl-inverted">
-    <div class="sl-overflow-y-hidden sl-rounded-lg">
-        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
-              data-method="POST"
-              data-path="api/v1/forgot-password-code/send"
-              data-hasfiles="0"
-              data-hasjsonbody="1">
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Headers
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-forgot-password-code-send-Content-Type">Content-Type</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTapi-v1-forgot-password-code-send-Content-Type"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-forgot-password-code-send-Accept">Accept</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Accept" name="Accept"
-                                               id="header-POSTapi-v1-forgot-password-code-send-Accept"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                    </div>
-                    </div>
-                </div>
-            
-            
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Body
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-v1-forgot-password-code-send"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "email": "johndoe@gmail.com"
-}</div>
-                            </div>
-                                            </div>
-                </div>
-            
-            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
-                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTapi-v1-forgot-password-code-send"
-                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
-                    >
-                        Send Request 💥
-                    </button>
-                </div>
-            </div>
-
-            <div data-endpoint="POSTapi-v1-forgot-password-code-send"
-                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
-                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                     role="button">
-                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                 data-icon="caret-down"
-                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path fill="currentColor"
-                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                            </svg>
-                        </div>
-                        Request failed with error
-                    </div>
-                </div>
-                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                    <div class="sl-panel__content sl-p-4">
-                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
-                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</p>
-                    </div>
-                </div>
-            </div>
-
-                <div data-endpoint="POSTapi-v1-forgot-password-code-send"
-                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Received response
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="sl-panel__content sl-p-4">
-                            <p class="sl-pb-2 response-status"></p>
-                            <pre><code class="sl-pb-2 response-content language-json"
-                                       data-empty-response-text="<Empty response>"
-                                       style="max-height: 300px;"></code></pre>
-                        </div>
-                    </div>
-                </div>
-        </form>
-    </div>
-</div>
-                
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                                    <div class="sl--ml-2">
-                                        Example request:
-                                        <select class="example-request-lang-toggle sl-text-base"
-                                                aria-label="Request Sample Language"
-                                                onchange="switchExampleLanguage(event.target.value);">
-                                                                                            <option>bash</option>
-                                                                                            <option>javascript</option>
-                                                                                    </select>
-                                    </div>
-                                </div>
-                            </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
-                                     style="">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/forgot-password-code/send" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"johndoe@gmail.com\"
-}"
-</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
-                                     style="display: none;">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/forgot-password-code/send"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "johndoe@gmail.com"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                    </div>
-                    
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
-                                    <div class="sl--ml-2">
-                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
-                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
-                                            <div class="sl-mb-2 sl-inline-block">
-                                                <select
-                                                        class="example-response-POSTapi-v1-forgot-password-code-send-toggle sl-text-base"
-                                                        aria-label="Response sample"
-                                                        onchange="switchExampleResponse('POSTapi-v1-forgot-password-code-send', event.target.value);">
-                                                                                                            <option value="0">200, Success</option>
-                                                                                                    </select></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
-                                    <div class="sl-mx-0">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
-                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path fill="currentColor"
-                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-forgot-password-code-send example-response-POSTapi-v1-forgot-password-code-send-0"
-                                     style=" "
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Forgot password code sent successfully&quot;,
-    &quot;status&quot;: 204
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                    </div>
-                            </div>
-    </div>
-</div>
-
-                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
-    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-        <div class="sl-relative">
-            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
-                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTapi-v1-forgot-password-code-verify">
-                    Verify Forgot Password Code
-                </h2>
-            </div>
-        </div>
-
-        <div class="sl-relative">
-            <div title="http://localhost:8000/api/v1/forgot-password-code/verify"
-                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
-                >
-                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
-                             style="background-color: black;"
-                        >
-                            POST
-                        </div>
-                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
-                        <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:8000</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/forgot-password-code/verify</div>
-                    </div>
-
-                                    </div>
-        </div>
-
-        <p>Verifies the forgot password code sent to the user's email</p>
-    </div>
-    <div class="sl-flex">
-        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
-            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
-                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
-                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
-                                Headers
-                            </h3>
-                            <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                            </div>
-                        </div>
-                    
-                    
-
-                    
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">email</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The email address of the user requesting password reset. Must be a valid email address. The <code>email</code> of an existing record in the users table.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        johndoe@gmail.com
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">code</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The verification code sent to the user's email. Must be 6 characters.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        123456
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-                            </div>
-                        </div>
-                    
-                                    </div>
-            </div>
-        </div>
-
-        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
-            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-
-                                    <div class="sl-inverted">
-    <div class="sl-overflow-y-hidden sl-rounded-lg">
-        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
-              data-method="POST"
-              data-path="api/v1/forgot-password-code/verify"
-              data-hasfiles="0"
-              data-hasjsonbody="1">
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Headers
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-forgot-password-code-verify-Content-Type">Content-Type</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTapi-v1-forgot-password-code-verify-Content-Type"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-forgot-password-code-verify-Accept">Accept</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Accept" name="Accept"
-                                               id="header-POSTapi-v1-forgot-password-code-verify-Accept"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                    </div>
-                    </div>
-                </div>
-            
-            
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Body
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-v1-forgot-password-code-verify"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "email": "johndoe@gmail.com",
-    "code": "123456"
-}</div>
-                            </div>
-                                            </div>
-                </div>
-            
-            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
-                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTapi-v1-forgot-password-code-verify"
-                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
-                    >
-                        Send Request 💥
-                    </button>
-                </div>
-            </div>
-
-            <div data-endpoint="POSTapi-v1-forgot-password-code-verify"
-                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
-                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                     role="button">
-                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                 data-icon="caret-down"
-                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path fill="currentColor"
-                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                            </svg>
-                        </div>
-                        Request failed with error
-                    </div>
-                </div>
-                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                    <div class="sl-panel__content sl-p-4">
-                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
-                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</p>
-                    </div>
-                </div>
-            </div>
-
-                <div data-endpoint="POSTapi-v1-forgot-password-code-verify"
-                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Received response
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="sl-panel__content sl-p-4">
-                            <p class="sl-pb-2 response-status"></p>
-                            <pre><code class="sl-pb-2 response-content language-json"
-                                       data-empty-response-text="<Empty response>"
-                                       style="max-height: 300px;"></code></pre>
-                        </div>
-                    </div>
-                </div>
-        </form>
-    </div>
-</div>
-                
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                                    <div class="sl--ml-2">
-                                        Example request:
-                                        <select class="example-request-lang-toggle sl-text-base"
-                                                aria-label="Request Sample Language"
-                                                onchange="switchExampleLanguage(event.target.value);">
-                                                                                            <option>bash</option>
-                                                                                            <option>javascript</option>
-                                                                                    </select>
-                                    </div>
-                                </div>
-                            </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
-                                     style="">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/forgot-password-code/verify" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"johndoe@gmail.com\",
-    \"code\": \"123456\"
-}"
-</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
-                                     style="display: none;">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/forgot-password-code/verify"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "johndoe@gmail.com",
-    "code": "123456"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                    </div>
-                    
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
-                                    <div class="sl--ml-2">
-                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
-                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
-                                            <div class="sl-mb-2 sl-inline-block">
-                                                <select
-                                                        class="example-response-POSTapi-v1-forgot-password-code-verify-toggle sl-text-base"
-                                                        aria-label="Response sample"
-                                                        onchange="switchExampleResponse('POSTapi-v1-forgot-password-code-verify', event.target.value);">
-                                                                                                            <option value="0">200, Success</option>
-                                                                                                            <option value="1">400, Invalid code</option>
-                                                                                                            <option value="2">400, Code expired</option>
-                                                                                                            <option value="3">404, User not found</option>
-                                                                                                    </select></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
-                                    <div class="sl-mx-0">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
-                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path fill="currentColor"
-                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-forgot-password-code-verify example-response-POSTapi-v1-forgot-password-code-verify-0"
-                                     style=" "
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Code verified successfully&quot;,
-    &quot;data&quot;: {
-        &quot;token&quot;: &quot;flsqjdfmjfqlsjkf&quot;
-    },
-    &quot;status&quot;: 200
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-forgot-password-code-verify example-response-POSTapi-v1-forgot-password-code-verify-1"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Invalid code&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-forgot-password-code-verify example-response-POSTapi-v1-forgot-password-code-verify-2"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Code expired&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-forgot-password-code-verify example-response-POSTapi-v1-forgot-password-code-verify-3"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;User not found&quot;,
-    &quot;status&quot;: 404
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                    </div>
-                            </div>
-    </div>
-</div>
-
-                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
-    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-        <div class="sl-relative">
-            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
-                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
-                    id="authentication-POSTapi-v1-password-reset">
-                    Reset Password
-                </h2>
-            </div>
-        </div>
-
-        <div class="sl-relative">
-            <div title="http://localhost:8000/api/v1/password/reset"
-                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
-                >
-                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
-                             style="background-color: black;"
-                        >
-                            POST
-                        </div>
-                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
-                        <div dir="rtl"
-                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://localhost:8000</div>
-                        <div class="sl-flex-1 sl-font-semibold">/api/v1/password/reset</div>
-                    </div>
-
-                                    </div>
-        </div>
-
-        <p>Resets the user's password</p>
-    </div>
-    <div class="sl-flex">
-        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
-            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
-                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
-                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
-                                Headers
-                            </h3>
-                            <div class="sl-text-sm">
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
-                                    </div>
-                                    </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        application/json
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-                                                            </div>
-                        </div>
-                    
-                    
-
-                    
-                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
-
-                                <div class="sl-text-sm">
-                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">email</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The email address of the user requesting the password reset. Must be a valid email address. The <code>email</code> of an existing record in the users table.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        johndoe@gmail.com
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">new_password</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The new password for the user. Must be at least 8 characters.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        newpassword123
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
-        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
-    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
-    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
-        <div class="sl-flex sl-items-center sl-max-w-full">
-                                        <div class="sl-flex sl-items-baseline sl-text-base">
-                    <div class="sl-font-mono sl-font-semibold sl-mr-2">token</div>
-                                            <span class="sl-truncate sl-text-muted">string</span>
-                                    </div>
-                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
-                    <span class="sl-ml-2 sl-text-warning">required</span>
-                                    </div>
-                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
-            <p>The password reset token.</p>
-        </div>
-                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
-                <span>Example:</span> <!-- <span> important for spacing -->
-                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
-                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        1234567890abcdef
-                    </div>
-                </div>
-            </div>
-            </div>
-</div>
-
-            </div>
-                            </div>
-                        </div>
-                    
-                                    </div>
-            </div>
-        </div>
-
-        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
-            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
-
-                                    <div class="sl-inverted">
-    <div class="sl-overflow-y-hidden sl-rounded-lg">
-        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
-              data-method="POST"
-              data-path="api/v1/password/reset"
-              data-hasfiles="0"
-              data-hasjsonbody="1">
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Headers
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="ParameterGrid sl-p-4">
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-password-reset-Content-Type">Content-Type</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Content-Type" name="Content-Type"
-                                               id="header-POSTapi-v1-password-reset-Content-Type"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                                                            <label aria-hidden="true"
-                                       for="header-POSTapi-v1-password-reset-Accept">Accept</label>
-                                <span class="sl-mx-3">:</span>
-                                <div class="sl-flex sl-flex-1">
-                                    <div class="sl-input sl-flex-1 sl-relative">
-                                        <input aria-label="Accept" name="Accept"
-                                               id="header-POSTapi-v1-password-reset-Accept"
-                                               value="application/json" data-component="header"
-                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
-                                    </div>
-                                </div>
-                                                    </div>
-                    </div>
-                </div>
-            
-            
-            
-                            <div class="sl-panel sl-outline-none sl-w-full expandable">
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Body
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                                                    <div class="TextRequestBody sl-p-4">
-                                <div class="code-editor language-json"
-                                     id="json-body-POSTapi-v1-password-reset"
-                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
-                                >{
-    "email": "johndoe@gmail.com",
-    "new_password": "newpassword123",
-    "token": "1234567890abcdef"
-}</div>
-                            </div>
-                                            </div>
-                </div>
-            
-            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
-                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
-                    <button type="button" data-endpoint="POSTapi-v1-password-reset"
-                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
-                    >
-                        Send Request 💥
-                    </button>
-                </div>
-            </div>
-
-            <div data-endpoint="POSTapi-v1-password-reset"
-                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
-                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                     role="button">
-                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                 data-icon="caret-down"
-                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path fill="currentColor"
-                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                            </svg>
-                        </div>
-                        Request failed with error
-                    </div>
-                </div>
-                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                    <div class="sl-panel__content sl-p-4">
-                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
-                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</p>
-                    </div>
-                </div>
-            </div>
-
-                <div data-endpoint="POSTapi-v1-password-reset"
-                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
-                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
-                         role="button">
-                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
-                                     data-icon="caret-down"
-                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                    <path fill="currentColor"
-                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
-                                </svg>
-                            </div>
-                            Received response
-                        </div>
-                    </div>
-                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
-                        <div class="sl-panel__content sl-p-4">
-                            <p class="sl-pb-2 response-status"></p>
-                            <pre><code class="sl-pb-2 response-content language-json"
-                                       data-empty-response-text="<Empty response>"
-                                       style="max-height: 300px;"></code></pre>
-                        </div>
-                    </div>
-                </div>
-        </form>
-    </div>
-</div>
-                
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
-                                    <div class="sl--ml-2">
-                                        Example request:
-                                        <select class="example-request-lang-toggle sl-text-base"
-                                                aria-label="Request Sample Language"
-                                                onchange="switchExampleLanguage(event.target.value);">
-                                                                                            <option>bash</option>
-                                                                                            <option>javascript</option>
-                                                                                    </select>
-                                    </div>
-                                </div>
-                            </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-bash"
-                                     style="">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/password/reset" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json" \
-    --data "{
-    \"email\": \"johndoe@gmail.com\",
-    \"new_password\": \"newpassword123\",
-    \"token\": \"1234567890abcdef\"
-}"
-</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
-                                     style="display: none;">
-                                    <div class="sl-px-0 sl-py-1">
-                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
-                                            <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/password/reset"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-let body = {
-    "email": "johndoe@gmail.com",
-    "new_password": "newpassword123",
-    "token": "1234567890abcdef"
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-    body: JSON.stringify(body),
-}).then(response =&gt; response.json());</code></pre>                                        </div>
-                                    </div>
-                                </div>
-                                                    </div>
-                    
-                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
-                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
-                                <div class="sl-flex sl-flex-1 sl-items-center sl-py-2">
-                                    <div class="sl--ml-2">
-                                        <div class="sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-text-muted sl-rounded sl-border-transparent sl-border">
-                                            <div class="sl-mb-2 sl-inline-block">Example response:</div>
-                                            <div class="sl-mb-2 sl-inline-block">
-                                                <select
-                                                        class="example-response-POSTapi-v1-password-reset-toggle sl-text-base"
-                                                        aria-label="Response sample"
-                                                        onchange="switchExampleResponse('POSTapi-v1-password-reset', event.target.value);">
-                                                                                                            <option value="0">200, Success</option>
-                                                                                                            <option value="1">400, Invalid token</option>
-                                                                                                            <option value="2">404, User not found</option>
-                                                                                                    </select></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button"
-                                        class="sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 hover:sl-bg-canvas-50 active:sl-bg-canvas-100 sl-text-muted hover:sl-text-body focus:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70">
-                                    <div class="sl-mx-0">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="copy"
-                                             class="svg-inline--fa fa-copy fa-fw fa-sm sl-icon" role="img"
-                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                            <path fill="currentColor"
-                                                  d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
-                            </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-password-reset example-response-POSTapi-v1-password-reset-0"
-                                     style=" "
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Password reset successfully&quot;,
-    &quot;status&quot;: 204
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-password-reset example-response-POSTapi-v1-password-reset-1"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;Invalid token&quot;,
-    &quot;status&quot;: 400
-}</code></pre>
-                                                                            </div>
-                                </div>
-                                                            <div class="sl-panel__content-wrapper sl-bg-canvas-100 example-response-POSTapi-v1-password-reset example-response-POSTapi-v1-password-reset-2"
-                                     style=" display: none;"
-                                >
-                                    <div class="sl-panel__content sl-p-0">                                                                                                                                
-                                            <pre><code style="max-height: 300px;"
-                                                       class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
-    &quot;message&quot;: &quot;User not found&quot;,
-    &quot;status&quot;: 404
 }</code></pre>
                                                                             </div>
                                 </div>
@@ -19402,16 +18121,16 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1rnvspqbm45rs47y6naz&quot;,
-            &quot;name&quot;: &quot;Bermuda&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwrs5cz22hdkhpejm5sjv&quot;,
+            &quot;name&quot;: &quot;Belgium&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1rnyqcsr6n37gspaxpej&quot;,
-            &quot;name&quot;: &quot;Azerbaijan&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+            &quot;id&quot;: &quot;01jtetwrsa8rbcdgdda808dyxg&quot;,
+            &quot;name&quot;: &quot;Germany&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -20123,25 +18842,25 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1rjyfyz213bszhbj05ac&quot;,
-            &quot;title&quot;: &quot;Enim qui nisi et.&quot;,
-            &quot;description&quot;: &quot;Adipisci officia rerum nihil quis deserunt voluptatem. Nesciunt nisi maxime est blanditiis. Quasi magni fuga est et culpa.&quot;,
+            &quot;id&quot;: &quot;01jtetwrnewbt8b1231w9hfjj3&quot;,
+            &quot;title&quot;: &quot;Sint iste rerum sint.&quot;,
+            &quot;description&quot;: &quot;Recusandae veniam repellat optio voluptatem voluptatem pariatur et. Totam corrupti aut est repellendus ducimus aut. Tempore quae optio culpa ea vero velit numquam.&quot;,
             &quot;status&quot;: &quot;draft&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rjrvszmvw5y35qdd9gv&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrn6229610n12mbbtsja&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
         },
         {
-            &quot;id&quot;: &quot;01jt9s1rkcfkw62mzjrw8y6t6k&quot;,
-            &quot;title&quot;: &quot;Vero necessitatibus nihil rerum.&quot;,
-            &quot;description&quot;: &quot;Commodi magni nulla et reiciendis. Delectus omnis exercitationem nam aut. Non qui consequatur hic totam voluptatem.&quot;,
+            &quot;id&quot;: &quot;01jtetwrnx9r4x2bk4jjh0y3jw&quot;,
+            &quot;title&quot;: &quot;Ea ut amet.&quot;,
+            &quot;description&quot;: &quot;Quo vel consequatur eveniet laboriosam delectus voluptatem quidem. Et quod dicta sed ratione aut autem facilis beatae. Iure consequatur harum perferendis deserunt mollitia qui. Nihil quibusdam a assumenda dolore.&quot;,
             &quot;status&quot;: &quot;published&quot;,
-            &quot;user_id&quot;: &quot;01jt9s1rk573g99p8kcgzcsp3y&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
+            &quot;user_id&quot;: &quot;01jtetwrnpgf8c8k3bjygd69hs&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
             &quot;artwork_likes_count&quot;: 0,
             &quot;artwork_comments_count&quot;: 0,
             &quot;artwork_main_photo_path&quot;: null
@@ -20288,7 +19007,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        veniam
+                        est
                     </div>
                 </div>
             </div>
@@ -20421,7 +19140,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-POSTapi-v1-artworks--artworkId--favorites-artworkId"
                                                placeholder="The ID of the artwork to mark as favorite"
-                                               value="veniam" data-component="url"
+                                               value="est" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20517,7 +19236,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/artworks/veniam/favorites" \
+    "http://localhost:8000/api/v1/artworks/est/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -20528,7 +19247,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/veniam/favorites"
+    "http://localhost:8000/api/v1/artworks/est/favorites"
 );
 
 const headers = {
@@ -20583,11 +19302,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1rmv5g9txjp1x3h10xea&quot;,
-        &quot;artwork_id&quot;: &quot;01jt9s1rmcerswc6ppz6jtjqv7&quot;,
-        &quot;user_id&quot;: &quot;01jt9s1rmkacdzhsgdzaqwetv3&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:28.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwrqpy1xptq3094tkseek&quot;,
+        &quot;artwork_id&quot;: &quot;01jtetwrq93s8czxyr2myk63bz&quot;,
+        &quot;user_id&quot;: &quot;01jtetwrqfczpr5z57zp2m03ym&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -20752,7 +19471,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        repellendus
+                        quod
                     </div>
                 </div>
             </div>
@@ -20885,7 +19604,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-DELETEapi-v1-artworks--artworkId--favorites-artworkId"
                                                placeholder="The ID of the artwork to remove from favorites"
-                                               value="repellendus" data-component="url"
+                                               value="quod" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -20981,7 +19700,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/artworks/repellendus/favorites" \
+    "http://localhost:8000/api/v1/artworks/quod/favorites" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -20992,7 +19711,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/repellendus/favorites"
+    "http://localhost:8000/api/v1/artworks/quod/favorites"
 );
 
 const headers = {
@@ -21211,7 +19930,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        quia
+                        harum
                     </div>
                 </div>
             </div>
@@ -21344,7 +20063,7 @@ fetch(url, {
                                         <input aria-label="artworkId" name="artworkId"
                                                id="urlparam-GETapi-v1-artworks--artworkId--favorites-is-favoriting-artworkId"
                                                placeholder="The ID of the artwork to check if the authenticated user is favoriting"
-                                               value="quia" data-component="url"
+                                               value="harum" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -21440,7 +20159,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/artworks/quia/favorites/is-favoriting" \
+    --get "http://localhost:8000/api/v1/artworks/harum/favorites/is-favoriting" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -21451,7 +20170,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/artworks/quia/favorites/is-favoriting"
+    "http://localhost:8000/api/v1/artworks/harum/favorites/is-favoriting"
 );
 
 const headers = {
@@ -21898,34 +20617,34 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1qzx62py2gcv34dfdb31&quot;,
-            &quot;username&quot;: &quot;Mac&quot;,
-            &quot;first_name&quot;: &quot;Milo&quot;,
-            &quot;last_name&quot;: &quot;McGlynn&quot;,
-            &quot;email&quot;: &quot;kareem.rau@example.net&quot;,
-            &quot;country&quot;: &quot;Iran&quot;,
-            &quot;bio&quot;: &quot;Beatae sequi omnis quas vitae possimus. Facilis corporis non commodi cupiditate aut consequuntur doloremque. Qui unde voluptatibus ad ad. Est neque atque animi est ut.&quot;,
-            &quot;photo&quot;: &quot;artwork-seeding-photos/14.jpeg&quot;,
-            &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;id&quot;: &quot;01jtetwr0fk4papy5d9gbkpcyh&quot;,
+            &quot;username&quot;: &quot;Peter&quot;,
+            &quot;first_name&quot;: &quot;Roxanne&quot;,
+            &quot;last_name&quot;: &quot;Bradtke&quot;,
+            &quot;email&quot;: &quot;perry06@example.net&quot;,
+            &quot;country&quot;: &quot;Norway&quot;,
+            &quot;bio&quot;: &quot;Quo consequuntur vel nostrum quae. Et cumque sed dolores quam est. Beatae et deleniti sunt. Ducimus ex quia velit ducimus.&quot;,
+            &quot;photo&quot;: null,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1r07680yd1nnsk5dtq85&quot;,
-            &quot;username&quot;: &quot;Dulce&quot;,
-            &quot;first_name&quot;: &quot;Shanna&quot;,
-            &quot;last_name&quot;: &quot;Goyette&quot;,
-            &quot;email&quot;: &quot;kathryn.parisian@example.net&quot;,
-            &quot;country&quot;: &quot;Macao&quot;,
-            &quot;bio&quot;: &quot;Sunt est minima voluptate vitae velit ullam nihil. Quae quia qui illum molestiae tempore aut. Debitis minus dignissimos quo ut odit aliquam ratione. Sint laboriosam illum blanditiis et quis quam.&quot;,
-            &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+            &quot;id&quot;: &quot;01jtetwr0t2cs2rskdjarh6hap&quot;,
+            &quot;username&quot;: &quot;Maxwell&quot;,
+            &quot;first_name&quot;: &quot;Jonatan&quot;,
+            &quot;last_name&quot;: &quot;Senger&quot;,
+            &quot;email&quot;: &quot;zemlak.verna@example.com&quot;,
+            &quot;country&quot;: &quot;Sierra Leone&quot;,
+            &quot;bio&quot;: &quot;Expedita sit blanditiis quia saepe accusamus. Unde aliquam quaerat adipisci. Beatae sunt quia expedita voluptatem.&quot;,
+            &quot;photo&quot;: &quot;artwork-seeding-photos/18.jpeg&quot;,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: null,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -22300,34 +21019,34 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9s1r0vg247jvcf50najqse&quot;,
-            &quot;username&quot;: &quot;Sigmund&quot;,
-            &quot;first_name&quot;: &quot;Wilhelm&quot;,
-            &quot;last_name&quot;: &quot;Grant&quot;,
-            &quot;email&quot;: &quot;dietrich.mara@example.org&quot;,
-            &quot;country&quot;: &quot;Togo&quot;,
-            &quot;bio&quot;: &quot;Dicta deleniti molestiae iusto impedit facilis. Ut quia repellat exercitationem et. Ut harum explicabo aut in voluptate. Debitis iure cum tempore deleniti voluptatem fugiat minima.&quot;,
-            &quot;photo&quot;: &quot;artwork-seeding-photos/21.jpeg&quot;,
-            &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
-            &quot;email_verified_at&quot;: null,
+            &quot;id&quot;: &quot;01jtetwr1dx1ry3f659yj9k9aq&quot;,
+            &quot;username&quot;: &quot;Nathanael&quot;,
+            &quot;first_name&quot;: &quot;Richmond&quot;,
+            &quot;last_name&quot;: &quot;Schiller&quot;,
+            &quot;email&quot;: &quot;lacey.keebler@example.org&quot;,
+            &quot;country&quot;: &quot;Cayman Islands&quot;,
+            &quot;bio&quot;: &quot;Possimus nemo accusantium consequuntur et debitis odit voluptatibus. Sunt exercitationem vel ad qui perspiciatis aut minus. Qui sint illum placeat velit quisquam. Molestiae et facere sed iure.&quot;,
+            &quot;photo&quot;: null,
+            &quot;artist_verified_at&quot;: &quot;2025-05-04 23:42:52&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;01jt9s1r15wcbkf27nneye7rfg&quot;,
-            &quot;username&quot;: &quot;Maxie&quot;,
-            &quot;first_name&quot;: &quot;Ole&quot;,
-            &quot;last_name&quot;: &quot;Goyette&quot;,
-            &quot;email&quot;: &quot;wintheiser.clyde@example.net&quot;,
-            &quot;country&quot;: &quot;Brazil&quot;,
-            &quot;bio&quot;: &quot;Autem aut iure facilis ut sit. Ea quia labore quasi voluptatum. Laboriosam illum tenetur et vitae. Non corrupti ut rerum consequatur tempora.&quot;,
+            &quot;id&quot;: &quot;01jtetwr1sagtxzfzzwrdeyrne&quot;,
+            &quot;username&quot;: &quot;Sim&quot;,
+            &quot;first_name&quot;: &quot;Kristy&quot;,
+            &quot;last_name&quot;: &quot;Hickle&quot;,
+            &quot;email&quot;: &quot;jade60@example.org&quot;,
+            &quot;country&quot;: &quot;American Samoa&quot;,
+            &quot;bio&quot;: &quot;Iusto non voluptatem natus quaerat omnis nihil. Commodi distinctio deserunt voluptates. In officia quia voluptatibus non odit explicabo enim. Sunt eos perspiciatis aspernatur et error quia neque.&quot;,
             &quot;photo&quot;: null,
             &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
         }
     ]
 }</code></pre>
@@ -22471,7 +21190,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eius
+                        sint
                     </div>
                 </div>
             </div>
@@ -22604,7 +21323,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-POSTapi-v1-follows-users--userId--userId"
                                                placeholder="The ID of the user to follow"
-                                               value="eius" data-component="url"
+                                               value="sint" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -22700,7 +21419,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/v1/follows/users/eius" \
+    "http://localhost:8000/api/v1/follows/users/sint" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -22711,7 +21430,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/eius"
+    "http://localhost:8000/api/v1/follows/users/sint"
 );
 
 const headers = {
@@ -22766,11 +21485,11 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1r2gwf9pax2v3baqwqm5&quot;,
-        &quot;follower_id&quot;: &quot;01jt9s1r1yk521srjgd8wwqpxg&quot;,
-        &quot;followed_id&quot;: &quot;01jt9s1r28v5qzbt3hne3mvjg2&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;id&quot;: &quot;01jtetwr34mb6ppsyacjpa0814&quot;,
+        &quot;follower_id&quot;: &quot;01jtetwr2kfzz35dwbgj100kd4&quot;,
+        &quot;followed_id&quot;: &quot;01jtetwr2vv510k9acyby8j9rm&quot;,
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:53.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -22935,7 +21654,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        explicabo
+                        nemo
                     </div>
                 </div>
             </div>
@@ -23068,7 +21787,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-DELETEapi-v1-follows-users--userId--userId"
                                                placeholder="The ID of the user to unfollow"
-                                               value="explicabo" data-component="url"
+                                               value="nemo" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -23164,7 +21883,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/v1/follows/users/explicabo" \
+    "http://localhost:8000/api/v1/follows/users/nemo" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -23175,7 +21894,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/follows/users/explicabo"
+    "http://localhost:8000/api/v1/follows/users/nemo"
 );
 
 const headers = {
@@ -23406,7 +22125,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        et
+                        qui
                     </div>
                 </div>
             </div>
@@ -23539,7 +22258,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-GETapi-v1-users--userId--is-following-userId"
                                                placeholder="The ID of the user to check if the authenticated user is following"
-                                               value="et" data-component="url"
+                                               value="qui" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -23635,7 +22354,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/et/is-following" \
+    --get "http://localhost:8000/api/v1/users/qui/is-following" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -23646,7 +22365,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/et/is-following"
+    "http://localhost:8000/api/v1/users/qui/is-following"
 );
 
 const headers = {
@@ -26517,28 +25236,28 @@ fetch(url, {
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;01jt9rzh2jm675pkqhbh8ytpdg&quot;,
-            &quot;username&quot;: &quot;Willard&quot;,
-            &quot;first_name&quot;: &quot;Meghan&quot;,
-            &quot;last_name&quot;: &quot;Wunsch&quot;,
-            &quot;email&quot;: &quot;willie36@example.net&quot;,
-            &quot;country&quot;: &quot;Sudan&quot;,
-            &quot;bio&quot;: &quot;Expedita officia unde rerum eos et. Omnis quos deserunt nostrum enim reiciendis quis est. Est reiciendis expedita odio est.&quot;,
+            &quot;id&quot;: &quot;01jtetscbbkbnsedhtfhpjgqbc&quot;,
+            &quot;username&quot;: &quot;Dejuan&quot;,
+            &quot;first_name&quot;: &quot;Christophe&quot;,
+            &quot;last_name&quot;: &quot;Lind&quot;,
+            &quot;email&quot;: &quot;sgrant@example.net&quot;,
+            &quot;country&quot;: &quot;Liberia&quot;,
+            &quot;bio&quot;: &quot;Unde ipsam rerum exercitationem. Rerum libero sit vel qui reprehenderit necessitatibus.&quot;,
             &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: null,
-            &quot;email_verified_at&quot;: null,
+            &quot;artist_verified_at&quot;: &quot;2025-05-04 23:41:02&quot;,
+            &quot;email_verified_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
             &quot;published_artworks&quot;: [
                 {
-                    &quot;id&quot;: &quot;01jt9rzh2rbs52e53q1kbngc9r&quot;,
-                    &quot;title&quot;: &quot;Voluptatem consequatur.&quot;,
-                    &quot;description&quot;: &quot;Voluptatem rem natus praesentium illum. Consequatur reiciendis id ipsam omnis veniam quae consequatur.&quot;,
+                    &quot;id&quot;: &quot;01jtetscc6ry8wfsejn6pp7rfh&quot;,
+                    &quot;title&quot;: &quot;Ut velit quam qui sint.&quot;,
+                    &quot;description&quot;: &quot;Ab est aut dolor consequatur qui consequatur. Aspernatur quia quas quis eos commodi.&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;user_id&quot;: &quot;01jt9rzh2jm675pkqhbh8ytpdg&quot;,
-                    &quot;created_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
+                    &quot;user_id&quot;: &quot;01jtetscbyrr5j8f9ysmj44dx7&quot;,
+                    &quot;created_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
                     &quot;artwork_likes_count&quot;: 0,
                     &quot;artwork_comments_count&quot;: 0,
                     &quot;artwork_main_photo_path&quot;: null
@@ -26546,28 +25265,28 @@ fetch(url, {
             ]
         },
         {
-            &quot;id&quot;: &quot;01jt9rzh330zx9cvjkkq8ehmhy&quot;,
-            &quot;username&quot;: &quot;Cullen&quot;,
-            &quot;first_name&quot;: &quot;Myrna&quot;,
-            &quot;last_name&quot;: &quot;Nolan&quot;,
-            &quot;email&quot;: &quot;rempel.margarette@example.net&quot;,
-            &quot;country&quot;: &quot;Syrian Arab Republic&quot;,
-            &quot;bio&quot;: &quot;Vitae suscipit dolor sequi non sit possimus vitae. Illum sint reprehenderit quam molestiae ea commodi quae. Aut cum molestias in nobis quia. Pariatur ullam consequatur pariatur.&quot;,
+            &quot;id&quot;: &quot;01jtetscbyrr5j8f9ysmj44dx7&quot;,
+            &quot;username&quot;: &quot;Lily&quot;,
+            &quot;first_name&quot;: &quot;Cameron&quot;,
+            &quot;last_name&quot;: &quot;Ankunding&quot;,
+            &quot;email&quot;: &quot;gideon58@example.org&quot;,
+            &quot;country&quot;: &quot;Iceland&quot;,
+            &quot;bio&quot;: &quot;Maxime maxime expedita mollitia et. A at perspiciatis debitis perferendis autem ad. Corrupti ducimus officia maxime veritatis molestiae amet dolor. Voluptas iure quas a voluptas aspernatur.&quot;,
             &quot;photo&quot;: null,
-            &quot;artist_verified_at&quot;: &quot;2025-05-03 00:33:14&quot;,
-            &quot;email_verified_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
+            &quot;artist_verified_at&quot;: null,
+            &quot;email_verified_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
             &quot;role&quot;: &quot;artist&quot;,
-            &quot;created_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
+            &quot;created_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
             &quot;published_artworks&quot;: [
                 {
-                    &quot;id&quot;: &quot;01jt9rzh2rbs52e53q1kbngc9r&quot;,
-                    &quot;title&quot;: &quot;Voluptatem consequatur.&quot;,
-                    &quot;description&quot;: &quot;Voluptatem rem natus praesentium illum. Consequatur reiciendis id ipsam omnis veniam quae consequatur.&quot;,
+                    &quot;id&quot;: &quot;01jtetscc6ry8wfsejn6pp7rfh&quot;,
+                    &quot;title&quot;: &quot;Ut velit quam qui sint.&quot;,
+                    &quot;description&quot;: &quot;Ab est aut dolor consequatur qui consequatur. Aspernatur quia quas quis eos commodi.&quot;,
                     &quot;status&quot;: &quot;published&quot;,
-                    &quot;user_id&quot;: &quot;01jt9rzh2jm675pkqhbh8ytpdg&quot;,
-                    &quot;created_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-05-03T00:33:14.000000Z&quot;,
+                    &quot;user_id&quot;: &quot;01jtetscbyrr5j8f9ysmj44dx7&quot;,
+                    &quot;created_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
+                    &quot;updated_at&quot;: &quot;2025-05-04T23:41:02.000000Z&quot;,
                     &quot;artwork_likes_count&quot;: 0,
                     &quot;artwork_comments_count&quot;: 0,
                     &quot;artwork_main_photo_path&quot;: null
@@ -26716,7 +25435,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        ut
+                        corrupti
                     </div>
                 </div>
             </div>
@@ -26813,7 +25532,7 @@ fetch(url, {
                                         <input aria-label="userId" name="userId"
                                                id="urlparam-GETapi-v1-users--userId--userId"
                                                placeholder="The id of the user"
-                                               value="ut" data-component="url"
+                                               value="corrupti" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -26909,7 +25628,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/ut" \
+    --get "http://localhost:8000/api/v1/users/corrupti" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -26919,7 +25638,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/ut"
+    "http://localhost:8000/api/v1/users/corrupti"
 );
 
 const headers = {
@@ -26971,19 +25690,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qwy9e8dmagenbc73d1n&quot;,
-        &quot;username&quot;: &quot;Clyde&quot;,
-        &quot;first_name&quot;: &quot;Carmine&quot;,
-        &quot;last_name&quot;: &quot;Mohr&quot;,
-        &quot;email&quot;: &quot;dagmar96@example.com&quot;,
-        &quot;country&quot;: &quot;Iraq&quot;,
-        &quot;bio&quot;: &quot;Eos molestiae iusto eos voluptatem repellendus quis. Incidunt voluptas dignissimos quia earum ratione in omnis. Sequi et porro nesciunt ullam porro dignissimos et. Aut excepturi illo sequi quis quod sequi voluptas.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/14.jpeg&quot;,
-        &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
-        &quot;email_verified_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
+        &quot;id&quot;: &quot;01jtetwqy9czhtb0cf2zwn2y88&quot;,
+        &quot;username&quot;: &quot;Jamil&quot;,
+        &quot;first_name&quot;: &quot;Micaela&quot;,
+        &quot;last_name&quot;: &quot;Bartoletti&quot;,
+        &quot;email&quot;: &quot;isabel.buckridge@example.net&quot;,
+        &quot;country&quot;: &quot;Jamaica&quot;,
+        &quot;bio&quot;: &quot;Architecto voluptas voluptatem tempore possimus illo. Voluptatem blanditiis fugit sint et. Maxime ducimus voluptatem praesentium asperiores ullam repellendus beatae. Eum quae dolor maiores mollitia et voluptatem.&quot;,
+        &quot;photo&quot;: &quot;artwork-seeding-photos/23.jpeg&quot;,
+        &quot;artist_verified_at&quot;: null,
+        &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -27357,19 +26076,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qxkwvpk15kgcq5zhg8v&quot;,
-        &quot;username&quot;: &quot;Esmeralda&quot;,
-        &quot;first_name&quot;: &quot;Antoinette&quot;,
-        &quot;last_name&quot;: &quot;Tillman&quot;,
-        &quot;email&quot;: &quot;bashirian.elliot@example.com&quot;,
-        &quot;country&quot;: &quot;Panama&quot;,
-        &quot;bio&quot;: &quot;Accusantium ut porro consequatur reiciendis ut aperiam eius. Error sint voluptatibus tenetur eaque alias facere aut. Dolorum necessitatibus eos nesciunt iusto consequatur et vitae iste.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/24.jpeg&quot;,
-        &quot;artist_verified_at&quot;: &quot;2025-05-03 00:34:27&quot;,
-        &quot;email_verified_at&quot;: null,
+        &quot;id&quot;: &quot;01jtetwqysvk7188kkk43etvsh&quot;,
+        &quot;username&quot;: &quot;Rowan&quot;,
+        &quot;first_name&quot;: &quot;Emie&quot;,
+        &quot;last_name&quot;: &quot;Rohan&quot;,
+        &quot;email&quot;: &quot;heaney.lisa@example.org&quot;,
+        &quot;country&quot;: &quot;Indonesia&quot;,
+        &quot;bio&quot;: &quot;Eos magni in ex fugit labore pariatur. Architecto necessitatibus modi quas quia tempore. Sit tenetur iste magnam facere officia dignissimos.&quot;,
+        &quot;photo&quot;: &quot;artwork-seeding-photos/30.jpeg&quot;,
+        &quot;artist_verified_at&quot;: &quot;2025-05-04 23:42:52&quot;,
+        &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>
@@ -27490,7 +26209,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        aut
+                        itaque
                     </div>
                 </div>
             </div>
@@ -27587,7 +26306,7 @@ fetch(url, {
                                         <input aria-label="username" name="username"
                                                id="urlparam-GETapi-v1-users--username--username"
                                                placeholder="The username of the user"
-                                               value="aut" data-component="url"
+                                               value="itaque" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -27683,7 +26402,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/v1/users/aut" \
+    --get "http://localhost:8000/api/v1/users/itaque" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
                                     </div>
@@ -27693,7 +26412,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/v1/users/aut"
+    "http://localhost:8000/api/v1/users/itaque"
 );
 
 const headers = {
@@ -27745,14 +26464,14 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;username&quot;: &quot;Favian&quot;,
-        &quot;first_name&quot;: &quot;Myron&quot;,
-        &quot;last_name&quot;: &quot;Satterfield&quot;,
-        &quot;email&quot;: &quot;karelle.rogahn@example.net&quot;,
-        &quot;email_verified_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;country&quot;: &quot;Italy&quot;,
-        &quot;bio&quot;: &quot;Neque eaque id mollitia odio nihil et fuga. Dolorem laboriosam beatae est odit quam excepturi adipisci. Tenetur commodi adipisci enim minus perferendis at vero. Modi quis rerum et.&quot;,
-        &quot;photo&quot;: null,
+        &quot;username&quot;: &quot;Reinhold&quot;,
+        &quot;first_name&quot;: &quot;Laurel&quot;,
+        &quot;last_name&quot;: &quot;Doyle&quot;,
+        &quot;email&quot;: &quot;gbayer@example.org&quot;,
+        &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;country&quot;: &quot;Syrian Arab Republic&quot;,
+        &quot;bio&quot;: &quot;Harum et et recusandae unde animi qui facilis ullam. Eum aliquam quas quae eius quia nisi voluptates. Ut iure tempora nesciunt rem. Exercitationem eligendi in non animi itaque et minima. Odit aperiam assumenda fugit exercitationem facere.&quot;,
+        &quot;photo&quot;: &quot;artwork-seeding-photos/39.jpeg&quot;,
         &quot;artist_verified_at&quot;: null,
         &quot;role&quot;: &quot;artist&quot;
     }
@@ -28050,7 +26769,7 @@ fetch(url, {
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        /tmp/php19qdrgrg7q0vaEhPhhI
+                        /tmp/phpbiaqj7ahol87fMKOcIm
                     </div>
                 </div>
             </div>
@@ -28366,7 +27085,7 @@ You can check the Dev Tools console for debugging information.</p>
     --form "email=johndoe@gmail.com"\
     --form "country=United States"\
     --form "bio=This is a bio"\
-    --form "photo=@/tmp/php19qdrgrg7q0vaEhPhhI" </code></pre>                                        </div>
+    --form "photo=@/tmp/phpbiaqj7ahol87fMKOcIm" </code></pre>                                        </div>
                                     </div>
                                 </div>
                                                             <div class="sl-bg-canvas-100 example-request example-request-javascript"
@@ -28438,19 +27157,19 @@ fetch(url, {
                                             <pre><code style="max-height: 300px;"
                                                        class="language-json sl-overflow-x-auto sl-overflow-y-auto">{
     &quot;data&quot;: {
-        &quot;id&quot;: &quot;01jt9s1qz51vhwkgyw4vfxc23t&quot;,
-        &quot;username&quot;: &quot;Violet&quot;,
-        &quot;first_name&quot;: &quot;Jeffery&quot;,
-        &quot;last_name&quot;: &quot;Kunde&quot;,
-        &quot;email&quot;: &quot;ewhite@example.net&quot;,
-        &quot;country&quot;: &quot;Holy See (Vatican City State)&quot;,
-        &quot;bio&quot;: &quot;Ut voluptas et animi ratione repellendus dolorem pariatur. Reprehenderit nostrum neque numquam alias dicta eius. Eius excepturi ipsam sit dolorem dolorum ipsa aut.&quot;,
-        &quot;photo&quot;: &quot;artwork-seeding-photos/33.jpeg&quot;,
-        &quot;artist_verified_at&quot;: null,
-        &quot;email_verified_at&quot;: null,
+        &quot;id&quot;: &quot;01jtetwqzxvh2ge35qrq6p4hx2&quot;,
+        &quot;username&quot;: &quot;Jaylon&quot;,
+        &quot;first_name&quot;: &quot;Elbert&quot;,
+        &quot;last_name&quot;: &quot;Bogan&quot;,
+        &quot;email&quot;: &quot;francis09@example.net&quot;,
+        &quot;country&quot;: &quot;Syrian Arab Republic&quot;,
+        &quot;bio&quot;: &quot;Numquam deleniti ex facere repellat voluptatem. Incidunt maiores perspiciatis sunt autem. Quos iure molestiae et voluptate. Sed esse qui iure veniam officiis quam.&quot;,
+        &quot;photo&quot;: null,
+        &quot;artist_verified_at&quot;: &quot;2025-05-04 23:42:52&quot;,
+        &quot;email_verified_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
         &quot;role&quot;: &quot;artist&quot;,
-        &quot;created_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-05-03T00:34:27.000000Z&quot;
+        &quot;created_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-05-04T23:42:52.000000Z&quot;
     }
 }</code></pre>
                                                                             </div>

@@ -30,7 +30,7 @@ class UserPolicy
             ->where('followed_id', $userToFollow->id)
             ->exists();
 
-        return $isUserArtist && $isUserToFollowArtist && ! $sameUser && ! $alreadyFollowing;
+        return $isUserArtist && $isUserToFollowArtist && !$sameUser && !$alreadyFollowing;
     }
 
     /**
@@ -48,6 +48,6 @@ class UserPolicy
             ->where('followed_id', $userToUnfollow->id)
             ->exists();
 
-        return $isUserArtist && $isUserToUnfollowArtist && ! $sameUser && $alreadyFollowing;
+        return $isUserArtist && $isUserToUnfollowArtist && !$sameUser && $alreadyFollowing;
     }
 }

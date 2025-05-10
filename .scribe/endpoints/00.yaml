@@ -198,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer fhD63ega45bVZ1EcadP8v6k'
+      - 'Bearer 61bkafvd4h38Ve5Pg6acEDZ'
     controller: null
     method: null
     route: null
@@ -283,7 +283,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer hd63v65DfcPVEkZgaba184e'
+      - 'Bearer cdDZ1fh6V5P8kEagav6be34'
     controller: null
     method: null
     route: null
@@ -310,7 +310,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: suscipit
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -320,15 +320,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: esse
+        example: dolores
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: suscipit
-      hash: esse
+      id: non
+      hash: dolores
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -378,7 +378,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer DcVh1fZa8E5366b4ePvdgka'
+      - 'Bearer P8Dbe3V6v6k5ahc4dZ1fEag'
     controller: null
     method: null
     route: null
@@ -431,7 +431,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D66haZk8cV3b1vfPeE45agd'
+      - 'Bearer EgDe1kfhcPVaZb65vda6348'
     controller: null
     method: null
     route: null
@@ -649,7 +649,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1Da5h6Vb46ZfPde8g3kvcEa'
+      - 'Bearer c3ahabkv6Zgfe5E81D64dPV'
     controller: null
     method: null
     route: null

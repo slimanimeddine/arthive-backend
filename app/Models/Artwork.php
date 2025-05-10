@@ -122,7 +122,7 @@ class Artwork extends Model
     protected function artworkLikesCount(): Attribute
     {
         return new Attribute(
-            get: fn () => $this->artworkLikes()->count(),
+            get: fn(): int => $this->artworkLikes()->count(),
         );
     }
 
@@ -132,7 +132,7 @@ class Artwork extends Model
     protected function artworkCommentsCount(): Attribute
     {
         return new Attribute(
-            get: fn () => $this->artworkComments()->count(),
+            get: fn(): int => $this->artworkComments()->count(),
         );
     }
 
@@ -144,7 +144,7 @@ class Artwork extends Model
         $artworkMainPhoto = $this->artworkPhotos()->where('is_main', true)->first();
 
         return new Attribute(
-            get: fn () => $artworkMainPhoto ? $artworkMainPhoto->path : null,
+            get: fn(): string|null => $artworkMainPhoto ? $artworkMainPhoto->path : null,
         );
     }
 

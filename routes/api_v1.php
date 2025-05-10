@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\V1\AdminController;
 use App\Http\Controllers\V1\ArtistVerificationRequestController;
 use App\Http\Controllers\V1\ArtworkCommentController;
 use App\Http\Controllers\V1\ArtworkController;
@@ -96,7 +97,10 @@ Route::put('users/me/notifications/unread', [NotificationController::class, 'mar
 Route::get('users/me/notifications/unread/exists', [NotificationController::class, 'unreadNotificationsExists'])->middleware('auth:sanctum');
 
 // admin routes
-Route::post('admin/sign-in', [AuthController::class, 'adminSignIn']);
+Route::prefix('admin')->group(function () {
+    Route::post('sign-in', [AuthController::class, 'adminSignIn']);
+    Route::get('artworks', [AdminController::class, 'listArtworks'])->middleware('auth:sanctum', 'admin');
+});
 
 // artist verification request routes
 Route::get('artist-verification-requests', [ArtistVerificationRequestController::class, 'listArtistVerificationRequests']);

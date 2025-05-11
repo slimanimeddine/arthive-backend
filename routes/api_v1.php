@@ -100,6 +100,9 @@ Route::get('users/me/notifications/unread/exists', [NotificationController::clas
 Route::prefix('admin')->group(function () {
     Route::post('sign-in', [AuthController::class, 'adminSignIn']);
     Route::get('artworks', [AdminController::class, 'listArtworks'])->middleware('auth:sanctum', 'admin');
+    Route::get('artworks/{artworkId}', [AdminController::class, 'showArtwork'])->middleware('auth:sanctum', 'admin')->whereUlid('artworkId');
+    Route::get('artists', [AdminController::class, 'listUsers'])->middleware('auth:sanctum', 'admin');
+    Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->middleware('auth:sanctum', 'admin')->whereUlid('artistId');
 });
 
 // artist verification request routes

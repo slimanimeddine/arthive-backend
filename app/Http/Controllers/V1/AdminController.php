@@ -279,4 +279,43 @@ class AdminController extends ApiController
 
         return ArtistVerificationRequestResource::collection($query);
     }
+
+    /**
+     * Show Artist Verification Request
+     *
+     * Retrieve a specific artist verification request by its ID.
+     *
+     * @authenticated
+     *
+     * @urlParam artistVerificationRequestId string required the id of the artist verification request.
+     *
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
+     *
+     * @apiResourceModel App\Models\ArtistVerificationRequest
+     *
+     * @response 401 scenario=Unauthenticated {
+     *       "message": "Unauthenticated",
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *       "message": "You are not authorized to access this resource.",
+     *       "status": 403
+     * }
+     *
+     * @response 404 scenario="Artist Not Found" {
+     *       "message": "The artist verification request you are trying to retrieve does not exist.",
+     *       "status": 404
+     * }
+     */
+    public function showArtistVerificationRequest(Request $request, string $artistVerificationRequestId)
+    {
+        $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
+
+        if (!$artistVerificationRequest) {
+            return $this->notFound('The artist verification request you are trying to retrieve does not exist.');
+        }
+
+        return new ArtistVerificationRequestResource($artistVerificationRequest);
+    }
+
 }

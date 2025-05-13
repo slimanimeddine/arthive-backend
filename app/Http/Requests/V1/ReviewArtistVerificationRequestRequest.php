@@ -16,7 +16,7 @@ class ReviewArtistVerificationRequestRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => ['required|in:approved,rejected'],
+            'status' => ['required', 'in:approved,rejected,pending'],
             'reason' => ['required_if:status,rejected', new MinWordCount, new MaxWordCount],
         ];
     }

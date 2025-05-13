@@ -198,7 +198,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 54Efkhcab13Dd6PVvZgae86'
+      - 'Bearer Z6bE1dgDk4Pf36ae5aVcv8h'
     controller: null
     method: null
     route: null
@@ -283,7 +283,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer haaDeVb36kvdcZEg4681f5P'
+      - 'Bearer E4DeckPbfgZa5Va61hv683d'
     controller: null
     method: null
     route: null
@@ -310,7 +310,7 @@ endpoints:
         name: id
         description: 'The ID of the verify.'
         required: true
-        example: cumque
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -320,15 +320,15 @@ endpoints:
         name: hash
         description: ''
         required: true
-        example: autem
+        example: tempora
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: cumque
-      hash: autem
+      id: non
+      hash: tempora
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -378,7 +378,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 5E6eZg1dPa3kVvhaf4b6Dc8'
+      - 'Bearer 66ak83DdfgPZbE1vehac45V'
     controller: null
     method: null
     route: null
@@ -431,7 +431,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer v5dhc6Z3ga1bD6VP48kaeEf'
+      - 'Bearer De4hag85E3k6aPbV61fZvdc'
     controller: null
     method: null
     route: null
@@ -649,7 +649,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4bdchgk6ZD5a368evEVfPa1'
+      - 'Bearer 46c8hbva3VDgZ1eE5k6fdPa'
     controller: null
     method: null
     route: null

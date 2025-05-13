@@ -19,6 +19,8 @@ class UserSeeder extends Seeder
             'password' => 'password',
         ]);
 
-        User::factory(200)->create();
+        User::factory(200)->state([
+            'artist_verified_at' => null,
+        ])->create();
     }
 }

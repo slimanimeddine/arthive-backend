@@ -106,6 +106,7 @@ Route::prefix('admin')->group(function () {
         Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->whereUlid('artistId');
         Route::get('artist-verification-requests', [AdminController::class, 'listArtistVerificationRequests']);
         Route::put('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'reviewArtistVerificationRequest'])->whereUlid('artistVerificationRequestId');
+        Route::get('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'showArtistVerificationRequest'])->whereUlid('artistVerificationRequestId');
     });
 });
 

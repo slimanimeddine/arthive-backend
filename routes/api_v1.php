@@ -99,17 +99,19 @@ Route::get('users/me/notifications/unread/exists', [NotificationController::clas
 // admin routes
 Route::prefix('admin')->group(function () {
     Route::post('sign-in', [AuthController::class, 'adminSignIn']);
-    Route::get('artworks', [AdminController::class, 'listArtworks'])->middleware('auth:sanctum', 'admin');
-    Route::get('artworks/{artworkId}', [AdminController::class, 'showArtwork'])->middleware('auth:sanctum', 'admin')->whereUlid('artworkId');
-    Route::get('artists', [AdminController::class, 'listUsers'])->middleware('auth:sanctum', 'admin');
-    Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->middleware('auth:sanctum', 'admin')->whereUlid('artistId');
+    Route::middleware(['auth:sanctum', 'admin'])->group(function () {
+        Route::get('artworks', [AdminController::class, 'listArtworks']);
+        Route::get('artworks/{artworkId}', [AdminController::class, 'showArtwork'])->whereUlid('artworkId');
+        Route::get('artists', [AdminController::class, 'listUsers']);
+        Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->whereUlid('artistId');
+        Route::get('artist-verification-requests', [AdminController::class, 'listArtistVerificationRequests']);
+        Route::put('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'reviewArtistVerificationRequest'])->whereUlid('artistVerificationRequestId');
+    });
 });
 
 // artist verification request routes
-Route::get('artist-verification-requests', [ArtistVerificationRequestController::class, 'listArtistVerificationRequests']);
 Route::post('users/me/artist-verification-requests', [ArtistVerificationRequestController::class, 'submitArtistVerificationRequest'])->middleware('auth:sanctum');
 Route::get('users/me/artist-verification-requests', [ArtistVerificationRequestController::class, 'getAuthenticatedUserArtistVerificationRequests'])->middleware('auth:sanctum');
-Route::put('artist-verification-requests/{artistVerificationRequestId}', [ArtistVerificationRequestController::class, 'reviewArtistVerificationRequest'])->middleware('auth:sanctum')->whereUlid('artistVerificationRequestId');
 
 // favorite routes
 Route::get('users/me/favorites/artworks', [FavoriteController::class, 'listAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');

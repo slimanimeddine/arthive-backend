@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\V1;
 
 use App\Filters\Users\VerifiedFilter;
+use App\Http\Requests\V1\ReviewArtistVerificationRequestRequest;
+use App\Http\Resources\V1\ArtistVerificationRequestResource;
 use App\Http\Resources\V1\ArtworkResource;
 use App\Http\Resources\V1\UserResource;
+use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\User;
+use App\Notifications\ArtistVerificationResponseNotification;
 use App\Sorts\Artworks\NewSort;
 use App\Sorts\Users\NewSort as UserNewSort;
 use App\Sorts\Artworks\PopularSort;
@@ -193,5 +197,86 @@ class AdminController extends ApiController
         }
 
         return new UserResource($artist);
+    }
+
+    /**
+     * Review Artist Verification Request
+     *
+     * Reviews an artist verification request
+     *
+     * @authenticated
+     *
+     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review.
+     *
+     * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
+     *
+     * @apiResourceModel App\Models\ArtistVerificationRequest
+     *
+     * @response 401 scenario=Unauthenticated {
+     *      "message": "Unauthenticated"
+     * }
+     * @response 403 scenario=Unauthorized {
+     *      "message": "You are not authorized to access this resource.",
+     *      "status": 403
+     * }
+     * @response 404 scenario="Artist verification request not found" {
+     *      "message": "The artist verification request you are trying to review does not exist.",
+     *      "status": 404
+     * }
+     */
+    public function reviewArtistVerificationRequest(ReviewArtistVerificationRequestRequest $request, string $artistVerificationRequestId)
+    {
+        $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
+
+        if (!$artistVerificationRequest) {
+            return $this->notFound('The artist verification request you are trying to review does not exist.');
+        }
+
+        $status = $request->status;
+        $reason = $request->has('reason') ? $request->reason : '';
+
+        $artistVerificationRequest->update([
+            'status' => $status,
+            'reason' => $reason,
+        ]);
+
+        $artistVerificationRequest->user->notify(new ArtistVerificationResponseNotification($artistVerificationRequest));
+
+        return new ArtistVerificationRequestResource($artistVerificationRequest);
+    }
+
+    /**
+     * List Artist Verification Requests
+     *
+     * Retrieve a list of artist verification requests submitted by artists.
+     *
+     * @authenticated
+     *
+     * @queryParam perPage integer The number of records to fetch per page. Example: 10
+     * @queryParam page string The page number to fetch. Example: 1
+     * @queryParam filter[status] string Filter artworks by status. Enum: pending, approved, rejected. Example: approved
+     *
+     * @apiResourceCollection App\Http\Resources\V1\ArtistVerificationRequestResource
+     *
+     * @apiResourceModel App\Models\ArtistVerificationRequest paginate=10
+     *
+     * @response 401 scenario=Unauthenticated {
+     *     "message": "Unauthenticated"
+     * }
+     * 
+     * @response 403 scenario=Unauthorized {
+     *      "message": "You are not authorized to access this resource.",
+     *      "status": 403
+     * }
+     */
+    public function listArtistVerificationRequests(Request $request)
+    {
+        $perPage = $request->query('perPage', 10);
+
+        $query = QueryBuilder::for(ArtistVerificationRequest::class)
+            ->allowedFilters(['status'])
+            ->paginate($perPage);
+
+        return ArtistVerificationRequestResource::collection($query);
     }
 }

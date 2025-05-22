@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/slimanimeddine/arthive-backend">
-    <img src="public/logoipsum-333.png" alt="Logo" width="260" height="120">
+    <img src="public/arthive-logo.svg" alt="Logo" width="260" height="120">
   </a>
 
   <h3 align="center">Arthive REST API</h3>
@@ -20,6 +20,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#other-parts">Other Parts</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -39,6 +40,11 @@
 ## About The Project
 
 This project is a backend API built with Laravel to power a Traditional Artworks Showcase platform. It provides a structured and efficient way to manage and display various artworks, allowing artists to upload their work and viewers to explore collections with ease. The API handles authentication, artwork management, user interactions, and other essential features to support a seamless frontend experience.
+
+### Other Parts
+
+- [Frontend](https://github.com/slimanimeddine/arthive)
+- [Admin Panel](https://github.com/slimanimeddine/arthive-admin)
 
 ### Features
 

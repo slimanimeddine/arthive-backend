@@ -1,2 +1,4 @@
 *
+!artwork-seeding-photos/
+!artwork-seeding-photos/*
 !.gitignore

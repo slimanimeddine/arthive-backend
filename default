@@ -11,16 +11,7 @@ server {
     location / {            
         index  index.php index.html index.htm hostingstart.html;
         try_files $uri $uri/ /index.php?$args; # Changed for Laravel
-    }
 
-    # redirect server error pages to the static page /50x.html
-    #
-    #error_page   500 502 503 504  /50x.html; # Commented out for Laravel so that Laravel debug mode pages are shown
-    location = /50x.html {
-        root   /html/;
-    }
-    
-    location / {
         proxy_http_version 1.1;
         proxy_set_header Host $http_host;
         proxy_set_header Scheme $scheme;
@@ -33,6 +24,13 @@ server {
         proxy_pass http://0.0.0.0:8080;
     }
 
+    # redirect server error pages to the static page /50x.html
+    #
+    #error_page   500 502 503 504  /50x.html; # Commented out for Laravel so that Laravel debug mode pages are shown
+    location = /50x.html {
+        root   /html/;
+    }
+    
     # Disable .git directory
     location ~ /\.git {
         deny all;

@@ -21,7 +21,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to follow
+     * @urlParam userId string required The ID of the user to follow. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\FollowResource
      *
@@ -70,11 +70,11 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to unfollow
+     * @urlParam userId string required The ID of the user to unfollow. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unfollowed this user.'
-     *      'status': 204
+     *      'status': 200
      * }
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -115,7 +115,7 @@ class FollowController extends ApiController
 
         $follow->delete();
 
-        return $this->noContent('You have successfully unfollowed this user.');
+        return $this->successNoData('You have successfully unfollowed this user.');
     }
 
     /**
@@ -175,7 +175,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to check if the authenticated user is following
+     * @urlParam userId string required The ID of the user to check if the authenticated user is following. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *      "message": "",

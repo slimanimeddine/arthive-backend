@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('favorites', function (Blueprint $table) {
-            $table->ulid('id')->primary();
+            $table->uuid('id')->primary();
 
-            $table->foreignUlid('artwork_id')->constrained()->onDelete('cascade');
-            $table->foreignUlid('user_id')->constrained()->onDelete('cascade');
+            $table->foreignUuid('artwork_id')->constrained()->onDelete('cascade');
+            $table->foreignUuid('user_id')->constrained()->onDelete('cascade');
             $table->unique(['user_id', 'artwork_id']);
             $table->timestamps();
         });

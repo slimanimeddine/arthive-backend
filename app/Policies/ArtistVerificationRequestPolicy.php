@@ -14,6 +14,6 @@ class ArtistVerificationRequestPolicy
         $isArtist = $user->isArtist();
         $isVerified = $user->artist_verified_at !== null;
 
-        return $isArtist && !$isVerified;
+        return $isArtist && ! $isVerified;
     }
 }

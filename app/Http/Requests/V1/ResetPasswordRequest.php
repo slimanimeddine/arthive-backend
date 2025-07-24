@@ -29,15 +29,15 @@ class ResetPasswordRequest extends FormRequest
             ],
             'email' => [
                 'description' => 'The email address of the user',
-                'example' => 'johndoe@gmail.com'
+                'example' => 'johndoe@gmail.com',
             ],
             'password' => [
                 'description' => 'The new password for the user',
-                'example' => 'newpassword123'
+                'example' => 'newpassword123',
             ],
             'password_confirmation' => [
                 'description' => 'The confirmation of the new password',
-                'example' => 'newpassword123'
+                'example' => 'newpassword123',
             ],
         ];
     }

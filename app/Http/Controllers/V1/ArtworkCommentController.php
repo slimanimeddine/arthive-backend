@@ -22,9 +22,9 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to comment on
+     * @urlParam artworkId string required The ID of the artwork to comment on. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
-     * @bodyParam comment_text string required The text of the comment
+     * @bodyParam comment_text string required The text of the comment. Example: This is a great artwork!
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
      *
@@ -74,9 +74,9 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId string required The ID of the comment to update
+     * @urlParam artworkCommentId string required The ID of the comment to update. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
-     * @bodyParam comment_text string required The text of the comment
+     * @bodyParam comment_text string required The text of the comment. Example: This is a great artwork!
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkCommentResource
      *
@@ -122,11 +122,11 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId string required The ID of the comment to delete
+     * @urlParam artworkCommentId string required The ID of the comment to delete. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *     'message': 'You have successfully deleted the comment.',
-     *     'status': 204,
+     *     'status': 200,
      * }
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
@@ -156,6 +156,6 @@ class ArtworkCommentController extends ApiController
 
         $artworkComment->delete();
 
-        return $this->noContent('You have successfully deleted this comment.');
+        return $this->successNoData('You have successfully deleted this comment.');
     }
 }

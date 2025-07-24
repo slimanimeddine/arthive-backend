@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Concerns\HasUlids;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,7 +13,7 @@ use Laravel\Scout\Searchable;
 
 class Artwork extends Model
 {
-    use HasFactory, HasUlids, Searchable;
+    use HasFactory, HasUuids, Searchable;
 
     protected $fillable = [
         'title',
@@ -122,7 +122,7 @@ class Artwork extends Model
     protected function artworkLikesCount(): Attribute
     {
         return new Attribute(
-            get: fn(): int => $this->artworkLikes()->count(),
+            get: fn (): int => $this->artworkLikes()->count(),
         );
     }
 
@@ -132,7 +132,7 @@ class Artwork extends Model
     protected function artworkCommentsCount(): Attribute
     {
         return new Attribute(
-            get: fn(): int => $this->artworkComments()->count(),
+            get: fn (): int => $this->artworkComments()->count(),
         );
     }
 
@@ -144,7 +144,7 @@ class Artwork extends Model
         $artworkMainPhoto = $this->artworkPhotos()->where('is_main', true)->first();
 
         return new Attribute(
-            get: fn(): string|null => $artworkMainPhoto ? $artworkMainPhoto->path : null,
+            get: fn (): ?string => $artworkMainPhoto ? $artworkMainPhoto->path : null,
         );
     }
 

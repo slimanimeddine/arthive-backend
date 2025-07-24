@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('artist_verification_requests', function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->foreignUlid('user_id')->constrained()->onDelete('cascade');
+            $table->uuid('id')->primary();
+            $table->foreignUuid('user_id')->constrained()->onDelete('cascade');
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->longText('reason')->nullable();
             $table->timestamps();

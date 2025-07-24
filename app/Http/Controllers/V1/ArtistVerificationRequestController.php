@@ -91,15 +91,15 @@ class ArtistVerificationRequestController extends ApiController
 
     /**
      * Get Authenticated User Artist Verification Requests
-     * 
+     *
      * Retrieve a list of artist verification requests submitted by the authenticated user.
-     * 
+     *
      * @authenticated
-     * 
+     *
      * @apiResourceCollection App\Http\Resources\V1\ArtistVerificationRequestResource
      *
      * @apiResourceModel App\Models\ArtistVerificationRequest paginate=10
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }

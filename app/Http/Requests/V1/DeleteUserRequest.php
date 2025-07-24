@@ -27,5 +27,4 @@ class DeleteUserRequest extends FormRequest
             ],
         ];
     }
-
 }

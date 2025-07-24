@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class IsAdmin
 {
     use ApiResponses;
+
     /**
      * Handle an incoming request.
      *
@@ -19,7 +20,7 @@ class IsAdmin
     {
         $authenticatedUser = $request->user();
 
-        if (!($authenticatedUser && $authenticatedUser->isAdmin())) {
+        if (! ($authenticatedUser && $authenticatedUser->isAdmin())) {
             return $this->unauthorized('You are not authorized to access this resource.');
         }
 

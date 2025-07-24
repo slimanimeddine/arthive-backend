@@ -13,12 +13,13 @@ use App\Policies\ArtworkPhotoPolicy;
 use App\Policies\ArtworkPolicy;
 use App\Policies\UserPolicy;
 use App\Traits\ApiResponses;
+use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Database\Eloquent\Model;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -37,6 +38,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Model::automaticallyEagerLoadRelationships();
+
         // registering policies
         Gate::policy(User::class, UserPolicy::class);
         Gate::policy(ArtworkComment::class, ArtworkCommentPolicy::class);

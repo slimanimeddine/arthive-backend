@@ -31,22 +31,22 @@ Route::delete('users/me', [AuthController::class, 'deleteUser'])->middleware('au
 
 // artwork routes
 Route::get('artworks', [ArtworkController::class, 'listPublishedArtworks']);
-Route::get('artworks/{artworkId}', [ArtworkController::class, 'showPublishedArtwork'])->whereUlid('artworkId');
+Route::get('artworks/{artworkId}', [ArtworkController::class, 'showPublishedArtwork'])->whereUuid('artworkId');
 Route::get('users/me/artworks', [ArtworkController::class, 'listAuthenticatedUserArtworks'])->middleware('auth:sanctum');
-Route::get('users/me/artworks/{artworkId}', [ArtworkController::class, 'showAuthenticatedUserArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
+Route::get('users/me/artworks/{artworkId}', [ArtworkController::class, 'showAuthenticatedUserArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
 Route::get('users/{username}/artworks', [ArtworkController::class, 'listUserPublishedArtworks']);
 
 Route::middleware(['throttle:create-artwork'])->group(function () {
     Route::post('artworks', [ArtworkController::class, 'createArtwork'])->middleware('auth:sanctum');
 });
 
-Route::put('artworks/{artworkId}', [ArtworkController::class, 'updateArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
-Route::put('artworks/{artworkId}/publish', [ArtworkController::class, 'publishArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
-Route::delete('artworks/{artworkId}', [ArtworkController::class, 'deleteArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
+Route::put('artworks/{artworkId}', [ArtworkController::class, 'updateArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
+Route::put('artworks/{artworkId}/publish', [ArtworkController::class, 'publishArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
+Route::delete('artworks/{artworkId}', [ArtworkController::class, 'deleteArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
 
 // user routes
 Route::get('users', [UserController::class, 'listUsers']);
-Route::get('users/{userId}', [UserController::class, 'showUserById'])->whereUlid('userId');
+Route::get('users/{userId}', [UserController::class, 'showUserById'])->whereUuid('userId');
 Route::get('users/me', [UserController::class, 'showAuthenticatedUser'])->middleware('auth:sanctum');
 Route::get('users/{username}', [UserController::class, 'showUser']);
 Route::post('users/me', [UserController::class, 'updateAuthenticatedUser'])->middleware('auth:sanctum');
@@ -55,27 +55,27 @@ Route::post('users/me', [UserController::class, 'updateAuthenticatedUser'])->mid
 Route::get('users/me/follows/followers', [FollowController::class, 'listAuthenticatedUserFollowers'])->middleware('auth:sanctum');
 Route::get('users/me/follows/following', [FollowController::class, 'listAuthenticatedUserFollowing'])->middleware('auth:sanctum');
 Route::middleware(['throttle:follow'])->group(function () {
-    Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereUlid('userId');
-    Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereUlid('userId');
+    Route::post('follows/users/{userId}', [FollowController::class, 'followUser'])->middleware('auth:sanctum')->whereUuid('userId');
+    Route::delete('follows/users/{userId}', [FollowController::class, 'unfollowUser'])->middleware('auth:sanctum')->whereUuid('userId');
 });
-Route::get('users/{userId}/is-following', [FollowController::class, 'isAuthenticatedUserFollowing'])->middleware('auth:sanctum')->whereUlid('userId');
+Route::get('users/{userId}/is-following', [FollowController::class, 'isAuthenticatedUserFollowing'])->middleware('auth:sanctum')->whereUuid('userId');
 
 // like routes
 Route::get('users/{username}/artwork-likes/received/count/by-tag', [ArtworkLikeController::class, 'listUserReceivedLikesCountByTag']);
 Route::get('users/{username}/artwork-likes/received/count', [ArtworkLikeController::class, 'showUserReceivedLikesCount']);
 Route::middleware(['throttle:like'])->group(function () {
-    Route::post('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'likeArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
-    Route::delete('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'unlikeArtwork'])->middleware('auth:sanctum')->whereUlid('artworkId');
+    Route::post('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'likeArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
+    Route::delete('artworks/{artworkId}/artwork-likes', [ArtworkLikeController::class, 'unlikeArtwork'])->middleware('auth:sanctum')->whereUuid('artworkId');
 });
-Route::get('artworks/{artworkId}/is-liking', [ArtworkLikeController::class, 'isAuthenticatedUserLiking'])->middleware('auth:sanctum')->whereUlid('artworkId');
+Route::get('artworks/{artworkId}/is-liking', [ArtworkLikeController::class, 'isAuthenticatedUserLiking'])->middleware('auth:sanctum')->whereUuid('artworkId');
 
 // comment routes
 Route::middleware(['throttle:comment'])->group(function () {
-    Route::post('artworks/{artworkId}/artwork-comments', [ArtworkCommentController::class, 'postArtworkComment'])->middleware('auth:sanctum')->whereUlid('artworkId');
-    Route::delete('artwork-comments/{artworkCommentId}', [ArtworkCommentController::class, 'deleteArtworkComment'])->middleware('auth:sanctum')->whereUlid('artworkCommentId');
+    Route::post('artworks/{artworkId}/artwork-comments', [ArtworkCommentController::class, 'postArtworkComment'])->middleware('auth:sanctum')->whereUuid('artworkId');
+    Route::delete('artwork-comments/{artworkCommentId}', [ArtworkCommentController::class, 'deleteArtworkComment'])->middleware('auth:sanctum')->whereUuid('artworkCommentId');
 });
 Route::middleware(['throttle:update-comment'])->group(function () {
-    Route::put('artwork-comments/{artworkCommentId}', [ArtworkCommentController::class, 'updateArtworkComment'])->middleware('auth:sanctum')->whereUlid('artworkCommentId');
+    Route::put('artwork-comments/{artworkCommentId}', [ArtworkCommentController::class, 'updateArtworkComment'])->middleware('auth:sanctum')->whereUuid('artworkCommentId');
 });
 
 // tags routes
@@ -84,11 +84,11 @@ Route::get('tags', [ArtworkTagController::class, 'listTags']);
 
 // photos routes
 Route::middleware(['throttle:upload-photos'])->group(function () {
-    Route::post('artworks/{artworkId}/artwork-photos', [ArtworkPhotoController::class, 'uploadArtworkPhotos'])->middleware('auth:sanctum')->whereUlid('artworkId');
+    Route::post('artworks/{artworkId}/artwork-photos', [ArtworkPhotoController::class, 'uploadArtworkPhotos'])->middleware('auth:sanctum')->whereUuid('artworkId');
 });
-Route::put('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'setArtworkPhotoAsMain'])->middleware('auth:sanctum')->whereUlid('artworkPhotoId');
-Route::delete('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'deleteArtworkPhoto'])->middleware('auth:sanctum')->whereUlid('artworkPhotoId');
-Route::post('artwork-photos/{artworkPhotoId}/path', [ArtworkPhotoController::class, 'replaceArtworkPhotoPath'])->middleware('auth:sanctum')->whereUlid('artworkPhotoId');
+Route::put('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'setArtworkPhotoAsMain'])->middleware('auth:sanctum')->whereUuid('artworkPhotoId');
+Route::delete('artwork-photos/{artworkPhotoId}', [ArtworkPhotoController::class, 'deleteArtworkPhoto'])->middleware('auth:sanctum')->whereUuid('artworkPhotoId');
+Route::post('artwork-photos/{artworkPhotoId}/path', [ArtworkPhotoController::class, 'replaceArtworkPhotoPath'])->middleware('auth:sanctum')->whereUuid('artworkPhotoId');
 
 // notifications routes
 Route::get('users/me/notifications', [NotificationController::class, 'listAuthenticatedUserNotifications'])->middleware('auth:sanctum');
@@ -101,12 +101,12 @@ Route::prefix('admin')->group(function () {
     Route::post('sign-in', [AuthController::class, 'adminSignIn']);
     Route::middleware(['auth:sanctum', 'admin'])->group(function () {
         Route::get('artworks', [AdminController::class, 'listArtworks']);
-        Route::get('artworks/{artworkId}', [AdminController::class, 'showArtwork'])->whereUlid('artworkId');
+        Route::get('artworks/{artworkId}', [AdminController::class, 'showArtwork'])->whereUuid('artworkId');
         Route::get('artists', [AdminController::class, 'listUsers']);
-        Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->whereUlid('artistId');
+        Route::get('artists/{artistId}', [AdminController::class, 'showArtist'])->whereUuid('artistId');
         Route::get('artist-verification-requests', [AdminController::class, 'listArtistVerificationRequests']);
-        Route::put('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'reviewArtistVerificationRequest'])->whereUlid('artistVerificationRequestId');
-        Route::get('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'showArtistVerificationRequest'])->whereUlid('artistVerificationRequestId');
+        Route::put('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'reviewArtistVerificationRequest'])->whereUuid('artistVerificationRequestId');
+        Route::get('artist-verification-requests/{artistVerificationRequestId}', [AdminController::class, 'showArtistVerificationRequest'])->whereUuid('artistVerificationRequestId');
     });
 });
 
@@ -117,10 +117,10 @@ Route::get('users/me/artist-verification-requests', [ArtistVerificationRequestCo
 // favorite routes
 Route::get('users/me/favorites/artworks', [FavoriteController::class, 'listAuthenticatedUserFavoriteArtworks'])->middleware('auth:sanctum');
 Route::middleware(['throttle:favorite'])->group(function () {
-    Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereUlid('artworkId');
+    Route::post('artworks/{artworkId}/favorites', [FavoriteController::class, 'markArtworkAsFavorite'])->middleware('auth:sanctum')->whereUuid('artworkId');
 });
-Route::delete('artworks/{artworkId}/favorites', [FavoriteController::class, 'removeArtworkFromFavorites'])->middleware('auth:sanctum')->whereUlid('artworkId');
-Route::get('artworks/{artworkId}/favorites/is-favoriting', [FavoriteController::class, 'isAuthenticatedUserFavoriting'])->middleware('auth:sanctum')->whereUlid('artworkId');
+Route::delete('artworks/{artworkId}/favorites', [FavoriteController::class, 'removeArtworkFromFavorites'])->middleware('auth:sanctum')->whereUuid('artworkId');
+Route::get('artworks/{artworkId}/favorites/is-favoriting', [FavoriteController::class, 'isAuthenticatedUserFavoriting'])->middleware('auth:sanctum')->whereUuid('artworkId');
 
 // country routes
 Route::get('countries', [CountryController::class, 'index']);

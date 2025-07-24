@@ -21,7 +21,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The id of the artwork
+     * @urlParam artworkId string required The id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -72,7 +72,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -128,11 +128,11 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
-     *    "status": 204
+     *    "status": 200
      * }
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
@@ -162,7 +162,7 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto->delete();
 
-        return $this->noContent('Artwork photo deleted successfully');
+        return $this->successNoData('Artwork photo deleted successfully');
     }
 
     /**
@@ -172,11 +172,11 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo
+     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo replaced successfully",
-     *    "status": 204
+     *    "status": 200
      * }
      * @response 401 scenario=Unauthenticated {
      *    "message": "Unauthenticated"
@@ -210,6 +210,6 @@ class ArtworkPhotoController extends ApiController
             'path' => $photo->store('artwork-photos'),
         ]);
 
-        return $this->noContent('Artwork photo replaced successfully');
+        return $this->successNoData('Artwork photo replaced successfully');
     }
 }

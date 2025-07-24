@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('follows', function (Blueprint $table) {
-            $table->ulid('id')->primary();
+            $table->uuid('id')->primary();
 
-            $table->foreignUlid('follower_id')->constrained('users')->onDelete('cascade');
-            $table->foreignUlid('followed_id')->constrained('users')->onDelete('cascade');
+            $table->foreignUuid('follower_id')->constrained('users')->onDelete('cascade');
+            $table->foreignUuid('followed_id')->constrained('users')->onDelete('cascade');
             $table->unique(['follower_id', 'followed_id']);
             $table->timestamps();
         });

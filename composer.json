@@ -1,30 +1,43 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "laravel/laravel",
+  "name": "slimanimeddine/arthive-backend",
   "type": "project",
-  "description": "The skeleton application for the Laravel framework.",
+  "description": "The backend for Arthiive, a platform for artists to showcase their work.",
   "keywords": [
     "laravel",
-    "framework"
+    "framework",
+    "php",
+    "art",
+    "artists",
+    "gallery"
+  ],
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Imed Eddine Abderrahmane SLIMANI",
+      "email": "imeds2000@gmail.com",
+      "homepage": "https://slimanimeddine.vercel.app/"
+    }
   ],
   "license": "MIT",
   "require": {
     "php": "^8.2",
-    "laravel/framework": "^11.44.2",
-    "laravel/reverb": "^1.5",
-    "laravel/sanctum": "^4.0.8",
-    "laravel/scout": "^10.14.1",
+    "knuckleswtf/scribe": "^5.2.1",
+    "laravel/framework": "^12.21.0",
+    "laravel/reverb": "^1.5.1",
+    "laravel/sanctum": "^4.2.0",
+    "laravel/scout": "^10.17.0",
     "laravel/tinker": "^2.10.1",
-    "resend/resend-laravel": "^0.17.0",
-    "spatie/laravel-query-builder": "^6.3.1",
-    "typesense/typesense-php": "^4.9.3"
+    "resend/resend-laravel": "^0.19.0",
+    "spatie/laravel-query-builder": "^6.3.",
+    "typesense/typesense-php": "^5.1.0",
+    "spatie/laravel-url-signer": "^3.2.1"
   },
   "require-dev": {
     "fakerphp/faker": "^1.24.1",
-    "knuckleswtf/scribe": "^4.40",
-    "laravel/pail": "^1.2.2",
-    "laravel/pint": "^1.22",
-    "laravel/sail": "^1.41",
+    "laravel/pail": "^1.2.3",
+    "laravel/pint": "^1.24",
+    "laravel/sail": "^1.44.0",
     "mockery/mockery": "^1.6.12",
     "nunomaduro/collision": "^8.7",
     "pestphp/pest": "^3.8",

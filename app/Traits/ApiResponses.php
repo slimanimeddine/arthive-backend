@@ -13,7 +13,7 @@ trait ApiResponses
         ], $statusCode);
     }
 
-    protected function noContent(string $message = 'No Content', int $statusCode = 204)
+    protected function successNoData(string $message = 'No Content', int $statusCode = 200)
     {
         return response()->json([
             'message' => $message,

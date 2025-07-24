@@ -67,7 +67,7 @@ class NotificationController extends ApiController
 
         $readStatus = $request->query('readStatus');
         if ($readStatus !== null) {
-            if (!in_array($readStatus, ['read', 'unread'])) {
+            if (! in_array($readStatus, ['read', 'unread'])) {
                 return $this->error('Invalid readStatus', 400);
             }
 
@@ -88,11 +88,11 @@ class NotificationController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam notificationId string required The id of the notification Example: 1
+     * @urlParam notificationId string required The id of the notification Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *      "message": "Notification marked as read",
-     *      "status": 204
+     *      "status": 200
      * }
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -108,13 +108,13 @@ class NotificationController extends ApiController
 
         $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->first();
 
-        if (!$unreadNotification) {
+        if (! $unreadNotification) {
             return $this->notFound('The notification you are trying to retrieve does not exist.');
         }
 
         $unreadNotification->markAsRead();
 
-        return $this->noContent('Notification marked as read');
+        return $this->successNoData('Notification marked as read');
     }
 
     /**
@@ -126,7 +126,7 @@ class NotificationController extends ApiController
      *
      * @response 200 scenario=Success {
      *      "message": "All your notifications are marked as read.",
-     *      "status": 204
+     *      "status": 200
      * }
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
@@ -138,7 +138,7 @@ class NotificationController extends ApiController
 
         $authenticatedUser->unreadNotifications->markAsRead();
 
-        return $this->noContent('All your notifications are marked as read.');
+        return $this->successNoData('All your notifications are marked as read.');
     }
 
     /**

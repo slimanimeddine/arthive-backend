@@ -166,10 +166,28 @@ Follow these instructions to run this project locally on your machine
     ```
 
 12. Import Artwork model records into the search index:
+
     ```sh
     php artisan scout:import "App\Models\Artwork"
     ```
-13. I have used [Resend](https://resend.com/) as an email API to send emails such as email verificaiton codes and forgot password codes.
+
+13. I have used [Laravel Reverb](https://reverb.laravel.com/) as a WebSocket server to broadcast notifications. All you have to do is set the reverb related env variables:
+    ```sh
+    REVERB_APP_ID=my-app-id
+    REVERB_APP_KEY=my-app-key
+    REVERB_APP_SECRET=my-app-secret
+    REVERB_HOST="localhost"
+    REVERB_PORT=8080
+    REVERB_SCHEME=http
+    ```
+14. Run the Reverb server:
+
+    ```sh
+    php artisan reverb:start
+    php artisan queue:listen
+    ```
+
+15. I have used [Resend](https://resend.com/) as an email API to send emails such as email verificaiton codes and forgot password codes.
 To configure Resend with Laravel follow these [instructions](https://resend.com/docs/send-with-laravel).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

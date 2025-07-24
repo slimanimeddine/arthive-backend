@@ -12,11 +12,11 @@ use App\Models\Artwork;
 use App\Models\User;
 use App\Notifications\ArtistVerificationResponseNotification;
 use App\Sorts\Artworks\NewSort;
-use App\Sorts\Users\NewSort as UserNewSort;
 use App\Sorts\Artworks\PopularSort;
-use App\Sorts\Users\PopularSort as UserPopularSort;
 use App\Sorts\Artworks\RisingSort;
 use App\Sorts\Artworks\TrendingSort;
+use App\Sorts\Users\NewSort as UserNewSort;
+use App\Sorts\Users\PopularSort as UserPopularSort;
 use Illuminate\Http\Request;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\AllowedSort;
@@ -31,7 +31,7 @@ class AdminController extends ApiController
      * List Artworks
      *
      * Retrieve a list of all artworks
-     * 
+     *
      * @authenticated
      *
      * @queryParam filter[tag] string Filter artworks by tag. Example: graphic
@@ -43,11 +43,10 @@ class AdminController extends ApiController
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkResource
      *
      * @apiResourceModel App\Models\Artwork paginate=10
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *     "message": "You are not authorized to access this resource.",
      *     "status": 403
@@ -80,7 +79,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required the id of the artwork.
+     * @urlParam artworkId string required the id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
@@ -89,12 +88,10 @@ class AdminController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *       "message": "Unauthenticated",
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *       "message": "You are not authorized to access this resource.",
      *       "status": 403
      * }
-     *
      * @response 404 scenario="Artwork Not Found" {
      *       "message": "The artwork you are trying to retrieve does not exist.",
      *       "status": 404
@@ -108,7 +105,7 @@ class AdminController extends ApiController
             'tags',
         ])->find($artworkId);
 
-        if (!$artwork) {
+        if (! $artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -130,11 +127,10 @@ class AdminController extends ApiController
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\UserResource
      *
      * @apiResourceModel App\Models\User paginate=10
-     * 
+     *
      * @response 401 scenario=Unauthenticated {
      *      "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *      "message": "You are not authorized to access this resource.",
      *      "status": 403
@@ -166,7 +162,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistId string required the id of the artwork.
+     * @urlParam artistId string required the id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *
@@ -175,12 +171,10 @@ class AdminController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *       "message": "Unauthenticated",
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *       "message": "You are not authorized to access this resource.",
      *       "status": 403
      * }
-     *
      * @response 404 scenario="Artist Not Found" {
      *       "message": "The artist you are trying to retrieve does not exist.",
      *       "status": 404
@@ -192,7 +186,7 @@ class AdminController extends ApiController
             'artworks',
         ])->find($artistId);
 
-        if (!$artist) {
+        if (! $artist) {
             return $this->notFound('The artist you are trying to retrieve does not exist.');
         }
 
@@ -206,7 +200,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review.
+     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
      *
@@ -228,7 +222,7 @@ class AdminController extends ApiController
     {
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
 
-        if (!$artistVerificationRequest) {
+        if (! $artistVerificationRequest) {
             return $this->notFound('The artist verification request you are trying to review does not exist.');
         }
 
@@ -263,7 +257,6 @@ class AdminController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *      "message": "You are not authorized to access this resource.",
      *      "status": 403
@@ -287,7 +280,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistVerificationRequestId string required the id of the artist verification request.
+     * @urlParam artistVerificationRequestId string required the id of the artist verification request. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
      *
@@ -296,12 +289,10 @@ class AdminController extends ApiController
      * @response 401 scenario=Unauthenticated {
      *       "message": "Unauthenticated",
      * }
-     * 
      * @response 403 scenario=Unauthorized {
      *       "message": "You are not authorized to access this resource.",
      *       "status": 403
      * }
-     *
      * @response 404 scenario="Artist Not Found" {
      *       "message": "The artist verification request you are trying to retrieve does not exist.",
      *       "status": 404
@@ -311,11 +302,10 @@ class AdminController extends ApiController
     {
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
 
-        if (!$artistVerificationRequest) {
+        if (! $artistVerificationRequest) {
             return $this->notFound('The artist verification request you are trying to retrieve does not exist.');
         }
 
         return new ArtistVerificationRequestResource($artistVerificationRequest);
     }
-
 }

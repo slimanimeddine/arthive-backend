@@ -22,7 +22,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to like
+     * @urlParam artworkId string required The ID of the artwork to like. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkLikeResource
      *
@@ -71,11 +71,11 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to unlike
+     * @urlParam artworkId string required The ID of the artwork to unlike. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unliked this artwork.',
-     *      'status': 204
+     *      'status': 200
      * }
      * @response 401 scenario=Unauthenticated {
      *     "message": "Unauthenticated"
@@ -109,7 +109,7 @@ class ArtworkLikeController extends ApiController
 
         $artworkLike->delete();
 
-        return $this->noContent('You have successfully unliked this artwork.');
+        return $this->successNoData('You have successfully unliked this artwork.');
     }
 
     /**
@@ -117,7 +117,7 @@ class ArtworkLikeController extends ApiController
      *
      * Retrieve the number of likes an artist has received by tag
      *
-     * @urlParam username string required The username of the user
+     * @urlParam username string required The username of the user. Example: johndoe
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -170,7 +170,7 @@ class ArtworkLikeController extends ApiController
      *
      * Retrieve the total number of likes an artist has received
      *
-     * @urlParam username string required The username of the user
+     * @urlParam username string required The username of the user. Example johndoe
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -211,7 +211,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is liking
+     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is liking. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @response 200 scenario=Success {
      *      "message": "",

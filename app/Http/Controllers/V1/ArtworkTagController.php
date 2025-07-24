@@ -19,16 +19,16 @@ class ArtworkTagController extends ApiController
      *
      * Retrieve a list of tags used by a user's published artworks
      *
-     * @urlParam username string required The username of the user
+     * @urlParam username string required The username of the user. Example: johndoe
      *
      * @response 200 scenario=Success {
      *      "data": [
      *          {
-     *              "id": "01jsn7h28c20dfrbybdt530p1d",
+     *              "id": "0197df53-4ed0-7337-b648-1b763a6d6857",
      *              "name": "abstract"
      *          },
      *          {
-     *              "id": "01jsn7h28c20dfrbybdt530p1d",
+     *              "id": "0197df53-4ed0-7337-b648-1b763a6d6857",
      *              "name": "portrait"
      *          }
      *      ],

@@ -69,7 +69,7 @@ class UserController extends ApiController
      *
      * Retrieve a single user by username
      *
-     * @urlParam username string required The username of the user
+     * @urlParam username string required The username of the user. Example: johndoe
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *
@@ -96,7 +96,7 @@ class UserController extends ApiController
      *
      * Retrieve a single user by id
      *
-     * @urlParam userId string required The id of the user
+     * @urlParam userId string required The id of the user. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *

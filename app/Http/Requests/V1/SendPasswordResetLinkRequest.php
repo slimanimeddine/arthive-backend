@@ -24,8 +24,7 @@ class SendPasswordResetLinkRequest extends FormRequest
             'email' => [
                 'description' => 'The email address of the user requesting the password reset link.',
                 'example' => 'johndoe@gmail.com',
-            ]
+            ],
         ];
     }
-
 }

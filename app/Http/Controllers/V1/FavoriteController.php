@@ -44,7 +44,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to mark as favorite. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to mark as favorite.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\FavoriteResource
      *
@@ -68,7 +68,7 @@ class FavoriteController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to mark as favorite does not exist.');
         }
 
@@ -91,7 +91,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to remove from favorites. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to remove from favorites.
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully removed this artwork from your favorites.',
@@ -115,7 +115,7 @@ class FavoriteController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to remove from favorites does not exist.');
         }
 
@@ -139,7 +139,7 @@ class FavoriteController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is favoriting. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is favoriting.
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -160,7 +160,7 @@ class FavoriteController extends ApiController
 
         $artwork = Artwork::published()->where('id', $artworkId)->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to check if you favorited does not exist.');
         }
 

@@ -84,7 +84,7 @@ class UserController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve does not exist.');
         }
 
@@ -96,7 +96,7 @@ class UserController extends ApiController
      *
      * Retrieve a single user by id
      *
-     * @urlParam userId string required The id of the user. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam userId string required The id of the user.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *
@@ -111,7 +111,7 @@ class UserController extends ApiController
     {
         $user = User::artist()->where('id', $userId)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve does not exist.');
         }
 

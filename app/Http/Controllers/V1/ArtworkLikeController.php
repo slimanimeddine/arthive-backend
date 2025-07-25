@@ -22,7 +22,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to like. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to like.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkLikeResource
      *
@@ -46,7 +46,7 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to like does not exist.');
         }
 
@@ -71,7 +71,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to unlike. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to unlike.
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unliked this artwork.',
@@ -95,7 +95,7 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::published()->where('id', $artworkId)->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to unlike does not exist.');
         }
 
@@ -142,7 +142,7 @@ class ArtworkLikeController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve likes for does not exist.');
         }
 
@@ -186,7 +186,7 @@ class ArtworkLikeController extends ApiController
     {
         $user = User::artist()->where('username', $username)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('The user you are trying to retrieve likes for does not exist.');
         }
 
@@ -211,7 +211,7 @@ class ArtworkLikeController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is liking. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to check if the authenticated user is liking.
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -232,7 +232,7 @@ class ArtworkLikeController extends ApiController
 
         $artwork = Artwork::published()->where('id', $artworkId)->first();
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to check if you liked does not exist.');
         }
 

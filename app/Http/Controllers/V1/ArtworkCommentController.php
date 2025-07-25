@@ -22,7 +22,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The ID of the artwork to comment on. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The ID of the artwork to comment on.
      *
      * @bodyParam comment_text string required The text of the comment. Example: This is a great artwork!
      *
@@ -48,7 +48,7 @@ class ArtworkCommentController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to comment on does not exist.');
         }
 
@@ -74,7 +74,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId string required The ID of the comment to update. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkCommentId string required The ID of the comment to update.
      *
      * @bodyParam comment_text string required The text of the comment. Example: This is a great artwork!
      *
@@ -100,7 +100,7 @@ class ArtworkCommentController extends ApiController
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
 
-        if (! $artworkComment) {
+        if (!$artworkComment) {
             return $this->notFound('The comment you are trying to update on does not exist.');
         }
 
@@ -122,7 +122,7 @@ class ArtworkCommentController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkCommentId string required The ID of the comment to delete. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkCommentId string required The ID of the comment to delete.
      *
      * @response 200 scenario=Success {
      *     'message': 'You have successfully deleted the comment.',
@@ -146,7 +146,7 @@ class ArtworkCommentController extends ApiController
 
         $artworkComment = ArtworkComment::find($artworkCommentId);
 
-        if (! $artworkComment) {
+        if (!$artworkComment) {
             return $this->notFound('The comment you are trying to delete does not exist.');
         }
 

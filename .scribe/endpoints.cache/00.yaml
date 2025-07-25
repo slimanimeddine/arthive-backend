@@ -65,7 +65,7 @@ endpoints:
         content: |-
           {
                "message": "User created successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -129,7 +129,7 @@ endpoints:
                "message": "Authenticated",
                "data": {
                    "token": "{YOUR_AUTH_KEY}",
-                   "id": "01jsn7h28c20dfrbybdt530p1d"
+                   "id": "0197df53-4ed0-7337-b648-1b763a6d6857"
                },
                "status": 200
           }
@@ -145,6 +145,26 @@ endpoints:
           }
         headers: []
         description: 'Invalid credentials'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+               "message": "User not found with the provided credentials.",
+               "status": 404
+          }
+        headers: []
+        description: 'User not found'
+        custom: []
+      -
+        status: 429
+        content: |-
+          {
+               "message": "Too many login attempts.",
+               "status": 429
+          }
+        headers: []
+        description: 'Rate limit exceeded'
         custom: []
     responseFields: []
     auth: []
@@ -182,7 +202,7 @@ endpoints:
         content: |-
           {
                "message": "Signed out successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -200,7 +220,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Z6bE1dgDk4Pf36ae5aVcv8h'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -257,7 +277,7 @@ endpoints:
         content: |-
           {
                "message": "Password updated successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -285,7 +305,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer E4DeckPbfgZa5Va61hv683d'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -310,9 +330,9 @@ endpoints:
     urlParameters:
       id:
         name: id
-        description: 'The ID of the verify.'
-        required: true
-        example: non
+        description: 'The ID of the user.'
+        required: false
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -320,19 +340,41 @@ endpoints:
         custom: []
       hash:
         name: hash
-        description: ''
-        required: true
-        example: tempora
+        description: 'The hash of the email.'
+        required: false
+        example: 1234567890abcdef1234567890abcdef12345678
         type: string
         enumValues: []
-        exampleWasSpecified: false
+        exampleWasSpecified: true
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: non
-      hash: tempora
-    queryParameters: []
-    cleanQueryParameters: []
+      id: architecto
+      hash: 1234567890abcdef1234567890abcdef12345678
+    queryParameters:
+      expires:
+        name: expires
+        description: 'The expiration time of the link in seconds.'
+        required: false
+        example: '1746693113'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      signature:
+        name: signature
+        description: 'The signature of the link.'
+        required: false
+        example: 1234567890abcdef
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      expires: '1746693113'
+      signature: 1234567890abcdef
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -342,7 +384,7 @@ endpoints:
         content: |-
           {
                "message": "Email verified successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -380,7 +422,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 66ak83DdfgPZbE1vehac45V'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -415,7 +457,7 @@ endpoints:
         content: |-
           {
                "message": "Verification link sent!",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -433,7 +475,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer De4hag85E3k6aPbV61fZvdc'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -478,7 +520,7 @@ endpoints:
         content: |-
           {
                "message": "Reset link sent successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -561,7 +603,7 @@ endpoints:
         content: |-
           {
                "message": "Password reset successfully",
-               "status": 204
+               "status": 200
           }
         headers: []
         description: Success
@@ -623,20 +665,10 @@ endpoints:
         content: |-
           {
                "message": "User deleted successfully",
-              "status": 204
+              "status": 200
           }
         headers: []
         description: Success
-        custom: []
-      -
-        status: 400
-        content: |-
-          {
-               "message": "Incorrect password.",
-               "status": 400
-          }
-        headers: []
-        description: 'Incorrect password'
         custom: []
       -
         status: 401
@@ -651,7 +683,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 46c8hbva3VDgZ1eE5k6fdPa'
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
     controller: null
     method: null
     route: null
@@ -709,7 +741,7 @@ endpoints:
            "message": "Authenticated",
            "data": {
                "token": "{YOUR_AUTH_KEY}",
-               "id": 1
+               "id": "0197df53-4ed0-7337-b648-1b763a6d6857"
            },
            "status": 200
           }
@@ -725,6 +757,26 @@ endpoints:
           }
         headers: []
         description: 'Invalid credentials'
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+               "message": "Admin not found with the provided credentials.",
+               "status": 404
+          }
+        headers: []
+        description: 'Admin not found'
+        custom: []
+      -
+        status: 429
+        content: |-
+          {
+               "message": "Too many login attempts.",
+               "status": 429
+          }
+        headers: []
+        description: 'Rate limit exceeded'
         custom: []
     responseFields: []
     auth: []

@@ -67,7 +67,7 @@ class NotificationController extends ApiController
 
         $readStatus = $request->query('readStatus');
         if ($readStatus !== null) {
-            if (! in_array($readStatus, ['read', 'unread'])) {
+            if (!in_array($readStatus, ['read', 'unread'])) {
                 return $this->error('Invalid readStatus', 400);
             }
 
@@ -88,7 +88,7 @@ class NotificationController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam notificationId string required The id of the notification Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam notificationId string required The id of the notification
      *
      * @response 200 scenario=Success {
      *      "message": "Notification marked as read",
@@ -108,7 +108,7 @@ class NotificationController extends ApiController
 
         $unreadNotification = $authenticatedUser->unreadNotifications()->where('id', $notificationId)->first();
 
-        if (! $unreadNotification) {
+        if (!$unreadNotification) {
             return $this->notFound('The notification you are trying to retrieve does not exist.');
         }
 

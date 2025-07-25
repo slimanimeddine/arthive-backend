@@ -72,13 +72,13 @@ class AuthController extends ApiController
      */
     public function signIn(SignInRequest $request)
     {
-        if (! Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::artist()->where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->notFound('Invalid credentials');
         }
 
@@ -120,13 +120,13 @@ class AuthController extends ApiController
      */
     public function adminSignIn(SignInRequest $request)
     {
-        if (! Auth::attempt($request->only('email', 'password'))) {
+        if (!Auth::attempt($request->only('email', 'password'))) {
             return $this->error('Invalid credentials', 401);
         }
 
         $user = User::admin()->where('email', $request->email)->first();
 
-        if (! $user) {
+        if (!$user) {
             return $this->error('Admin not found with the provided credentials.', 401);
         }
 
@@ -183,7 +183,7 @@ class AuthController extends ApiController
     {
         $authenticatedUser = $request->user();
 
-        if (! Hash::check($request->current_password, $authenticatedUser->password)) {
+        if (!Hash::check($request->current_password, $authenticatedUser->password)) {
             return $this->error('Invalid current password', 422);
         }
 
@@ -204,7 +204,7 @@ class AuthController extends ApiController
      * @queryParam expires string The expiration time of the link in seconds. Example: 1746693113
      * @queryParam signature string The signature of the link. Example: 1234567890abcdef
      *
-     * @urlParam id string The ID of the user. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam id string The ID of the user.
      * @urlParam hash string The hash of the email. Example: 1234567890abcdef1234567890abcdef12345678
      *
      * @response 200 scenario=Success {
@@ -231,17 +231,17 @@ class AuthController extends ApiController
 
         $signature = $request->query('signature');
 
-        $url = env('FRONTEND_URL').'/email/verify/'.$id.'/'.$hash.'?expires='.$expires.'&signature='.$signature;
+        $url = env('FRONTEND_URL') . '/email/verify/' . $id . '/' . $hash . '?expires=' . $expires . '&signature=' . $signature;
 
-        if (! UrlSigner::validate($url)) {
+        if (!UrlSigner::validate($url)) {
             return $this->unauthorized('Link is invalid');
         }
 
-        if (! hash_equals((string) $authenticatedUser->getKey(), (string) $id)) {
+        if (!hash_equals((string) $authenticatedUser->getKey(), (string) $id)) {
             return $this->unauthorized('Id is invalid');
         }
 
-        if (! hash_equals(sha1($authenticatedUser->getEmailForVerification()), (string) $hash)) {
+        if (!hash_equals(sha1($authenticatedUser->getEmailForVerification()), (string) $hash)) {
             return $this->unauthorized('Hash is invalid');
         }
 
@@ -249,7 +249,7 @@ class AuthController extends ApiController
             return $this->unauthorized('Email already verified');
         }
 
-        if (! $authenticatedUser->hasVerifiedEmail()) {
+        if (!$authenticatedUser->hasVerifiedEmail()) {
             $authenticatedUser->markEmailAsVerified();
         }
 

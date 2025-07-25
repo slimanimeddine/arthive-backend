@@ -21,7 +21,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to follow. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam userId string required The ID of the user to follow.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\FollowResource
      *
@@ -45,7 +45,7 @@ class FollowController extends ApiController
 
         $userToFollow = User::find($userId);
 
-        if (! $userToFollow) {
+        if (!$userToFollow) {
             return $this->notFound('The user you are trying to follow does not exist.');
         }
 
@@ -70,7 +70,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to unfollow. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam userId string required The ID of the user to unfollow.
      *
      * @response 200 scenario=Success {
      *      'message': 'You have successfully unfollowed this user.'
@@ -98,7 +98,7 @@ class FollowController extends ApiController
 
         $userToUnfollow = User::find($userId);
 
-        if (! $userToUnfollow) {
+        if (!$userToUnfollow) {
             return $this->notFound('The user you are trying to unfollow does not exist.');
         }
 
@@ -109,7 +109,7 @@ class FollowController extends ApiController
         $follow = Follow::where('follower_id', $authenticatedUser->id)
             ->where('followed_id', $userToUnfollow->id)
             ->first();
-        if (! $follow) {
+        if (!$follow) {
             return $this->notFound('You have not followed this user.');
         }
 
@@ -175,7 +175,7 @@ class FollowController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam userId string required The ID of the user to check if the authenticated user is following. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam userId string required The ID of the user to check if the authenticated user is following.
      *
      * @response 200 scenario=Success {
      *      "message": "",
@@ -196,7 +196,7 @@ class FollowController extends ApiController
 
         $userToCheck = User::find($userId);
 
-        if (! $userToCheck) {
+        if (!$userToCheck) {
             return $this->notFound('The user you are trying to check does not exist.');
         }
 

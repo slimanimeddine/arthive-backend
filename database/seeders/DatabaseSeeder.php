@@ -13,13 +13,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Artisan::call('db:seed --class=CountriesSeeder');
-        Artisan::call('db:seed --class=TagSeeder');
-        Artisan::call('db:seed --class=UserSeeder');
-        Artisan::call('db:seed --class=ArtworkSeeder');
-        Artisan::call('db:seed --class=ArtworkCommentSeeder');
-        Artisan::call('db:seed --class=ArtworkLikeSeeder');
-        Artisan::call('db:seed --class=FavoritesSeeder');
-        Artisan::call('db:seed --class=FollowsSeeder');
+        $this->call([
+            CountriesSeeder::class,
+            TagSeeder::class,
+            UserSeeder::class,
+            ArtworkSeeder::class,
+            ArtworkCommentSeeder::class,
+            ArtworkLikeSeeder::class,
+            FavoritesSeeder::class,
+            FollowsSeeder::class,
+        ]);
     }
 }

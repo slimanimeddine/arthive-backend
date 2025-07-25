@@ -79,11 +79,11 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required the id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required the id of the artwork.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkResource
      *
-     * @apiResourceModel App\Models\Artwork with=user,artworkPhotos,tags
+     * @apiResourceModel App\Models\Artwork with=user,tags,artworkPhotos
      *
      * @response 401 scenario=Unauthenticated {
      *       "message": "Unauthenticated",
@@ -105,7 +105,7 @@ class AdminController extends ApiController
             'tags',
         ])->find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to retrieve does not exist.');
         }
 
@@ -162,7 +162,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistId string required the id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artistId string required the id of the artwork.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\UserResource
      *
@@ -186,7 +186,7 @@ class AdminController extends ApiController
             'artworks',
         ])->find($artistId);
 
-        if (! $artist) {
+        if (!$artist) {
             return $this->notFound('The artist you are trying to retrieve does not exist.');
         }
 
@@ -200,7 +200,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artistVerificationRequestId string required The ID of the artist verification request to review.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
      *
@@ -222,7 +222,7 @@ class AdminController extends ApiController
     {
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
 
-        if (! $artistVerificationRequest) {
+        if (!$artistVerificationRequest) {
             return $this->notFound('The artist verification request you are trying to review does not exist.');
         }
 
@@ -280,7 +280,7 @@ class AdminController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artistVerificationRequestId string required the id of the artist verification request. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artistVerificationRequestId string required the id of the artist verification request.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtistVerificationRequestResource
      *
@@ -302,7 +302,7 @@ class AdminController extends ApiController
     {
         $artistVerificationRequest = ArtistVerificationRequest::find($artistVerificationRequestId);
 
-        if (! $artistVerificationRequest) {
+        if (!$artistVerificationRequest) {
             return $this->notFound('The artist verification request you are trying to retrieve does not exist.');
         }
 

@@ -21,7 +21,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkId string required The id of the artwork. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkId string required The id of the artwork.
      *
      * @apiResourceCollection scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -45,7 +45,7 @@ class ArtworkPhotoController extends ApiController
 
         $artwork = Artwork::find($artworkId);
 
-        if (! $artwork) {
+        if (!$artwork) {
             return $this->notFound('The artwork you are trying to upload photos to does not exist.');
         }
 
@@ -72,7 +72,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkPhotoId string required The id of the artwork photo.
      *
      * @apiResource scenario=Success App\Http\Resources\V1\ArtworkPhotoResource
      *
@@ -96,7 +96,7 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (! $artworkPhoto) {
+        if (!$artworkPhoto) {
             return $this->notFound('The artwork photo you are trying to set as main does not exist.');
         }
 
@@ -128,7 +128,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkPhotoId string required The id of the artwork photo.
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo deleted successfully",
@@ -152,7 +152,7 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (! $artworkPhoto) {
+        if (!$artworkPhoto) {
             return $this->notFound('The artwork photo you are trying to delete does not exist.');
         }
 
@@ -172,7 +172,7 @@ class ArtworkPhotoController extends ApiController
      *
      * @authenticated
      *
-     * @urlParam artworkPhotoId string required The id of the artwork photo. Example: 0197df53-4ed0-7337-b648-1b763a6d6857
+     * @urlParam artworkPhotoId string required The id of the artwork photo.
      *
      * @response 200 scenario=Success {
      *    "message": "Artwork photo replaced successfully",
@@ -196,7 +196,7 @@ class ArtworkPhotoController extends ApiController
 
         $artworkPhoto = ArtworkPhoto::find($artworkPhotoId);
 
-        if (! $artworkPhoto) {
+        if (!$artworkPhoto) {
             return $this->notFound('The artwork photo you are trying to replace does not exist.');
         }
 

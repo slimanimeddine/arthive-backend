@@ -146,7 +146,7 @@ class AppServiceProvider extends ServiceProvider
 
         // customize the reset password notification
         ResetPassword::createUrlUsing(function (User $user, string $token) {
-            return env('FRONTEND_URL') . '/reset-password?token=' . $token;
+            return config('app.frontend_url') . '/reset-password?token=' . $token;
         });
     }
 }

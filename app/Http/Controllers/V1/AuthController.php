@@ -231,7 +231,11 @@ class AuthController extends ApiController
 
         $signature = $request->query('signature');
 
-        $url = config('app.frontend_url') . '/email/verify/' . $id . '/' . $hash . '?expires=' . $expires . '&signature=' . $signature;
+        $frontendUrl = $authenticatedUser->user_type === 'admin'
+            ? config('app.admin_frontend_url')
+            : config('app.frontend_url');
+
+        $url = $frontendUrl . '/email/verify/' . $id . '/' . $hash . '?expires=' . $expires . '&signature=' . $signature;
 
         if (!UrlSigner::validate($url)) {
             return $this->unauthorized('Link is invalid');

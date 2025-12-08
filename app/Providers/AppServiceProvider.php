@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App;
 use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
@@ -13,6 +14,9 @@ use App\Policies\ArtworkPhotoPolicy;
 use App\Policies\ArtworkPolicy;
 use App\Policies\UserPolicy;
 use App\Traits\ApiResponses;
+use Carbon\CarbonImmutable;
+use Date;
+use DB;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -20,6 +24,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Model;
+use URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -39,6 +44,20 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Model::automaticallyEagerLoadRelationships();
+
+        Model::shouldBeStrict();
+
+        Model::unguard();
+
+        Date::use(CarbonImmutable::class);
+
+        if (App::environment('production')) {
+            URL::forceHttps();
+        }
+
+        DB::prohibitDestructiveCommands(
+            app()->isProduction(),
+        );
 
         // registering policies
         Gate::policy(User::class, UserPolicy::class);

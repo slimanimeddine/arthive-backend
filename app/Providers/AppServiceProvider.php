@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App;
 use App\Models\ArtistVerificationRequest;
 use App\Models\Artwork;
 use App\Models\ArtworkComment;
@@ -15,11 +14,12 @@ use App\Policies\ArtworkPolicy;
 use App\Policies\UserPolicy;
 use App\Traits\ApiResponses;
 use Carbon\CarbonImmutable;
-use Date;
-use DB;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
